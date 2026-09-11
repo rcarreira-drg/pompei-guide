@@ -18,7 +18,7 @@ const hasLongWord = (text: string) => text.split(/\s+/).some((w) => w.length > L
 export default function StopPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const { pos } = useGeolocation();
+  const { pos, enabled, enable, error: geoError } = useGeolocation();
   const { visited, markVisited, setCurrentStop } = useProgress();
 
   const stops = ROUTE.stops;
@@ -123,6 +123,10 @@ export default function StopPage() {
             <h2 className="section-title">CÓMO LLEGAR A LA SIGUIENTE</h2>
             <p>{stop.directionsToNext}</p>
             {stop.walkMinutesToNext != null && <p className="mono">≈ {stop.walkMinutesToNext} min a pie</p>}
+            {!enabled && (
+              <button type="button" className="btn btn-accent btn-block" onClick={enable}>ACTIVAR UBICACIÓN</button>
+            )}
+            {geoError && <p className="callout callout--warn">{geoError}</p>}
             {next && <Compass target={next.coords} userPos={pos} label={next.name} compact />}
           </section>
         )}
