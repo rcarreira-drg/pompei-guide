@@ -1,0 +1,36 @@
+/* ==== BRUTALIST DESIGN TOKENS ==== */
+:root {
+  --ink: #111111;
+  --paper: #f2efe6;        /* papel / estuco */
+  --paper-2: #e6e1d3;
+  --pompeian: #b4321e;     /* rojo pompeyano */
+  --ochre: #d9a521;        /* ocre */
+  --ash: #6b6b6b;
+  --ash-light: #a8a8a8;
+  --lava: #2b1a17;
+  --white: #ffffff;
+
+  --border: 3px solid var(--ink);
+  --border-thick: 5px solid var(--ink);
+  --shadow: 6px 6px 0 var(--ink);
+  --shadow-sm: 3px 3px 0 var(--ink);
+  --radius: 0;
+
+  --font-display: 'Archivo Black', 'Arial Black', Impact, 'Helvetica Neue', sans-serif;
+  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --step--1: clamp(0.8rem, 0.78rem + 0.2vw, 0.9rem);
+  --step-0: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+  --step-1: clamp(1.25rem, 1.15rem + 0.6vw, 1.6rem);
+  --step-2: clamp(1.6rem, 1.4rem + 1.2vw, 2.4rem);
+  --step-3: clamp(2.2rem, 1.8rem + 2.4vw, 3.6rem);
+  --step-4: clamp(3rem, 2.2rem + 4vw, 5.5rem);
+
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
+  --space-5: 1.5rem; --space-6: 2rem; --space-7: 3rem; --space-8: 4rem;
+
+  --max-w: 720px;
+  --nav-h: 64px;
+  --safe-b: env(safe-area-inset-bottom, 0px);
+}

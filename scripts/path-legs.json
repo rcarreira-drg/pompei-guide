@@ -1,0 +1,178 @@
+[
+  {
+    "from": "porta-marina",
+    "to": "templo-venus",
+    "m": 131,
+    "snapA": 0,
+    "snapB": 25,
+    "ok": true
+  },
+  {
+    "from": "templo-venus",
+    "to": "basilica",
+    "m": 94,
+    "snapA": 25,
+    "snapB": 6,
+    "ok": true
+  },
+  {
+    "from": "basilica",
+    "to": "templo-apolo",
+    "m": 64,
+    "snapA": 6,
+    "snapB": 25,
+    "ok": true
+  },
+  {
+    "from": "templo-apolo",
+    "to": "foro",
+    "m": 215,
+    "snapA": 25,
+    "snapB": 17,
+    "ok": true
+  },
+  {
+    "from": "foro",
+    "to": "edificio-eumachia",
+    "m": 94,
+    "snapA": 17,
+    "snapB": 8,
+    "ok": true
+  },
+  {
+    "from": "edificio-eumachia",
+    "to": "termas-foro",
+    "m": 272,
+    "snapA": 8,
+    "snapB": 27,
+    "ok": true
+  },
+  {
+    "from": "termas-foro",
+    "to": "casa-poeta-tragico",
+    "m": 85,
+    "snapA": 27,
+    "snapB": 9,
+    "ok": true
+  },
+  {
+    "from": "casa-poeta-tragico",
+    "to": "casa-fauno",
+    "m": 174,
+    "snapA": 9,
+    "snapB": 3,
+    "ok": true
+  },
+  {
+    "from": "casa-fauno",
+    "to": "casa-vettii",
+    "m": 161,
+    "snapA": 3,
+    "snapB": 4,
+    "ok": true
+  },
+  {
+    "from": "casa-vettii",
+    "to": "lupanar",
+    "m": 383,
+    "snapA": 4,
+    "snapB": 1,
+    "ok": true
+  },
+  {
+    "from": "lupanar",
+    "to": "termas-estabianas",
+    "m": 120,
+    "snapA": 1,
+    "snapB": 7,
+    "ok": true
+  },
+  {
+    "from": "termas-estabianas",
+    "to": "via-abbondanza",
+    "m": 40,
+    "snapA": 7,
+    "snapB": 2,
+    "ok": true
+  },
+  {
+    "from": "via-abbondanza",
+    "to": "fullonica-stephanus",
+    "m": 134,
+    "snapA": 2,
+    "snapB": 13,
+    "ok": true
+  },
+  {
+    "from": "fullonica-stephanus",
+    "to": "casa-menandro",
+    "m": 172,
+    "snapA": 13,
+    "snapB": 24,
+    "ok": true
+  },
+  {
+    "from": "casa-menandro",
+    "to": "teatro-grande",
+    "m": 265,
+    "snapA": 24,
+    "snapB": 5,
+    "ok": true
+  },
+  {
+    "from": "teatro-grande",
+    "to": "templo-isis",
+    "m": 54,
+    "snapA": 5,
+    "snapB": 16,
+    "ok": true
+  },
+  {
+    "from": "templo-isis",
+    "to": "casa-venus-concha",
+    "m": 670,
+    "snapA": 16,
+    "snapB": 10,
+    "ok": true
+  },
+  {
+    "from": "casa-venus-concha",
+    "to": "casa-octavio-cuartio",
+    "m": 222,
+    "snapA": 10,
+    "snapB": 5,
+    "ok": true
+  },
+  {
+    "from": "casa-octavio-cuartio",
+    "to": "jardin-fugitivos",
+    "m": 329,
+    "snapA": 5,
+    "snapB": 29,
+    "ok": true
+  },
+  {
+    "from": "jardin-fugitivos",
+    "to": "palestra-grande",
+    "m": 442,
+    "snapA": 29,
+    "snapB": 41,
+    "ok": true
+  },
+  {
+    "from": "palestra-grande",
+    "to": "anfiteatro",
+    "m": 231,
+    "snapA": 41,
+    "snapB": 1,
+    "ok": true
+  },
+  {
+    "from": "anfiteatro",
+    "to": "necropolis-porta-nocera",
+    "m": 371,
+    "snapA": 1,
+    "snapB": 2,
+    "ok": true
+  }
+]
