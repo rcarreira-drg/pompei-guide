@@ -30,6 +30,23 @@
 .hero-subtitle { font-family: var(--font-mono); font-size: var(--step-0); margin-top: var(--space-3); max-width: 42ch; color: var(--ink); opacity: 0.9; }
 .hero .hero-subtitle { color: var(--paper); }
 
+/* Los títulos de capítulo/parada no son la portada: tamaño menor y sin
+   partir palabras a mitad (evita "CATÁSTROF/E"). Solo Home conserva step-4. */
+.section-hero .hero-title,
+.stop-hero .hero-title {
+  font-size: var(--step-3);
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: manual;
+}
+/* Si alguna palabra del título supera los 12 caracteres, encoge más el tamaño
+   para que quepa sin partirse (misma especificidad + orden posterior = gana). */
+.hero-title.hero-title--long,
+.section-hero .hero-title.hero-title--long,
+.stop-hero .hero-title.hero-title--long {
+  font-size: clamp(1.6rem, 7.5vw, 2.6rem);
+}
+
 /* ---- Home ---- */
 .home-illus { margin-top: var(--space-6); padding: var(--space-4); background: var(--paper-2); }
 .home-illus-svg { width: 100%; height: auto; display: block; }
@@ -61,17 +78,24 @@
 .status-card { margin-top: var(--space-6); padding: var(--space-5); }
 .status-card h3 { margin-bottom: var(--space-3); }
 .status-card p { margin: var(--space-1) 0; }
+.status-card-links { display: flex; flex-direction: column; gap: var(--space-3); margin-top: var(--space-4); }
 
 .home-footer { margin: var(--space-7) 0 var(--space-6); padding-top: var(--space-5); border-top: var(--border); }
 .home-footer p { color: var(--ash); font-size: var(--step--1); margin: var(--space-2) 0; }
 
-/* ---- Anchor nav (Prepare) ---- */
-.anchor-nav { display: flex; gap: var(--space-2); flex-wrap: wrap; margin: var(--space-6) 0; position: sticky; top: 0; z-index: 5; background: var(--paper); padding: var(--space-3) 0; border-bottom: var(--border); }
-.anchor-nav a {
-  text-decoration: none; padding: var(--space-2) var(--space-3); border: 2px solid var(--ink); background: var(--white);
-  font-weight: 700; font-size: 0.75rem; min-height: 44px; display: inline-flex; align-items: center;
+/* ---- Tabs / anchor chips (Prepare, Practical) ---- */
+.tabs-nav {
+  display: flex; gap: var(--space-2); flex-wrap: wrap; margin: var(--space-6) 0; position: sticky; top: 0; z-index: 5;
+  background: var(--paper); padding: var(--space-3) 0; border-bottom: var(--border);
 }
-.anchor-nav a:hover, .anchor-nav a:focus-visible { background: var(--ochre); }
+.tab-btn {
+  text-decoration: none; padding: 0 var(--space-3); border: 2px solid var(--ink); background: var(--white); color: var(--ink);
+  font-family: var(--font-mono); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;
+  min-height: 44px; display: inline-flex; align-items: center; cursor: pointer;
+}
+.tab-btn:hover, .tab-btn:focus-visible { background: var(--ochre); }
+.tab-btn.is-active { background: var(--ink); color: var(--paper); }
+.practical-chips { margin-top: 0; }
 
 /* ---- Section list / SectionCard ---- */
 .section-list { display: flex; flex-direction: column; gap: var(--space-5); }
@@ -84,9 +108,13 @@
   position: absolute; top: var(--space-3); right: var(--space-3); font-size: var(--step-2); font-weight: 700;
   color: var(--paper); background: var(--ink); padding: 2px 10px; z-index: 2;
 }
-.section-card-media { aspect-ratio: 16 / 9; overflow: hidden; border-bottom: var(--border); background: var(--paper-2); }
+.section-card-media { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-bottom: var(--border); background: var(--paper-2); }
 .section-card-media img, .section-card-media svg { width: 100%; height: 100%; object-fit: cover; display: block; }
 .section-card-placeholder { width: 100%; height: 100%; }
+.section-card-credit {
+  position: absolute; right: 0; bottom: 0; left: 0; padding: 2px var(--space-2); font-size: 0.62rem;
+  background: rgba(17,17,17,0.7); color: var(--paper);
+}
 .section-card-body { padding: var(--space-4); }
 .section-card-summary { margin: var(--space-2) 0; }
 .section-card-meta { color: var(--ash); }
@@ -145,11 +173,18 @@
 .faq-item p { margin-top: var(--space-3); }
 
 /* ---- Practical accordions ---- */
-.practical-accordion-list { display: flex; flex-direction: column; gap: var(--space-4); }
-.practical-accordion { padding: var(--space-4); }
-.practical-accordion summary { cursor: pointer; list-style: none; min-height: 44px; }
-.practical-accordion summary::-webkit-details-marker { display: none; }
-.practical-accordion summary .kicker { display: block; margin-bottom: var(--space-1); }
+.practical-accordion-list { display: flex; flex-direction: column; gap: var(--space-4); margin-bottom: var(--space-4); }
+.practical-accordion { padding: var(--space-4); margin-bottom: var(--space-4); }
+/* Combinador de hijo directo (>): Checklist y FAQ anidan sus propios
+   <details class="faq-item"> dentro de este mismo acordeón, y un selector
+   descendiente normal filtraría también su marcador +/-. */
+.practical-accordion > summary { cursor: pointer; list-style: none; min-height: 44px; position: relative; padding-right: var(--space-6); }
+.practical-accordion > summary::-webkit-details-marker { display: none; }
+.practical-accordion > summary::after {
+  content: '+'; position: absolute; right: 0; top: 0; font-family: var(--font-display); font-size: var(--step-1); color: var(--pompeian);
+}
+.practical-accordion[open] > summary::after { content: '–'; }
+.practical-accordion > summary .kicker { display: block; margin-bottom: var(--space-1); }
 .practical-accordion-body { margin-top: var(--space-4); }
 
 /* ---- Blocks ---- */
@@ -168,6 +203,7 @@
 .look-for-list li::before { background: var(--ochre); }
 .fact-card { padding: var(--space-4) var(--space-5); margin: var(--space-5) 0; display: block; }
 .fact-value { display: block; font-family: var(--font-display); font-size: var(--step-3); margin-top: var(--space-1); }
+.fact-value--long { font-size: var(--step-1); line-height: 1.15; }
 .block-figure { margin: var(--space-5) 0; }
 .block-img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: var(--border); }
 .block-img-placeholder {
@@ -177,8 +213,14 @@
   background: var(--paper); color: var(--ink); padding: var(--space-2) var(--space-3); text-align: center;
 }
 .block-caption { margin-top: var(--space-2); color: var(--ash); font-size: var(--step--1); }
+.block-caption-text, .block-credit-line { display: block; }
+.block-credit-line { margin-top: 2px; font-size: 0.7rem; }
+.block-credit-line a { color: var(--ash); text-decoration: underline; }
 .illus-frame { border: var(--border); background: var(--white); padding: var(--space-4); display: flex; align-items: center; justify-content: center; }
 .illus-frame svg { width: 100%; height: auto; max-height: 260px; }
+/* En StopPage el SVG ya dibuja su propio marco: quitamos el borde exterior
+   para no duplicar la caja-dentro-de-caja. */
+.stop-illus-frame { border: none; background: var(--paper-2); box-shadow: none; }
 .callout { margin: var(--space-5) 0; padding: var(--space-4); border: var(--border); }
 .callout p { margin: 0; }
 .callout--tip { background: var(--ochre); }
@@ -190,6 +232,11 @@
 .section-hero-media { position: relative; }
 .section-hero-img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-bottom: var(--border-thick); }
 .section-hero-illus { width: 100%; aspect-ratio: 4 / 3; border-bottom: var(--border-thick); }
+.section-hero-credit {
+  position: absolute; right: 0; bottom: 5px; left: 0; margin: 0; padding: 2px var(--space-3);
+  background: rgba(17,17,17,0.7); color: var(--paper); font-size: 0.68rem;
+}
+.section-hero-credit a { color: var(--paper); text-decoration: underline; }
 .section-hero .container { padding-top: var(--space-5); padding-bottom: var(--space-3); }
 .section-meta { color: var(--ash); margin-top: var(--space-2); }
 .section-pager { display: flex; justify-content: space-between; gap: var(--space-3); margin: var(--space-6) 0; flex-wrap: wrap; }
@@ -208,6 +255,7 @@
 .next-stop-card { margin: var(--space-5) 0; padding: var(--space-4); display: flex; flex-direction: column; gap: var(--space-3); }
 .next-stop-card h3 { margin: 0; }
 
+.stop-list-summary { color: var(--ash); margin: 0 0 var(--space-4); }
 .stop-list { list-style: none; margin: var(--space-4) 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-3); }
 .stop-list-item a {
   display: flex; align-items: center; gap: var(--space-3); text-decoration: none; color: var(--ink);
@@ -261,8 +309,9 @@
 
 /* ---- ProgressBar ---- */
 .progress-bar { margin: var(--space-4) 0; }
-.progress-blocks { display: flex; gap: 3px; flex-wrap: wrap; }
-.progress-block { flex: 1 1 12px; min-width: 8px; height: 18px; background: var(--white); border: 2px solid var(--ink); }
+.progress-blocks { display: flex; gap: 0; }
+.progress-block { flex: 1 1 12px; min-width: 8px; height: 22px; background: var(--paper-2); border: 2px solid var(--ink); border-right-width: 0; }
+.progress-block:last-child { border-right-width: 2px; }
 .progress-block.is-filled { background: var(--pompeian); }
 .progress-label { margin-top: var(--space-2); }
 
@@ -286,6 +335,13 @@
 }
 .stop-pin--visited { background: var(--ochre); color: var(--ink); }
 .stop-pin--current { background: var(--pompeian); color: var(--paper); }
+
+/* Parche defensivo: Quiz.tsx/extras.css (otro agente, en curso) usa columnas
+   1fr fijas en .quiz-mode-chips con botones de ancho de contenido (nowrap),
+   lo que desborda horizontalmente a 360-390px. minmax(0, 1fr) evita el
+   desbordamiento sin tocar su archivo; se puede retirar cuando lo corrijan allí. */
+.quiz-mode-chips { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; }
+.quiz-mode-btn { white-space: normal !important; }
 
 /* ==== Responsive ==== */
 @media (min-width: 640px) {

@@ -19,7 +19,7 @@ export function useProgress() {
         const visited = { ...p.visited };
         if (visited[stopId]) delete visited[stopId];
         else visited[stopId] = new Date().toISOString();
-        return { ...p, visited };
+        return { ...p, visited, routeStartedAt: p.routeStartedAt ?? new Date().toISOString() };
       });
     },
     [update]
@@ -27,7 +27,7 @@ export function useProgress() {
 
   const markVisited = useCallback(
     (stopId: string) => {
-      update((p) => ({ ...p, visited: { ...p.visited, [stopId]: new Date().toISOString() } }));
+      update((p) => ({ ...p, visited: { ...p.visited, [stopId]: new Date().toISOString() }, routeStartedAt: p.routeStartedAt ?? new Date().toISOString() }));
     },
     [update]
   );
@@ -60,17 +60,45 @@ export function useProgress() {
     setProgress(loadProgress());
   }, []);
 
+  const setNote = useCallback(
+    (stopId: string, text: string) => {
+      update((p) => ({ ...p, notes: { ...p.notes, [stopId]: text } }));
+    },
+    [update]
+  );
+
+  const setPlan = useCallback(
+    (plan: { start: string; pace: string; villa: boolean }) => {
+      update((p) => ({ ...p, plan }));
+    },
+    [update]
+  );
+
+  const setMode = useCallback(
+    (mode: 'completa' | 'express') => {
+      update((p) => ({ ...p, mode }));
+    },
+    [update]
+  );
+
   return {
     progress,
     visited: progress.visited,
     checklist: progress.checklist,
     currentStop: progress.currentStop,
+    notes: progress.notes,
+    plan: progress.plan,
+    mode: progress.mode,
+    routeStartedAt: progress.routeStartedAt,
     toggleVisited,
     markVisited,
     markRead,
     isRead,
     toggleChecklist,
     setCurrentStop,
+    setNote,
+    setPlan,
+    setMode,
     reset,
   };
 }

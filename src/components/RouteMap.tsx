@@ -2,7 +2,8 @@
  * Mapa Leaflet brutalista. Solo usa divIcon/CircleMarker (nunca el icono por
  * defecto de Leaflet, que rompe con Vite si no se gestionan sus assets).
  */
-import { CircleMarker, MapContainer, Marker, Polyline, Popup, TileLayer } from 'react-leaflet';
+import { CircleMarker, MapContainer, Marker, Polyline, Popup, TileLayer, useMap } from 'react-leaflet';
+import { useEffect } from 'react';
 import L from 'leaflet';
 import { Link } from 'react-router-dom';
 import type { Stop } from '@/content/types';
@@ -39,6 +40,17 @@ function stopIcon(order: number, state: 'visited' | 'current' | 'default') {
 
 const bounds = L.latLngBounds(PARK_BOUNDS).pad(0.15);
 
+/** Encuadra todas las paradas al montar (y cuando cambia el conjunto). */
+function FitStops({ points, single }: { points: LatLng[]; single: boolean }) {
+  const map = useMap();
+  useEffect(() => {
+    if (points.length === 0) return;
+    if (single) { map.setView(points[0], 17); return; }
+    map.fitBounds(L.latLngBounds(points), { padding: [24, 24], maxZoom: 17 });
+  }, [map, points.length, single]);
+  return null;
+}
+
 export default function RouteMap({ stops, path = [], currentId, visited, userPos, onSelect, height = '55vh' }: RouteMapProps) {
   if (stops.length === 0) {
     return (
@@ -55,7 +67,7 @@ export default function RouteMap({ stops, path = [], currentId, visited, userPos
       <MapContainer
         center={center}
         zoom={16}
-        minZoom={15}
+        minZoom={14}
         maxZoom={19}
         maxBounds={bounds}
         maxBoundsViscosity={1.0}
@@ -67,6 +79,7 @@ export default function RouteMap({ stops, path = [], currentId, visited, userPos
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> contributors'
         />
+        <FitStops points={stops.map((s) => s.coords)} single={stops.length === 1} />
 
         {path.length > 1 && (
           <>

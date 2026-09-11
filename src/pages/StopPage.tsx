@@ -8,7 +8,12 @@ import { img } from '@/content/images';
 import { ROUTE } from '@/content/route';
 import { useGeolocation } from '@/lib/useGeolocation';
 import { useProgress } from '@/lib/useProgress';
+import { resolveCredit } from '@/lib/credit';
+import StopNotes from '@/components/StopNotes';
 import type { Block } from '@/content/types';
+
+const LONG_WORD_LENGTH = 12;
+const hasLongWord = (text: string) => text.split(/\s+/).some((w) => w.length > LONG_WORD_LENGTH);
 
 export default function StopPage() {
   const { id } = useParams<{ id: string }>();
@@ -39,6 +44,8 @@ export default function StopPage() {
       ? stop.image.src
       : img(stop.image.src)
     : undefined;
+  const imgCredit = stop.image ? resolveCredit(stop.image.src, stop.image.credit) : undefined;
+  const longTitle = hasLongWord(stop.name);
 
   const tipsBlocks: Block[] = (stop.tips ?? []).map((t) => ({ type: 'callout', tone: 'tip', text: t }));
 
@@ -59,7 +66,7 @@ export default function StopPage() {
         <p className="kicker">
           PARADA {stop.order}/{stops.length}
         </p>
-        <h1 className="hero-title">{stop.name}</h1>
+        <h1 className={`hero-title${longTitle ? ' hero-title--long' : ''}`}>{stop.name}</h1>
         {(stop.latinName || stop.regio) && (
           <p className="mono stop-subtitle">
             {stop.latinName}
@@ -74,13 +81,23 @@ export default function StopPage() {
           {imgSrc ? (
             <img src={imgSrc} alt={stop.image?.alt ?? stop.name} loading="lazy" className="stop-media-img" />
           ) : stop.illus ? (
-            <div className="illus-frame">
+            <div className="illus-frame stop-illus-frame">
               <Illustration name={stop.illus} title={stop.name} />
             </div>
           ) : (
             <div className="stripes stop-media-img" role="img" aria-label={stop.name} />
           )}
-          {stop.image?.credit && <p className="mono img-credit">{stop.image.credit}</p>}
+          {imgCredit && (
+            <p className="mono img-credit">
+              {imgCredit.url ? (
+                <a href={imgCredit.url} target="_blank" rel="noopener noreferrer">
+                  {imgCredit.text}
+                </a>
+              ) : (
+                imgCredit.text
+              )}
+            </p>
+          )}
         </div>
 
         <p className="stop-intro">{stop.intro}</p>
@@ -133,6 +150,8 @@ export default function StopPage() {
             )}
           </nav>
         </div>
+
+        <StopNotes stopId={stop.id} />
 
         <h2 className="section-title">UBICACIÓN</h2>
         <RouteMap stops={[stop]} currentId={stop.id} visited={visited} userPos={pos} height="30vh" />

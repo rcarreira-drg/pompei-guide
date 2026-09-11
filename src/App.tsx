@@ -6,8 +6,10 @@ import SectionPage from './pages/SectionPage';
 import Visit from './pages/Visit';
 import StopPage from './pages/StopPage';
 import Practical from './pages/Practical';
+import QuizPage from './pages/QuizPage';
 import './styles/app.css';
 import './styles/pages.css';
+import './styles/extras.css';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -23,6 +25,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/preparar" element={<Prepare />} />
+          <Route path="/preparar/quiz" element={<QuizPage />} />
           <Route path="/preparar/:id" element={<SectionPage />} />
           <Route path="/visita" element={<Visit />} />
           <Route path="/visita/:id" element={<StopPage />} />

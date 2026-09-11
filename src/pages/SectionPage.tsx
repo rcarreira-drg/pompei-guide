@@ -5,6 +5,10 @@ import { Illustration } from '@/illustrations';
 import { img } from '@/content/images';
 import { SECTIONS } from '@/content/sections';
 import { useProgress } from '@/lib/useProgress';
+import { resolveCredit } from '@/lib/credit';
+
+const LONG_WORD_LENGTH = 12;
+const hasLongWord = (text: string) => text.split(/\s+/).some((w) => w.length > LONG_WORD_LENGTH);
 
 export default function SectionPage() {
   const { id } = useParams<{ id: string }>();
@@ -31,6 +35,8 @@ export default function SectionPage() {
   const cover = section.cover;
   const coverSrc =
     cover && 'src' in cover ? (cover.src.startsWith('http') || cover.src.startsWith('/') ? cover.src : img(cover.src)) : undefined;
+  const coverCredit = cover && 'src' in cover ? resolveCredit(cover.src, cover.credit) : undefined;
+  const longTitle = hasLongWord(section.title);
 
   return (
     <div>
@@ -50,10 +56,21 @@ export default function SectionPage() {
           ) : (
             <div className="stripes section-hero-illus" role="img" aria-label={section.title} />
           )}
+          {coverCredit && (
+            <p className="mono img-credit section-hero-credit">
+              {coverCredit.url ? (
+                <a href={coverCredit.url} target="_blank" rel="noopener noreferrer">
+                  {coverCredit.text}
+                </a>
+              ) : (
+                coverCredit.text
+              )}
+            </p>
+          )}
         </div>
         <div className="container">
           <p className="kicker">{section.kicker}</p>
-          <h1 className="hero-title">{section.title}</h1>
+          <h1 className={`hero-title${longTitle ? ' hero-title--long' : ''}`}>{section.title}</h1>
           <p className="mono section-meta">
             {section.readingMinutes} min de lectura {read && '· LEÍDO ✓'}
           </p>

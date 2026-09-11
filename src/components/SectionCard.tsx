@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import type { Section } from '@/content/types';
 import { Illustration } from '@/illustrations';
 import { img } from '@/content/images';
+import { resolveCredit } from '@/lib/credit';
 
 export interface SectionCardProps {
   section: Section;
@@ -14,6 +15,7 @@ export default function SectionCard({ section, index, read }: SectionCardProps) 
   const cover = section.cover;
   const coverSrc =
     cover && 'src' in cover ? (cover.src.startsWith('http') || cover.src.startsWith('/') ? cover.src : img(cover.src)) : undefined;
+  const credit = cover && 'src' in cover ? resolveCredit(cover.src, cover.credit) : undefined;
 
   return (
     <Link to={`/preparar/${section.id}`} className="section-card box">
@@ -28,6 +30,8 @@ export default function SectionCard({ section, index, read }: SectionCardProps) 
         ) : (
           <div className="stripes section-card-placeholder" role="img" aria-label={section.title} />
         )}
+        {/* Texto plano (no enlace): la tarjeta entera ya es un <Link>; anidar un <a> sería HTML inválido. */}
+        {credit && <span className="mono section-card-credit">{credit.text}</span>}
       </div>
       <div className="section-card-body">
         <p className="kicker">{section.kicker}</p>

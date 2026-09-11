@@ -84,7 +84,7 @@ const ID_TO_FILE = {
   'templo-jupiter': 'Temple of Jupiter Pompeii.jpg',
   'templo-isis':
     'Pompeii, Temple of Isis, East Portico, Harpocrates Niche with a reproduction of a Fresco (48442486262).jpg',
-  basilica: 'Basilica de Pompeya, Italia, 2016 01.jpg',
+  basilica: 'Basilica (Pompei) WLM 002.JPG',
   'panaderia-horno': 'Bakery with oven and mills Pompeii ProWalk Tours.jpg',
   // 'pan-carbonizado': sin imagen satisfactoria en Commons, omitida (ver informe).
   'porta-marina': 'I08 129 Porta Marina.jpg',
@@ -100,7 +100,7 @@ const ID_TO_FILE = {
   'edificio-eumachia': 'Building of Eumachia, Pompeii Forum, Entrance.jpg',
   lararium: 'Lararium (household shrine) in the thermopolium of Lucius Vetutius Placidus.jpg',
   'erupcion-pintura': 'Destruction of Pompeii and Herculaneum.jpg',
-  'plinio-grabado': 'Pliny the Elder.jpg',
+  'plinio-grabado': 'Pliny the Elder.png',
   'plano-historico':
     '1832 S.D.U.K. City Plan or Map of Pompeii, Italy - Geographicus - Pompeii-SDUK-1832.jpg',
   'fiorelli-retrato': 'Bust of Giuseppe Fiorelli - DPLA - 606d51f38a4e8bbc12e817ef405f1429.jpg',

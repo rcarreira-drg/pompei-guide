@@ -8,6 +8,12 @@ import { useGeolocation } from '@/lib/useGeolocation';
 import { useProgress } from '@/lib/useProgress';
 import { distanceM } from '@/lib/geo';
 import type { StopCategory } from '@/content/types';
+import ExpressToggle from '@/components/ExpressToggle';
+import WakeLockToggle from '@/components/WakeLockToggle';
+import WeatherCard from '@/components/WeatherCard';
+import Planner from '@/components/Planner';
+import Diploma from '@/components/Diploma';
+import { filterStops } from '@/lib/express';
 
 const CATEGORY_LABEL: Record<StopCategory, string> = {
   puerta: 'PUERTA',
@@ -25,10 +31,10 @@ const CATEGORY_LABEL: Record<StopCategory, string> = {
 
 export default function Visit() {
   const { pos, accuracy, error, enabled, enable } = useGeolocation();
-  const { visited, currentStop, reset } = useProgress();
+  const { visited, currentStop, reset, mode, routeStartedAt } = useProgress();
   const [confirmingReset, setConfirmingReset] = useState(false);
 
-  const stops = ROUTE.stops;
+  const stops = useMemo(() => filterStops(ROUTE.stops, mode === 'express'), [mode]);
   const visitedCount = stops.filter((s) => visited[s.id]).length;
 
   const nextStop = useMemo(() => {
@@ -81,8 +87,6 @@ export default function Visit() {
           <p className="empty-state box">La ruta está en preparación.</p>
         ) : (
           <>
-            <RouteMap stops={stops} path={ROUTE.path} currentId={nextStop?.id} visited={visited} userPos={pos} height="45vh" />
-
             {nextStop && (
               <div className="box next-stop-card">
                 <p className="kicker">SIGUIENTE PARADA</p>
@@ -96,7 +100,19 @@ export default function Visit() {
               </div>
             )}
 
-            <h2 className="section-title">TODAS LAS PARADAS</h2>
+            <RouteMap stops={stops} path={ROUTE.path} currentId={nextStop?.id} visited={visited} userPos={pos} height="60vh" />
+
+            <Diploma visitedCount={visitedCount} total={stops.length} startedAt={routeStartedAt} />
+
+            <div className="visit-tools">
+              <ExpressToggle />
+              <WakeLockToggle />
+            </div>
+
+            <h2 className="section-title">{mode === 'express' ? 'RUTA EXPRÉS' : 'TODAS LAS PARADAS'}</h2>
+            <p className="mono stop-list-summary">
+              {mode === 'express' ? `TOTAL: ${stops.length} paradas · ~3 km · 2,5-3 h` : `TOTAL: ${stops.length} paradas · ${ROUTE.distanceKm} km · ${ROUTE.totalHours}`}
+            </p>
             <ol className="stop-list">
               {stops.map((s) => (
                 <li key={s.id} className={`stop-list-item ${visited[s.id] ? 'is-visited' : ''}`}>
@@ -119,7 +135,16 @@ export default function Visit() {
           </>
         )}
 
-        <button type="button" className="btn btn-block" onClick={handleReset} aria-label="Reiniciar el recorrido">
+        <details className="practical-accordion box visit-planner">
+              <summary><span className="kicker">HORARIO</span><h2>PLANIFICADOR DEL DÍA</h2></summary>
+              <div className="practical-accordion-body"><Planner stops={ROUTE.stops} /></div>
+            </details>
+            <details className="practical-accordion box visit-weather">
+              <summary><span className="kicker">CIELO SOBRE EL VESUBIO</span><h2>EL TIEMPO</h2></summary>
+              <div className="practical-accordion-body"><WeatherCard /></div>
+            </details>
+
+            <button type="button" className="btn btn-block" onClick={handleReset} aria-label="Reiniciar el recorrido">
           {confirmingReset ? '¿SEGURO? TOCA DE NUEVO PARA REINICIAR' : 'REINICIAR RECORRIDO'}
         </button>
 

@@ -7,6 +7,7 @@ import { Fragment } from 'react';
 import type { Block } from '@/content/types';
 import { Illustration } from '@/illustrations';
 import { img } from '@/content/images';
+import { resolveCredit } from '@/lib/credit';
 
 function renderInline(text: string): ReactNode[] {
   const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g).filter((p) => p.length > 0);
@@ -62,12 +63,13 @@ export default function Blocks({ blocks }: { blocks: Block[] }) {
             return (
               <div key={i} className="fact-card box">
                 <span className="kicker">{block.label}</span>
-                <strong className="fact-value">{block.value}</strong>
+                <strong className={`fact-value ${block.value.length > 9 ? 'fact-value--long' : ''}`}>{block.value}</strong>
               </div>
             );
 
           case 'img': {
             const resolved = resolveSrc(block.src);
+            const credit = resolveCredit(block.src, block.credit);
             return (
               <figure key={i} className="block-figure">
                 {resolved ? (
@@ -77,11 +79,20 @@ export default function Blocks({ blocks }: { blocks: Block[] }) {
                     <span className="mono placeholder-label">{block.alt}</span>
                   </div>
                 )}
-                {(block.caption || block.credit) && (
+                {(block.caption || credit) && (
                   <figcaption className="mono block-caption">
-                    {block.caption}
-                    {block.caption && block.credit ? ' — ' : ''}
-                    {block.credit}
+                    {block.caption && <span className="block-caption-text">{block.caption}</span>}
+                    {credit && (
+                      <span className="block-credit-line">
+                        {credit.url ? (
+                          <a href={credit.url} target="_blank" rel="noopener noreferrer">
+                            {credit.text}
+                          </a>
+                        ) : (
+                          credit.text
+                        )}
+                      </span>
+                    )}
                   </figcaption>
                 )}
               </figure>

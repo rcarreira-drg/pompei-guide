@@ -6,8 +6,11 @@ export interface Progress {
   read: Record<string, boolean>;   // sectionId -> leído
   currentStop?: string;
   routeStartedAt?: string;
+  notes: Record<string, string>;   // stopId -> nota personal
+  plan?: { start: string; pace: string; villa: boolean };
+  mode?: 'completa' | 'express';
 }
-const empty = (): Progress => ({ visited: {}, checklist: {}, read: {} });
+const empty = (): Progress => ({ visited: {}, checklist: {}, read: {}, notes: {} });
 export function loadProgress(): Progress {
   try { const raw = localStorage.getItem(KEY); return raw ? { ...empty(), ...JSON.parse(raw) } : empty(); }
   catch { return empty(); }

@@ -14,9 +14,12 @@ const FACTS: { label: string; value: string }[] = [
 ];
 
 export default function Home() {
-  const { progress } = useProgress();
+  const { progress, isRead } = useProgress();
   const readCount = Object.values(progress.read).filter(Boolean).length;
   const checklistDone = Object.values(progress.checklist).filter(Boolean).length;
+  const firstUnreadIndex = SECTIONS.findIndex((s) => !isRead(s.id));
+  const firstUnread = firstUnreadIndex >= 0 ? SECTIONS[firstUnreadIndex] : undefined;
+  const checklistPending = CHECKLIST.length > 0 && checklistDone < CHECKLIST.length;
 
   return (
     <div>
@@ -67,6 +70,18 @@ export default function Home() {
           <p className="mono">
             {checklistDone}/{CHECKLIST.length || '—'} de la checklist lista
           </p>
+          <div className="status-card-links">
+            {firstUnread && (
+              <Link to={`/preparar/${firstUnread.id}`} className="btn btn-block">
+                {`Seguir leyendo → capítulo ${firstUnreadIndex + 1}`}
+              </Link>
+            )}
+            {checklistPending && (
+              <Link to="/practico?open=checklist" className="btn btn-block">
+                Completar checklist
+              </Link>
+            )}
+          </div>
         </div>
 
         <footer className="home-footer">

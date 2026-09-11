@@ -1,0 +1,144 @@
+/* ==== EXTRAS: Quiz, Weather, Planner, WakeLock, StopNotes, ExpressToggle, Diploma ==== */
+
+/* ---- Quiz ---- */
+.quiz { display: flex; flex-direction: column; gap: var(--space-4); }
+.quiz-instructions { margin-bottom: var(--space-2); }
+.quiz-mode-grid { display: flex; flex-direction: column; gap: var(--space-4); }
+.quiz-mode-btn {
+  position: relative; flex-direction: column; align-items: flex-start; gap: 2px;
+  min-height: 56px; padding: var(--space-3) var(--space-4); width: 100%;
+  font-size: 0.78rem; white-space: nowrap;
+}
+.quiz-mode-all { font-size: var(--step-0); white-space: normal; }
+.quiz-mode-chips { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+.quiz-mode-best { font-size: 0.65rem; opacity: 0.75; letter-spacing: 0.04em; }
+
+.quiz-progress { margin-bottom: var(--space-3); color: var(--ash); }
+.quiz-card { padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-4); }
+.quiz-question { font-family: var(--font-display); font-size: var(--step-1); text-transform: none; line-height: 1.25; }
+.quiz-options { display: flex; flex-direction: column; gap: var(--space-3); }
+.quiz-option {
+  min-height: 56px; padding: var(--space-3) var(--space-4); text-align: left;
+  border: var(--border); background: var(--white); color: var(--ink);
+  font-family: var(--font-body); font-weight: 600; font-size: var(--step-0);
+  box-shadow: var(--shadow-sm); transition: transform .08s, box-shadow .08s, background-color .1s;
+}
+.quiz-option:not(:disabled):active { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--ink); }
+.quiz-option--correct { background: var(--ochre); box-shadow: var(--shadow-sm); }
+.quiz-option--incorrect { background: var(--pompeian); color: var(--paper); box-shadow: var(--shadow-sm); }
+.quiz-option--disabled { opacity: 0.5; box-shadow: none; }
+.quiz-explain p { margin: 0; }
+.quiz-next { margin-top: var(--space-2); }
+
+.quiz-result { padding: var(--space-6) var(--space-5); text-align: center; }
+.quiz-score { font-family: var(--font-display); font-size: var(--step-4); line-height: 1; margin: var(--space-2) 0 0; }
+.quiz-pct { font-size: var(--step-1); color: var(--ash); margin: 0 0 var(--space-3); }
+.quiz-message { margin: 0 0 var(--space-4); }
+.quiz-failed { margin: var(--space-4) 0; text-align: left; }
+.quiz-failed-title { margin-bottom: var(--space-2); color: var(--ash); }
+.quiz-failed-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.quiz-result-actions { display: flex; flex-direction: column; gap: var(--space-3); margin-top: var(--space-4); }
+
+/* ---- WeatherCard ---- */
+.weather-card { padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-4); }
+.weather-now { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--space-3); }
+.weather-now-temp { font-family: var(--font-display); font-size: var(--step-4); line-height: 1; margin: var(--space-1) 0 0; }
+.weather-now-meta { text-align: right; }
+.weather-now-meta p { margin: 0 0 2px; }
+
+.weather-days { display: flex; gap: var(--space-3); overflow-x: auto; padding-bottom: var(--space-2); -webkit-overflow-scrolling: touch; }
+.weather-day {
+  flex: 0 0 auto; width: 92px; min-height: 100px; display: flex; flex-direction: column; align-items: center; gap: 4px;
+  padding: var(--space-3) var(--space-2); border: var(--border); background: var(--white); color: var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+.weather-day--active { background: var(--ink); color: var(--paper); }
+.weather-day-label { font-size: 0.7rem; font-weight: 700; }
+.weather-day-date { font-size: 0.65rem; color: var(--ash); }
+.weather-day--active .weather-day-date { color: var(--ash-light); }
+.weather-day-temps { font-weight: 700; }
+.weather-day-tmin { color: var(--ash); font-weight: 400; }
+.weather-day--active .weather-day-tmin { color: var(--ash-light); }
+.weather-day-rain { font-size: 0.62rem; }
+
+.weather-detail { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); padding: var(--space-3) 0; font-size: var(--step--1); }
+.weather-advice p { margin: 0; }
+.weather-credit { color: var(--ash); font-size: 0.7rem; text-align: right; margin: 0; }
+
+/* ---- Planner ---- */
+.planner { padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-4); }
+.planner-controls { display: flex; flex-direction: column; gap: var(--space-4); }
+.planner-field { display: flex; flex-direction: column; gap: var(--space-2); }
+.planner-label { color: var(--ash); }
+.planner-input {
+  min-height: 48px; padding: 0 var(--space-4); border: var(--border); background: var(--white);
+  font-family: var(--font-mono); font-weight: 700; font-size: var(--step-0);
+}
+.planner-pace-group { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-2); }
+.planner-pace-btn { padding: 0 var(--space-2); font-size: 0.7rem; }
+.planner-pace-btn--active { background: var(--ink); color: var(--paper); }
+.planner-checkbox { display: flex; align-items: center; gap: var(--space-3); min-height: 44px; cursor: pointer; }
+.planner-checkbox input[type="checkbox"] { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.planner-checkbox input:checked + .checklist-box { background: var(--ochre); }
+.planner-checkbox input:checked + .checklist-box::after { content: '✓'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+.planner-checkbox .checklist-box { position: relative; flex: 0 0 28px; width: 28px; height: 28px; border: var(--border); background: var(--white); }
+
+.planner-table-wrap { overflow-x: auto; border: var(--border); }
+.planner-table { width: 100%; border-collapse: collapse; font-size: var(--step--1); min-width: 320px; }
+.planner-table th, .planner-table td { padding: var(--space-2) var(--space-3); border-bottom: 2px solid var(--ink); text-align: left; white-space: nowrap; }
+.planner-table th { font-family: var(--font-mono); text-transform: uppercase; background: var(--paper-2); }
+.planner-table td:nth-child(2) { white-space: normal; }
+.planner-table tr:last-child td { border-bottom: 0; }
+
+.planner-finish { font-size: var(--step-1); font-weight: 700; text-align: center; }
+.planner-warning p { margin: 0; }
+
+/* ---- WakeLockToggle ---- */
+.wakelock-btn { letter-spacing: 0.04em; }
+.wakelock-unsupported { color: var(--ash); text-align: center; }
+
+/* ---- StopNotes ---- */
+.stop-notes { padding: var(--space-4); display: flex; flex-direction: column; gap: var(--space-3); }
+.stop-notes-textarea {
+  width: 100%; min-height: 120px; padding: var(--space-3); border: var(--border); background: var(--white);
+  font-family: var(--font-body); font-size: var(--step-0); resize: vertical;
+}
+.stop-notes-footer { display: flex; justify-content: space-between; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+.stop-notes-count { color: var(--ash); font-size: 0.7rem; }
+
+/* ---- ExpressToggle ---- */
+.express-toggle { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+.express-toggle-btn { width: 100%; }
+
+/* ---- Diploma ---- */
+.diploma {
+  position: relative; margin: var(--space-6) 0; padding: var(--space-6) var(--space-5);
+  background: var(--ink); color: var(--paper); border: var(--border-thick); box-shadow: var(--shadow);
+  text-align: center; overflow: hidden;
+}
+.diploma-kicker { color: var(--ochre); }
+.diploma-title { color: var(--paper); margin: var(--space-2) 0 var(--space-4); }
+.diploma-text { color: var(--paper); opacity: 0.9; max-width: 46ch; margin: 0 auto var(--space-4); }
+.diploma-meta { color: var(--ash-light); margin: 0 0 var(--space-2); }
+.diploma-share { margin-top: var(--space-4); background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.diploma-seal {
+  position: absolute; top: var(--space-5); right: -28px; width: 150px; height: 150px;
+  transform: rotate(18deg); border: 5px solid var(--pompeian); color: var(--pompeian);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  font-family: var(--font-mono); font-weight: 700; font-size: 0.72rem; letter-spacing: 0.06em;
+  text-align: center; mix-blend-mode: screen;
+}
+
+/* ==== Responsive ==== */
+@media (min-width: 640px) {
+  .quiz-mode-grid { flex-direction: row; align-items: stretch; }
+  .quiz-mode-all { flex: 0 0 200px; }
+  .quiz-mode-chips { flex: 1 1 auto; grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 420px) {
+  .diploma-seal { width: 120px; height: 120px; right: -22px; font-size: 0.62rem; }
+}
+
+/* Integración en Visita */
+.visit-tools { display: grid; gap: var(--space-3); margin: var(--space-5) 0; }
+.visit-planner, .visit-weather { margin: var(--space-5) 0; }
