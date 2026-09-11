@@ -29,7 +29,7 @@ const STOPS: Stop[] = [
     tips: [
       'La rampa es empedrada y tiene pendiente: calzado con buen agarre desde el primer minuto.',
       'Es el punto de entrada más habitual y suele haber cola a primera hora; llegar al abrir el recinto evita el calor y las aglomeraciones.',
-      'Pompeya cuenta con el itinerario "Pompei per tutti", una ruta accesible sin barreras de unos tres coma cinco kilómetros pensada para sillas de ruedas y carritos; preguntad por ella en taquilla si la necesitan.',
+      'Pompeya cuenta con el itinerario "Pompei per tutti", una ruta accesible sin barreras de unos tres coma cinco kilómetros pensada para sillas de ruedas y carritos; preguntad por ella en taquilla si la necesitáis.',
     ],
     accessibility: 'medio',
   },
@@ -109,8 +109,8 @@ const STOPS: Stop[] = [
     intro: 'Este es el santuario más antiguo de toda Pompeya, dedicado al dios de la profecía y de la luz mucho antes de que la ciudad fuera romana.',
     narration: [
       'El culto a Apolo en este lugar se remonta al siglo seis antes de nuestra era, cuando Pompeya era todavía una ciudad de tradición etrusca y samnita, con fuerte influencia griega llegada a través de las colonias del sur de Italia. Es, con diferencia, el edificio religioso más antiguo documentado en todo el yacimiento, muy anterior al Templo de Venus o al de Júpiter que veremos enseguida.',
-      'El templo que contemplan hoy es el resultado de sucesivas reconstrucciones, la última de ellas tras el terremoto que sacudió la ciudad en el año sesenta y dos, diecisiete años antes de la erupción final. Se alza sobre un podio alto, rodeado de treinta y ocho columnas de orden jónico que en su día estuvieron pintadas de colores vivos, algo que a menudo olvidamos al ver el mármol y la piedra desnudos de hoy.',
-      'A ambos lados del pórtico de entrada había dos estatuas de bronce que representaban a Apolo y a su hermana Diana, ambos como arqueros, tensando el arco. Las originales se conservan en el Museo Arqueológico Nacional de Nápoles, y las que ven aquí son reproducciones, pero permiten hacerse una idea exacta de cómo se recibía a los fieles que entraban en el recinto sagrado.',
+      'El templo que contempláis hoy es el resultado de sucesivas reconstrucciones, la última de ellas tras el terremoto que sacudió la ciudad en el año sesenta y dos, diecisiete años antes de la erupción final. Se alza sobre un podio alto, rodeado de treinta y ocho columnas de orden jónico que en su día estuvieron pintadas de colores vivos, algo que a menudo olvidamos al ver el mármol y la piedra desnudos de hoy.',
+      'A ambos lados del pórtico de entrada había dos estatuas de bronce que representaban a Apolo y a su hermana Diana, ambos como arqueros, tensando el arco. Las originales se conservan en el Museo Arqueológico Nacional de Nápoles, y las que veis aquí son reproducciones, pero permiten hacerse una idea exacta de cómo se recibía a los fieles que entraban en el recinto sagrado.',
       'En el centro del patio hay también un altar y una columna que sostenía un reloj de sol, uno de los instrumentos de medición del tiempo más sofisticados que se han encontrado en la ciudad. Todo el conjunto refleja una época en la que Pompeya miraba tanto hacia Roma como hacia el mundo griego, y este templo es la prueba material más antigua de esa doble identidad.',
     ],
     lookFor: [
@@ -120,7 +120,7 @@ const STOPS: Stop[] = [
       'El podio elevado del templo central, más alto que el resto del pavimento del recinto.',
     ],
     anecdote: 'En 1817, durante las excavaciones borbónicas, aparecieron aquí las estatuas originales de Apolo y Diana, tan bien conservadas que causaron sensación en toda Europa y alimentaron la moda neoclásica del momento.',
-    directionsToNext: 'Cruzad el templo hacia el este, en dirección a la gran explanada abierta: han llegado al Foro. Apenas un minuto de camino.',
+    directionsToNext: 'Cruzad el templo hacia el este, en dirección a la gran explanada abierta: habéis llegado al Foro. Apenas un minuto de camino.',
     image: { src: 'templo-apolo', alt: 'Columnas del Templo de Apolo en Pompeya', credit: 'Wikimedia Commons' },
     illus: 'columna',
     tips: [
@@ -155,7 +155,7 @@ const STOPS: Stop[] = [
     image: { src: 'foro-vesubio', alt: 'El foro de Pompeya con el Vesubio al fondo', credit: 'Wikimedia Commons' },
     illus: 'foro',
     tips: [
-      'Los baños públicos más cercanos al foro están junto a las Termas del Foro, nuestra próxima parada larga; aprovechad si lo necesitan.',
+      'Los baños públicos más cercanos al foro están junto a las Termas del Foro, nuestra próxima parada larga; aprovechad si lo necesitáis.',
       'Es un buen punto para repartir el grupo un momento y dejar que cada uno busque su propia foto con el Vesubio de fondo.',
     ],
     accessibility: 'facil',
@@ -171,7 +171,7 @@ const STOPS: Stop[] = [
     walkMinutesToNext: 4,
     intro: 'Aquí conocemos a la mujer más poderosa de la Pompeya conocida, y al lado, al mercado que alimentaba a toda la ciudad.',
     narration: [
-      'El edificio grande que tienen delante lo construyó una mujer llamada Eumáquia, sacerdotisa pública y patrona del gremio de los batanadores, es decir, de quienes trabajaban con la lana y las telas. Lo dedicó a la Concordia Augusta y a la Piedad, dos virtudes muy queridas por el emperador de turno, y en su interior se encontró una estatua suya, hoy en el Museo Arqueológico de Nápoles, con una inscripción que deja muy claro quién pagaba y quién mandaba aquí.',
+      'El edificio grande que tenéis delante lo construyó una mujer llamada Eumáquia, sacerdotisa pública y patrona del gremio de los batanadores, es decir, de quienes trabajaban con la lana y las telas. Lo dedicó a la Concordia Augusta y a la Piedad, dos virtudes muy queridas por el emperador de turno, y en su interior se encontró una estatua suya, hoy en el Museo Arqueológico de Nápoles, con una inscripción que deja muy claro quién pagaba y quién mandaba aquí.',
       'Que una mujer financiara un edificio público de este tamaño dice mucho sobre su fortuna y su influencia social, aunque no pudiera ocupar cargos políticos como los hombres. Es probable que el edificio funcionara como sede de negocios textiles y como lugar de reunión del gremio, una especie de bolsa de comercio de la lana en pleno centro de la ciudad.',
       'Justo al lado se encuentra el Macellum, el mercado cubierto de alimentos frescos de Pompeya. En el centro había un templete circular, probablemente destinado a la venta de pescado, con un desagüe central para limpiar los puestos con agua corriente. Alrededor se disponían tiendas más pequeñas para carne, pan y otros productos.',
       'En las excavaciones del Macellum aparecieron restos de espinas de pescado y huesos de animales que confirman su función, además de pinturas murales con escenas mitológicas que decoraban los muros. Entre el edificio de Eumáquia y el Macellum se resume perfectamente la doble cara del comercio pompeyano: por un lado, los grandes negocios textiles y las finanzas; por otro, la compra diaria de comida fresca para las familias de la ciudad.',
@@ -220,7 +220,7 @@ const STOPS: Stop[] = [
     illus: 'termas',
     tips: [
       'Hay baños públicos modernos muy cerca, en la zona del foro; conviene usarlos antes de adentrarse en el barrio de las domus.',
-      'El suelo de algunas salas es irregular; caminad despacio si llevan calzado de suela lisa.',
+      'El suelo de algunas salas es irregular; caminad despacio si lleváis calzado de suela lisa.',
     ],
     accessibility: 'medio',
   },
@@ -234,7 +234,7 @@ const STOPS: Stop[] = [
     regio: 'VI.8.5',
     minutes: 10,
     walkMinutesToNext: 2,
-    intro: 'Antes de entrar, miren al suelo: un perro de mosaico les está advirtiendo, en latín, que tengáis cuidado.',
+    intro: 'Antes de entrar, mirad al suelo: un perro de mosaico os está advirtiendo, en latín, que tengáis cuidado.',
     narration: [
       'Esta casa no es de las más grandes de Pompeya, pero es probablemente una de las más conocidas gracias a un pequeño detalle en el umbral de la entrada: un mosaico que representa un perro atado con cadena, con la inscripción cave canem, es decir, cuidado con el perro. Es una de las imágenes más reproducidas de todo el mundo romano, y muchos visitantes vienen a Pompeya solo para verla con sus propios ojos.',
       'La casa recibió su nombre moderno por otro mosaico, hoy conservado en el Museo Arqueológico de Nápoles, que representa el ensayo de una compañía teatral antes de una representación, con actores probándose máscaras y un director dando instrucciones. Aquella escena, junto con otras pinturas de tema mitológico que decoraban las paredes, llevó a los primeros excavadores a imaginar que aquí había vivido un poeta dedicado al teatro trágico, aunque no hay ninguna prueba real de quién habitó la casa.',
@@ -269,7 +269,7 @@ const STOPS: Stop[] = [
     intro: 'Ocupamos ahora una manzana entera de la ciudad: esta es, sin discusión, la casa privada más grande de toda Pompeya.',
     narration: [
       'La Casa del Fauno ocupa por sí sola una manzana completa, casi tres mil metros cuadrados, lo que la convierte en la vivienda privada más extensa jamás encontrada en la ciudad. Se construyó a comienzos del siglo dos antes de nuestra era, en plena época de expansión y riqueza samnita, y su tamaño y su lujo hacen pensar en una de las familias más poderosas de la Pompeya prerromana.',
-      'La casa tiene, de hecho, dos atrios y dos peristilos, es decir, dos conjuntos completos de patios y jardines porticados, algo excepcional incluso para los estándares más altos de la arquitectura doméstica romana. Recibe su nombre moderno de una pequeña estatua de bronce, un fauno danzante, encontrada en el atrio principal; la que ven hoy es una copia, ya que el original se conserva en el Museo Arqueológico de Nápoles.',
+      'La casa tiene, de hecho, dos atrios y dos peristilos, es decir, dos conjuntos completos de patios y jardines porticados, algo excepcional incluso para los estándares más altos de la arquitectura doméstica romana. Recibe su nombre moderno de una pequeña estatua de bronce, un fauno danzante, encontrada en el atrio principal; la que veis hoy es una copia, ya que el original se conserva en el Museo Arqueológico de Nápoles.',
       'Pero el verdadero tesoro de esta casa es el mosaico de Alejandro, una obra maestra de más de veinte metros cuadrados compuesta por millones de diminutas teselas, que representaba el enfrentamiento entre Alejandro Magno y el rey persa Darío en la batalla de Iso. Se cree que es copia de un cuadro griego original, hoy perdido, y es una de las piezas de arte antiguo más estudiadas del mundo. El original también se trasladó a Nápoles para su conservación.',
       'Recorrer esta casa, aunque hoy veamos sobre todo suelos, arranques de columnas y muros bajos, sirve para entender la escala de las élites pompeyanas antes de la llegada de Roma. Aquí no solo se vivía: se recibía a clientes, se negociaban acuerdos y se exhibía riqueza y cultura griega ante cualquier visitante importante que cruzara el umbral.',
     ],
@@ -316,7 +316,7 @@ const STOPS: Stop[] = [
     image: { src: 'casa-vettii-fresco', alt: 'Fresco del cuarto estilo pompeyano en la Casa de los Vettii', credit: 'Wikimedia Commons' },
     illus: 'fresco',
     tips: [
-      'Es una de las casas con más aforo limitado y colas en horas centrales; si pueden elegir, visitadla a primera hora.',
+      'Es una de las casas con más aforo limitado y colas en horas centrales; si podéis elegir, visitadla a primera hora.',
       'La sala de las pinturas eróticas a veces abre por turnos controlados por el personal del recinto.',
     ],
     accessibility: 'medio',
@@ -377,7 +377,7 @@ const STOPS: Stop[] = [
       'Las columnillas de ladrillo del hipocausto en las salas donde se conserva a la vista.',
     ],
     anecdote: 'Los romanos consideraban de mala educación bañarse antes de mediodía; las termas abrían sobre todo por la tarde, y acudir demasiado pronto era casi tan mal visto como llegar demasiado tarde a una cena de gala.',
-    directionsToNext: 'Salid a la Via Stabiana y cruzad justo enfrente: han llegado al cruce con la Via dell’Abbondanza, con sus pasos de peatones de piedra y sus fuentes públicas. Un minuto de camino.',
+    directionsToNext: 'Salid a la Via Stabiana y cruzad justo enfrente: habéis llegado al cruce con la Via dell’Abbondanza, con sus pasos de peatones de piedra y sus fuentes públicas. Un minuto de camino.',
     image: { src: 'termas-estabianas', alt: 'Palestra de las Termas Estabianas en Pompeya', credit: 'Wikimedia Commons' },
     illus: 'termas',
     tips: [
@@ -412,7 +412,7 @@ const STOPS: Stop[] = [
     illus: 'termopolio',
     tips: [
       'Las piedras del cruce son irregulares y resbalan si ha llovido: pisad con cuidado al cruzar.',
-      'Hay una fuente pública de piedra muy cerca del cruce; en varios puntos de la calle encontrarán otras similares para refrescarse.',
+      'Hay una fuente pública de piedra muy cerca del cruce; en varios puntos de la calle encontraréis otras similares para refrescaros.',
     ],
     accessibility: 'medio',
   },
@@ -506,7 +506,7 @@ const STOPS: Stop[] = [
     image: { src: 'teatro-grande', alt: 'Gradas del Teatro Grande de Pompeya', credit: 'Wikimedia Commons' },
     illus: 'teatro',
     tips: [
-      'Las gradas de piedra son altas y sin pasamanos en varios tramos; tengáis cuidado si bajan hasta la orquesta.',
+      'Las gradas de piedra son altas y sin pasamanos en varios tramos; tened cuidado si bajáis hasta la orquesta.',
       'Es una buena zona de sombra parcial a media mañana gracias a las columnas del Cuadripórtico.',
     ],
     accessibility: 'medio',
@@ -559,7 +559,7 @@ const STOPS: Stop[] = [
       'Esta vivienda es de tamaño discreto comparada con las grandes domus que hemos visitado antes, pero guarda en su jardín una de las pinturas murales más celebradas de todo el yacimiento: una Venus de tamaño casi natural, reclinada dentro de una enorme concha marina, flanqueada por dos pequeños amorcillos y con una estatua de Marte cercana observando la escena.',
       'La pintura se conserva directamente sobre el muro que cierra el jardín, expuesta a la intemperie desde su descubrimiento, lo cual explica que hoy la vean protegida por una estructura de cristal que intenta frenar el deterioro provocado por la luz solar y la humedad. Aun con las pérdidas de color inevitables tras dos mil años, la composición sigue siendo asombrosamente elegante.',
       'El resto del jardín estaba decorado con pequeñas esculturas y fuentes, formando un rincón de recreo privado pensado para el disfrute de la familia, más que para impresionar a grandes visitas oficiales. Es un buen ejemplo de cómo incluso las casas de tamaño medio en Pompeya dedicaban recursos considerables a rodearse de arte y de referencias mitológicas en su vida cotidiana.',
-      'Venus, como recordarán desde nuestra primera parada junto al mar, era la diosa protectora de toda la ciudad, así que no debería sorprendernos encontrarla representada una y otra vez en las casas particulares, no solo en los grandes templos oficiales. Cada familia pompeyana, a su manera, colocaba su propia versión de la diosa en el lugar de la casa que consideraba más especial.',
+      'Venus, como recordaréis desde nuestra primera parada junto al mar, era la diosa protectora de toda la ciudad, así que no debería sorprendernos encontrarla representada una y otra vez en las casas particulares, no solo en los grandes templos oficiales. Cada familia pompeyana, a su manera, colocaba su propia versión de la diosa en el lugar de la casa que consideraba más especial.',
       'La casa debe su nombre moderno precisamente a esta pintura, descubierta ya en el siglo veinte durante una de las últimas grandes campañas de excavación de esa zona de la ciudad. A pesar de tratarse de una vivienda modesta en comparación con la Casa del Fauno o la Casa de los Vettii, el cuidado puesto en decorar este rincón concreto demuestra que el buen gusto no era exclusivo de las grandes fortunas de Pompeya.',
     ],
     lookFor: [
@@ -572,7 +572,7 @@ const STOPS: Stop[] = [
     directionsToNext: 'La Casa de Octavio Cuartio está prácticamente pared con pared, un minuto caminando hacia el este por la misma Via dell’Abbondanza.',
     illus: 'fresco',
     tips: [
-      'El cristal protector puede producir reflejos; buscad el ángulo lateral para fotografiar el fresco sin deslumbrarse.',
+      'El cristal protector puede producir reflejos; buscad el ángulo lateral para fotografiar el fresco sin deslumbraros.',
     ],
     accessibility: 'facil',
   },
@@ -621,7 +621,7 @@ const STOPS: Stop[] = [
     narration: [
       'Este espacio era en origen un huerto y viñedo dentro de las murallas de la ciudad, un uso agrícola perfectamente normal en una Pompeya que, aunque urbana, conservaba huertos y jardines productivos en varias zonas, sobre todo cerca de las puertas. El nombre moderno del lugar, sin embargo, hace referencia a algo mucho más trágico que ocurrió aquí durante la erupción.',
       'En este punto se encontró un grupo de trece víctimas, probablemente una familia completa con niños, que habían intentado huir de la ciudad cuando ya era demasiado tarde. Quedaron atrapadas por la lluvia de ceniza y los gases tóxicos, y sus cuerpos, al descomponerse dentro de la ceniza endurecida, dejaron huecos con la forma exacta de sus posturas finales en el momento de morir.',
-      'Fue el arqueólogo Giuseppe Fiorelli quien, en 1863, tuvo la idea de verter yeso líquido dentro de esos huecos antes de retirar la ceniza que los rodeaba, logrando así reproducir con un detalle estremecedor no solo los cuerpos, sino también los pliegues de la ropa e incluso las expresiones de las caras en el instante final. Los calcos que ven expuestos aquí, en vitrinas junto al recorrido, son precisamente ese testimonio directo de la tragedia humana detrás de las ruinas.',
+      'Fue el arqueólogo Giuseppe Fiorelli quien, en 1863, tuvo la idea de verter yeso líquido dentro de esos huecos antes de retirar la ceniza que los rodeaba, logrando así reproducir con un detalle estremecedor no solo los cuerpos, sino también los pliegues de la ropa e incluso las expresiones de las caras en el instante final. Los calcos que veis expuestos aquí, en vitrinas junto al recorrido, son precisamente ese testimonio directo de la tragedia humana detrás de las ruinas.',
       'Más allá de la evidente carga emocional del lugar, esta técnica revolucionó por completo la manera de estudiar la erupción, porque permitió a los investigadores conocer con precisión la edad, la postura, e incluso, en algunos casos, la vestimenta de las víctimas. Detenerse aquí en silencio, después de haber recorrido casas, termas y tiendas llenas de vida cotidiana, ayuda a no olvidar nunca que Pompeya no es solo un decorado antiguo, sino el lugar donde miles de personas reales perdieron la vida en apenas unas horas.',
     ],
     lookFor: [
@@ -662,7 +662,7 @@ const STOPS: Stop[] = [
       'Las hileras de huecos en el suelo que marcan la posición de los antiguos árboles plantados.',
       'El pórtico de columnas que recorre tres de los cuatro lados del patio.',
     ],
-    anecdote: 'Los árboles de la palestra fueron replantados siguiendo exactamente las huellas de las raíces originales encontradas por los arqueólogos, así que la sombra que puedan encontrar aquí hoy cae, en teoría, en el mismo lugar exacto que hace dos mil años.',
+    anecdote: 'Los árboles de la palestra fueron replantados siguiendo exactamente las huellas de las raíces originales encontradas por los arqueólogos, así que la sombra que podáis encontrar aquí hoy cae, en teoría, en el mismo lugar exacto que hace dos mil años.',
     directionsToNext: 'Salid por el lado este de la palestra hacia la Piazza Anfiteatro: el Anfiteatro está justo enfrente, unos tres minutos de camino.',
     image: { src: 'palestra-grande', alt: 'Columnas de la Palestra Grande de Pompeya', credit: 'Wikimedia Commons' },
     illus: 'columna',
@@ -699,7 +699,7 @@ const STOPS: Stop[] = [
     illus: 'gladiador',
     tips: [
       'Hay baños públicos y una zona de sombra junto a la Piazza Anfiteatro, última antes del tramo final de la ruta.',
-      'Esta salida por Piazza Anfiteatro es también un punto habitual para terminar la visita y salir del recinto, si no van a continuar hacia la necrópolis.',
+      'Esta salida por Piazza Anfiteatro es también un punto habitual para terminar la visita y salir del recinto, si no vais a continuar hacia la necrópolis.',
     ],
     accessibility: 'facil',
   },
@@ -747,7 +747,7 @@ const STOPS: Stop[] = [
       'La Villa de los Misterios es una gran residencia suburbana situada fuera de las murallas, en una colina con vistas al mar, en el extremo noroeste del yacimiento. Aunque comenzó siendo una lujosa villa de recreo, con el paso de los años parte de sus instalaciones se dedicaron también a la producción de vino, con un lagar y prensas conservados en una de las alas del edificio, mezclando ocio y negocio bajo el mismo techo.',
       'Su fama mundial se debe a un friso pictórico único, pintado hacia el año sesenta antes de nuestra era sobre fondo rojo pompeyano, que ocupa las paredes de una de las salas principales con figuras de tamaño casi natural. La escena parece representar el proceso de iniciación de una joven novia en los misterios del culto a Dioniso, el dios del vino y del éxtasis, aunque el significado exacto de cada escena sigue siendo objeto de debate entre los especialistas.',
       'En la composición aparecen músicos, sátiros, una figura femenina alada que parece azotar a la iniciada, y la propia pareja divina de Dioniso y Ariadna presidiendo la escena central. Es, sin exagerar, una de las obras de pintura antigua mejor conservadas de todo el mundo, tanto por la calidad técnica como por la intensidad casi teatral de las expresiones de cada personaje.',
-      'La villa se excavó entre 1909 y 1910, ya con métodos arqueológicos mucho más cuidadosos que los de las primeras campañas del siglo dieciocho, lo que explica el extraordinario estado de conservación de sus pinturas. Termina aquí, o empieza, según el orden que hayan elegido para su visita, un recorrido que atraviesa toda la historia de Pompeya: desde el culto agrario más antiguo hasta el misterio religioso más elaborado, pasando por el foro, las casas, los baños, el teatro y la tragedia final de la erupción.',
+      'La villa se excavó entre 1909 y 1910, ya con métodos arqueológicos mucho más cuidadosos que los de las primeras campañas del siglo dieciocho, lo que explica el extraordinario estado de conservación de sus pinturas. Termina aquí, o empieza, según el orden que hayáis elegido para vuestra visita, un recorrido que atraviesa toda la historia de Pompeya: desde el culto agrario más antiguo hasta el misterio religioso más elaborado, pasando por el foro, las casas, los baños, el teatro y la tragedia final de la erupción.',
     ],
     lookFor: [
       'El friso completo de la sala de los misterios, con sus figuras de tamaño casi natural sobre fondo rojo.',
