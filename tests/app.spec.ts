@@ -43,7 +43,7 @@ test('visita: mapa, lista de paradas y detalle con narración', async ({ page })
   expect(await stops.count()).toBeGreaterThanOrEqual(20);
   await stops.first().click();
   await expect(page.getByText(/PARADA\s*1/i).first()).toBeVisible();
-  await expect(page.getByRole('button', { name: /escuchar/i })).toBeVisible();
+  await expect(page.getByRole('button', { name: /escuchar narración/i })).toBeVisible();
   await expect(page.getByText(/fíjate/i).first()).toBeVisible();
   await page.getByRole('button', { name: /visitada/i }).first().click();
   await noHorizontalScroll(page);
@@ -88,4 +88,17 @@ test('visita: banner de proximidad visible y legible', async ({ page }) => {
   await expect(banner).toBeVisible();
   const bg = await banner.evaluate(el => getComputedStyle(el).backgroundColor);
   expect(bg).toBe('rgb(180, 50, 30)');
+});
+
+test('parada: reproductor con audio pregrabado y descarga offline', async ({ page }) => {
+  await page.goto('#/visita/foro');
+  const main = page.getByRole('button', { name: /escuchar narración/i });
+  await expect(main).toBeVisible();
+  await expect(page.getByText(/voz pregrabada/i)).toBeVisible();
+  await expect(page.getByRole('button', { name: /^1×$/ })).toBeVisible();
+  await main.click();
+  await expect(page.getByRole('button', { name: /pausar narración|escuchar narración/i })).toBeVisible();
+  await page.getByRole('button', { name: /detener/i }).click({ force: true }).catch(() => {});
+  await page.goto('#/visita');
+  await expect(page.getByRole('button', { name: /descargar narración/i })).toBeVisible();
 });

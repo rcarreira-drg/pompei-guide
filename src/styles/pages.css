@@ -290,21 +290,24 @@
 .narrator-unsupported { margin: var(--space-5) 0; }
 
 /* ---- Compass ---- */
-.compass { display: flex; align-items: center; gap: var(--space-4); margin: var(--space-4) 0; }
-.compass--compact { margin: var(--space-3) 0; }
-.compass-dial {
-  flex: 0 0 auto; width: 88px; height: 88px; border-radius: 50%; border: var(--border-thick); background: var(--ink);
-  position: relative; display: flex; align-items: center; justify-content: center;
+.compass { display: flex; flex-direction: column; gap: var(--space-3); margin: var(--space-5) 0; }
+.compass--compact { margin: var(--space-3) 0; gap: var(--space-2); }
+.compass-title { margin: 0; color: var(--ash); }
+.compass-body { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; }
+.compass--compact .compass-body { flex-wrap: nowrap; gap: var(--space-3); }
+.compass-dial-svg { flex: 0 0 auto; display: block; }
+.compass-rotatable { transition: transform 0.4s ease-out; }
+.compass-info { flex: 1 1 220px; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-2); }
+.compass--compact .compass-info { flex-basis: 140px; gap: var(--space-1); }
+.compass-reading { margin: 0; font-weight: 700; font-size: var(--step-1); }
+.compass--compact .compass-reading { font-size: var(--step-0); }
+.compass-help { margin: 0; font-size: var(--step--1); color: var(--ash); line-height: 1.4; max-width: 32ch; }
+.compass-hint {
+  display: inline-block; padding: 4px 10px; border: 2px solid var(--ink);
+  font-family: var(--font-mono); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase;
 }
-.compass--compact .compass-dial { width: 64px; height: 64px; }
-.compass-arrow {
-  position: absolute; width: 0; height: 0; top: 50%; left: 50%; transform-origin: center;
-  border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 34px solid var(--pompeian);
-  margin-top: -26px; margin-left: -10px;
-}
-.compass--compact .compass-arrow { border-left-width: 7px; border-right-width: 7px; border-bottom-width: 24px; margin-top: -18px; margin-left: -7px; }
-.compass-info { flex: 1 1 auto; min-width: 0; }
-.compass-reading { margin: var(--space-1) 0; }
+.compass-hint--ok { background: var(--ochre); color: var(--ink); }
+.compass-hint--turn { background: var(--pompeian); color: var(--white); }
 .btn-sm { min-height: 44px; padding: 0 var(--space-3); font-size: 0.7rem; }
 
 /* ---- ProgressBar ---- */

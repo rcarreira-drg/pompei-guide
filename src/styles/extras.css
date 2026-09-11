@@ -142,3 +142,28 @@
 /* Integración en Visita */
 .visit-tools { display: grid; gap: var(--space-3); margin: var(--space-5) 0; }
 .visit-planner, .visit-weather { margin: var(--space-5) 0; }
+
+/* ===== Narrador ===== */
+.narrator-head { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-3); margin-bottom: var(--space-3); flex-wrap: wrap; }
+.narrator-meta { font-size: 0.75rem; color: var(--ash); }
+.narrator-controls { display: grid; grid-template-columns: 1fr auto; gap: var(--space-3); margin-bottom: var(--space-3); }
+.narrator-controls .btn { min-height: 56px; font-size: 1rem; }
+.narrator-progress { display: flex; gap: 3px; margin-bottom: var(--space-3); }
+.narrator-seg { position: relative; flex: 1 1 0; height: 10px; border: 2px solid var(--ink); background: var(--white); overflow: hidden; }
+.narrator-seg.is-done { background: var(--ink); }
+.narrator-seg.is-active { background: var(--paper-2); }
+.narrator-seg-fill { position: absolute; inset: 0 auto 0 0; background: var(--pompeian); transition: width .25s linear; }
+.narrator-options { display: flex; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap; margin-bottom: var(--space-3); }
+.narrator-rates, .narrator-engine { display: flex; gap: 6px; }
+.narrator .tag { min-height: 36px; display: inline-flex; align-items: center; cursor: pointer; }
+.narrator .tag.is-on { background: var(--ink); color: var(--paper); }
+.narrator-voice { display: flex; flex-direction: column; gap: 4px; font-size: 0.72rem; font-weight: 700; letter-spacing: .1em; margin-bottom: var(--space-3); }
+.narrator-voice select { font: inherit; font-family: var(--font-mono); font-size: 0.85rem; border: var(--border); background: var(--white); padding: 8px; min-height: 44px; }
+.narrator-text p { cursor: pointer; }
+.narrator-text p:hover { background: var(--paper-2); }
+.narrator-text p.narrator-active { background: var(--ochre); }
+.narrator-intro { font-weight: 600; border-left: 5px solid var(--pompeian); }
+.narrator-hint { font-size: 0.7rem; color: var(--ash); cursor: default !important; }
+.narrator-hint:hover { background: transparent !important; }
+.audio-download { padding: var(--space-4); margin: var(--space-4) 0; display: grid; gap: var(--space-3); }
+.audio-progress { height: 14px; }

@@ -100,9 +100,8 @@ export default function StopPage() {
           )}
         </div>
 
-        <p className="stop-intro">{stop.intro}</p>
 
-        <Narrator paragraphs={stop.narration} />
+        <Narrator stopId={stop.id} intro={stop.intro} paragraphs={stop.narration} title={stop.name} />
 
         {stop.lookFor.length > 0 && (
           <section>

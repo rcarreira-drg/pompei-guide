@@ -13,6 +13,7 @@ import WakeLockToggle from '@/components/WakeLockToggle';
 import WeatherCard from '@/components/WeatherCard';
 import Planner from '@/components/Planner';
 import Diploma from '@/components/Diploma';
+import AudioDownload from '@/components/AudioDownload';
 import { filterStops } from '@/lib/express';
 
 const CATEGORY_LABEL: Record<StopCategory, string> = {
@@ -108,6 +109,7 @@ export default function Visit() {
               <ExpressToggle />
               <WakeLockToggle />
             </div>
+            <AudioDownload />
 
             <h2 className="section-title">{mode === 'express' ? 'RUTA EXPRÉS' : 'TODAS LAS PARADAS'}</h2>
             <p className="mono stop-list-summary">
