@@ -1,17 +1,22 @@
 /** Envuelve loadProgress/saveProgress en estado React reactivo. */
-import { useCallback, useState } from 'react';
+import { useCallback, useSyncExternalStore } from 'react';
 import { loadProgress, saveProgress, resetProgress, type Progress } from './storage';
 
-export function useProgress() {
-  const [progress, setProgress] = useState<Progress>(() => loadProgress());
+/** Store compartido a nivel de módulo: todos los componentes ven el mismo estado. */
+let state: Progress = loadProgress();
+const listeners = new Set<() => void>();
+const subscribe = (l: () => void) => { listeners.add(l); return () => { listeners.delete(l); }; };
+const getSnapshot = () => state;
+function setState(fn: (p: Progress) => Progress) {
+  state = fn(state);
+  saveProgress(state);
+  listeners.forEach((l) => l());
+}
 
-  const update = useCallback((fn: (p: Progress) => Progress) => {
-    setProgress((prev) => {
-      const next = fn(prev);
-      saveProgress(next);
-      return next;
-    });
-  }, []);
+export function useProgress() {
+  const progress = useSyncExternalStore(subscribe, getSnapshot, getSnapshot);
+
+  const update = useCallback((fn: (p: Progress) => Progress) => { setState(fn); }, []);
 
   const toggleVisited = useCallback(
     (stopId: string) => {
@@ -57,7 +62,7 @@ export function useProgress() {
 
   const reset = useCallback(() => {
     resetProgress();
-    setProgress(loadProgress());
+    setState(() => loadProgress());
   }, []);
 
   const setNote = useCallback(

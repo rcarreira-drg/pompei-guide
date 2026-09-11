@@ -6,7 +6,7 @@ function pickVoice(): SpeechSynthesisVoice | undefined {
   const voices = window.speechSynthesis.getVoices();
   return voices.find(v => /^es-ES/i.test(v.lang)) || voices.find(v => /^es/i.test(v.lang));
 }
-export function speak(text: string, onEnd?: () => void) {
+export function speak(text: string, onEnd?: () => void, onError?: (msg: string) => void) {
   if (!ttsSupported()) return;
   stop();
   const u = new SpeechSynthesisUtterance(text);
@@ -15,7 +15,7 @@ export function speak(text: string, onEnd?: () => void) {
   const v = pickVoice();
   if (v) u.voice = v;
   u.onend = () => { current = null; onEnd?.(); };
-  u.onerror = () => { current = null; onEnd?.(); };
+  u.onerror = (e) => { current = null; if (e.error === 'interrupted' || e.error === 'canceled') return; onError ? onError(e.error || 'error') : onEnd?.(); };
   current = u;
   window.speechSynthesis.speak(u);
 }

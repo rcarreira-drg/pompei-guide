@@ -68,3 +68,24 @@ test('PWA: manifest y service worker registrados', async ({ page }) => {
   const hasSW = await page.evaluate(() => 'serviceWorker' in navigator);
   expect(hasSW).toBeTruthy();
 });
+
+test('visita: el modo exprés filtra la lista sin recargar', async ({ page }) => {
+  await page.goto('#/visita');
+  const stops = page.locator('a[href*="#/visita/"]');
+  const before = await stops.count();
+  await page.getByRole('button', { name: /exprés/i }).click();
+  await expect(page.getByRole('heading', { name: /ruta exprés/i })).toBeVisible();
+  expect(await stops.count()).toBeLessThan(before);
+  await page.getByRole('button', { name: /completa/i }).click();
+  expect(await stops.count()).toBe(before);
+});
+
+test('visita: banner de proximidad visible y legible', async ({ page }) => {
+  await page.context().setGeolocation({ latitude: 40.74921, longitude: 14.4844 });
+  await page.goto('#/visita');
+  await page.getByRole('button', { name: /activar ubicaci/i }).click();
+  const banner = page.locator('.banner-here');
+  await expect(banner).toBeVisible();
+  const bg = await banner.evaluate(el => getComputedStyle(el).backgroundColor);
+  expect(bg).toBe('rgb(180, 50, 30)');
+});

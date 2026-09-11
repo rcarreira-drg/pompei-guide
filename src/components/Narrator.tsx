@@ -5,6 +5,7 @@ import { pause, resume, speak, stop, ttsSupported } from '@/lib/tts';
 export default function Narrator({ paragraphs }: { paragraphs: string[] }) {
   const [status, setStatus] = useState<'idle' | 'playing' | 'paused'>('idle');
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [ttsError, setTtsError] = useState<string | null>(null);
   const supported = ttsSupported();
 
   useEffect(() => () => stop(), []);
@@ -27,7 +28,12 @@ export default function Narrator({ paragraphs }: { paragraphs: string[] }) {
     }
     setActiveIndex(i);
     setStatus('playing');
-    speak(paragraphs[i], () => playFrom(i + 1));
+    setTtsError(null);
+    speak(paragraphs[i], () => playFrom(i + 1), () => {
+      setStatus('idle');
+      setActiveIndex(null);
+      setTtsError('No se ha podido reproducir la voz en este dispositivo. Comprueba que tienes instalada una voz en español o lee el texto a continuación.');
+    });
   };
 
   const handlePlay = () => {
@@ -66,6 +72,7 @@ export default function Narrator({ paragraphs }: { paragraphs: string[] }) {
           ■ PARAR
         </button>
       </div>
+      {ttsError && <p className="callout callout--warn" role="alert">{ttsError}</p>}
       <div className="narrator-text">
         {paragraphs.map((p, i) => (
           <p key={i} className={i === activeIndex ? 'narrator-active' : ''}>

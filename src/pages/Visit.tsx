@@ -90,9 +90,9 @@ export default function Visit() {
             {nextStop && (
               <div className="box next-stop-card">
                 <p className="kicker">SIGUIENTE PARADA</p>
-                <h3>
+                <h2 className="next-stop-title">
                   {nextStop.order}. {nextStop.name}
-                </h3>
+                </h2>
                 <Compass target={nextStop.coords} userPos={pos} label={nextStop.name} compact />
                 <Link to={`/visita/${nextStop.id}`} className="btn btn-primary btn-block">
                   IR A LA PARADA

@@ -448,7 +448,7 @@ export const SECTIONS: Section[] = [
       {
         type: 'p',
         text:
-          'Pompeya es, entre otras cosas, el mayor archivo de escritura cotidiana romana que se conserva. Las fachadas estaban cubiertas de **programmata**, anuncios electorales pintados con fórmulas fijas del tipo "fulano, os lo pido, hacedlo edil" (*oro vos faciatis*), a menudo respaldados por colectivos de vecinos o gremios que declaraban públicamente su apoyo a un candidato. En la casa del banquero **Lucio Cecilio Jocundo** se halló un archivo de más de un centenar de tablillas de cera con recibos de subastas y préstamos, cada uno sellado por varios testigos: una contabilidad privada que permite reconstruir con un detalle asombroso el funcionamiento del crédito y el comercio en una ciudad romana media.',
+          'Pompeya es, entre otras cosas, el mayor archivo de escritura cotidiana romana que se conserva. Las fachadas estaban cubiertas de **programmata**, anuncios electorales pintados con fórmulas fijas del tipo "fulano, os lo pido, hacedlo edil" (*oro vos faciatis*), a menudo respaldados por colectivos de vecinos o gremios que declaraban públicamente su apoyo a un candidato. En la casa del banquero **Lucio Cecilio Jocundo** se halló un archivo de más de ciento cincuenta tablillas de cera con recibos de subastas y préstamos, cada uno sellado por varios testigos: una contabilidad privada que permite reconstruir con un detalle asombroso el funcionamiento del crédito y el comercio en una ciudad romana media.',
       },
       {
         type: 'glossary',

@@ -45,8 +45,10 @@ function FitStops({ points, single }: { points: LatLng[]; single: boolean }) {
   const map = useMap();
   useEffect(() => {
     if (points.length === 0) return;
-    if (single) { map.setView(points[0], 17); return; }
-    map.fitBounds(L.latLngBounds(points), { padding: [24, 24], maxZoom: 17 });
+    try {
+      if (single) map.setView(points[0], 17, { animate: false });
+      else map.fitBounds(L.latLngBounds(points), { padding: [24, 24], maxZoom: 17, animate: false });
+    } catch { /* el mapa puede estar desmontándose */ }
   }, [map, points.length, single]);
   return null;
 }
@@ -70,6 +72,8 @@ export default function RouteMap({ stops, path = [], currentId, visited, userPos
         minZoom={14}
         maxZoom={19}
         maxBounds={bounds}
+        zoomAnimation={false}
+        markerZoomAnimation={false}
         maxBoundsViscosity={1.0}
         scrollWheelZoom
         style={{ height: '100%', width: '100%' }}
