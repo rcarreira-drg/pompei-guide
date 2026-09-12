@@ -183,3 +183,11 @@
 .next-sticky strong { font-family: var(--font-display); text-transform: uppercase; font-size: 0.95rem; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .next-sticky-dist { font-size: 0.75rem; font-weight: 700; white-space: nowrap; }
 .has-next-sticky { padding-bottom: calc(var(--nav-h) + var(--safe-b) + 56px); }
+
+/* ===== Estado de ubicación ===== */
+.geo-status { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: var(--space-3); padding: var(--space-2) var(--space-3); border: var(--border); background: var(--white); margin: var(--space-3) 0; }
+.geo-status-dot { width: 14px; height: 14px; background: var(--pompeian); border: 2px solid var(--ink); animation: geo-pulse 1.6s infinite; }
+@keyframes geo-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+.geo-status-text { font-size: 0.75rem; font-weight: 700; }
+.geo-stop { min-height: 40px; padding: 0 var(--space-3); font-size: 0.72rem; }
+.geo-status-error { grid-column: 1 / -1; margin: 0; }

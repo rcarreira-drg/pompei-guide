@@ -102,3 +102,13 @@ test('parada: reproductor con audio pregrabado y descarga offline', async ({ pag
   await page.goto('#/visita');
   await expect(page.getByRole('button', { name: /descargar narración/i })).toBeVisible();
 });
+
+test('visita: la ubicación se puede detener', async ({ page }) => {
+  await page.goto('#/visita');
+  await page.getByRole('button', { name: /activar ubicación/i }).click();
+  await expect(page.getByText(/ubicación activa/i)).toBeVisible();
+  await page.getByRole('button', { name: /detener la ubicación/i }).click();
+  await expect(page.getByRole('button', { name: /activar ubicación/i })).toBeVisible();
+  await page.reload();
+  await expect(page.getByRole('button', { name: /activar ubicación/i })).toBeVisible();
+});

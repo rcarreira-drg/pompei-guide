@@ -16,6 +16,7 @@ import Diploma from '@/components/Diploma';
 import AudioDownload from '@/components/AudioDownload';
 import { filterStops } from '@/lib/express';
 import { useWalkRoute } from '@/lib/useWalkRoute';
+import LocationToggle from '@/components/LocationToggle';
 
 const CATEGORY_LABEL: Record<StopCategory, string> = {
   puerta: 'PUERTA',
@@ -32,7 +33,7 @@ const CATEGORY_LABEL: Record<StopCategory, string> = {
 };
 
 export default function Visit() {
-  const { pos, accuracy, error, enabled, enable } = useGeolocation();
+  const { pos } = useGeolocation();
   const { visited, currentStop, reset, mode, routeStartedAt } = useProgress();
   const [confirmingReset, setConfirmingReset] = useState(false);
 
@@ -72,13 +73,7 @@ export default function Visit() {
       </header>
 
       <div className="container">
-        {!enabled && (
-          <button type="button" className="btn btn-accent btn-block" onClick={enable} aria-label="Activar ubicación en tiempo real">
-            ACTIVAR UBICACIÓN
-          </button>
-        )}
-        {error && <p className="callout callout--warn">{error}</p>}
-        {enabled && accuracy != null && <p className="mono geo-accuracy">Precisión: ±{Math.round(accuracy)} m</p>}
+        <LocationToggle />
 
         {nearbyUnvisited && (
           <Link to={`/visita/${nearbyUnvisited.id}`} className="box banner-here" aria-label={`Estás en ${nearbyUnvisited.name}`}>

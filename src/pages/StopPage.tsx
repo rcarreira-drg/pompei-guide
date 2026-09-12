@@ -11,6 +11,7 @@ import { useProgress } from '@/lib/useProgress';
 import { resolveCredit } from '@/lib/credit';
 import StopNotes from '@/components/StopNotes';
 import { useWalkRoute } from '@/lib/useWalkRoute';
+import LocationToggle from '@/components/LocationToggle';
 import { formatDistance, walkMinutes } from '@/lib/geo';
 import type { Block } from '@/content/types';
 
@@ -20,7 +21,7 @@ const hasLongWord = (text: string) => text.split(/\s+/).some((w) => w.length > L
 export default function StopPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const { pos, enabled, enable, error: geoError } = useGeolocation();
+  const { pos } = useGeolocation();
   const nextForRoute = ROUTE.stops.find((x) => x.order === (ROUTE.stops.find((y) => y.id === id)?.order ?? 0) + 1) ?? null;
   const walk = useWalkRoute(pos ?? ROUTE.stops.find((y) => y.id === id)?.coords ?? null, nextForRoute?.coords ?? null);
   const { visited, markVisited, setCurrentStop } = useProgress();
@@ -145,10 +146,7 @@ export default function StopPage() {
               </p>
             )}
             {stop.directionsToNext && <p>{stop.directionsToNext}</p>}
-            {!enabled && (
-              <button type="button" className="btn btn-accent btn-block" onClick={enable}>ACTIVAR UBICACIÓN PARA SEGUIR EL CAMINO</button>
-            )}
-            {geoError && <p className="callout callout--warn">{geoError}</p>}
+            <LocationToggle label="ACTIVAR UBICACIÓN PARA SEGUIR EL CAMINO" />
             <Compass target={next.coords} userPos={pos} label={next.name} compact />
           </section>
         )}
