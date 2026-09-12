@@ -57,6 +57,8 @@ export interface Stop {
   anecdote?: string;        // curiosidad o cita antigua
   directionsToNext?: string; // indicaciones a pie hacia la siguiente parada
   image?: { src: string; alt: string; credit?: string };
+  /** Imágenes de referencia de lo que hay que ver para ubicarse (2-4), con pie que diga qué mirar. */
+  gallery?: { src: string; alt: string; caption: string }[];
   illus?: IllustrationName;
   tips?: string[];          // consejos prácticos (sombra, colas, cerrado a veces…)
   accessibility?: 'facil' | 'medio' | 'dificil';

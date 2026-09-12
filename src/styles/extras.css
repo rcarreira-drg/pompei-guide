@@ -244,3 +244,12 @@
 .official-result { display: grid; grid-template-columns: auto 1fr; gap: var(--space-3); align-items: center; padding: 8px 10px; text-decoration: none; color: var(--ink); border-bottom: 2px solid var(--paper-2); min-height: 48px; }
 .official-result .legend-num { width: auto; padding: 0 8px; font-size: 0.8rem; }
 .official-result small { color: var(--ash); font-size: 0.7rem; }
+.arrive-box { margin: var(--space-4) 0; }
+.arrive-box .route-map { margin-bottom: var(--space-3); }
+.arrive-text { margin-top: var(--space-3); }
+.map-ctrl-btn { min-height: 40px; padding: 0 10px; border: var(--border); background: var(--white); font-family: var(--font-mono); font-weight: 700; font-size: 0.65rem; letter-spacing: .05em; box-shadow: var(--shadow-sm); cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+.map-ctrl-btn.is-on { background: var(--pompeian); color: var(--paper); }
+.map-ctrl-btn:active { transform: translate(2px, 2px); box-shadow: none; }
+.map-rotate-controls { position: absolute; right: 10px; top: 58px; z-index: 1000; display: grid; gap: 6px; justify-items: end; }
+.map-north { display: inline-block; color: var(--pompeian); }
+.map-rotate-hint { font-size: 0.65rem; color: var(--ash); }

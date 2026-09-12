@@ -15,7 +15,7 @@ import { useWalkRoute } from '@/lib/useWalkRoute';
 import { stopsForMode, findStop, nextInMode, prevInMode, type RouteMode } from '@/lib/modes';
 import { useMemo } from 'react';
 import LocationToggle from '@/components/LocationToggle';
-import { formatDistance, walkMinutes } from '@/lib/geo';
+import { formatDistance, walkMinutes, distanceM } from '@/lib/geo';
 import type { Block } from '@/content/types';
 
 const LONG_WORD_LENGTH = 12;
@@ -35,7 +35,12 @@ export default function StopPage() {
   const stop = stopBase ? (stops.find((s) => s.id === stopBase.id) ?? stopBase) : undefined;
   const index = stop ? stops.findIndex((s) => s.id === stop.id) : -1;
   const nextForRoute = stop ? nextInMode(rmode, stop.id) ?? null : null;
-  const walk = useWalkRoute(pos ?? stop?.coords ?? null, nextForRoute?.coords ?? null);
+  // Cómo llegar HASTA AQUÍ (desde tu posición) y de aquí a la SIGUIENTE (desde esta parada)
+  const walkHere = useWalkRoute(pos, stop?.coords ?? null);
+  const walk = useWalkRoute(stop?.coords ?? null, nextForRoute?.coords ?? null);
+  const walkNextFromUser = useWalkRoute(pos, nextForRoute?.coords ?? null);
+  const distHere = pos && stop ? distanceM(pos, stop.coords) : null;
+  const arrived = distHere != null && distHere < 40;
 
   if (!stop) {
     return (
@@ -92,6 +97,36 @@ export default function StopPage() {
       </header>
 
       <div className="container">
+        <details className="practical-accordion box arrive-box" open={!!pos && !arrived}>
+          <summary>
+            <span className="kicker">{arrived ? 'HAS LLEGADO' : 'ANTES DE NADA'}</span>
+            <h2>CÓMO LLEGAR HASTA AQUÍ</h2>
+          </summary>
+          <div className="practical-accordion-body">
+            {pos ? (
+              <>
+                <RouteMap stops={[stop]} currentId={stop.id} visited={visited} userPos={pos} heading={heading} walk={walkHere?.path ?? null} follow height="36vh" />
+                {walkHere && (
+                  <p className="mono walk-summary">
+                    {arrived ? 'ESTÁS EN LA PARADA' : `DESDE TU POSICIÓN · ${formatDistance(walkHere.distance)} · ≈ ${walkMinutes(walkHere.distance)} min a pie${walkHere.offNetwork ? ' · en línea recta' : ''}`}
+                  </p>
+                )}
+                {!arrived && <Compass target={stop.coords} userPos={pos} label={stop.name} compact />}
+              </>
+            ) : (
+              <>
+                <p>Activa la ubicación para ver el camino desde donde estás hasta esta parada.</p>
+                <LocationToggle />
+              </>
+            )}
+            {prev?.directionsToNext && (
+              <p className="arrive-text"><span className="kicker">DESDE {prev.name.toUpperCase()}</span><br />{prev.directionsToNext}</p>
+            )}
+          </div>
+        </details>
+      </div>
+
+      <div className="container">
         <div className="stop-media">
           {imgSrc ? (
             <img src={imgSrc} alt={stop.image?.alt ?? stop.name} loading="lazy" className="stop-media-img" />
@@ -146,12 +181,11 @@ export default function StopPage() {
               visited={visited}
               userPos={pos} heading={heading}
               walk={walk?.path ?? null}
-              follow
               height="38vh"
             />
             {walk && (
               <p className="mono walk-summary">
-                {pos ? 'DESDE TU POSICIÓN' : 'DESDE ESTA PARADA'} · {formatDistance(walk.distance)} · ≈ {walkMinutes(walk.distance)} min a pie
+                DESDE ESTA PARADA · {formatDistance(walk.distance)} · ≈ {walkMinutes(walk.distance)} min a pie
                 {walk.offNetwork ? ' · en línea recta' : ' · por las calles del parque'}
               </p>
             )}
@@ -194,11 +228,11 @@ export default function StopPage() {
         )}
       </div>
       {next && (
-        <a href="#siguiente" className="next-sticky" onClick={(e) => { e.preventDefault(); document.getElementById('siguiente')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }} aria-label={`Ir a las indicaciones hacia ${next.name}`}>
+        <Link to={`/visita/${next.id}`} className="next-sticky" aria-label={`Ir a la siguiente parada: ${next.name}`}>
           <span className="kicker">SIGUIENTE →</span>
           <strong>{next.name}</strong>
-          {walk && <span className="mono next-sticky-dist">{formatDistance(walk.distance)} · {walkMinutes(walk.distance)} min</span>}
-        </a>
+          {(walkNextFromUser ?? walk) && <span className="mono next-sticky-dist">{formatDistance((walkNextFromUser ?? walk)!.distance)} · {walkMinutes((walkNextFromUser ?? walk)!.distance)} min</span>}
+        </Link>
       )}
     </div>
   );

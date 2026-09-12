@@ -5,6 +5,7 @@
 import { MapContainer, Marker, Polyline, Popup, TileLayer, useMap, useMapEvents } from 'react-leaflet';
 import { useCallback, useEffect, useState } from 'react';
 import L from 'leaflet';
+import 'leaflet-rotate';
 import { Link } from 'react-router-dom';
 import type { Stop } from '@/content/types';
 import type { LatLng } from '@/lib/geo';
@@ -68,13 +69,44 @@ function userIcon(heading: number | null | undefined) {
   });
 }
 
+/** Rotación: gesto de dos dedos (plugin leaflet-rotate) y modo "brújula" (el mapa gira con el rumbo del móvil). */
+function RotationControls({ heading }: { heading: number | null | undefined }) {
+  const map = useMap();
+  const [headingUp, setHeadingUp] = useState(false);
+  const [bearing, setBearing] = useState(0);
+  useEffect(() => {
+    const onRotate = () => setBearing(Math.round(map.getBearing?.() ?? 0));
+    map.on('rotate', onRotate);
+    return () => { map.off('rotate', onRotate); };
+  }, [map]);
+  useEffect(() => {
+    if (!headingUp || heading == null || !map.setBearing) return;
+    try { map.setBearing(-heading); } catch { /* ignore */ }
+  }, [headingUp, heading, map]);
+  const resetNorth = () => { setHeadingUp(false); try { map.setBearing(0); } catch { /* ignore */ } };
+  return (
+    <div className="map-rotate-controls">
+      {heading != null && (
+        <button type="button" className={`map-ctrl-btn ${headingUp ? 'is-on' : ''}`} onClick={() => (headingUp ? resetNorth() : setHeadingUp(true))} aria-pressed={headingUp} aria-label="Girar el mapa con la brújula">
+          {headingUp ? '⟲ BRÚJULA ON' : '⟲ GIRAR CON BRÚJULA'}
+        </button>
+      )}
+      {bearing !== 0 && !headingUp && (
+        <button type="button" className="map-ctrl-btn" onClick={resetNorth} aria-label="Volver a orientar el mapa al norte">
+          <span className="map-north" style={{ transform: `rotate(${bearing}deg)` }}>▲</span> NORTE
+        </button>
+      )}
+    </div>
+  );
+}
+
 /** Botón para centrar el mapa en la posición del usuario. */
 function CenterOnUser({ userPos }: { userPos: LatLng }) {
   const map = useMap();
   return (
     <button
       type="button"
-      className="map-center-btn"
+      className="map-ctrl-btn map-center-btn"
       onClick={(e) => { e.stopPropagation(); try { map.setView(userPos, Math.max(map.getZoom(), 17), { animate: false }); } catch { /* ignore */ } }}
       aria-label="Centrar el mapa en mi posición"
     >
@@ -119,6 +151,10 @@ export default function RouteMap({ stops, path = [], currentId, visited, userPos
         minZoom={14}
         maxZoom={19}
         maxBounds={bounds}
+        rotate
+        touchRotate
+        rotateControl={false}
+        shiftKeyRotate={false}
         zoomAnimation={false}
         markerZoomAnimation={false}
         maxBoundsViscosity={1.0}
@@ -178,6 +214,7 @@ export default function RouteMap({ stops, path = [], currentId, visited, userPos
 
         {userPos && <Marker position={userPos} icon={userIcon(heading)} interactive={false} zIndexOffset={1000} />}
         {userPos && <CenterOnUser userPos={userPos} />}
+        <RotationControls heading={heading} />
       </MapContainer>
     </div>
   );
