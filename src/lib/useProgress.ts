@@ -80,7 +80,7 @@ export function useProgress() {
   );
 
   const setMode = useCallback(
-    (mode: 'completa' | 'express') => {
+    (mode: 'completa' | 'express' | 'total') => {
       update((p) => ({ ...p, mode }));
     },
     [update]

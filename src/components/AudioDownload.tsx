@@ -1,11 +1,11 @@
 /** Descarga la narración pregrabada del modo elegido para escucharla sin conexión. */
 import { useEffect, useRef, useState } from 'react';
-import { audioFilesForMode, audioMegabytesForMode, cachedAudioCount, clearAudioCache, downloadAllAudio } from '@/lib/audioCache';
+import { audioFilesForMode, audioMegabytesForMode, cachedAudioCount, clearAudioCache, downloadAllAudio, type AudioMode } from '@/lib/audioCache';
 import { useProgress } from '@/lib/useProgress';
 
 export default function AudioDownload() {
   const { mode } = useProgress();
-  const m: 'completa' | 'express' = mode === 'express' ? 'express' : 'completa';
+  const m: AudioMode = mode === 'express' ? 'express' : mode === 'total' ? 'total' : 'completa';
   const files = audioFilesForMode(m);
   const total = files.length;
   const mb = audioMegabytesForMode(m);
@@ -31,11 +31,11 @@ export default function AudioDownload() {
 
   return (
     <div className="box audio-download">
-      <span className="kicker">AUDIO SIN CONEXIÓN · RUTA {m === 'express' ? 'EXPRÉS' : 'COMPLETA'}</span>
+      <span className="kicker">AUDIO SIN CONEXIÓN · RUTA {m === 'express' ? 'EXPRÉS' : m === 'total' ? 'TOTAL' : 'COMPLETA'}</span>
       <p>
         {complete
-          ? `La narración de la ruta ${m === 'express' ? 'exprés' : 'completa'} está guardada en este dispositivo (unos ${mb} MB). Podrás escucharla sin datos dentro del parque.`
-          : `Descarga ahora con wifi la narración de la ruta ${m === 'express' ? 'exprés' : 'completa'} (${total} pistas, unos ${mb} MB) y escúchala sin gastar datos ni depender de la cobertura del yacimiento. Cada pista es un único archivo: sigue sonando con la pantalla bloqueada.`}
+          ? `La narración de la ruta ${m === 'express' ? 'exprés' : m === 'total' ? 'total' : 'completa'} está guardada en este dispositivo (unos ${mb} MB). Podrás escucharla sin datos dentro del parque.`
+          : `Descarga ahora con wifi la narración de la ruta ${m === 'express' ? 'exprés' : m === 'total' ? 'total' : 'completa'} (${total} pistas, unos ${mb} MB) y escúchala sin gastar datos ni depender de la cobertura del yacimiento. Cada pista es un único archivo: sigue sonando con la pantalla bloqueada.`}
       </p>
       {busy ? (
         <>

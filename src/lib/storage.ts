@@ -8,7 +8,7 @@ export interface Progress {
   routeStartedAt?: string;
   notes: Record<string, string>;   // stopId -> nota personal
   plan?: { start: string; pace: string; villa: boolean };
-  mode?: 'completa' | 'express';
+  mode?: 'completa' | 'express' | 'total';
 }
 const empty = (): Progress => ({ visited: {}, checklist: {}, read: {}, notes: {} });
 export function loadProgress(): Progress {

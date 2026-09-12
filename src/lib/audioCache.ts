@@ -1,17 +1,20 @@
 /** Descarga toda la narración pregrabada a la Cache Storage para usarla sin conexión. */
 import { AUDIO, audioUrl } from '@/content/audio';
+import { EXTRA_IDS } from './modes';
 export const AUDIO_CACHE = 'pompei-audio-v1';
 export function allAudioFiles(): string[] { return Object.values(AUDIO).map(a => audioUrl(a.file)); }
 /** Pistas necesarias para un modo: completa = paradas sin sufijo + presentación; exprés = pistas ':express' + presentación. */
-export function audioFilesForMode(mode: 'completa' | 'express'): string[] {
-  return Object.entries(AUDIO)
-    .filter(([k]) => mode === 'express' ? (k.endsWith(':express') || k === 'route:express') : (!k.includes(':') || k === 'route:completa'))
-    .map(([, a]) => audioUrl(a.file));
+export type AudioMode = 'completa' | 'express' | 'total';
+function keysForMode(mode: AudioMode): string[] {
+  return Object.keys(AUDIO).filter((k) => {
+    if (mode === 'express') return k.endsWith(':express') || k === 'route:express';
+    if (mode === 'total') return !k.includes(':') || k === 'route:completa'; // clásicas + extras (sin sufijo) + presentación
+    return (!k.includes(':') && !EXTRA_IDS.has(k)) || k === 'route:completa';
+  });
 }
-export function audioMegabytesForMode(mode: 'completa' | 'express'): number {
-  const secs = Object.entries(AUDIO)
-    .filter(([k]) => mode === 'express' ? (k.endsWith(':express') || k === 'route:express') : (!k.includes(':') || k === 'route:completa'))
-    .reduce((s, [, a]) => s + a.total, 0);
+export function audioFilesForMode(mode: AudioMode): string[] { return keysForMode(mode).map((k) => audioUrl(AUDIO[k].file)); }
+export function audioMegabytesForMode(mode: AudioMode): number {
+  const secs = keysForMode(mode).reduce((s, k) => s + AUDIO[k].total, 0);
   return Math.round(secs * 6 / 1024); // ~6 KB/s a 48 kbps
 }
 export function totalAudioMinutes(): number { return Math.round(Object.values(AUDIO).reduce((s, a) => s + a.total, 0) / 60); }

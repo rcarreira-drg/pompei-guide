@@ -207,3 +207,7 @@
 .user-pin.has-heading .user-dot::after { content: ''; position: absolute; left: 50%; top: -11px; margin-left: -5px; border: 5px solid transparent; border-bottom: 8px solid var(--ink); border-top: 0; transform: rotate(var(--h)); transform-origin: 50% 20px; }
 .map-center-btn { position: absolute; right: 10px; top: 10px; z-index: 1000; min-height: 40px; padding: 0 12px; border: var(--border); background: var(--white); font-family: var(--font-mono); font-weight: 700; font-size: 0.7rem; letter-spacing: .06em; box-shadow: var(--shadow-sm); cursor: pointer; }
 .map-center-btn:active { transform: translate(2px, 2px); box-shadow: none; }
+.express-toggle--3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2); }
+.express-toggle--3 .btn { flex-direction: column; gap: 2px; padding: 8px 4px; min-height: 60px; white-space: normal; font-size: 0.72rem; line-height: 1.1; }
+.express-toggle--3 .btn small { font-weight: 400; font-size: 0.58rem; letter-spacing: 0; text-transform: none; opacity: .85; }
+.tag--extra { background: var(--ochre); }

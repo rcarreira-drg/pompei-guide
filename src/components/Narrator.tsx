@@ -56,7 +56,8 @@ export default function Narrator({ audioKey, texts, title, introIndex = 0, outro
   const track = AUDIO[audioKey];
   const speechOk = ttsSupported();
   const [settings, setSettings] = useState<NarratorSettings>(() => loadNarratorSettings());
-  const engine: 'audio' | 'speech' = settings.engine === 'audio' && track ? 'audio' : speechOk ? 'speech' : 'audio';
+  const [fallbackSpeech, setFallbackSpeech] = useState(false); // solo para esta sesión de reproducción
+  const engine: 'audio' | 'speech' = settings.engine === 'audio' && track && !fallbackSpeech ? 'audio' : speechOk ? 'speech' : 'audio';
   const [status, setStatus] = useState<Status>('idle');
   const [index, setIndex] = useState<number | null>(null);
   const [progress, setProgress] = useState(0); // 0..1 de la pista completa
@@ -112,8 +113,9 @@ export default function Narrator({ audioKey, texts, title, introIndex = 0, outro
     const opts = { signal: ac.signal };
     a.addEventListener('timeupdate', () => {
       if (!a.duration) return;
-      setProgress(a.currentTime / a.duration);
       const i = paragraphAt(a.currentTime);
+      if (i >= texts.length) { a.pause(); a.currentTime = 0; finish(); return; } // la pista sigue con párrafos que este modo no usa
+      setProgress(a.currentTime / a.duration);
       if (i !== indexRef.current) { indexRef.current = i; setIndex(i); }
     }, opts);
     a.addEventListener('playing', () => { setStatus('playing'); if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'playing'; }, opts);
@@ -121,13 +123,13 @@ export default function Narrator({ audioKey, texts, title, introIndex = 0, outro
     a.addEventListener('pause', () => { if (!a.ended) setStatus((s) => (s === 'idle' ? s : 'paused')); if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'paused'; }, opts);
     a.addEventListener('ended', () => finish(), opts);
     a.addEventListener('error', () => {
-      if (speechOk) { setError('Audio no disponible sin conexión; se usa la voz del sistema.'); updateSettings({ engine: 'speech' }); speakFrom(indexRef.current); }
+      if (speechOk) { setError('No se ha podido cargar el audio pregrabado (¿sin conexión y sin descarga previa?). Por ahora se usa la voz del sistema, que se detiene al bloquear la pantalla.'); setFallbackSpeech(true); speakFrom(indexRef.current); }
       else { setError('No se ha podido cargar el audio. Comprueba la conexión o descarga la narración desde la pantalla Visita.'); finish(); }
     }, opts);
     audioRef.current = a;
     return a;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [track, paragraphAt, finish, speechOk, speakFrom]);
+  }, [track, paragraphAt, finish, speechOk, speakFrom, texts.length]);
 
   const playAudioFrom = useCallback((i: number) => {
     if (!track) return;
@@ -178,6 +180,7 @@ export default function Narrator({ audioKey, texts, title, introIndex = 0, outro
 
   const mainLabel = status === 'idle' ? '▶ ESCUCHAR' : status === 'loading' ? '… CARGANDO' : status === 'playing' ? '❚❚ PAUSA' : '▶ REANUDAR';
   const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, '0')}`;
+  const usableTotal = track ? (texts.length < track.starts.length ? track.starts[texts.length] : track.total) : 0;
 
   if (texts.length === 0) return null;
 
@@ -186,7 +189,7 @@ export default function Narrator({ audioKey, texts, title, introIndex = 0, outro
       <div className="narrator-head">
         <span className="kicker">{compactHeader ? 'ESCUCHAR' : 'NARRACIÓN'}</span>
         <span className="mono narrator-meta">
-          {engine === 'audio' && track ? `${fmt(track.total)} · voz pregrabada · sigue con la pantalla bloqueada` : 'voz del sistema'}
+          {engine === 'audio' && track ? `${fmt(usableTotal)} · voz pregrabada · sigue con la pantalla bloqueada` : 'voz del sistema'}
         </span>
       </div>
 
@@ -235,6 +238,11 @@ export default function Narrator({ audioKey, texts, title, introIndex = 0, outro
       )}
       {!track && !speechOk && <p className="callout callout--info">La narración por voz no está disponible en este navegador. Lee el texto a continuación.</p>}
       {error && <p className="callout callout--warn" role="alert">{error}</p>}
+      {engine === 'speech' && track && (
+        <p className="callout callout--warn narrator-speech-warn">
+          Estás usando la voz del móvil, que se corta al bloquear la pantalla o cambiar de app. Pulsa PREGRABADA para la narración continua.
+        </p>
+      )}
       {engine === 'audio' && track && isIosStandalone() && (
         <p className="callout callout--info narrator-ios-hint">
           En iPhone, con la app instalada en la pantalla de inicio, iOS suele cortar el audio al bloquear. Para escuchar con la pantalla apagada, abre la guía en Safari (rcarreira-drg.github.io/pompei-guide) o baja el brillo en lugar de bloquear.

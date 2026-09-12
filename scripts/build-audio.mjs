@@ -11,9 +11,10 @@ const PIPER = `${SCRATCH}/piper-venv/bin/python`;
 const VDIR = `${SCRATCH}/voices`;
 const CLIPS = `${SCRATCH}/clips-${VOICE}`; mkdirSync(CLIPS, { recursive: true });
 
-await build({ entryPoints: ['src/content/route.ts', 'src/lib/express.ts'], bundle: true, format: 'esm', outdir: `${SCRATCH}/bundle`, platform: 'node' });
+await build({ entryPoints: ['src/content/route.ts', 'src/lib/express.ts', 'src/content/extra.ts'], bundle: true, format: 'esm', outdir: `${SCRATCH}/bundle`, platform: 'node' });
 const { ROUTE } = await import(`${SCRATCH}/bundle/content/route.js`);
 const { EXPRESS_IDS } = await import(`${SCRATCH}/bundle/lib/express.js`);
+const { EXTRA_STOPS } = await import(`${SCRATCH}/bundle/content/extra.js`);
 const express = new Set(EXPRESS_IDS);
 const clean = t => t.replace(/\*\*/g, '').replace(/\s+/g, ' ').trim();
 const dur = f => parseFloat(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', f]).toString());
@@ -57,6 +58,7 @@ for (const s of ROUTE.stops) {
   add(s.id, [s.intro, ...s.narration, ...(s.whyNext ? [s.whyNext] : [])]);
   if (express.has(s.id) && s.whyNextExpress) add(`${s.id}:express`, [s.intro, ...s.narration, s.whyNextExpress]);
 }
+for (const s of EXTRA_STOPS) add(s.id, [s.intro, ...s.narration]);
 // carpetas huérfanas
 const keep = new Set(Object.keys(manifest).map(k => k.replace(':', '-')));
 for (const d of readdirSync('public/audio')) if (!keep.has(d)) rmSync(`public/audio/${d}`, { recursive: true });

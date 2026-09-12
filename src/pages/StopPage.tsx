@@ -12,7 +12,7 @@ import { useProgress } from '@/lib/useProgress';
 import { resolveCredit } from '@/lib/credit';
 import StopNotes from '@/components/StopNotes';
 import { useWalkRoute } from '@/lib/useWalkRoute';
-import { filterStops } from '@/lib/express';
+import { stopsForMode, findStop, nextInMode, prevInMode, type RouteMode } from '@/lib/modes';
 import { useMemo } from 'react';
 import LocationToggle from '@/components/LocationToggle';
 import { formatDistance, walkMinutes } from '@/lib/geo';
@@ -27,16 +27,14 @@ export default function StopPage() {
   const { pos } = useGeolocation();
   const { heading } = useHeading();
   const { visited, markVisited, setCurrentStop, mode } = useProgress();
-  const isExpress = mode === 'express';
-  // En modo exprés la lista (y por tanto la "siguiente") es la de la ruta exprés
-  const stops = useMemo(() => filterStops(ROUTE.stops, isExpress), [isExpress]);
-  const fullIndex = ROUTE.stops.findIndex((s) => s.id === id);
-  const stop = fullIndex >= 0 ? ROUTE.stops[fullIndex] : undefined;
-  // Si la parada no pertenece a la ruta exprés, la siguiente es la primera exprés posterior
+  const rmode: RouteMode = (mode as RouteMode) ?? 'completa';
+  const isExpress = rmode === 'express';
+  const stops = useMemo(() => stopsForMode(rmode), [rmode]);
+  const stopBase = findStop(id);
+  // `order` mostrado según el modo (renumerado); el resto de campos son los originales
+  const stop = stopBase ? (stops.find((s) => s.id === stopBase.id) ?? stopBase) : undefined;
   const index = stop ? stops.findIndex((s) => s.id === stop.id) : -1;
-  const nextForRoute = stop
-    ? (index >= 0 ? stops[index + 1] : stops.find((s) => s.order > stop.order)) ?? null
-    : null;
+  const nextForRoute = stop ? nextInMode(rmode, stop.id) ?? null : null;
   const walk = useWalkRoute(pos ?? stop?.coords ?? null, nextForRoute?.coords ?? null);
 
   if (!stop) {
@@ -50,9 +48,10 @@ export default function StopPage() {
     );
   }
 
-  const prev = index > 0 ? stops[index - 1] : (index < 0 ? [...stops].reverse().find((s) => s.order < stop.order) : undefined);
+  const prev = prevInMode(rmode, stop.id);
   const next = nextForRoute ?? undefined;
-  const whyNext = isExpress && stop.whyNextExpress ? stop.whyNextExpress : stop.whyNext;
+  // En modo total el "por qué seguimos" clásico no aplica (la siguiente parada es otra): se omite y el audio se detiene antes
+  const whyNext = rmode === 'total' ? undefined : isExpress && stop.whyNextExpress ? stop.whyNextExpress : stop.whyNext;
   const audioKey = isExpress && stop.whyNextExpress ? `${stop.id}:express` : stop.id;
   const narrationTexts = [stop.intro, ...stop.narration, ...(whyNext ? [whyNext] : [])];
   const isVisited = Boolean(visited[stop.id]);
@@ -81,7 +80,7 @@ export default function StopPage() {
     <div className={next ? 'has-next-sticky' : ''}>
       <header className="stop-hero container">
         <p className="kicker">
-          PARADA {stop.order}/{stops.length}
+          PARADA {index >= 0 ? stop.order : '·'}/{stops.length}
         </p>
         <h1 className={`hero-title${longTitle ? ' hero-title--long' : ''}`}>{stop.name}</h1>
         {(stop.latinName || stop.regio) && (

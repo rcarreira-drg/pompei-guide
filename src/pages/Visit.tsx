@@ -16,7 +16,7 @@ import Planner from '@/components/Planner';
 import Diploma from '@/components/Diploma';
 import AudioDownload from '@/components/AudioDownload';
 import MapDownload from '@/components/MapDownload';
-import { filterStops } from '@/lib/express';
+import { stopsForMode, modeSummary, EXTRA_IDS, type RouteMode } from '@/lib/modes';
 import { useWalkRoute } from '@/lib/useWalkRoute';
 import LocationToggle from '@/components/LocationToggle';
 import Narrator from '@/components/Narrator';
@@ -41,7 +41,8 @@ export default function Visit() {
   const { visited, currentStop, reset, mode, routeStartedAt } = useProgress();
   const [confirmingReset, setConfirmingReset] = useState(false);
 
-  const stops = useMemo(() => filterStops(ROUTE.stops, mode === 'express'), [mode]);
+  const rmode: RouteMode = (mode as RouteMode) ?? 'completa';
+  const stops = useMemo(() => stopsForMode(rmode), [rmode]);
   const visitedCount = stops.filter((s) => visited[s.id]).length;
 
   const nextStop = useMemo(() => {
@@ -131,9 +132,9 @@ export default function Visit() {
             <AudioDownload />
             <MapDownload />
 
-            <h2 className="section-title">{mode === 'express' ? 'RUTA EXPRÉS' : 'TODAS LAS PARADAS'}</h2>
+            <h2 className="section-title">{rmode === 'express' ? 'RUTA EXPRÉS' : rmode === 'total' ? 'RUTA TOTAL' : 'TODAS LAS PARADAS'}</h2>
             <p className="mono stop-list-summary">
-              {mode === 'express' ? `TOTAL: ${stops.length} paradas · ~3 km · 2,5-3 h` : `TOTAL: ${stops.length} paradas · ${ROUTE.distanceKm} km · ${ROUTE.totalHours}`}
+              {`TOTAL: ${modeSummary(rmode)}`}
             </p>
             <ol className="stop-list">
               {stops.map((s) => (
@@ -144,6 +145,7 @@ export default function Visit() {
                       <strong>{s.name}</strong>
                       <span className="stop-list-meta">
                         <span className="tag">{CATEGORY_LABEL[s.category] ?? s.category}</span>
+                        {rmode === 'total' && EXTRA_IDS.has(s.id) && <span className="tag tag--extra">MAPA OFICIAL</span>}
                         <span className="mono">{s.minutes} min</span>
                       </span>
                     </span>
@@ -159,7 +161,7 @@ export default function Visit() {
 
         <details className="practical-accordion box visit-planner">
               <summary><span className="kicker">HORARIO</span><h2>PLANIFICADOR DEL DÍA</h2></summary>
-              <div className="practical-accordion-body"><Planner stops={ROUTE.stops} /></div>
+              <div className="practical-accordion-body"><Planner stops={stops} /></div>
             </details>
             <details className="practical-accordion box visit-weather">
               <summary><span className="kicker">CIELO SOBRE EL VESUBIO</span><h2>EL TIEMPO</h2></summary>
