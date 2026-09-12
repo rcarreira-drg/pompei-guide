@@ -71,10 +71,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.749062, 14.485477],
     regio: 'VIII.3.1',
     minutes: 6,
-    intro: 'En este recinto discreto, junto a la Basílica, los ciudadanos de Pompeya elegían cada año a sus magistrados.',
+    intro: 'Fijaos en este recinto abierto, sin techo, pegado a la Basílica: aquí es donde Pompeya decidía, una vez al año, quién la iba a gobernar.',
     narration: [
-      'El Comitium era el espacio reservado para las asambleas electorales, donde los ciudadanos con derecho de voto se reunían para proclamar a los duunviros y a los ediles que gobernarían la ciudad durante el año siguiente. Su planta, hoy parcialmente reconstruida, se excavó en mil ochocientos catorce y de nuevo en mil ochocientos veintiséis, y algunos investigadores fechan la fábrica que veis en época republicana, con una reforma posterior ya bajo Augusto.',
-      'En los pilares que miran hacia la Via dell\'Abbondanza se conservan restos de carteles electorales pintados, los llamados programmata, con los que los propios vecinos recomendaban a sus candidatos favoritos. El pavimento de mármol que tuvo originalmente fue arrancado en gran parte tras la erupción, en las excavaciones clandestinas que se sucedieron durante siglos. Un estudio con georradar de la Universidad de Tubinga, realizado entre dos mil diecisiete y dos mil diecinueve, ha permitido precisar mejor sus distintas fases constructivas.',
+      'Poneos en el centro y mirad los pilares que dan a la Via dell\'Abbondanza. Todavía se leen ahí restos de carteles pintados, los programmata, con los que un vecino recomendaba a otro su candidato favorito para duunviro o para edil. Se excavó en mil ochocientos catorce y de nuevo en mil ochocientos veintiséis, y algunos investigadores fechan la fábrica en época republicana, con una reforma posterior ya bajo Augusto.',
+      'Lo que nadie repara es que el suelo de mármol que tuvo originalmente casi ha desaparecido, arrancado por excavadores clandestinos durante siglos después de la erupción. Un estudio con georradar de la Universidad de Tubinga, entre dos mil diecisiete y dos mil diecinueve, ha ayudado a reconstruir sus fases. La Basílica, donde se litigaba, queda a un paso; aquí, en cambio, se votaba.',
     ],
     lookFor: [
       'Los pilares hacia la Via dell\'Abbondanza, donde se pintaban los carteles electorales de los candidatos.',
@@ -97,10 +97,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.748691, 14.485125],
     regio: 'VIII.2.6-10',
     minutes: 8,
-    intro: 'Tres salas casi idénticas, en el lado sur del Foro, donde se gobernaba y se archivaba la vida entera de la ciudad.',
+    intro: 'Contad conmigo estas tres salas idénticas, alineadas en el lado sur del Foro: ahí dentro cabía la administración entera de una ciudad de once mil habitantes.',
     narration: [
-      'Estas tres estancias absidadas, muy parecidas entre sí, formaban la sede administrativa de Pompeya: la curia, donde se reunían los decuriones que formaban el consejo municipal, el tabularium, el archivo con los documentos oficiales de la ciudad, y la oficina de los duunviros y ediles, los magistrados que se ocupaban del día a día del gobierno local. Las fuentes discrepan sobre qué sala exacta cumplía cada función, así que conviene tomar los nombres individuales con cierta cautela.',
-      'Se excavaron en mil ochocientos catorce y mil ochocientos veintiséis, y quedaron gravemente dañadas por el terremoto del año sesenta y dos, todavía en obras de reparación cuando llegó la erupción diecisiete años después. Imaginad aquí los archivos con los registros de propiedad, los censos de ciudadanos y las actas de las sesiones del consejo, buena parte de los cuales se habrían escrito sobre tablillas de cera hoy perdidas para siempre.',
+      'Mirad la planta absidada, repetida tres veces como si el arquitecto no quisiera arriesgarse a elegir. Una sala era la curia, donde se reunían los decuriones del consejo municipal; otra, el tabularium, el archivo de la ciudad; la tercera, la oficina de los duunviros y ediles. Los especialistas discuten todavía qué sala era cuál, así que tomad estos nombres con cautela.',
+      'El detalle que nadie busca es que las tres quedaron gravemente dañadas por el terremoto del año sesenta y dos, y seguían en obras cuando llegó la erupción diecisiete años después. Imaginad los censos, los registros de propiedad y las actas del consejo escritos en tablillas de cera, hoy perdidas para siempre. Entre la Basílica y el Edificio de Eumáquia, este era el corazón de papeleo de Pompeya.',
     ],
     lookFor: [
       'La planta absidada, casi idéntica, de las tres salas alineadas en el lado sur del Foro.',
@@ -122,10 +122,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.74964, 14.48426],
     regio: 'VII.7.29',
     minutes: 8,
-    intro: 'Este mercado cubierto de cereales, nunca terminado, guarda hoy uno de los mayores depósitos arqueológicos de Pompeya.',
+    intro: 'Acercaos a las rejas de este edificio y mirad dentro: cientos de ánforas alineadas en la penumbra, como si el mercado hubiera cerrado ayer.',
     narration: [
-      'Los Granai del Foro se reconstruyeron después del terremoto del año sesenta y dos como un gran mercado cubierto de grano y legumbres, con ocho entradas independientes desde la plaza del Foro. La obra se quedó sin terminar: nunca llegó a enlucirse, y las columnas conservan todavía el aspecto tosco de una construcción en curso cuando llegó la erupción.',
-      'Hoy el edificio no funciona como mercado sino como almacén arqueológico, con más de nueve mil objetos catalogados desde la reanudación de las excavaciones modernas: cientos de ánforas alineadas, fuentes y elementos de mármol recuperados de distintos puntos de la ciudad y, sobre todo, varios calcos de yeso de víctimas de la erupción, entre ellos el de un perro y el de un árbol. Se puede asomar la vista a través de las rejas de las entradas, aunque el acceso al interior está reservado a visitas extraordinarias anunciadas por el parque arqueológico.',
+      'Fijaos en las columnas, todavía toscas, sin el enlucido final que les faltaba cuando llegó la erupción. Los Granai del Foro se reconstruyeron después del terremoto del año sesenta y dos como un gran mercado cubierto de grano y legumbres, con ocho entradas independientes desde la plaza. La obra nunca se terminó, y ese inacabado es justo lo que hoy lo vuelve tan revelador.',
+      'Lo que pocos saben es que este mercado a medio hacer se convirtió después en almacén arqueológico, con más de nueve mil objetos catalogados: ánforas, fragmentos de mármol y varios calcos de víctimas, entre ellos uno especialmente conmovedor, el de un perro. El interior solo se abre en jornadas extraordinarias, pero desde las rejas, a un paso del Foro, ya se intuye la escala del hallazgo.',
     ],
     lookFor: [
       'Las hileras de ánforas y fragmentos de mármol almacenados, visibles a través de las rejas de las entradas.',
@@ -148,10 +148,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.7499, 14.4845],
     regio: 'VII.8',
     minutes: 8,
-    intro: 'En el extremo norte del Foro, con el Vesubio detrás, se alza el santuario dedicado a la tríada que protegía Roma entera.',
+    intro: 'Poneos en el centro de la plaza y mirad hacia el norte: el templo, el podio y el Vesubio se alinean como si alguien lo hubiera calculado a propósito.',
     narration: [
-      'El templo original se levantó hacia mediados del siglo dos antes de nuestra era, pero tras la conquista romana de la ciudad en el año ochenta antes de Cristo se reconvirtió en Capitolio, dedicado a la tríada capitolina formada por Júpiter, Juno y Minerva, la misma que presidía el templo más importante de la propia Roma. Es la manera más clara de proclamar que Pompeya era ya, oficialmente, una ciudad romana.',
-      'El terremoto del año sesenta y dos causó daños graves en el edificio, que seguía en obras de reparación cuando llegó la erupción. En las excavaciones aparecieron una cabeza colosal de Júpiter y una máscara de Juno, hoy en el Museo Arqueológico de Nápoles, además de dos arcos honoríficos que flanqueaban el templo. Desde la escalinata, el encuadre con el Vesubio al fondo es una de las imágenes más repetidas de todo el yacimiento.',
+      'El templo original se levantó hacia mediados del siglo dos antes de nuestra era. Tras la conquista romana de la ciudad en el año ochenta antes de Cristo se reconvirtió en Capitolio, dedicado a la misma tríada, Júpiter, Juno y Minerva, que presidía el templo más importante de la propia Roma. No hacía falta ningún cartel para anunciar que Pompeya ya era ciudad romana.',
+      'El terremoto del año sesenta y dos lo dañó gravemente, y seguía en obras cuando llegó la erupción. Aquí aparecieron una cabeza colosal de Júpiter y una máscara de Juno, hoy en Nápoles, junto a dos arcos honoríficos que todavía flanquean el templo. Fijaos en ese encuadre exacto con el volcán detrás: es la fotografía que nadie sabía, entonces, que sería una premonición.',
     ],
     lookFor: [
       'El podio elevado del templo, visible desde cualquier punto de la plaza del Foro.',
@@ -174,10 +174,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.74959, 14.48516],
     regio: 'VII.9.2',
     minutes: 6,
-    intro: 'Un pequeño templo del lado este del Foro guarda uno de los relieves con escenas de sacrificio mejor conservados de la ciudad.',
+    intro: 'Acercaos al altar de mármol que hay frente a la escalinata: ahí está tallado, paso a paso, un sacrificio romano completo.',
     narration: [
-      'La fecha exacta de este pequeño templo sigue discutida: para algunos especialistas es de época augustea y fue reformado después del terremoto del año sesenta y dos, mientras que otros creen que se construyó ya tarde, y por eso quedó sin terminar, sin columnas ni el revestimiento de mármol previsto, cuando llegó la erupción diecisiete años después. Se le dedica de forma tradicional al Genio de Augusto, aunque el nombre popular recuerda al emperador Vespasiano.',
-      'Lo más destacado es el altar de mármol situado frente a la escalinata, decorado con un relieve que representa una escena de sacrificio: un sacerdote que hace una libación sobre un trípode, una corona de encina y un toro conducido hacia el ritual. Es una de las representaciones más completas que se conservan de cómo se desarrollaba realmente un sacrificio público romano, con todo el atrezo del rito recogido en un único bloque de piedra.',
+      'Mirad el relieve despacio. Un sacerdote hace una libación sobre un trípode, hay una corona de encina y un toro conducido hacia el ritual, todo el atrezo de una ceremonia pública recogido en un único bloque de piedra. Es de las representaciones más completas que se conservan de cómo se sacrificaba de verdad en época romana.',
+      'Lo que casi nadie nota es que al propio templo le faltan columnas y el revestimiento de mármol previsto: quedó sin terminar cuando llegó la erupción, diecisiete años después del terremoto que lo dejó en obras. Ni siquiera su dedicación es segura del todo, aunque la tradición lo llama de Vespasiano. Está a un paso del Edificio de Eumáquia, en pleno pórtico del Foro.',
     ],
     lookFor: [
       'El altar de mármol frente a la escalinata, con el relieve del sacrificio.',
@@ -199,10 +199,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.74975, 14.48502],
     regio: 'VII.9.3',
     minutes: 6,
-    intro: 'El mayor santuario del Foro, dedicado a los dioses protectores de la ciudad entera, quedó también inacabado por la erupción.',
+    intro: 'Fijaos en el ábside del fondo, con sus tres nichos vacíos: este patio abierto era el santuario más grande de todo el Foro.',
     narration: [
-      'Este es el edificio religioso de mayor tamaño de todo el Foro, levantado después del terremoto del año sesenta y dos para sustituir un santuario anterior. Estaba dedicado a los Lares Públicos, los dioses tutelares que protegían a la ciudad en su conjunto, un equivalente cívico de los Lares domésticos que cada familia veneraba en su propio hogar.',
-      'Se descubrió en mil ochocientos diecisiete, y su planta muestra un gran patio abierto con un ábside al fondo donde se colocaban tres nichos para otras tantas estatuas de culto. Igual que el vecino Templo de Vespasiano, quedó sin terminar: le falta el pórtico previsto y el revestimiento de mármol, y ni siquiera llegó a cubrirse por completo, señal de que las obras públicas de reconstrucción tras el terremoto avanzaban todavía muy despacio cuando la erupción lo detuvo todo de golpe.',
+      'Se levantó después del terremoto del año sesenta y dos para sustituir un santuario anterior, dedicado a los Lares Públicos, los dioses que protegían a la ciudad entera, igual que cada familia pompeyana veneraba a sus propios Lares en casa. Se descubrió en mil ochocientos diecisiete, y su patio, amplio como pocos en el Foro, terminaba en ese ábside con tres nichos para las estatuas de culto.',
+      'Lo que nadie mira es que, igual que el vecino Templo de Vespasiano, se quedó sin terminar: sin el pórtico previsto, sin revestimiento de mármol y sin cubrirse del todo. Diecisiete años no bastaron para acabar la reconstrucción tras el terremoto. Queda entre el Macellum y el Templo de Vespasiano, buena señal de por dónde iba, muy despacio, la obra pública de Pompeya.',
     ],
     lookFor: [
       'El ábside al fondo del patio, con los tres nichos previstos para las estatuas de culto.',
@@ -223,10 +223,10 @@ export const EXTRA_STOPS: Stop[] = [
     category: 'calle',
     coords: [40.75075, 14.48418],
     minutes: 6,
-    intro: 'Un arco solitario de ladrillo marca el inicio de la Via di Mercurio, la calle que sube hacia el barrio de las grandes domus.',
+    intro: 'Mirad ese único vano de ladrillo, desnudo de su mármol original: aquí empieza la Via di Mercurio, la calle que sube hacia las grandes casas de Pompeya.',
     narration: [
-      'Este arco de un solo vano, construido en ladrillo y hoy sin su revestimiento original de mármol, señala el arranque de la Via di Mercurio justo frente a las Termas del Foro y al Templo de la Fortuna Augusta. La atribución tradicional a Calígula se basa en una estatua ecuestre de bronce, hoy muy fragmentada, que se halló bajo el arco y que representaría a un emperador o a un miembro destacado de su familia a caballo.',
-      'No todos los especialistas aceptan esta identificación: la historiadora Katherine Welch ha propuesto que la estatua podría representar en realidad a Marco Tulio, el rico duunviro que también costeó de su propio bolsillo el cercano Templo de la Fortuna Augusta. Sea quien fuera el homenajeado, el arco funcionaba como una especie de puerta simbólica entre el bullicio comercial del Foro y el barrio residencial más elegante de la ciudad.',
+      'Bajo el arco apareció una estatua ecuestre de bronce, hoy muy fragmentada, y la tradición dice que representaba a Calígula a caballo, de ahí el nombre que le damos. Pero no todos están de acuerdo. La historiadora Katherine Welch propone que la estatua era en realidad de Marco Tulio, el mismo duunviro rico que pagó de su bolsillo el templo que tenéis justo enfrente.',
+      'El detalle que nadie repara es que, fuera quien fuera el jinete, el arco no defendía nada: era una puerta simbólica, sin más función que separar el ruido comercial del Foro del barrio residencial más elegante de la ciudad. Un paso hacia el norte, y Pompeya cambia de registro por completo.',
     ],
     lookFor: [
       'El vano único de ladrillo, hoy desnudo del revestimiento de mármol que tuvo en origen.',
@@ -249,10 +249,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.75068, 14.48435],
     regio: 'VII.4.1',
     minutes: 8,
-    intro: 'Un rico magistrado pagó de su propio bolsillo este templo dedicado a la diosa Fortuna, en el cruce más transitado de la ciudad.',
+    intro: 'Buscad la inscripción de la escalinata: en ella, un hombre llamado Marco Tulio presume, en piedra, de haber pagado este templo de su propio bolsillo.',
     narration: [
-      'El templo se construyó entre los años tres antes de nuestra era y dos después, en pleno cruce entre la Via di Mercurio, la Via del Foro y la Via di Nola, uno de los puntos con más tráfico de toda Pompeya. Lo costeó por completo Marco Tulio, un duunviro que quiso dejar constancia expresa de ello en una inscripción: la construyó, dice el texto, con dinero propio y en suelo propio.',
-      'Se excavó en varias campañas a lo largo del siglo diecinueve y se restauró en mil novecientos ocho, tras sufrir daños importantes en el terremoto del año sesenta y dos. En su interior se hallaron estatuas de la diosa Fortuna y de miembros de la familia imperial, además de una del propio Marco Tulio, hoy conservadas en el Museo Arqueológico de Nápoles: un magistrado que se aseguró de aparecer, en piedra, junto a los dioses y los emperadores a los que había honrado.',
+      'Poneos frente al podio y mirad el cruce que tenéis alrededor. La Via di Mercurio, la Via del Foro y la Via di Nola se juntan justo aquí, uno de los puntos con más tráfico de toda la ciudad, y el templo se levantó entre los años tres antes de nuestra era y dos después con el dinero de un solo duunviro, Marco Tulio, que lo dejó escrito sin ninguna modestia: lo construyó con dinero propio y en suelo propio.',
+      'Lo que casi nadie busca es que, dentro, aparecieron estatuas de la diosa Fortuna, de la familia imperial y del propio Marco Tulio, hoy las tres en el museo de Nápoles: se aseguró de quedar retratado junto a los dioses y los emperadores que había honrado. Queda justo enfrente del Arco de Calígula, así que visitad los dos juntos.',
     ],
     lookFor: [
       'La posición del templo, exactamente en el cruce de tres calles principales.',
@@ -274,10 +274,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.75114, 14.48363],
     regio: 'VI.8.22',
     minutes: 8,
-    intro: 'Junto a la Casa del Poeta Trágico, una fuente cubierta de mosaico convierte un simple surtidor doméstico en una pequeña obra de arte.',
+    intro: 'Asomaos al jardín y buscad el pequeño templete cubierto de mosaico azul y verde: es la fuente que da nombre a toda la casa.',
     narration: [
-      'Esta casa, excavada en mil ochocientos veintiséis, debe su nombre moderno a la gran fuente monumental que preside su jardín, un pequeño templete con la superficie cubierta de mosaico de pasta vítrea y conchas, en tonos azules y verdes muy vivos que todavía sorprenden por su frescura. Es también conocida como Casa de Helvio Vestal, por un cartel electoral pintado en su fachada.',
-      'Este tipo de fuentes-ninfeo, con teselas diminutas de vidrio coloreado formando escenas o simples motivos geométricos, se puso de moda en Pompeya en las últimas décadas antes de la erupción, sobre todo en casas de la Regio Sexta con suficiente desahogo económico para permitirse este lujo decorativo. La fachada, restaurada recientemente, ha recuperado buena parte de su aspecto original sobre la Via di Mercurio.',
+      'Fijaos en las teselas diminutas de pasta vítrea y conchas, todavía vivas de color después de dos mil años bajo la ceniza. La casa se excavó en mil ochocientos veintiséis, y también se la conoce como Casa de Helvio Vestal, por un cartel electoral pintado en su fachada, hoy restaurada, sobre la propia Via di Mercurio.',
+      'El detalle que casi nadie relaciona es que este tipo de fuente-ninfeo se puso de moda en las últimas décadas de Pompeya, sobre todo entre las casas de la Regio Sexta con dinero de sobra para el lujo decorativo. A pocos pasos, la Casa de la Fuente Pequeña presume de otra fuente casi igual de vistosa, aunque en formato más modesto.',
     ],
     lookFor: [
       'La fuente-templete cubierta de mosaico de pasta vítrea y conchas, pieza central del jardín.',
@@ -299,10 +299,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.751391, 14.48365],
     regio: 'VI.8.23',
     minutes: 7,
-    intro: 'Su vecina más modesta guarda una fuente igual de vistosa, con un pequeño amorcillo de bronce abrazado a un ganso.',
+    intro: 'Mirad la fuente de esta casa, más pequeña que la de su vecina, pero con un detalle que aquella no tiene: un niño de bronce abrazado a un ganso.',
     narration: [
-      'Esta casa nació de la fusión de dos viviendas samnitas más antiguas del siglo dos antes de nuestra era, reparadas después del terremoto del año sesenta y dos. Se excavó en mil ochocientos veintisiete, justo al lado de la Casa de la Fuente Grande, con la que comparte estilo de decoración pero no tamaño.',
-      'Su fuente, algo menor que la de la casa vecina, combina mosaico de vidrio coloreado con dos pequeñas esculturas de mármol y bronce: un putto abrazado a un ganso y un pescador. Los frescos de paisajes de cuarto estilo que decoran algunas salas se conservan gracias a una cubierta protectora instalada ya en el siglo diecinueve, una de las primeras medidas de conservación in situ que se tomaron en Pompeya. Tras una restauración de seis años, la casa reabrió sus puertas en noviembre de dos mil veinticuatro.',
+      'La casa nació de la fusión de dos viviendas samnitas del siglo dos antes de nuestra era, reparadas tras el terremoto del año sesenta y dos, y se excavó en mil ochocientos veintisiete, pared con pared con la Casa de la Fuente Grande. Su fuente combina mosaico de vidrio coloreado con dos pequeñas esculturas, ese putto con el ganso y un pescador.',
+      'Lo que nadie suele mirar es el techo protector que cubre los frescos de paisaje de una de las salas, instalado ya en el siglo diecinueve: fue una de las primeras medidas de conservación in situ de todo Pompeya. Tras una restauración de seis años, la casa reabrió en noviembre de dos mil veinticuatro, justo al lado de su hermana mayor.',
     ],
     lookFor: [
       'La fuente con el putto de bronce abrazado a un ganso y la figura del pescador.',
@@ -324,10 +324,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.7512, 14.48257],
     regio: 'VI.2.4',
     minutes: 8,
-    intro: 'Una de las casas más antiguas de Pompeya, que con el tiempo llegó a convertirse en posada y en tienda de comidas.',
+    intro: 'Mirad el atrio y fijaos en esos paneles que imitan mármol de colores: es estuco pintado, y de los más antiguos de toda Pompeya.',
     narration: [
-      'El núcleo de esta vivienda se remonta al siglo cuatro antes de nuestra era, con ampliaciones posteriores en el siglo dos antes de Cristo, lo que la convierte en una de las domus más antiguas conocidas de la ciudad. En el atrio se conservan restos de decoración de primer estilo, la más temprana de las cuatro fases pictóricas pompeyanas, con paneles que imitan bloques de mármol de colores mediante estuco pintado.',
-      'Su nombre moderno viene de un cartel electoral a favor de un tal Salustio pintado en la fachada, aunque también se la conoce como Casa de Aulo Cosio Libano por otra inscripción. En época tardía, parte de la vivienda se transformó en un hospitium con panadería y termopolio propio, señal de que el edificio cambió de uso varias veces a lo largo de los siglos. Un fresco con Diana y Acteón se perdió en el bombardeo aliado de mil novecientos cuarenta y tres y fue restaurado en mil novecientos setenta.',
+      'El núcleo de la casa se remonta al siglo cuatro antes de nuestra era, con ampliaciones dos siglos después, y esa decoración de primer estilo es la fase más temprana de las cuatro que distinguimos en la pintura pompeyana. Un cartel electoral a favor de un tal Salustio, pintado en la fachada, le dio el nombre moderno, aunque otra inscripción la llama también Casa de Aulo Cosio Libano.',
+      'Lo que casi nadie espera es que, con los siglos, parte de esta casa tan antigua acabó convertida en posada con panadería y termopolio propio: hasta las viviendas más venerables cambiaban de oficio en Pompeya. Un fresco con Diana y Acteón se perdió en el bombardeo aliado de mil novecientos cuarenta y tres y se restauró en mil novecientos setenta, casi como la propia casa.',
     ],
     lookFor: [
       'Los restos de decoración de primer estilo en el atrio, la fase más antigua de la pintura pompeyana.',
@@ -349,10 +349,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.7516, 14.4819],
     regio: 'VI.1.9',
     minutes: 8,
-    intro: 'Una de las casas más antiguas de Pompeya debe su nombre a un sorprendente hallazgo de instrumental médico romano.',
+    intro: 'Tocad con la mirada esa fachada de sillares bien escuadrados, sobre la Via Consolare: es de las construcciones más antiguas que vais a ver hoy.',
     narration: [
-      'Excavada ya en mil setecientos setenta bajo la dirección de Francesco La Vega, esta vivienda se cuenta entre las más antiguas de todo el yacimiento, con una fachada de sillares de piedra caliza del Sarno dispuestos en opus quadratum que se remonta a alrededor del año doscientos antes de nuestra era. Una moneda hallada bajo el pavimento del atrio en mil novecientos veintiséis, acuñada entre los años doscientos catorce y doscientos doce antes de Cristo, ayudó a confirmar esta datación tan temprana.',
-      'Su nombre actual proviene del hallazgo, en mil setecientos setenta y uno, de unos cuarenta instrumentos quirúrgicos de bronce: escalpelos, fórceps, sondas y otros utensilios que hoy se conservan en el Museo Arqueológico de Nápoles y que constituyen uno de los conjuntos más completos de instrumental médico romano jamás encontrados. Se cree que en la casa vivió o trabajó un médico, aunque su identidad exacta sigue sin conocerse.',
+      'Ese aparejo en opus quadratum, de piedra caliza del Sarno, se remonta a alrededor del año doscientos antes de nuestra era, y Francesco La Vega ya la excavó en mil setecientos setenta. Una moneda hallada bajo el pavimento del atrio en mil novecientos veintiséis, acuñada entre los años doscientos catorce y doscientos doce antes de Cristo, confirmó esa fecha tan temprana.',
+      'El hallazgo que le da nombre llegó en mil setecientos setenta y uno: unos cuarenta instrumentos quirúrgicos de bronce, escalpelos, fórceps y sondas, hoy en Nápoles, uno de los conjuntos de instrumental médico romano más completos que existen. Se cree que aquí vivió o trabajó un médico, aunque nadie sabe todavía su nombre. La calle de fuera lleva directa hacia la Porta Ercolano.',
     ],
     lookFor: [
       'La fachada de sillares de piedra caliza en opus quadratum, de una de las fases constructivas más antiguas del yacimiento.',
@@ -374,10 +374,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.75056, 14.48407],
     regio: 'VI.6.1',
     minutes: 9,
-    intro: 'Una vivienda tan grande que ocupa una manzana entera, citada durante generaciones como modelo escolar de domus romana.',
+    intro: 'Rodead esta manzana entera con la mirada: toda ella, tiendas incluidas, era una sola casa.',
     narration: [
-      'La Casa de Pansa ocupa toda una insula, con la vivienda principal en el centro y una serie de tiendas y apartamentos de alquiler distribuidos alrededor, de cara a la calle, para aprovechar comercialmente el resto del solar. Su origen se remonta a época samnita, y su planta de manual, con atrio toscano y amplio peristilo de dieciséis columnas, ha aparecido durante generaciones en libros de arquitectura como ejemplo perfecto de domus romana.',
-      'El nombre actual procede de un cartel de alquiler pintado en la fachada a nombre de Cneo Alleyo Nigidio Mayo, un rico personaje local que también aparece en carteles electorales de otras partes de la ciudad. La excavación completa de la vivienda no se dio por terminada hasta mil novecientos cuarenta y tres, casi ciento treinta años después de que empezaran los primeros trabajos en este sector de la Regio Sexta.',
+      'En el centro vivía la familia; alrededor, de cara a la calle, había tiendas y apartamentos de alquiler que sacaban rendimiento al resto del solar. Su origen es samnita, y la planta, con atrio toscano y un peristilo de dieciséis columnas, ha salido durante generaciones en los libros de arquitectura como el ejemplo perfecto de domus romana, el que dibujan los estudiantes cuando les piden imaginar una casa pompeyana.',
+      'El detalle que casi nadie relaciona es el nombre: viene de un cartel de alquiler pintado en la fachada a nombre de Cneo Alleyo Nigidio Mayo, un personaje rico que también aparece en carteles electorales de otras zonas de la ciudad. La excavación no se dio por terminada hasta mil novecientos cuarenta y tres, casi ciento treinta años después de empezar. Estáis en pleno corazón de la Regio Sexta, a un paso de la Casa del Fauno.',
     ],
     lookFor: [
       'La distribución en torno a la insula completa, con tiendas y apartamentos alquilados alrededor de la vivienda principal.',
@@ -399,10 +399,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.7511, 14.4832],
     regio: 'VI.7.23',
     minutes: 7,
-    intro: 'Un sello de bronce con nombre propio permitió identificar al dueño de esta casa decorada con escenas de Apolo.',
+    intro: 'Buscad, en el atrio, los restos fragmentarios de un fresco de Apolo: apenas queda nada, y aun así le dio nombre a toda la casa.',
     narration: [
-      'Excavada en la década de mil ochocientos treinta, esta vivienda debe su nombre a los frescos con escenas de Apolo que decoraban el atrio, aunque hoy se conservan solo de forma fragmentaria. En marzo de mil ochocientos treinta apareció un sello de bronce con el nombre de Aulo Herennuleyo Comune, que se considera el propietario más probable de la casa en sus últimos años de vida.',
-      'El jardín conserva un nicho-fuente decorado con mosaico y pequeñas estatuillas, en la línea de otras casas de la misma manzana que competían por tener el rincón de agua más vistoso posible. La decoración combina tercer y cuarto estilo, señal de que la vivienda se remodeló al menos una vez antes de la erupción final.',
+      'La vivienda se excavó en la década de mil ochocientos treinta, y ese mismo mes de marzo apareció un sello de bronce con el nombre de Aulo Herennuleyo Comune, el propietario más probable en sus últimos años. Un objeto tan pequeño, y aun así basta para ponerle nombre y apellido a una casa entera.',
+      'Lo que casi nadie mira es el nicho-fuente del jardín, con mosaico y estatuillas, muy parecido al de otras casas de esta misma manzana que competían por el rincón de agua más vistoso. La decoración combina tercer y cuarto estilo, señal de que la casa se remodeló al menos una vez antes del final. Estáis muy cerca de la Casa del Fauno, en el mismo barrio de las grandes domus.',
     ],
     lookFor: [
       'Los restos de los frescos de Apolo que dan nombre a la casa, en el área del atrio.',
@@ -424,10 +424,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.751781, 14.483828],
     regio: 'VI.9.6',
     minutes: 9,
-    intro: 'Una de las pocas casas de Pompeya con dos atrios distintos, decorada por el mismo taller que pintó la Casa de los Vettii.',
+    intro: 'Contad los atrios de esta casa: son dos, uno de ellos con columnas corintias, algo que solo existe en cuatro viviendas de toda Pompeya.',
     narration: [
-      'Descubierta entre mil ochocientos veintiocho y mil ochocientos veintinueve, esta gran vivienda se organiza en torno a dos atrios, uno de ellos de orden corintio, algo que solo se conoce en cuatro casas de toda Pompeya. Ambos espacios se conectan mediante un peristilo de tipo rodio, con columnas más altas en un lado para dejar entrar más luz, y un estanque central.',
-      'La decoración de cuarto estilo, con escenas de Adonis, de Escila y de Apolo persiguiendo a Dafne, salió del mismo taller de pintores que trabajó poco después en la vecina Casa de los Vettii, algo que se nota en el tratamiento del color y de las figuras. El cuadro que da nombre a la casa, con los Dioscuros Cástor y Pólux a la entrada, se trasladó hace tiempo al Museo Arqueológico de Nápoles.',
+      'Descubierta entre mil ochocientos veintiocho y mil ochocientos veintinueve, la casa conecta esos dos atrios con un peristilo de tipo rodio, con columnas más altas en un lado para dejar entrar más luz sobre un estanque central. Los frescos de cuarto estilo, con Adonis, Escila y Apolo persiguiendo a Dafne, salieron del mismo taller de pintores que trabajaría poco después en la Casa de los Vettii, y se nota en el color y en el trazo de las figuras.',
+      'El detalle que casi nadie relaciona es que el cuadro que da nombre a la casa, con los Dioscuros Cástor y Pólux a la entrada, hace tiempo que vive en el museo de Nápoles: solo queda aquí el hueco donde colgaba. La Casa de los Vettii, con la firma del mismo pintor, os espera un poco más adelante en la ruta.',
     ],
     lookFor: [
       'El doble atrio, uno de ellos de orden corintio, una rareza entre las casas pompeyanas.',
@@ -449,10 +449,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.7515, 14.4835],
     regio: 'VI.9.2',
     minutes: 8,
-    intro: 'Uno de los grandes peristilos jardín de la Regio Sexta, con un fresco que dio nombre a toda la casa.',
+    intro: 'Caminad hasta el fondo de la casa y mirad el peristilo: ese jardín con estanque es mucho más grande de lo que suele caber en una domus pompeyana.',
     narration: [
-      'Descubierta en mil ochocientos veintinueve y reexcavada en mil ochocientos treinta y seis y de nuevo en mil novecientos sesenta y seis, esta casa conserva restos de decoración de primero, tercero y cuarto estilo, prueba de que estuvo habitada y remodelada durante varios siglos seguidos. Es una de las viviendas más lujosas de toda esta manzana de la Regio Sexta.',
-      'Debe su nombre a un fresco que representaba a Meleagro y Atalanta, los protagonistas del mito de la caza del jabalí de Calidón, hoy trasladado al Museo Arqueológico de Nápoles junto con buena parte de la mejor decoración. El gran peristilo columnado con estanque y jardín, muy amplio para el tamaño habitual de las casas pompeyanas, era sin duda el espacio pensado para impresionar a las visitas.',
+      'Se pensó así a propósito, para impresionar a las visitas antes de que se sentaran a cenar. La casa se descubrió en mil ochocientos veintinueve, se reexcavó en mil ochocientos treinta y seis y de nuevo en mil novecientos sesenta y seis, y conserva decoración de primero, tercero y cuarto estilo, señal de que se habitó y se remodeló durante varios siglos.',
+      'El fresco que le da nombre, con Meleagro y Atalanta cazando el jabalí de Calidón, ya no está aquí, sino en el museo de Nápoles, junto con buena parte de su mejor decoración. Lo que queda, ese peristilo desmesurado, es igual de elocuente. Comparte manzana con la Casa de los Dioscuros, apenas unos pasos más allá.',
     ],
     lookFor: [
       'El amplio peristilo columnado con estanque, uno de los más generosos de la Regio Sexta.',
@@ -474,10 +474,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.75183, 14.48436],
     regio: 'VI.11.9',
     minutes: 9,
-    intro: 'Un mosaico con Teseo venciendo al Minotauro en pleno laberinto da nombre a una de las mansiones más antiguas de la ciudad.',
+    intro: 'Buscad en el suelo del oecus norte un mosaico diminuto: Teseo enfrentándose al Minotauro dentro de un laberinto de líneas geométricas.',
     narration: [
-      'De origen samnita, la casa se reconstruyó después del asedio de Sila del año ochenta y nueve antes de nuestra era, cuando buena parte de este sector de la muralla sufrió graves daños. Perteneció a la familia de los Sextilios, y se excavó en mil ochocientos treinta y cuatro. Tiene dos atrios, uno de ellos tetrástilo, con cuatro columnas sosteniendo la cubierta abierta al cielo.',
-      'En el oecus norte, una sala de recepción especialmente decorada, se conserva un mosaico con Teseo enfrentándose al Minotauro dentro de un laberinto de líneas geométricas, la representación más antigua conocida de este motivo en todo el mundo romano. El resto de la casa conserva pinturas de segundo estilo y unas termas privadas, un lujo que solo podían permitirse las familias más acomodadas de la ciudad.',
+      'Es la representación más antigua conocida de ese motivo en todo el mundo romano, y está aquí, bajo vuestros pies, sin ningún cartel que le haga justicia. La casa, de origen samnita, se reconstruyó después del asedio de Sila del año ochenta y nueve antes de nuestra era, cuando este sector de la muralla sufrió graves daños; perteneció a la familia de los Sextilios y se excavó en mil ochocientos treinta y cuatro.',
+      'Lo que casi nadie busca es el segundo atrio, tetrástilo, con cuatro columnas sosteniendo la cubierta abierta al cielo, y unas termas privadas, un lujo que solo podían pagarse las familias más acomodadas. Las pinturas de segundo estilo que quedan en el resto de la casa son mucho más discretas que ese pequeño laberinto del suelo.',
     ],
     lookFor: [
       'El mosaico de Teseo y el Minotauro en el laberinto, en el oecus norte de la casa.',
@@ -499,10 +499,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.75228, 14.48503],
     regio: 'VI.16.7',
     minutes: 9,
-    intro: 'Unos pequeños discos de vidrio dorado dieron nombre a una de las casas más refinadas de toda Pompeya.',
+    intro: 'Mirad hacia el peristilo, entre las columnas: esas máscaras de mármol colgadas se llaman oscilla, y se mecían con el viento como adorno de buena suerte.',
     narration: [
-      'Esta vivienda perteneció, según la tradición, a la familia de los Popeos, posiblemente emparentada con la propia Popea Sabina, la segunda esposa del emperador Nerón. Se excavó entre mil novecientos tres y mil novecientos cinco, y se restauró de nuevo entre dos mil quince y dos mil dieciséis para recuperar buena parte de su color original.',
-      'Debe su nombre a unos pequeños discos de vidrio con figuras de amorcillos recubiertas de pan de oro, hallados en uno de los cubículos de la casa. Los frescos representan a Paris y Helena y a Aquiles y Patroclo, y el larario doméstico está dedicado a divinidades egipcias como Isis, Serapis, Anubis y Harpócrates, señal del gusto por los cultos orientales que se extendió entre las familias más ricas en las últimas décadas de la ciudad. El peristilo conserva también máscaras de mármol y oscilla colgantes entre las columnas.',
+      'La casa perteneció, según la tradición, a la familia de los Popeos, quizá emparentada con la propia Popea Sabina, segunda esposa del emperador Nerón. Se excavó entre mil novecientos tres y mil novecientos cinco, y se restauró de nuevo entre dos mil quince y dos mil dieciséis, recuperando buena parte de su color original.',
+      'El detalle que le da nombre son unos discos diminutos de vidrio con amorcillos recubiertos de pan de oro, hallados en un cubículo, junto a frescos de Paris y Helena y de Aquiles y Patroclo. El larario está dedicado a Isis, Serapis, Anubis y Harpócrates, prueba del gusto por lo egipcio que cundió entre las familias más ricas en las últimas décadas de la ciudad, el mismo gusto que veremos también junto al Templo de Isis.',
     ],
     lookFor: [
       'Los discos de vidrio con amorcillos dorados que dan nombre a la casa.',
@@ -524,10 +524,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.7517, 14.4839],
     regio: 'VI.10.7',
     minutes: 7,
-    intro: 'Un mosaico con un ancla negra en la entrada da nombre a una casa con un jardín hundido poco común en Pompeya.',
+    intro: 'Mirad al suelo nada más entrar: un ancla negra en mosaico, un motivo que casi ningún vestíbulo pompeyano se atrevió a usar.',
     narration: [
-      'Excavada entre mil ochocientos veintiséis y mil ochocientos veintisiete, esta vivienda pasó por varias fases decorativas, desde el primer estilo del siglo dos antes de nuestra era hasta el cuarto estilo posterior al terremoto del año sesenta y dos. En el vestíbulo se conserva un mosaico con un ancla de color negro, motivo poco frecuente en las entradas pompeyanas y origen del nombre moderno de la casa.',
-      'Lo más singular es su jardín hundido, unos escalones por debajo del nivel del resto de la vivienda, con un criptopórtico y varios nichos decorativos, una solución poco habitual en el resto de la ciudad. En el atrio se conserva también la base de lava volcánica donde se asentaba un arca fuerte, el mueble donde las familias pompeyanas guardaban su dinero y sus objetos de valor a la vista de las visitas, como muestra deliberada de riqueza.',
+      'De ahí el nombre moderno de la casa, excavada entre mil ochocientos veintiséis y mil ochocientos veintisiete, con fases decorativas que van del primer estilo, del siglo dos antes de nuestra era, hasta el cuarto estilo posterior al terremoto del año sesenta y dos. Bajad unos escalones y encontraréis lo más singular de la vivienda, un jardín hundido con criptopórtico y nichos decorativos, una solución que apenas se repite en el resto de la ciudad.',
+      'El detalle que nadie mira es la base de lava volcánica del atrio, donde se asentaba un arca fuerte: el mueble donde una familia pompeyana guardaba su dinero a la vista de cualquier visita, como quien no tiene nada que ocultar de su propia riqueza.',
     ],
     lookFor: [
       'El mosaico del ancla negra en el vestíbulo de entrada.',
@@ -549,10 +549,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.75294, 14.48473],
     regio: 'V.6.12',
     minutes: 7,
-    intro: 'Un hallazgo reciente en la zona de los Nuovi Scavi de la Regio Quinta sacó a la luz este fresco mitológico casi intacto.',
+    intro: 'Fijaos en los andamios y las protecciones que todavía rodean esta zona: la casa de Leda lleva excavada solo unos años.',
     narration: [
-      'Esta vivienda de clase media salió a la luz en noviembre de dos mil dieciocho, durante los trabajos de contención de taludes del Gran Proyecto Pompeya en la Regio Quinta, uno de los sectores del yacimiento excavados más recientemente. Las campañas siguientes, entre dos mil diecinueve y dos mil veinticuatro, fueron sacando a la luz varias estancias contiguas y viviendas vecinas en el mismo bloque.',
-      'Junto a las fauces de entrada apareció, en un pequeño cubículo, un fresco de cuarto estilo con Leda y el cisne, el mito de Zeus transformado en ave para seducir a la reina de Esparta, en un estado de conservación excepcional para tratarse de un hallazgo tan reciente. Es un buen ejemplo de que Pompeya sigue dando sorpresas: buena parte de la Regio Quinta permanecía sin excavar hasta hace muy pocos años.',
+      'Salió a la luz en noviembre de dos mil dieciocho, durante los trabajos de contención de taludes del Gran Proyecto Pompeya en la Regio Quinta, uno de los sectores del yacimiento explorados más recientemente. Las campañas siguientes, entre dos mil diecinueve y dos mil veinticuatro, fueron sacando a la luz estancias contiguas y casas vecinas en el mismo bloque.',
+      'Junto a las fauces de entrada, en un cubículo pequeño, apareció un fresco de cuarto estilo con Leda y el cisne, el mito de Zeus convertido en ave para seducir a la reina de Esparta, en un estado de conservación que sorprende para un hallazgo tan reciente. Buena parte de esta regio seguía bajo tierra hace apenas unos años, así que preguntad si aún hay novedades cuando lleguéis a las Termas Estabianas.',
     ],
     lookFor: [
       'El fresco de Leda y el cisne, en el cubículo junto a la entrada.',
@@ -574,10 +574,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.752136, 14.486357],
     regio: 'V.2.B',
     minutes: 8,
-    intro: 'El mostrador de comida rápida más colorido de todo el yacimiento salió a la luz hace apenas unos años, casi intacto.',
+    intro: 'Mirad el mostrador, con su pintura casi intacta: una nereida sobre un caballo marino, patos, un gallo y un perro atado con correa.',
     narration: [
-      'Este termopolio se excavó por completo entre dos mil diecinueve y dos mil veinte, y su hallazgo se anunció oficialmente a finales de diciembre de dos mil veinte, convirtiéndose de inmediato en una de las noticias arqueológicas más comentadas del año. El mostrador conserva su pintura original casi intacta: una nereida cabalgando un caballo marino, patos, un gallo y un perro atado con correa, motivos que probablemente anunciaban parte de lo que se servía en el local.',
-      'En el interior de los dolia empotrados en el mostrador aparecieron restos de pescado, caracoles y carne de cerdo, confirmando su uso como puesto de comida rápida para los vecinos del barrio. Junto al mostrador se halló también el esqueleto completo de un perro de raza pequeña, probablemente el guardián o la mascota del propio local en el momento de la erupción.',
+      'Es probable que anunciaran, sin necesidad de palabras, parte de lo que se servía dentro. El termopolio se excavó por completo entre dos mil diecinueve y dos mil veinte, y el anuncio oficial del hallazgo, a finales de diciembre de dos mil veinte, fue una de las noticias arqueológicas más comentadas de aquel año. Dentro de los dolia empotrados en el mostrador aparecieron restos de pescado, caracoles y carne de cerdo.',
+      'El detalle que se os puede escapar es que junto al mostrador se halló también el esqueleto completo de un perro pequeño, seguramente el guardián o la mascota del local en el momento de la erupción. Un puesto de comida rápida así, con su fogón y sus dolia, es justo lo que necesitáis para imaginar lo que fueron los termopolios que ya habéis visto en la Via dell\'Abbondanza.',
     ],
     lookFor: [
       'La pintura original del mostrador, con la nereida, los patos, el gallo y el perro.',
@@ -600,10 +600,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.752513, 14.486548],
     regio: 'V.2.i',
     minutes: 8,
-    intro: 'Uno de los mayores atrios de toda Pompeya recuerda, con su nombre, una boda real celebrada en Italia mil ochocientos años después.',
+    intro: 'Contad las columnas de este atrio tetrástilo: son de toba, y sostienen uno de los espacios más grandes que se conservan en toda Pompeya.',
     narration: [
-      'Esta gran vivienda se construyó a finales del siglo dos antes de nuestra era, en plena época samnita, y se remodeló después en época augustea. Se excavó en mil ochocientos noventa y tres, el mismo año en que Umberto primero de Italia y Margarita de Saboya celebraban sus bodas de plata, y los arqueólogos decidieron ponerle ese nombre en su honor, una costumbre habitual en la Pompeya decimonónica de dedicar los hallazgos a la actualidad de la corte.',
-      'Su atrio tetrástilo corintio, con columnas de toba, se cuenta entre los más grandes conservados en toda la ciudad, y se completa con un peristilo de estilo rodio. El propietario de la vivienda sigue sin conocerse con seguridad, aunque algunas atribuciones apuntan a un tal Lucio Albucio Celso sin que exista una prueba definitiva.',
+      'La casa se construyó a finales del siglo dos antes de nuestra era, en plena época samnita, y se remodeló ya bajo Augusto, con un peristilo de estilo rodio completando el conjunto. Su propietario sigue sin conocerse con seguridad, aunque algunas atribuciones apuntan a un tal Lucio Albucio Celso, sin que haya prueba definitiva.',
+      'Lo que casi nadie relaciona es el propio nombre de la casa: se excavó en mil ochocientos noventa y tres, justo el año en que Umberto primero de Italia y Margarita de Saboya celebraban sus bodas de plata, y los arqueólogos decidieron honrarlos así, una costumbre habitual en la Pompeya decimonónica de dedicar los hallazgos a la actualidad de la corte.',
     ],
     lookFor: [
       'El atrio tetrástilo corintio, uno de los mayores conservados en Pompeya.',
@@ -625,10 +625,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.752882, 14.487941],
     regio: 'V.4.a',
     minutes: 9,
-    intro: 'Los carteles electorales identificaron a su dueño con nombre y apellido: un magistrado local con gusto refinado por la pintura mitológica.',
+    intro: 'Leed, si podéis, los restos de los carteles electorales de la fachada: ahí está escrito, con una seguridad poco frecuente, el nombre del dueño de esta casa.',
     narration: [
-      'Construida en el siglo dos antes de nuestra era y ampliada ya en época augustea, esta casa sufrió daños en el terremoto del año sesenta y dos y todavía estaba en obras de reconstrucción cuando llegó la erupción. Se excavó primero entre mil ochocientos noventa y nueve y mil novecientos, y de nuevo entre mil novecientos setenta y uno y mil novecientos setenta y cuatro.',
-      'Los carteles electorales pintados en la fachada permiten identificar a su propietario con una seguridad poco frecuente: se trataba de Marco Lucrecio Fronto, un magistrado local que dio nombre a la casa. En el tablino se conservan frescos de tercer y cuarto estilo con Marte y Venus, Narciso, y Pero amamantando a su padre Micón en la cárcel, un episodio clásico de piedad filial muy repetido en la pintura romana. En una de las estancias se hallaron los restos de ocho víctimas de la erupción, cinco adultos y tres niños.',
+      'Se llamaba Marco Lucrecio Fronto, un magistrado local, y su tablino conserva frescos de tercer y cuarto estilo con Marte y Venus, con Narciso y con una escena menos conocida, Pero amamantando en la cárcel a su padre Micón, un episodio clásico de piedad filial que la pintura romana repitió muchas veces. La casa, construida en el siglo dos antes de nuestra era y ampliada bajo Augusto, seguía en obras de reconstrucción cuando llegó la erupción.',
+      'En una de las estancias se hallaron los restos de ocho víctimas, cinco adultos y tres niños, que buscaron refugio sin conseguirlo. Reabierta tras una restauración entre dos mil doce y dos mil catorce, esta casa está muy cerca de donde la ruta clásica cruza la Via Stabiana hacia las Termas Estabianas.',
     ],
     lookFor: [
       'Los carteles electorales de la fachada que identifican al propietario de la casa.',
@@ -650,10 +650,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.75105, 14.486],
     regio: 'VII.4.48',
     minutes: 7,
-    intro: 'Un gran fresco con leones, jabalíes y osos persiguiéndose por el fondo del peristilo da nombre a esta domus discreta.',
+    intro: 'Al fondo del peristilo, mirad ese fresco de caza: leones, jabalíes y osos persiguiéndose entre la vegetación pintada.',
     narration: [
-      'Excavada entre mil ochocientos treinta y cuatro y mil ochocientos treinta y cinco, esta casa sigue el esquema clásico de atrio y peristilo de cualquier domus pompeyana de tamaño medio. Se la llama Caza Antigua para distinguirla de otra vivienda de la ciudad conocida como Casa de la Caza Nueva, con un motivo decorativo parecido pero de fecha posterior.',
-      'El fresco que da nombre a la casa, en el fondo del peristilo, representa una escena de caza con leones, jabalíes y osos entre la vegetación, un tema muy apreciado en las casas pompeyanas de gusto refinado. El resto de las estancias conserva pinturas de cuarto estilo con escenas mitológicas como Leda, Dánae y Diana, todas ellas protagonistas de episodios de seducción divina muy repetidos en la pintura de la época.',
+      'Es un tema que gustaba mucho en las casas pompeyanas de gusto refinado, y de ahí el nombre de esta vivienda, la Caza Antigua, para distinguirla de otra casa de la ciudad con un motivo parecido pero más tardío, la Caza Nueva. Se excavó entre mil ochocientos treinta y cuatro y mil ochocientos treinta y cinco, y sigue el esquema clásico de atrio y peristilo de cualquier domus pompeyana de tamaño medio.',
+      'Lo que casi nadie relaciona son las pinturas de cuarto estilo del resto de las salas, con Leda, Dánae y Diana, todas protagonistas de episodios de seducción divina que la pintura de la época repitió sin cansarse. Está a un paso de donde la ruta clásica pasa junto al Templo de Isis.',
     ],
     lookFor: [
       'El fresco de caza con leones, jabalíes y osos en el fondo del peristilo.',
@@ -674,10 +674,10 @@ export const EXTRA_STOPS: Stop[] = [
     category: 'servicio',
     coords: [40.75276, 14.48286],
     minutes: 8,
-    intro: 'Una de las doce torres de la muralla ofrece, desde su explanada, la mejor panorámica de todo el barrio norte de Pompeya.',
+    intro: 'Subid la mirada hacia esta torre y luego girad hacia el sur: toda la Via di Mercurio se alinea, recta, hasta el Foro.',
     narration: [
-      'Esta torre defensiva, la número once de las que jalonaban la muralla de la ciudad, se construyó entre los siglos dos y uno antes de nuestra era como parte del sistema defensivo pompeyano, en el extremo norte de la Via di Mercurio, la calle que le da nombre moderno. Junto con el tramo vecino, ha sido objeto de una restauración reciente financiada con fondos europeos, que ha consolidado la toba original y recuperado buena parte de la fábrica de piedra.',
-      'Desde lo alto se domina una vista axial sobre toda la Via di Mercurio hasta el propio Foro, con el Vesubio, el mar y el valle del río Sarno como telón de fondo, una de las panorámicas más completas de todo el yacimiento. El acceso al adarme superior, el paso de ronda que recorría la muralla, suele reservarse a grupos reducidos por motivos de conservación.',
+      'Es la torre número once de las que jalonaban la muralla, construida entre los siglos dos y uno antes de nuestra era, justo donde arranca la calle que le da nombre moderno. Junto con el tramo vecino, ha sido restaurada recientemente con fondos europeos, que han consolidado la toba original y recuperado buena parte de la fábrica de piedra.',
+      'El detalle que casi nadie sube a comprobar es la vista desde lo alto: el Vesubio, el mar y el valle del Sarno como telón de fondo de toda la calle. El acceso al paso de ronda suele reservarse a grupos reducidos por conservación, así que preguntad antes de subir. Desde aquí hasta el Arco de Calígula, ya no hay más que bajar.',
     ],
     lookFor: [
       'La vista axial sobre toda la Via di Mercurio, con el Foro al fondo.',
@@ -698,10 +698,10 @@ export const EXTRA_STOPS: Stop[] = [
     category: 'servicio',
     coords: [40.75322, 14.484164],
     minutes: 7,
-    intro: 'En el punto más alto de la ciudad, esta torre de distribución repartía el agua del acueducto entre fuentes, termas y casas.',
+    intro: 'Mirad esta cuenca circular de piedra: por aquí entraba toda el agua que bebía Pompeya, antes de repartirse calle a calle.',
     narration: [
-      'Construido bajo el reinado de Augusto, a finales del siglo primero antes de nuestra era, este edificio era el punto final del ramal del acueducto del Serino que abastecía a Pompeya, situado deliberadamente en el punto más alto de toda la ciudad, a unos cuarenta y dos metros sobre el nivel del mar, para que el agua pudiera repartirse después por gravedad hacia el resto del núcleo urbano.',
-      'Se excavó en mil novecientos dos, y conserva una cuenca circular construida en opus reticulatum con una rejilla y tres conductos de salida distintos. El reparto no era igualitario: las fuentes públicas tenían prioridad absoluta sobre las termas y sobre las casas privadas, de manera que si escaseaba el agua, primero se cerraba el grifo a los baños y a los ricos antes que a cualquier vecino que fuera a llenar su cántaro a la calle. Tras el terremoto del año sesenta y dos, no está claro si volvió a funcionar con normalidad antes de la erupción.',
+      'El edificio se construyó bajo Augusto, a finales del siglo primero antes de nuestra era, como punto final del ramal del acueducto del Serino, situado a propósito en el lugar más alto de la ciudad, a unos cuarenta y dos metros sobre el mar, para que el agua bajara después por gravedad. Se excavó en mil novecientos dos, y la cuenca, en opus reticulatum, todavía conserva la rejilla y los tres conductos de salida.',
+      'Lo que casi nadie sabe es que el reparto no era igual para todos: las fuentes públicas tenían prioridad absoluta, y si escaseaba el agua, se cerraba antes el grifo a las termas y a las casas ricas que a cualquier vecino con un cántaro. Tras el terremoto del año sesenta y dos, no está claro si volvió a funcionar del todo antes de la erupción. Queda junto a la Porta Vesuvio, en el punto más alto de todo el recorrido.',
     ],
     lookFor: [
       'La cuenca circular de distribución, construida en opus reticulatum.',
@@ -722,10 +722,10 @@ export const EXTRA_STOPS: Stop[] = [
     category: 'puerta',
     coords: [40.75338, 14.484099],
     minutes: 6,
-    intro: 'La puerta que miraba directamente hacia el volcán conserva todavía las marcas de un asedio anterior a la propia erupción.',
+    intro: 'Fijaos en los muros de esta puerta, la que miraba de frente al volcán: todavía se distinguen ahí los golpes de un asedio anterior a la propia erupción.',
     narration: [
-      'Esta puerta se construyó por fases desde finales del siglo tres antes de nuestra era, con una última reconstrucción todavía en marcha en el momento de la erupción. En sus muros se distinguen impactos de proyectiles del asedio de Sila del año ochenta y nueve antes de Cristo, cuando Pompeya, aliada de otros pueblos itálicos, resistió el ataque de las legiones romanas durante la guerra social.',
-      'Se excavó en mil ochocientos once y de nuevo en mil novecientos cinco. Junto a ella se conserva un pequeño larario con dos altares y frescos dedicados a los Lares, y algo más allá arranca la necrópolis donde se encuentra la tumba del edil Vestorio Prisco, muerto hacia los años setenta y cinco o setenta y seis, unos años antes de la erupción que sepultaría la ciudad entera.',
+      'Son impactos de proyectiles del asedio de Sila, del año ochenta y nueve antes de Cristo, cuando Pompeya, aliada de otros pueblos itálicos, resistió aquí el ataque de las legiones romanas durante la guerra social. La puerta se construyó por fases desde finales del siglo tres antes de nuestra era, con una última reconstrucción que seguía en marcha cuando llegó la erupción, y se excavó en mil ochocientos once y de nuevo en mil novecientos cinco.',
+      'Lo que casi nadie mira es el pequeño larario de al lado, con dos altares y frescos dedicados a los Lares. Un poco más allá arranca la necrópolis, con la tumba del edil Vestorio Prisco, muerto hacia los años setenta y cinco o setenta y seis, pocos años antes de que el volcán que miraba de frente sepultara la ciudad entera.',
     ],
     lookFor: [
       'Las marcas de impactos de proyectiles del asedio de Sila, visibles en algunos tramos de muro.',
@@ -747,10 +747,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.750881, 14.485712],
     regio: 'VII.2.22',
     minutes: 7,
-    intro: 'Un horno de ladrillo casi intacto y cinco grandes molinos de piedra recuerdan que Pompeya tenía unas treinta y cinco panaderías.',
+    intro: 'Contad los molinos de piedra alineados en este patio: son cinco, y cada uno tenía que girarlo un burro o un esclavo, sin descanso, para moler el grano de toda una calle.',
     narration: [
-      'Esta panadería, situada en el Vicolo Storto, perteneció a Numerio Popidio Prisco, cuyo nombre aparece en las inscripciones asociadas al local. A diferencia de otros establecimientos de la ciudad, no tiene mostrador de venta directa a la calle, lo que hace pensar que funcionaba sobre todo al por mayor, repartiendo pan a otros comercios y a domus particulares en lugar de vender de puerta en puerta.',
-      'Conserva un horno de ladrillo en muy buen estado y hasta cinco molinos de piedra volcánica, cada uno formado por dos piezas superpuestas, la meta fija y el catillus giratorio, que se hacían girar con la fuerza de un burro o de un esclavo para triturar el grano. Pompeya llegó a tener unas treinta y cinco panaderías documentadas, y esta es una de las que mejor conserva el conjunto completo de sus instalaciones de producción.',
+      'Esta panadería del Vicolo Storto perteneció a Numerio Popidio Prisco, cuyo nombre aparece en las inscripciones del local, y conserva un horno de ladrillo en muy buen estado además de esos cinco molinos, cada uno formado por dos piezas superpuestas, la meta fija abajo y el catillus giratorio encima. Pompeya llegó a tener unas treinta y cinco panaderías documentadas, y esta es de las que mejor conservan el conjunto completo de su producción.',
+      'Lo que casi nadie relaciona es que, a diferencia de otras panaderías de la ciudad, esta no tiene mostrador a la calle: repartía pan al por mayor, a otros comercios y a domus particulares, en lugar de vender de puerta en puerta. Es una parada corta y muy visual antes de seguir hacia la Porta Stabia.',
     ],
     lookFor: [
       'El horno de ladrillo, muy bien conservado, en el fondo del local.',
@@ -772,10 +772,10 @@ export const EXTRA_STOPS: Stop[] = [
     category: 'puerta',
     coords: [40.748328, 14.489955],
     minutes: 6,
-    intro: 'La puerta más antigua de las que se conservan en pie recibía a quienes llegaban desde Stabia y desde el sur de la bahía.',
+    intro: 'Poneos bajo el arco y mirad hacia el norte: toda la Via Stabiana, la arteria que cruza Pompeya de punta a punta, arranca justo aquí.',
     narration: [
-      'Descubierta en mil ochocientos cincuenta y uno y acondicionada para la visita en mil novecientos siete y mil novecientos ocho, esta puerta da inicio a la Via Stabiana, la gran arteria que atraviesa la ciudad de sur a norte. Está construida en opus incertum de toba, con un enlucido de primer estilo todavía visible en algunos tramos, y conserva una inscripción en lengua osca que hace referencia a obras viales anteriores a la romanización de la ciudad.',
-      'Junto a la puerta se conserva una fuente pública con un relieve decorativo, uno de los muchos surtidores de agua corriente que jalonaban las calles de Pompeya. Fuera de las murallas se extiende una necrópolis todavía en estudio, investigada por un proyecto conjunto con la Universidad de Cincinnati que ha permitido documentar buena parte del sector funerario meridional de la ciudad.',
+      'Es la puerta más antigua que se conserva en pie, descubierta en mil ochocientos cincuenta y uno y acondicionada para la visita en mil novecientos siete y mil novecientos ocho. Está construida en opus incertum de toba, con un enlucido de primer estilo todavía visible en algunos tramos, y conserva una inscripción en lengua osca sobre obras viales anteriores a la romanización de la ciudad.',
+      'Junto a ella hay una fuente pública con un relieve decorativo, uno de tantos surtidores que jalonaban las calles pompeyanas, y fuera de la muralla se extiende una necrópolis todavía en estudio, investigada junto con la Universidad de Cincinnati. Si hacéis el recorrido en sentido inverso, esta es vuestra puerta de entrada hacia las Termas Estabianas.',
     ],
     lookFor: [
       'El aparejo de opus incertum de toba, con restos de enlucido de primer estilo.',
@@ -798,10 +798,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.75054, 14.487356],
     regio: 'VII.1.47',
     minutes: 8,
-    intro: 'Un mosaico en el umbral desea buena suerte a quien entra, con una fórmula que resume de maravilla la mentalidad comercial pompeyana.',
+    intro: 'Leed el mosaico del umbral antes de entrar: salve lucru, bienvenido, beneficio, la frase que mejor resume cómo pensaba esta ciudad de comerciantes.',
     narration: [
-      'Esta gran vivienda, resultado de la fusión de dos casas anteriores, perteneció a Publio Vedio Siricio, cuyo nombre aparece en un sello de bronce hallado en la excavación, en sociedad con otro personaje llamado Vedio Numiano. Se excavó entre mil ochocientos cincuenta y uno y mil ochocientos setenta y tres, sacando a la luz una de las mansiones más completas de la Regio Séptima.',
-      'En el umbral de entrada hay un mosaico con la inscripción salve lucru, que se traduce como bienvenido, beneficio, una declaración de intenciones nada disimulada sobre la importancia del dinero para su propietario. En una de las exedras se conservan frescos con Eneas curado por el médico Yapix, Hércules ebrio y Tetis en la fragua de Vulcano, escenas mitológicas de gran calidad técnica.',
+      'La casa perteneció a Publio Vedio Siricio, cuyo nombre aparece en un sello de bronce hallado en la excavación, en sociedad con otro personaje llamado Vedio Numiano. Nació de la fusión de dos viviendas anteriores, se excavó entre mil ochocientos cincuenta y uno y mil ochocientos setenta y tres, y es una de las mansiones más completas de toda la Regio Séptima.',
+      'Lo que casi nadie relaciona es la calidad de los frescos de una de sus exedras: Eneas curado por el médico Yapix, Hércules ebrio y Tetis en la fragua de Vulcano, escenas mitológicas de un taller que sabía lo que hacía. Salve lucru resume al propietario mejor que cualquier inscripción funeraria.',
     ],
     lookFor: [
       'El mosaico del umbral con la inscripción salve lucru.',
@@ -823,10 +823,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.75156, 14.48677],
     regio: 'IX.4',
     minutes: 10,
-    intro: 'El mayor complejo termal de Pompeya se quedó a medio construir cuando llegó la erupción, con las columnas todavía sin tallar.',
+    intro: 'Mirad esos capiteles a medio tallar: es la mejor fotografía que existe de una obra pública interrumpida en seco por la erupción.',
     narration: [
-      'Estas termas se empezaron a construir después del terremoto del año sesenta y dos, ocupando una insula completa de la Regio Novena, casi tres mil setecientos metros cuadrados que las convierten en el complejo termal más grande y más moderno de toda la ciudad. A diferencia de las Termas del Foro o las Estabianas, no tienen una sección separada para mujeres, quizás porque el proyecto original preveía turnos distintos según el horario del día.',
-      'Grandes ventanales orientados al sur, una novedad frente a las termas más antiguas y oscuras, muestran un concepto arquitectónico más luminoso y moderno. Pero las obras nunca se terminaron: los capiteles de algunas columnas se quedaron a medio tallar y las piscinas sin el revestimiento final, una fotografía perfecta de un proyecto público interrumpido en seco por la erupción diecisiete años después de empezarlo.',
+      'Estas termas se empezaron a construir después del terremoto del año sesenta y dos, ocupando una insula entera de la Regio Novena, casi tres mil setecientos metros cuadrados que las convierten en el complejo termal más grande y más moderno de la ciudad. Grandes ventanales orientados al sur, una novedad frente a las termas más antiguas y oscuras, anunciaban un concepto de baño mucho más luminoso.',
+      'El detalle que casi nadie nota es que, a diferencia de las Termas del Foro o las Estabianas que ya conocéis, aquí no hay sección separada para mujeres, quizá porque el proyecto preveía turnos distintos según la hora del día. Diecisiete años no bastaron para acabar la obra: comparad esta ambición inacabada con la solidez ya vieja de las Termas del Foro.',
     ],
     lookFor: [
       'Los capiteles de columnas dejados a medio tallar, prueba de la obra interrumpida.',
@@ -848,10 +848,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.749891, 14.488763],
     regio: 'I.4.5',
     minutes: 10,
-    intro: 'Una de las mayores mansiones de Pompeya, resultado de fusionar varias casas, con una estatua de Apolo tocando la cítara.',
+    intro: 'Imaginad, en el peristilo que pisáis, una estatua de bronce de Apolo tocando la cítara: de ahí sale el nombre de esta casa inmensa.',
     narration: [
-      'De origen samnita, en el siglo tres antes de nuestra era, esta vivienda llegó a fusionar al menos dos casas distintas después del terremoto del año sesenta y dos, hasta alcanzar unos dos mil setecientos metros cuadrados, una de las mayores superficies habitadas de toda la ciudad. Se excavó entre mil ochocientos cincuenta y tres y mil ochocientos sesenta y uno, con ampliaciones posteriores en mil ochocientos sesenta y ocho, mil ochocientos setenta y dos y mil novecientos veintinueve.',
-      'Debe su nombre a una estatua de bronce de Apolo Citaredo hallada en el peristilo, hoy en el Museo Arqueológico de Nápoles junto con un curioso grupo escultórico de serpiente, perros, jabalí, león y ciervo. Los frescos de Marte y Venus, Leda e Ifigenia en Táuride, también trasladados al museo, se atribuyen tentativamente a la familia de los Popidios. Tras una restauración, la casa reabrió al público en junio de dos mil veintiséis, con visitas guiadas los miércoles dentro de un proyecto llamado Parvula Domus.',
+      'De origen samnita, en el siglo tres antes de nuestra era, la vivienda llegó a fusionar al menos dos casas distintas después del terremoto del año sesenta y dos, hasta unos dos mil setecientos metros cuadrados, una de las mayores superficies habitadas de toda la ciudad. Se excavó entre mil ochocientos cincuenta y tres y mil ochocientos sesenta y uno, con ampliaciones posteriores en mil ochocientos sesenta y ocho, mil ochocientos setenta y dos y mil novecientos veintinueve.',
+      'Lo que casi nadie sabe es que junto al Apolo Citaredo, hoy en Nápoles, apareció también un curioso grupo escultórico de serpiente, perros, jabalí, león y ciervo, y frescos de Marte y Venus atribuidos tentativamente a la familia de los Popidios. Reabierta en junio de dos mil veintiséis, con visitas guiadas los miércoles dentro del proyecto Parvula Domus.',
     ],
     lookFor: [
       'El peristilo donde apareció la estatua de bronce de Apolo Citaredo.',
@@ -873,10 +873,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.751843, 14.488034],
     regio: 'IX.8.3',
     minutes: 9,
-    intro: 'Excavada justo cuando se cumplían mil ochocientos años de la erupción, guarda la representación más antigua conocida del Vesubio.',
+    intro: 'Buscad en el larario un fresco con Baco cubierto de racimos junto a una montaña de un solo pico: es el Vesubio más antiguo que conocemos, pintado por alguien que no sabía que era un volcán.',
     narration: [
-      'Esta gran vivienda se excavó en mil ochocientos setenta y nueve, coincidiendo con el decimoctavo centenario de la erupción, de ahí su nombre moderno. Se construyó hacia mediados del siglo dos antes de nuestra era, y su propietario en el momento de la erupción sigue sin identificarse con seguridad completa.',
-      'En su larario apareció un fresco excepcional que representa al dios Baco cubierto de racimos de uva junto a una montaña con un solo pico cubierto de viñedos: es la imagen más antigua que se conoce del Vesubio, pintada cuando todavía nadie sospechaba que aquella montaña tranquila fuera en realidad un volcán activo. La casa conserva también un ninfeo decorado y una panadería propia integrada en la vivienda, además de un fresco erótico en una de sus estancias privadas.',
+      'La montaña aparece cubierta de viñedos, verde y tranquila, sin ningún indicio de la furia que llegaría después. La casa se excavó en mil ochocientos setenta y nueve, coincidiendo con el decimoctavo centenario de la erupción, de ahí su nombre moderno, y se construyó hacia mediados del siglo dos antes de nuestra era; su propietario en el momento final sigue sin identificarse con seguridad.',
+      'El detalle que casi nadie busca es la panadería integrada en la propia vivienda, junto a un ninfeo decorado y un fresco erótico en una de las estancias privadas. Pocas imágenes explican mejor por qué nadie en Pompeya temía a su montaña como cuando veis este fresco antes de subir hacia la Via Stabiana.',
     ],
     lookFor: [
       'El fresco del larario con Baco y el Vesubio de un solo pico, la representación más antigua conocida del volcán.',
@@ -898,10 +898,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.751, 14.4869],
     regio: 'IX.3.5',
     minutes: 8,
-    intro: 'Junto a la Via Stabiana, un decurión y sacerdote de Marte dejó su huella en las paredes de esta vivienda.',
+    intro: 'Buscad en el jardín la fuente de mármol con la figura de Sileno: un pequeño lujo doméstico junto a la Via Stabiana.',
     narration: [
-      'Excavada entre mil ochocientos cuarenta y seis y mil ochocientos cuarenta y siete, esta casa de unos seiscientos veinticinco metros cuadrados conserva frescos de cuarto estilo con escenas de un sátiro y una ménade, de Narciso contemplando su reflejo y de Venus pescadora, además de un jardín con una fuente de mármol decorada con la figura de Sileno.',
-      'Una inscripción permite atribuir la vivienda a Marco Lucrecio, que ejerció como decurión, es decir, miembro del consejo municipal, y también como sacerdote de Marte, un cargo religioso de cierto prestigio en la vida pública de la ciudad. La planta alta de la casa conservaba en origen otra decoración que hoy se ha perdido casi por completo. Reabierta al público en octubre de dos mil veinticinco tras una restauración, forma parte del recorrido habitual de esta zona de la Regio Novena.',
+      'La casa, de unos seiscientos veinticinco metros cuadrados, se excavó entre mil ochocientos cuarenta y seis y mil ochocientos cuarenta y siete, y conserva frescos de cuarto estilo con un sátiro y una ménade, con Narciso contemplando su reflejo y con Venus pescadora. Una inscripción permite atribuirla a Marco Lucrecio, decurión del consejo municipal y también sacerdote de Marte, un cargo de cierto prestigio en la vida pública pompeyana.',
+      'Lo que casi nadie sabe es que la planta alta conservaba en origen otra decoración, hoy perdida casi por completo. Reabierta en octubre de dos mil veinticinco tras una restauración, esta casa forma parte del recorrido habitual de la Regio Novena, muy cerca de las Termas Estabianas.',
     ],
     lookFor: [
       'Los frescos de cuarto estilo con el sátiro y la ménade, y con Narciso.',
@@ -923,10 +923,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.7527, 14.4891],
     regio: 'IX.14.4',
     minutes: 6,
-    intro: 'La vivienda de un duunviro cuya tumba se levanta junto a la Porta Nola sigue hoy siendo terreno de investigación arqueológica activa.',
+    intro: 'Miradla desde fuera, porque hoy es zona de excavación activa: esta casa pertenece a un hombre cuya tumba veréis más tarde en la Porta Nola.',
     narration: [
-      'De origen samnita, esta casa perteneció a Marco Obelio Firmo, un duunviro pompeyano cuyo monumento funerario se conserva en la necrópolis de la Porta Nola, lo que ha permitido relacionar con bastante seguridad el nombre del propietario con la vivienda. En el momento de la erupción, la casa estaba en obras de reforma, otra muestra más de la reconstrucción todavía inacabada tras el terremoto del año sesenta y dos.',
-      'En el atrio se encontró una caja fuerte de bronce y hierro, el tipo de mueble que las familias acomodadas exhibían como símbolo de solvencia económica. Desde hace algunos años, un equipo de la Universidad de Bolonia investiga esta zona de la Regio Novena en profundidad, por lo que la casa no forma parte de los itinerarios oficiales de visita y su estado puede cambiar según avance la excavación.',
+      'Se llamaba Marco Obelio Firmo, duunviro pompeyano, y su monumento funerario junto a la Porta Nola es lo que ha permitido relacionar con bastante seguridad su nombre con esta vivienda de origen samnita. En el momento de la erupción, la casa estaba en obras de reforma, otra muestra de la reconstrucción todavía inacabada tras el terremoto del año sesenta y dos.',
+      'El detalle que casi nadie ve, porque el acceso no es libre, es la caja fuerte de bronce y hierro hallada en el atrio, el mueble que una familia acomodada exhibía como prueba de solvencia. Un equipo de la Universidad de Bolonia investiga aquí desde hace años, así que su estado puede cambiar según avance la excavación.',
     ],
     lookFor: [
       'El lugar donde apareció la caja fuerte de bronce y hierro, junto al atrio.',
@@ -948,10 +948,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.750911, 14.490068],
     regio: 'IX.12.6',
     minutes: 10,
-    intro: 'Una panadería con vivienda propia, reabierta tras casi una década de restauración, guarda uno de los frescos de banquete más tiernos de Pompeya.',
+    intro: 'Mirad ese fresco del triclinio, un hombre y una mujer a punto de besarse: es la escena más tierna de todo el repertorio pictórico pompeyano.',
     narration: [
-      'Esta casa combinaba vivienda y panadería bajo el mismo techo, con un horno propio, cinco molinos y un establo donde se hallaron los restos de cinco animales de carga. Se excavó por primera vez en mil novecientos doce, bajo la dirección de Vittorio Spinazzola, y se retomó en distintas campañas a lo largo de las décadas siguientes hasta completarse ya en el siglo veintiuno.',
-      'En el triclinio se conserva un fresco de banquete con varias parejas recostadas, entre ellas la escena que da nombre a la casa: un hombre y una mujer a punto de besarse con una ternura poco frecuente en el arte pompeyano, más dado a mostrar el sexo de forma explícita que la simple intimidad amorosa. En el momento de la erupción la decoración estaba sin terminar, con dibujos preparatorios y recipientes de pigmento todavía a mano. Tras siete años de restauración, la casa reabrió al público en mayo de dos mil veinticuatro con una pasarela elevada de nueva construcción.',
+      'Ahí, entre otras parejas recostadas en un banquete, está el gesto que da nombre a la casa, más cercano a la ternura que al sexo explícito que domina tantas otras pinturas de la ciudad. Esta vivienda combinaba casa y panadería bajo el mismo techo, con horno propio, cinco molinos y un establo donde se hallaron los restos de cinco animales de carga. Se excavó por primera vez en mil novecientos doce, bajo Vittorio Spinazzola, y se completó ya en el siglo veintiuno.',
+      'Lo que casi nadie nota es que la decoración estaba sin terminar cuando llegó la erupción, con dibujos preparatorios y recipientes de pigmento todavía a mano. Tras siete años de restauración, reabrió en mayo de dos mil veinticuatro con una pasarela nueva, a un paso de la Fullonica de Stephanus.',
     ],
     lookFor: [
       'El fresco de banquete del triclinio, con la escena de los castos amantes que da nombre a la casa.',
@@ -974,10 +974,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.750579, 14.489538],
     regio: 'I.7.2',
     minutes: 6,
-    intro: 'Una vivienda modesta de dos plantas, con balcón sobre la Via dell\'Abbondanza, de la que se conserva menos documentación que de sus vecinas.',
+    intro: 'Mirad hacia arriba, al balcón que sobresale sobre la Via dell\'Abbondanza: esta casa modesta, de dos plantas, es la vivienda que de verdad habitaba la mayoría de Pompeya.',
     narration: [
-      'Esta casa, de planta estrecha y alargada, se levanta en dos alturas sobre la propia Via dell\'Abbondanza, con un balcón que sobresalía sobre la calle, una solución habitual en las viviendas de clase media pompeyanas donde el espacio en planta baja escaseaba. Es una vivienda mucho más modesta que las grandes domus de la Regio Sexta, y representa mejor el tipo de casa donde vivía la mayoría de la población de la ciudad.',
-      'En el atrio se conservan restos de frescos de cuarto estilo, un pozo de hierro y un pavimento de mosaico blanco y negro junto al impluvium. Hay menos información publicada sobre su historia de excavación y sobre su propietario que sobre otras casas de la misma manzana, así que conviene tomar cualquier dato concreto sobre ella con cierta prudencia hasta que se disponga de estudios más completos.',
+      'De planta estrecha y alargada, resolvía la falta de espacio en la calle sacando un balcón hacia fuera, una solución habitual entre la clase media pompeyana. Nada que ver con las grandes domus de la Regio Sexta que hemos visitado antes. En el atrio se conservan frescos de cuarto estilo, un pozo de hierro y un pavimento de mosaico blanco y negro junto al impluvium.',
+      'Lo que casi nadie repara es que hay menos información publicada sobre esta casa que sobre sus vecinas más ilustres, así que conviene tomar cualquier dato con prudencia. Es precisamente esa modestia, frente al lujo de otras paradas, lo que la vuelve interesante.',
     ],
     lookFor: [
       'El balcón sobre la Via dell\'Abbondanza, ejemplo de vivienda de dos plantas con planta baja reducida.',
@@ -999,10 +999,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.750131, 14.489672],
     regio: 'I.6.2',
     minutes: 9,
-    intro: 'Bajo esta casa se esconde una galería abovedada donde varias víctimas de la erupción intentaron en vano refugiarse.',
+    intro: 'Bajad con cuidado hacia esta galería abovedada: aquí se refugiaron, sin conseguirlo, varios habitantes de la casa en las últimas horas de la erupción.',
     narration: [
-      'El elemento que da nombre a esta vivienda es su criptopórtico, una galería subterránea y abovedada decorada con un friso pintado de tema homérico que recorre las paredes a media altura, un tipo de espacio fresco pensado originalmente para pasear y descansar durante las horas de más calor. La casa se excavó a lo largo de varias campañas dirigidas por Vittorio Spinazzola entre mil novecientos once y mil novecientos veintinueve.',
-      'La propia galería sirvió también, en las horas finales de la erupción, como refugio para varios habitantes de la casa: en su interior se hallaron calcos de yeso de algunas de las víctimas, que buscaron protección bajo tierra sin llegar a escapar de la nube ardiente que terminó por alcanzarlos. La casa conserva además una pequeña sala termal privada, un lujo poco frecuente fuera de las grandes domus de la ciudad.',
+      'Mirad el friso pintado de tema homérico que recorre las paredes a media altura. El criptopórtico se pensó en origen como un espacio fresco para pasear y descansar en las horas de más calor, no como refugio, y la casa se excavó en varias campañas dirigidas por Vittorio Spinazzola entre mil novecientos once y mil novecientos veintinueve.',
+      'El detalle que casi nadie olvida, una vez que lo sabe, es que aquí abajo se hallaron calcos de yeso de las víctimas que buscaron protección bajo tierra sin escapar de la nube ardiente. La casa conserva también una pequeña sala termal privada, un lujo poco frecuente fuera de las grandes domus. Seguid hacia la Casa de los Ceii, un poco más adelante en la misma manzana.',
     ],
     lookFor: [
       'El friso pintado de tema homérico que recorre las paredes del criptopórtico.',
@@ -1024,10 +1024,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.750033, 14.489397],
     regio: 'I.6.15',
     minutes: 8,
-    intro: 'Una fachada que imita sillares de piedra esconde uno de los frescos de jardín más completos de toda Pompeya.',
+    intro: 'Fijaos bien en esa fachada, de estuco pintado para imitar grandes sillares de piedra: es un engaño tan bien hecho que sigue engañando dos mil años después.',
     narration: [
-      'De origen samnita, hacia finales del siglo dos antes de nuestra era, esta casa se remodeló ya a comienzos del siglo primero de nuestra era. Se excavó entre mil novecientos trece y mil novecientos catorce, con nuevos trabajos en mil novecientos ochenta y dos, y se atribuye de forma bastante probable a Lucio Ceyo Segundo, un edil documentado en el año setenta y seis, tres años antes de la erupción.',
-      'La fachada, decorada con estuco que imita grandes sillares de piedra, es una de las mejor conservadas de la ciudad. En el interior, un gran fresco de jardín representa una escena de caza de fieras junto a paisajes de tipo niló­tico, con animales exóticos y motivos egipcios que reflejan la moda por lo oriental extendida entre las clases acomodadas de Pompeya en sus últimas décadas de existencia.',
+      'De origen samnita, hacia finales del siglo dos antes de nuestra era, la casa se remodeló ya a comienzos del siglo primero de nuestra era, y se atribuye de forma bastante probable a Lucio Ceyo Segundo, un edil documentado en el año setenta y seis, tres años antes de la erupción. Se excavó entre mil novecientos trece y mil novecientos catorce, con nuevos trabajos en mil novecientos ochenta y dos.',
+      'Dentro, un gran fresco de jardín representa una escena de caza de fieras junto a paisajes de tipo nilótico, con animales exóticos y motivos egipcios, la misma moda oriental que ya habréis visto en otras casas de este barrio. Está muy cerca de la Casa del Criptopórtico y de la Casa del Larario de Aquiles.',
     ],
     lookFor: [
       'La fachada con estuco que imita grandes sillares de piedra.',
@@ -1049,10 +1049,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.7501, 14.48985],
     regio: 'I.6.4',
     minutes: 6,
-    intro: 'Un pequeño altar doméstico decorado con escenas de la Ilíada da nombre a esta discreta vivienda de la Regio Primera.',
+    intro: 'Acercaos al pequeño larario de esta casa y buscad, en sus frisos, el momento en que Príamo suplica a Aquiles por el cuerpo de su hijo Héctor.',
     narration: [
-      'De origen samnita, hacia el siglo tres antes de nuestra era, esta casa se excavó entre mil novecientos doce y mil novecientos trece, y se despejó por completo en mil novecientos veintinueve. Su propietario en el momento de la erupción sigue sin identificarse, y la vivienda es de dimensiones más bien modestas si se compara con las grandes domus del barrio de la Regio Sexta.',
-      'Su nombre procede del larario doméstico, decorado con frisos en estuco y pintura que representan episodios de la Ilíada, entre ellos el enfrentamiento entre Aquiles y Héctor y el momento en que Príamo rescata el cuerpo de su hijo ante la tienda del héroe griego. Es un buen ejemplo de cómo la mitología griega llegaba hasta el rincón más íntimo y cotidiano de una casa pompeyana de tamaño medio: el pequeño altar donde la familia rendía culto a sus dioses protectores.',
+      'Es un episodio de la Ilíada llevado al rincón más íntimo de una vivienda pompeyana de tamaño medio, el pequeño altar donde la familia rendía culto a sus dioses. La casa, de origen samnita hacia el siglo tres antes de nuestra era, se excavó entre mil novecientos doce y mil novecientos trece, y se despejó del todo en mil novecientos veintinueve.',
+      'Lo que casi nadie relaciona es que su propietario en el momento de la erupción sigue sin identificarse, algo poco frecuente en este barrio donde tantas casas llevan nombre y apellido. Combina bien esta parada con la vecina Casa del Criptopórtico y la Casa de los Ceios, todas a un paso.',
     ],
     lookFor: [
       'Los frisos del larario con escenas de la Ilíada, entre ellas Aquiles y Héctor.',
@@ -1074,10 +1074,11 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.750424, 14.489664],
     regio: 'I.7.1',
     minutes: 8,
-    intro: 'Otro perro de mosaico vigila el umbral de esta casa, con un pavimento de animales que rivaliza con el de la Casa del Poeta Trágico.',
+    intro: 'Otro perro atado vigila este umbral, para que comparéis de memoria con el que ya visteis en la Casa del Poeta Trágico.',
     narration: [
-      'De origen samnita, esta casa se excavó en mil novecientos once y de nuevo entre mil novecientos veintitrés y mil novecientos veintiséis. Su nombre procede de sendos carteles electorales pintados en la fachada, que mencionan a dos candidatos distintos, Publio Paquio Próculo y Cayo Cuspio Pansa, sin que se sepa con certeza a cuál de los dos perteneció realmente la vivienda.',
-      'En las fauces de entrada hay un mosaico con la inscripción cave canem, un perro atado que advierte a quien llega igual que en la Casa del Poeta Trágico, aunque resuelto con un estilo algo distinto. El pavimento del atrio conserva un mosaico con distintos animales, y en una de las estancias aparece una escena nilótica con pigmeos navegando entre cocodrilos e hipopótamos, un motivo egiptizante muy repetido en las casas pompeyanas de gusto exótico.',
+      'Mirad primero el mosaico de las fauces de entrada: un perro sujeto a una cadena y la inscripción cave canem, cuidado con el perro, resuelta aquí con un trazo algo distinto al que recordáis de aquella otra casa. Publio Paquio Próculo y Cayo Cuspio Pansa aparecen los dos en los carteles electorales de la fachada, sin que se sepa con certeza a cuál de los dos perteneció realmente la vivienda.',
+      'El pavimento del atrio guarda un mosaico de animales que casi nadie se para a mirar del todo, y en una de las estancias interiores hay una escena nilótica con pigmeos navegando entre cocodrilos e hipopótamos, el mismo gusto egiptizante que veréis repetido en otras casas de Pompeya.',
+      'Volved un momento a la Casa del Poeta Trágico con la memoria: dos perros de mosaico, dos casas distintas, la misma advertencia para el visitante que llega.',
     ],
     lookFor: [
       'El mosaico cave canem de las fauces de entrada, distinto al de la Casa del Poeta Trágico.',
@@ -1100,10 +1101,11 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.750456, 14.490009],
     regio: 'I.7.10',
     minutes: 8,
-    intro: 'Una estatua griega de bronce convertida en lámpara ilumina el nombre de esta vivienda de un comerciante enriquecido.',
+    intro: 'Fijaos en la lámpara con forma de joven griego que da nombre a esta casa de un comerciante enriquecido.',
     narration: [
-      'Esta casa nació de la unión de varias viviendas anteriores, y se excavó en mil novecientos doce y de nuevo entre mil novecientos veinticinco y mil novecientos veintisiete. Se atribuye de forma probable a Publio Cornelio Tegeto, un comerciante que prosperó lo suficiente como para permitirse una vivienda de este tamaño y esta calidad decorativa, otra muestra de la movilidad social que la riqueza permitía en la Pompeya de los últimos años.',
-      'Le da nombre una estatua de bronce de un efebo, un joven griego, reconvertida en soporte de lámparas, copia de un original griego del siglo cinco antes de nuestra era y hoy conservada en el Museo Arqueológico de Nápoles. El triclinio de verano, al aire libre, conserva frescos con motivos nilóticos, otro ejemplo del gusto por lo egipcio tan extendido entre las familias acomodadas de la ciudad. Reabrió al público en diciembre de dos mil quince tras una restauración.',
+      'Mirad la réplica de la estatua del efebo, un muchacho de bronce convertido en pie de lámparas, copia de un original griego del siglo cinco antes de nuestra era. La pieza original, hoy en el Museo Arqueológico de Nápoles, decoraba una vivienda nacida de la unión de varias casas más pequeñas, atribuida de forma probable a Publio Cornelio Tegeto, un comerciante que prosperó lo suficiente para permitirse este lujo.',
+      'Pocos se fijan en el triclinio de verano, al aire libre, con frescos de motivos nilóticos que delatan el mismo gusto por lo egipcio que encontraréis en otras casas del barrio. Reabrió al público en diciembre de dos mil quince tras una restauración.',
+      'A un paso, en la misma manzana, la Casa de Paquio Próculo y la Casa de los Ceios completan este pequeño recorrido de la Regio Primera.',
     ],
     lookFor: [
       'La réplica de la estatua del efebo reconvertida en lámpara, que da nombre a la casa.',
@@ -1125,10 +1127,11 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.748914, 14.4877],
     regio: 'VIII.7.30',
     minutes: 10,
-    intro: 'El templo más antiguo de toda Pompeya preside esta plaza, asomada a un acantilado con vistas al golfo.',
+    intro: 'Poneos junto al borde del acantilado: delante tenéis el templo más antiguo de toda Pompeya.',
     narration: [
-      'En el centro de esta plaza triangular se levanta el llamado Templo Dórico, dedicado probablemente a Atenea y a Hércules, construido ya en el siglo seis antes de nuestra era y considerado el edificio religioso más antiguo de toda la ciudad, incluso anterior al Templo de Apolo. La plaza se monumentalizó en el siglo dos antes de Cristo con un pórtico de nada menos que noventa y cinco columnas, aprovechando la posición elevada sobre el acantilado que domina el golfo de Nápoles.',
-      'Se excavó entre mil setecientos sesenta y cinco y mil setecientos sesenta y siete, uno de los primeros sectores explorados de todo el yacimiento. En el patio se conservan un pequeño edificio circular con un pozo sagrado, varios altares de toba y un reloj de sol. Sondeos realizados en dos mil dieciséis han sacado a la luz depósitos votivos del siglo tres antes de nuestra era, prueba de que el culto en este lugar se mantuvo activo durante siglos antes de la llegada de Roma.',
+      'Mirad los restos del llamado Templo Dórico, dedicado probablemente a Atenea y a Hércules, construido ya en el siglo seis antes de nuestra era, más viejo incluso que el Templo de Apolo. La plaza que lo rodea se monumentalizó en el siglo dos antes de Cristo con un pórtico de nada menos que noventa y cinco columnas, aprovechando esta posición elevada sobre el golfo de Nápoles.',
+      'Fijaos en el pequeño edificio circular del patio, con un pozo sagrado, varios altares de toba y un reloj de sol: casi nadie se detiene ahí, pero sondeos de dos mil dieciséis sacaron a la luz depósitos votivos del siglo tres antes de nuestra era, prueba de que aquí se rezaba mucho antes de que llegaran los romanos.',
+      'A un paso, hacia el Teatro Grande, veréis cómo esa misma ciudad supo también divertirse.',
     ],
     lookFor: [
       'Los restos del Templo Dórico, el edificio religioso más antiguo conservado en Pompeya.',
@@ -1150,10 +1153,11 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.74904, 14.487956],
     regio: 'VIII.7.29',
     minutes: 7,
-    intro: 'Antes de que existiera la Palestra Grande, los jóvenes pompeyanos se entrenaban aquí, junto al Foro Triangular.',
+    intro: 'Antes de que existiera la Palestra Grande, los jóvenes pompeyanos venían a entrenarse aquí, junto al Foro Triangular.',
     narration: [
-      'Esta palestra, más pequeña y más antigua que la Palestra Grande que veremos más adelante, se construyó en el siglo dos antes de nuestra era, según recuerda una inscripción en lengua osca que menciona a Vibio Adirano como responsable de la obra. Se excavó entre mil setecientos sesenta y siete y mil setecientos noventa y ocho, en las primeras campañas borbónicas del yacimiento.',
-      'El patio, rodeado por un pórtico dórico de columnas de toba, servía para el ejercicio físico y la formación de los jóvenes pompeyanos, siguiendo el modelo griego de la palestra como espacio educativo además de deportivo. Aquí se halló una copia del Doríforo de Policleto, hoy en el Museo Arqueológico de Nápoles, una de las esculturas más influyentes de todo el arte clásico. Cuando se amplió el vecino Templo de Isis tras el terremoto del año sesenta y dos, parte del recinto original de esta palestra quedó recortado.',
+      'Fijaos en el pórtico dórico de columnas de toba que rodea el patio: una inscripción en lengua osca recuerda a Vibio Adirano como responsable de la obra, levantada en el siglo dos antes de nuestra era, mucho antes que su hermana mayor.',
+      'Aquí se halló una copia del Doríforo de Policleto, hoy en el Museo Arqueológico de Nápoles, una de las esculturas más influyentes de todo el arte clásico, prueba de que el modelo griego de educación física y formación llegó también hasta Pompeya.',
+      'El detalle que pocos notan es el recorte del recinto original: cuando se amplió el vecino Templo de Isis tras el terremoto del año sesenta y dos, la palestra perdió parte de su espacio. Seguid unos pasos hacia el Teatro Grande, Odeón y Cuadripórtico, el otro gran centro de ocio de este barrio.',
     ],
     lookFor: [
       'El pórtico dórico de columnas de toba que rodea el patio.',
@@ -1175,10 +1179,11 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.7489, 14.4885],
     regio: 'VIII.7.25',
     minutes: 6,
-    intro: 'Un pequeño santuario cuya divinidad exacta sigue sin estar clara, entre Júpiter, Esculapio y una posible tríada capitolina provisional.',
+    intro: 'Ni siquiera los arqueólogos se ponen de acuerdo sobre a qué dios pertenecía en realidad este pequeño santuario.',
     narration: [
-      'Este pequeño recinto religioso, con un altar de toba y una cella elevada sobre un podio, se excavó en distintas campañas entre mil setecientos sesenta y seis y mil ochocientos sesenta y nueve, cerca del cruce entre la Via Stabiana y la Via del Templo de Isis. Durante mucho tiempo se le atribuyó erróneamente a Esculapio, el dios de la medicina, un error que perduró en la denominación popular del santuario durante décadas.',
-      'En su interior aparecieron estatuas de terracota de Júpiter y Juno, junto con un busto de Minerva, lo que ha llevado a algunos investigadores a proponer que el templo sirvió de sede provisional para el culto a la tríada capitolina mientras se reparaban los daños del terremoto del año sesenta y dos en el Templo de Júpiter del Foro. La identificación cultual definitiva del edificio sigue siendo objeto de debate entre los especialistas.',
+      'Mirad el altar de toba y la cella elevada sobre su podio, cerca del cruce entre la Via Stabiana y la Via del Templo de Isis. Durante mucho tiempo se le atribuyó erróneamente a Esculapio, el dios de la medicina, un error que duró décadas en su nombre popular.',
+      'Dentro aparecieron estatuas de terracota de Júpiter y Juno junto con un busto de Minerva, lo que ha llevado a algunos investigadores a pensar que sirvió de sede provisional para el culto a la tríada capitolina mientras se reparaban los daños del terremoto del año sesenta y dos en el templo del Foro.',
+      'Es una parada breve, de paso hacia el Teatro Grande y el Templo de Isis, los dos grandes vecinos de este pequeño santuario sin nombre seguro.',
     ],
     lookFor: [
       'El altar de toba y la cella elevada sobre su podio.',
@@ -1200,10 +1205,11 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.751472, 14.490989],
     regio: 'III.2.1',
     minutes: 8,
-    intro: 'La fachada de esta casa conserva uno de los mayores conjuntos de propaganda electoral pintada de toda la ciudad antigua.',
+    intro: 'La fachada de esta casa estuvo cubierta, de arriba abajo, de propaganda electoral pintada.',
     narration: [
-      'Esta vivienda perteneció a la familia de los Trebios, y su último propietario documentado fue Aulo Trebio Valente. Se excavó en mil novecientos trece, con nuevos trabajos entre mil novecientos quince y mil novecientos dieciocho, en el sector de la Regio Tercera, algo menos visitado que el resto del yacimiento.',
-      'Su fachada estuvo cubierta de decenas de carteles electorales pintados, uno de los mayores conjuntos de propaganda mural conocidos de todo el mundo antiguo, aunque buena parte se perdió en un bombardeo aliado en mil novecientos cuarenta y tres y solo sobrevive un fragmento en el lado este. En el jardín interior se conserva un triclinio de verano bajo una pérgola sostenida por cuatro columnas, decorado con pinturas de vivos colores, pensado para comer al aire libre en las noches más calurosas del año.',
+      'Fijaos en el fragmento que sobrevive en el lado este de la fachada: es lo poco que queda de uno de los mayores conjuntos de carteles electorales conocidos de todo el mundo antiguo, la mayor parte perdida en un bombardeo aliado de mil novecientos cuarenta y tres. Perteneció a la familia de los Trebios, y su último dueño documentado fue Aulo Trebio Valente.',
+      'Entrad en el jardín y buscad el triclinio de verano, bajo una pérgola sostenida por cuatro columnas y decorado con pinturas de colores vivos, pensado para cenar al fresco en las noches más calurosas del año.',
+      'Esta parte de la Regio Tercera queda algo apartada de las grandes rutas, pero comparte barrio con el Anfiteatro, adonde nos dirigimos ahora.',
     ],
     lookFor: [
       'El fragmento superviviente de los carteles electorales, en el lado este de la fachada.',
@@ -1225,10 +1231,11 @@ export const EXTRA_STOPS: Stop[] = [
     category: 'puerta',
     coords: [40.75372, 14.4908],
     minutes: 6,
-    intro: 'Una cabeza de Minerva, muy erosionada, corona todavía la clave de esta puerta samnita del extremo noreste de la ciudad.',
+    intro: 'Mirad hacia arriba, a la clave del arco: ahí sigue, muy desgastada, la cabeza de Minerva.',
     narration: [
-      'Identificada en mil setecientos noventa y nueve y excavada por completo en mil ochocientos trece, esta puerta samnita conserva en la clave de su arco una cabeza de Minerva muy desgastada por el paso de los siglos. Su nombre recuerda que por aquí salía el camino hacia Nola, otra ciudad campana del interior con la que Pompeya mantenía un intenso tráfico comercial.',
-      'En ella se conserva una inscripción en lengua osca con el nombre de Vibio Popidio, que ejerció como meddix tuticus, la máxima magistratura samnita anterior a la romanización de la ciudad; el original se conserva hoy en el Museo Británico de Londres. Junto a la puerta se extiende una necrópolis donde se encuentra, entre otras, la tumba de Marco Obelio Firmo, el mismo duunviro al que perteneció una de las casas que hemos visitado antes en la Regio Novena.',
+      'Esta puerta samnita se identificó en mil setecientos noventa y nueve y se excavó por completo en mil ochocientos trece. Por aquí salía el camino hacia Nola, otra ciudad campana con la que Pompeya mantenía un tráfico comercial constante.',
+      'Fijaos en la inscripción en lengua osca con el nombre de Vibio Popidio, que ejerció como meddix tuticus, la máxima magistratura samnita anterior a la romanización de la ciudad; el original se conserva hoy en el Museo Británico de Londres. Junto a la puerta se extiende una necrópolis con la tumba de Marco Obelio Firmo, el mismo duunviro cuya casa visitamos antes en la Regio Novena.',
+      'Queda algo apartada del recorrido principal, en el extremo noreste, camino ya del Anfiteatro.',
     ],
     lookFor: [
       'La cabeza de Minerva, muy erosionada, en la clave del arco de la puerta.',
@@ -1249,10 +1256,11 @@ export const EXTRA_STOPS: Stop[] = [
     category: 'puerta',
     coords: [40.75281, 14.49442],
     minutes: 6,
-    intro: 'Por aquí huyeron muchos pompeyanos hacia Nocera; la necrópolis exterior sigue dando sorpresas a los arqueólogos.',
+    intro: 'Por esta puerta, al final de la Via dell\'Abbondanza, huyeron muchos pompeyanos hacia Nocera.',
     narration: [
-      'Situada al final de la Via dell\'Abbondanza, esta puerta era una de las siete que daban acceso a Pompeya, y durante la erupción se convirtió en una de las rutas de huida hacia Nocera para buena parte de la población que intentó escapar de la ciudad. Junto a ella se halló el cuerpo de una víctima que llevaba consigo cuarenta y nueve denarios de plata, sesenta y un áureos de oro y varias joyas, hoy conservados en el Museo Arqueológico de Nápoles.',
-      'En dos mil veintiuno se descubrió aquí la tumba pintada del liberto Marco Venerio Segundo, con restos que conservan parcialmente signos de momificación natural, un hallazgo excepcional para la arqueología funeraria romana. Investigadores de la Universidad de Valencia, en colaboración con el parque arqueológico, excavan la necrópolis exterior desde dos mil veinticuatro, y en dos mil veinticinco se presentó un nuevo relieve funerario con una pareja representada de cuerpo entero.',
+      'Fijaos en la perspectiva: la misma calle larga que habéis recorrido desde el Foro termina justo aquí, en una de las siete puertas de la ciudad. Junto a ella se halló el cuerpo de una víctima que llevaba consigo cuarenta y nueve denarios de plata, sesenta y un áureos de oro y varias joyas, hoy en el Museo Arqueológico de Nápoles.',
+      'En dos mil veintiuno se descubrió aquí la tumba pintada del liberto Marco Venerio Segundo, con restos que conservan parcialmente signos de momificación natural. Investigadores de la Universidad de Valencia excavan la necrópolis exterior desde dos mil veinticuatro, y en dos mil veinticinco presentaron un nuevo relieve funerario con una pareja de cuerpo entero.',
+      'La necrópolis sigue cerrada al público, zona de excavación activa; la puerta y su cara interior sí podéis recorrerlas, camino ya del Anfiteatro.',
     ],
     lookFor: [
       'La puerta en sí, al final de la Via dell\'Abbondanza, marcando la salida este de la ciudad.',
@@ -1274,10 +1282,11 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.7516, 14.4934],
     regio: 'II.4.3',
     minutes: 9,
-    intro: 'Una mujer libre de nacimiento convirtió su propia casa en un negocio de alquiler de baños, tiendas y jardines tras el gran terremoto.',
+    intro: 'Una mujer libre convirtió su propia casa en un negocio de alquiler, y lo anunció en un cartel pintado.',
     narration: [
-      'Esta propiedad ocupa toda una insula, con casi dos tercios del espacio dedicados a huerto y jardín, y perteneció a Julia Félix, una mujer con plenos derechos de propiedad que, tras el terremoto del año sesenta y dos, decidió convertir buena parte de su casa en un negocio de alquiler. Un cartel pintado, conservado gracias a un dibujo antiguo, anunciaba el alquiler de un balneario elegante, tabernas y pisos superiores a quien pudiera pagarlos.',
-      'Se excavó por primera vez entre mil setecientos cincuenta y cuatro y mil setecientos cincuenta y siete, y se volvió a enterrar después; la excavación completa no se retomó hasta mil novecientos cincuenta y uno y mil novecientos cincuenta y dos. En la vivienda apareció un friso con escenas de la vida cotidiana en el Foro, hoy en el Museo Arqueológico de Nápoles, y un largo estanque, el euripo, rodeado de un pórtico con pilares de mármol.',
+      'Mirad la extensión del huerto y el jardín, casi dos tercios de toda la propiedad: Julia Félix, con plenos derechos de propiedad, decidió tras el terremoto del año sesenta y dos alquilar buena parte de su casa a quien pudiera pagarlo, un balneario elegante, tabernas y pisos superiores.',
+      'Fijaos en el euripo, el largo estanque rodeado de pórtico con pilares de mármol, y pensad que un friso hoy conservado en Nápoles retrataba escenas de la vida cotidiana en el propio Foro que ya conocéis. Se excavó primero entre mil setecientos cincuenta y cuatro y mil setecientos cincuenta y siete, y se volvió a enterrar después.',
+      'Queda a un paso del Anfiteatro y de la Palestra Grande, en el extremo de la ciudad donde también se ganaba dinero fuera del comercio.',
     ],
     lookFor: [
       'La extensión del huerto y jardín, casi dos tercios de toda la propiedad.',
@@ -1301,8 +1310,9 @@ export const EXTRA_STOPS: Stop[] = [
     minutes: 7,
     intro: 'Tres normas de buena conducta, pintadas en el triclinio, convierten esta casa en un pequeño manual de urbanidad romana.',
     narration: [
-      'Esta vivienda nació de la unión de dos casas distintas, propiedad de Cayo Arrio Crescente y de Marco Epidio Himeneo, y se excavó en mil novecientos dieciséis y mil novecientos diecisiete, en un sector cercano al anfiteatro menos frecuentado por los grandes grupos de visita.',
-      'Debe su nombre moderno a tres dísticos en latín pintados en letras blancas sobre fondo negro en el triclinio de verano, con normas de comportamiento en la mesa: no decir palabras groseras, mantener las manos alejadas de las mujeres ajenas y controlar el mal humor, así resumidas de forma libre. En el jardín se conservó también una estatua de Isis, hoy en el museo de Nápoles. La casa sufrió daños adicionales en los bombardeos de mil novecientos cuarenta y tres y mil novecientos cuarenta y cuatro.',
+      'Fijaos en las letras blancas sobre fondo negro del triclinio de verano: tres dísticos en latín que piden no decir palabrotas, mantener las manos lejos de las mujeres ajenas y controlar el mal humor durante la cena. La casa nació de la unión de dos viviendas, propiedad de Cayo Arrio Crescente y de Marco Epidio Himeneo.',
+      'En el jardín hubo también una estatua de Isis, hoy en el museo de Nápoles, y pocos reparan en que la casa sufrió daños adicionales en los bombardeos de mil novecientos cuarenta y tres y mil novecientos cuarenta y cuatro, las mismas bombas que arrasaron otras viviendas de este barrio.',
+      'Está cerca del Anfiteatro, en un sector menos frecuentado por los grandes grupos, camino ya del final de la visita.',
     ],
     lookFor: [
       'Los tres dísticos latinos con normas de buena conducta, pintados en el triclinio de verano.',
@@ -1323,10 +1333,11 @@ export const EXTRA_STOPS: Stop[] = [
     category: 'villa',
     coords: [40.75239, 14.47871],
     minutes: 12,
-    intro: 'Frente a la tumba que le da nombre, esta gran villa suburbana esconde un criptopórtico donde murieron treinta y seis personas.',
+    intro: 'Frente a la tumba que le da nombre, esta gran villa suburbana esconde una galería donde murieron treinta y seis personas.',
     narration: [
-      'Excavada entre mil setecientos setenta y uno y mil setecientos setenta y cuatro por Francesco La Vega, esta villa de unos tres mil quinientos metros cuadrados se organiza en torno a un peristilo inferior de diecisiete columnas y un largo criptopórtico subterráneo. Su nombre moderno viene de la tumba de Marco Arrio Diomedes, que se conserva justo enfrente, en la Via dei Sepolcri, aunque no hay ninguna prueba de que este fuera realmente el propietario de la villa.',
-      'En el criptopórtico se hallaron los restos de treinta y ocho personas de las treinta y seis que en total murieron en la villa, refugiadas bajo tierra sin llegar a escapar de la nube ardiente, junto con una bolsa que contenía mil trescientas cincuenta y seis sestercios en monedas. La decoración de cuarto estilo se conserva hoy en un estado bastante deficiente, pero la planta completa de la villa, con su terraza y su jardín, sigue siendo una de las más elocuentes del extrarradio pompeyano.',
+      'Bajad hacia el criptopórtico subterráneo, la larga galería abovedada donde varios habitantes de la villa se refugiaron sin escapar de la nube ardiente. Francesco La Vega excavó la villa entre mil setecientos setenta y uno y mil setecientos setenta y cuatro, organizada en torno a un peristilo inferior de diecisiete columnas.',
+      'Con los cuerpos apareció una bolsa con mil trescientas cincuenta y seis sestercios en monedas, el dinero que sus dueños no llegaron a gastar nunca. La decoración de cuarto estilo se conserva hoy bastante deteriorada, pero la planta completa, con su terraza y su jardín, sigue contando la historia entera de una casa de recreo fuera de las murallas.',
+      'Su nombre viene de la tumba de Marco Arrio Diomedes, justo enfrente, aunque nada prueba que él fuera realmente el dueño. Seguid la Via dei Sepolcri y llegaréis pronto a la Villa de los Misterios.',
     ],
     lookFor: [
       'El peristilo inferior de diecisiete columnas, en la parte más baja de la villa.',
@@ -1347,10 +1358,11 @@ export const EXTRA_STOPS: Stop[] = [
     category: 'puerta',
     coords: [40.751827, 14.48111],
     minutes: 8,
-    intro: 'Por esta puerta salían los pompeyanos hacia Herculano, y todavía guarda en sus muros las cicatrices del asedio de Sila.',
+    intro: 'Por esta puerta salían los pompeyanos hacia Herculano, y sus muros todavía guardan las cicatrices de un asedio anterior a la erupción.',
     narration: [
-      'Esta puerta tiene tres vanos, uno central más ancho para el paso de carros y dos laterales para peatones, un esquema parecido al que vimos al entrar por la Porta Marina. Sus muros, de origen samnita entre los siglos cuatro y tres antes de nuestra era, sufrieron el asedio de Sila en el año ochenta y nueve antes de Cristo, cuyas huellas de proyectiles de catapulta todavía se pueden reconocer en algunos bloques.',
-      'La puerta se reconstruyó hacia el año ochenta antes de nuestra era y se monumentalizó de nuevo ya en época flavia, poco antes de la erupción. Al cruzarla hacia el exterior arranca la Via dei Sepolcri, la avenida de las tumbas, con los monumentos funerarios de familias como los Mamios o los Istacidios, y un poco más allá la tumba de Escauro, antes de llegar a la Villa de Diomedes y a la propia Villa de los Misterios.',
+      'Fijaos en los tres vanos: uno central, más ancho, para el paso de carros, y dos laterales para peatones, el mismo esquema que recordaréis de la Porta Marina por donde entramos. Los muros, de origen samnita entre los siglos cuatro y tres antes de nuestra era, sufrieron el asedio de Sila del año ochenta y nueve antes de Cristo.',
+      'Buscad, en algunos bloques, las marcas de los proyectiles de catapulta de aquel ataque, mucho antes de que la ciudad muriera de otra manera. La puerta se reconstruyó hacia el año ochenta antes de nuestra era y se monumentalizó de nuevo ya en época flavia.',
+      'Al cruzarla arranca la Via dei Sepolcri, con las tumbas de los Mamios y los Istacidios, camino de la Villa de Diomedes y de la Villa de los Misterios.',
     ],
     lookFor: [
       'Los tres vanos de la puerta, uno central para carros y dos laterales para peatones.',
@@ -1372,10 +1384,11 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.75035, 14.4832],
     regio: 'VII.16.22',
     minutes: 10,
-    intro: 'Una vivienda escalonada en cuatro niveles se asoma al mar desde lo alto de la muralla oeste, en el sector más aristocrático de la ciudad.',
+    intro: 'Una vivienda escalonada en cuatro niveles se asoma al mar desde lo alto de la muralla oeste.',
     narration: [
-      'Esta casa forma parte de la llamada Insula Occidentalis, un conjunto de mansiones construidas aprovechando el desnivel de la muralla oeste para ganar altura y vistas hacia el golfo, en lo que fue el barrio más exclusivo de todo el yacimiento en sus últimos años. Se excavó en distintas campañas a lo largo del siglo veinte, entre mil novecientos diez y los años ochenta, con un primer sondeo ya en mil setecientos cincuenta y nueve.',
-      'La vivienda se despliega en cuatro niveles escalonados sobre la muralla, con suelos de opus sectile de mármoles de colores y frescos de jardín, además de una sala que conservaba una copia de una pintura griega del siglo cuatro antes de nuestra era. El nombre del propietario procede de grafitos hallados en la propia casa, y forma parte del itinerario especial de la Insula Occidentalis, que el parque arqueológico abre de forma rotativa.',
+      'Mirad cómo la casa gana altura aprovechando el propio desnivel de la muralla, en lo que fue el barrio más exclusivo de Pompeya en sus últimos años, la llamada Insula Occidentalis. Se excavó en distintas campañas del siglo veinte, con un primer sondeo ya en mil setecientos cincuenta y nueve.',
+      'Fijaos en los suelos de opus sectile, con mármoles de colores encajados como un rompecabezas, y en una sala que guardaba una copia de una pintura griega del siglo cuatro antes de nuestra era. El nombre del propietario viene de grafitos hallados en la propia casa.',
+      'Forma parte del itinerario especial de la Insula Occidentalis, de apertura rotativa, muy cerca ya del Templo de Venus con el que abrimos la visita.',
     ],
     lookFor: [
       'Los cuatro niveles escalonados de la vivienda sobre la muralla oeste.',
@@ -1399,8 +1412,9 @@ export const EXTRA_STOPS: Stop[] = [
     minutes: 10,
     intro: 'Cuatro personas murieron abrazadas al pie de una escalera; una de ellas llevaba un brazalete de oro de más de medio kilo.',
     narration: [
-      'También asomada a la muralla oeste, en la misma Insula Occidentalis, esta casa se escalona en tres niveles con terrazas y jardines pensados para aprovechar las vistas hacia el mar. Sus frescos de jardín, con aves y fuentes pintadas con gran naturalismo, se cuentan entre los más bellos conservados de toda Pompeya.',
-      'En mil novecientos setenta y cuatro se hallaron bajo la escalera del jardín los restos de cuatro personas, dos adultos y dos niños, que habían buscado refugio juntos sin conseguir escapar. Una de las mujeres llevaba puesto un brazalete de oro en forma de serpiente de unos seiscientos diez gramos, la pieza que da nombre a la casa y que hoy se expone en el Museo Arqueológico de Nápoles junto con un mosaico que representa la boda de Alejandro Magno y Roxana.',
+      'Mirad los frescos de jardín, con aves y fuentes pintadas con un naturalismo que se cuenta entre lo mejor conservado de toda Pompeya, en esta casa asomada también a la muralla oeste, escalonada en tres niveles con terrazas hacia el mar.',
+      'En mil novecientos setenta y cuatro se hallaron bajo la escalera del jardín los restos de dos adultos y dos niños, refugiados juntos sin conseguir escapar; una de las mujeres llevaba puesto un brazalete de oro en forma de serpiente de unos seiscientos diez gramos, hoy en Nápoles junto a un mosaico con la boda de Alejandro Magno y Roxana.',
+      'Conviene visitarla junto a la vecina Casa de Marco Fabio Rufo, en el mismo tramo de la Insula Occidentalis, cerca ya del Templo de Venus.',
     ],
     lookFor: [
       'Los frescos de jardín con aves y fuentes, entre los mejor conservados de la ciudad.',
