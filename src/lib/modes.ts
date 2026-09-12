@@ -30,7 +30,7 @@ export function modeCount(mode: RouteMode): number { return stopsForMode(mode).l
 export function modeSummary(mode: RouteMode): string {
   if (mode === 'express') return `${modeCount('express')} paradas · ~3 km · 2,5-3 h`;
   if (mode === 'total') {
-    const mins = stopsForMode('total').reduce((s, x) => s + x.minutes, 0) + stopsForMode('total').length * 3;
+    const mins = stopsForMode('total').reduce((s, x) => s + x.minutes, 0) + stopsForMode('total').length * 2;
     return `${modeCount('total')} puntos · ~8 km · ${Math.round(mins / 60)}-${Math.round(mins / 60) + 1} h (mejor en dos días)`;
   }
   return `${modeCount('completa')} paradas · ${ROUTE.distanceKm} km · ${ROUTE.totalHours}`;

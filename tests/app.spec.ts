@@ -131,3 +131,15 @@ test('mapa: las teselas vistas se sirven sin conexión desde el service worker',
   expect(before.length).toBeGreaterThan(0);
   await context.setOffline(false);
 });
+
+test('visita: el modo total añade los puntos del mapa oficial y la ficha respeta el orden', async ({ page }) => {
+  await page.goto('#/visita');
+  const stops = page.locator('a[href*="#/visita/"]');
+  const classic = await stops.count();
+  await page.getByRole('button', { name: /^total/i }).click();
+  await expect(page.getByRole('heading', { name: /^ruta total$/i })).toBeVisible();
+  expect(await stops.count()).toBeGreaterThan(classic + 40);
+  await page.goto('#/visita/templo-vespasiano');
+  await expect(page.getByText(/PARADA \d+\/\d+/).first()).toBeVisible();
+  await expect(page.locator('.next-sticky')).toContainText(/lares/i);
+});

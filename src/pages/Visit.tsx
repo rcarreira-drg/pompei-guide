@@ -104,7 +104,7 @@ export default function Visit() {
               </div>
             )}
 
-            <RouteMap stops={stops} path={ROUTE.path} currentId={nextStop?.id} visited={visited} userPos={pos} heading={heading} walk={walk?.path ?? null} height="60vh" />
+            <RouteMap stops={stops} path={ROUTE.path} currentId={nextStop?.id} visited={visited} userPos={pos} heading={heading} walk={walk?.path ?? null} height="60vh" minor={rmode === 'total' ? EXTRA_IDS : undefined} />
 
             {((mode === 'express' ? ROUTE.logicExpress : ROUTE.logic) ?? []).length > 0 && (
               <details className="practical-accordion box visit-logic" open={visitedCount === 0}>

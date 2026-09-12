@@ -2,8 +2,8 @@
  * Mapa Leaflet brutalista. Solo usa divIcon/CircleMarker (nunca el icono por
  * defecto de Leaflet, que rompe con Vite si no se gestionan sus assets).
  */
-import { MapContainer, Marker, Polyline, Popup, TileLayer, useMap } from 'react-leaflet';
-import { useEffect } from 'react';
+import { MapContainer, Marker, Polyline, Popup, TileLayer, useMap, useMapEvents } from 'react-leaflet';
+import { useCallback, useEffect, useState } from 'react';
 import L from 'leaflet';
 import { Link } from 'react-router-dom';
 import type { Stop } from '@/content/types';
@@ -28,6 +28,8 @@ export interface RouteMapProps {
   follow?: boolean;
   /** Rumbo del dispositivo en grados (0 = norte). Si se indica, el marcador del usuario muestra un cono de dirección. */
   heading?: number | null;
+  /** Ids de paradas "menores" (puntos extra): se dibujan pequeñas y sin número hasta acercar el zoom. */
+  minor?: Set<string>;
 }
 
 function isVisited(visited: VisitedMap | undefined, id: string): boolean {
@@ -36,14 +38,21 @@ function isVisited(visited: VisitedMap | undefined, id: string): boolean {
   return Boolean(visited[id]);
 }
 
-function stopIcon(order: number, state: 'visited' | 'current' | 'default') {
+function stopIcon(order: number, state: 'visited' | 'current' | 'default', minor = false) {
   return L.divIcon({
-    className: 'stop-divicon',
-    html: `<span class="stop-pin stop-pin--${state}">${order}</span>`,
-    iconSize: [30, 30],
-    iconAnchor: [15, 15],
-    popupAnchor: [0, -18],
+    className: minor ? 'stop-divicon stop-divicon--minor' : 'stop-divicon',
+    html: `<span class="stop-pin stop-pin--${state} ${minor ? 'stop-pin--minor' : ''}">${order}</span>`,
+    iconSize: minor ? [18, 18] : [30, 30],
+    iconAnchor: minor ? [9, 9] : [15, 15],
+    popupAnchor: [0, minor ? -12 : -18],
   });
+}
+
+/** Marca en el contenedor el nivel de zoom (lejos/cerca) para adaptar los pines menores por CSS. */
+function ZoomClass({ onChange }: { onChange: (far: boolean) => void }) {
+  const map = useMapEvents({ zoomend: () => onChange(map.getZoom() < 17) });
+  useEffect(() => { onChange(map.getZoom() < 17); }, [map, onChange]);
+  return null;
 }
 
 const bounds = L.latLngBounds(PARK_BOUNDS).pad(0.15);
@@ -89,7 +98,9 @@ function FitStops({ points, single, follow }: { points: LatLng[]; single: boolea
   return null;
 }
 
-export default function RouteMap({ stops, path = [], currentId, visited, userPos, onSelect, height = '55vh', walk, fitExtra = [], follow, heading }: RouteMapProps) {
+export default function RouteMap({ stops, path = [], currentId, visited, userPos, onSelect, height = '55vh', walk, fitExtra = [], follow, heading, minor }: RouteMapProps) {
+  const [far, setFar] = useState(true);
+  const onZoom = useCallback((f: boolean) => setFar(f), []);
   if (stops.length === 0) {
     return (
       <div className="route-map route-map--empty box" style={{ height }}>
@@ -101,7 +112,7 @@ export default function RouteMap({ stops, path = [], currentId, visited, userPos
   const center: LatLng = stops[0].coords;
 
   return (
-    <div className="route-map box" style={{ height }}>
+    <div className={`route-map box ${far ? 'is-far' : 'is-near'}`} style={{ height }}>
       <MapContainer
         center={center}
         zoom={16}
@@ -121,6 +132,7 @@ export default function RouteMap({ stops, path = [], currentId, visited, userPos
           maxZoom={19}
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> contributors'
         />
+        <ZoomClass onChange={onZoom} />
         <FitStops
           points={[...stops.map((s) => s.coords), ...fitExtra, ...(walk ?? [])]}
           single={stops.length === 1 && fitExtra.length === 0 && !walk}
@@ -143,11 +155,13 @@ export default function RouteMap({ stops, path = [], currentId, visited, userPos
 
         {stops.map((s) => {
           const state = s.id === currentId ? 'current' : isVisited(visited, s.id) ? 'visited' : 'default';
+          const isMinor = !!minor?.has(s.id) && s.id !== currentId;
           return (
             <Marker
               key={s.id}
               position={s.coords}
-              icon={stopIcon(s.order, state)}
+              icon={stopIcon(s.order, state, isMinor)}
+              zIndexOffset={isMinor ? -100 : 0}
               eventHandlers={onSelect ? { click: () => onSelect(s.id) } : undefined}
             >
               <Popup>
