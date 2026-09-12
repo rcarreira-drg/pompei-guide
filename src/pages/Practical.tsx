@@ -99,7 +99,7 @@ export default function Practical() {
         <details id="tiempo" className="practical-accordion box" open>
           <summary>
             <span className="kicker">PREVISIÓN 7 DÍAS</span>
-            <h2>EL TIEMPO EN POMPEYA</h2>
+            <h2>EL TIEMPO EN POMPEI</h2>
           </summary>
           <div className="practical-accordion-body">
             <WeatherCard />
