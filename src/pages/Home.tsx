@@ -86,6 +86,7 @@ export default function Home() {
                 Completar checklist
               </Link>
             )}
+            <Link to="/ayuda" className="btn btn-block">¿Cómo funciona?</Link>
           </div>
         </div>
 

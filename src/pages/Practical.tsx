@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import Hero from '@/components/Hero';
 import Blocks from '@/components/Blocks';
 import Checklist from '@/components/Checklist';
@@ -60,6 +60,8 @@ export default function Practical() {
       <Hero kicker="INFO PRÁCTICA" title="PRÁCTICO" subtitle="Horarios, entradas, consejos y dudas frecuentes" />
 
       <div className="container">
+        <Link to="/ayuda" className="tag practical-howto-chip">¿CÓMO FUNCIONA?</Link>
+
         {PRACTICAL_SECTIONS.length === 0 ? (
           <p className="empty-state box">Contenido en preparación.</p>
         ) : (

@@ -1,0 +1,138 @@
+/* ==== ONBOARDING: pantallas de bienvenida (/bienvenida/:n) y ayuda (/ayuda) ==== */
+
+/* La pantalla completa se superpone a todo mientras dura el onboarding; el body
+   pierde el padding reservado para la barra inferior (oculta en este momento). */
+body.onboarding-active { overflow: hidden; }
+
+.onboarding-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.onboarding-skip {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  z-index: 5;
+  min-height: 44px;
+  padding: 0 var(--space-4);
+}
+
+.onboarding-slide {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  padding: calc(44px + var(--space-2)) var(--space-4) 4px;
+}
+
+.onboarding-slide-illus {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(12vh, 72px);
+  height: min(12vh, 72px);
+  margin: 0 auto var(--space-1);
+}
+.onboarding-slide-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.onboarding-slide-kicker { display: block; color: var(--pompeian); margin-bottom: 4px; font-size: 0.7rem; }
+
+.onboarding-slide-title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  line-height: 1.05;
+  font-size: clamp(1.25rem, 1rem + 3vw, 1.8rem);
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: manual;
+  margin: 0 0 var(--space-2);
+}
+
+.onboarding-slide-body { display: flex; flex-direction: column; gap: 6px; font-size: var(--step--1); }
+.onboarding-slide-body p { margin: 0; }
+.onboarding-note { color: var(--ash); }
+.onboarding-again-hint { color: var(--ash); text-align: center; margin-top: var(--space-1); }
+
+.onboarding-install { margin-top: 0; padding: var(--space-3); display: flex; flex-direction: column; gap: 4px; }
+.onboarding-install p { margin: 0; }
+.onboarding-voice-test { margin-top: 0; padding: var(--space-3); display: flex; flex-direction: column; gap: var(--space-2); }
+.onboarding-voice-list { color: var(--ash); }
+
+/* ---- Progreso (puntos) ---- */
+.onboarding-dots {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 4px 0;
+}
+.onboarding-dot {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.onboarding-dot::before {
+  content: '';
+  display: block;
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--ink);
+  background: var(--white);
+}
+.onboarding-dot.is-active::before { background: var(--pompeian); }
+
+/* ---- Navegación inferior ---- */
+.onboarding-nav {
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-2);
+  align-items: stretch;
+  padding: var(--space-2) var(--space-4) calc(var(--space-2) + var(--safe-b));
+  border-top: var(--border);
+  background: var(--paper);
+}
+.onboarding-nav .btn { min-height: 44px; }
+
+/* ---- Página /ayuda ---- */
+.onboarding-help-list { display: flex; flex-direction: column; }
+.onboarding-help-list .onboarding-slide {
+  position: static;
+  flex: none;
+  overflow: visible;
+  padding: var(--space-6) 0;
+  border-bottom: var(--border);
+}
+.onboarding-help-list .onboarding-slide:first-child { padding-top: var(--space-5); }
+.onboarding-help-list .onboarding-slide-illus { width: 160px; height: 160px; }
+.onboarding-help-home { margin: var(--space-6) 0; }
+
+@media (min-width: 640px) {
+  .onboarding-slide { padding-left: var(--space-6); padding-right: var(--space-6); }
+}
+
+/* ---- Enlace "¿Cómo funciona?" en Práctico ---- */
+.practical-howto-chip {
+  display: inline-flex; align-items: center; min-height: 44px; margin: var(--space-4) 0;
+  text-decoration: none; cursor: pointer;
+}

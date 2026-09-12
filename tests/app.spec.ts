@@ -1,5 +1,12 @@
 import { test, expect, type Page } from '@playwright/test';
 
+// Estas pruebas navegan directamente a rutas concretas (p.ej. "#/") y esperan ver esa
+// página tal cual: marcamos el onboarding como ya visto para que la redirección a
+// "/bienvenida/1" (ver tests/onboarding.spec.ts) no interfiera aquí.
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => { try { localStorage.setItem('pompei-guide:onboarded', '1'); } catch { /* ignore */ } });
+});
+
 const errors: string[] = [];
 test.beforeEach(({ page }) => {
   errors.length = 0;
