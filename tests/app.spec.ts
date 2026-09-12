@@ -90,17 +90,28 @@ test('visita: banner de proximidad visible y legible', async ({ page }) => {
   expect(bg).toBe('rgb(180, 50, 30)');
 });
 
-test('parada: reproductor con audio pregrabado y descarga offline', async ({ page }) => {
+test('parada: reproductor de voz del móvil con velocidad y párrafos pulsables', async ({ page }) => {
   await page.goto('#/visita/foro');
   const main = page.getByRole('button', { name: /escuchar narración/i });
   await expect(main).toBeVisible();
-  await expect(page.getByText(/voz pregrabada/i)).toBeVisible();
+  await expect(page.locator('.narrator-meta')).toContainText(/voz del móvil/i);
   await expect(page.getByRole('button', { name: /^1×$/ })).toBeVisible();
   await main.click();
   await expect(page.getByRole('button', { name: /pausar narración|escuchar narración/i })).toBeVisible();
   await page.getByRole('button', { name: /detener/i }).click({ force: true }).catch(() => {});
-  await page.goto('#/visita');
-  await expect(page.getByRole('button', { name: /descargar narración/i })).toBeVisible();
+  expect(await page.locator('.narrator-text p[role=button]').count()).toBeGreaterThan(3);
+});
+
+test('plano oficial: regiones, cuadrícula numerada y ficha', async ({ page }) => {
+  await page.goto('#/mapa');
+  await expect(page.getByRole('heading', { name: /plano oficial/i })).toBeVisible();
+  await page.getByRole('tab', { name: 'VIII' }).click();
+  await expect(page).toHaveURL(/#\/mapa\/VIII-/);
+  await page.getByRole('link', { name: /^2\s*Basílica/i }).click();
+  await expect(page).toHaveURL(/VIII-2$/);
+  await expect(page.getByRole('heading', { name: /^basílica$/i })).toBeVisible();
+  await expect(page.getByRole('link', { name: /ficha completa/i })).toBeVisible();
+  await expect(page.getByRole('button', { name: /escuchar narración/i })).toBeVisible();
 });
 
 test('visita: la ubicación se puede detener', async ({ page }) => {

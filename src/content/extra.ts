@@ -17,10 +17,10 @@ export const EXTRA_STOPS: Stop[] = [
     category: 'termas',
     coords: [40.7486, 14.4828],
     minutes: 10,
-    intro: 'Antes incluso de cruzar la Porta Marina, unas termas privadas guardan la escena más atrevida de toda Pompeya.',
+    intro: 'Bajad por la rampa de la Porta Marina y fijaos en esa fachada de ladrillo a la izquierda, medio escondida bajo la terraza del Templo de Venus: ahí dentro está el vestuario más comentado de todo el yacimiento.',
     narration: [
-      'Estas termas quedan fuera de las murallas, adosadas a la ladera que baja hacia el que fue el antiguo puerto, y no eran de uso público como las del Foro o las Estabianas, sino un negocio privado con vestuario, sala fría, templada y caliente igual que cualquier balneario de la ciudad. Se excavaron entre mil novecientos cincuenta y ocho y mil novecientos sesenta, y se restauraron después entre mil novecientos ochenta y cinco y mil novecientos ochenta y ocho.',
-      'Lo que las hizo famosas es la decoración del vestuario: dieciséis pequeñas escenas eróticas pintadas sobre las hornacinas donde los clientes guardaban la ropa, de las que hoy se conservan ocho a la vista. Entre ellas hay una escena entre dos mujeres, la única representación conocida de este tipo en toda la pintura romana conservada. Nadie se pone de acuerdo sobre su función exacta, si era simple decoración picante, numeración jocosa de las taquillas o publicidad de servicios adicionales del propio establecimiento.',
+      'Entrad y mirad hacia arriba, a las hornacinas donde los clientes dejaban la ropa mientras se bañaban. Sobre ocho de ellas se conservan todavía otras tantas escenas eróticas, de las dieciséis pintadas en origen, y entre ellas hay una escena entre dos mujeres que es la única de este tipo conocida en toda la pintura romana. Nadie se pone de acuerdo sobre su sentido. Pudo ser decoración picante, un modo jocoso de numerar las taquillas o publicidad de servicios adicionales del propio negocio.',
+      'Lo que casi nadie busca aquí es la fuente de bronce con un sátiro que decoraba una de las salas, y el mosaico de cupidos armando a Marte junto a la entrada, dos piezas discretas que sobreviven a la sombra de las escenas del vestuario. Este era un balneario privado, de pago, no un servicio público como el que visitaréis luego junto al Foro, y esa diferencia dice mucho de quién podía permitirse aquí un baño caliente antes de entrar en la ciudad.',
     ],
     lookFor: [
       'Las pequeñas escenas eróticas pintadas sobre las antiguas hornacinas del vestuario.',
@@ -44,10 +44,10 @@ export const EXTRA_STOPS: Stop[] = [
     coords: [40.74854, 14.48329],
     regio: 'VIII.1.4',
     minutes: 12,
-    intro: 'El museo del propio yacimiento, con los calcos de yeso y los objetos que dan rostro a la vida cotidiana de la ciudad.',
+    intro: 'Antes de perderos entre las ruinas, entrad aquí: este edificio guarda las caras y los objetos que le faltan a todo lo demás que vais a ver hoy.',
     narration: [
-      'El primer Antiquarium de Pompeya lo construyó el arqueólogo Giuseppe Fiorelli en mil ochocientos setenta y tres, junto a esta misma zona, para exponer sobre el terreno los objetos y los calcos de yeso que iban apareciendo en las excavaciones, en lugar de dispersarlos por museos lejanos. Amedeo Maiuri lo amplió en mil novecientos veintiséis, pero un bombardeo aliado lo destruyó casi por completo en septiembre de mil novecientos cuarenta y tres, con la pérdida de miles de piezas.',
-      'El edificio actual, reabierto con museografía completamente nueva en enero de dos mil veintiuno, recupera aquella función con salas dedicadas al urbanismo, la vida doméstica y la propia erupción. Entre las piezas más impactantes están los calcos de un caballo ensillado y de un hombre y un posible esclavo hallados en la villa de Civita Giuliana, las pinturas rescatadas de la Casa del Brazalete de Oro y el llamado Tesoro de Moregine, un excepcional conjunto de vajilla de plata.',
+      'Mirad primero la sala dedicada a los calcos de yeso. Giuseppe Fiorelli, el arqueólogo que ideó esta técnica, abrió el primer Antiquarium en mil ochocientos setenta y tres justo en esta zona, para que los objetos hallados se quedaran junto al yacimiento en lugar de dispersarse por museos lejanos. Amedeo Maiuri lo amplió en mil novecientos veintiséis, pero un bombardeo aliado lo destruyó casi entero en septiembre de mil novecientos cuarenta y tres, con miles de piezas perdidas para siempre.',
+      'El edificio que recorréis ahora reabrió en enero de dos mil veintiuno, con salas nuevas sobre el urbanismo, la vida doméstica y la erupción. Buscad el calco del caballo ensillado de la villa de Civita Giuliana, y junto a él el de un hombre y un posible esclavo hallados en el mismo lugar. El detalle que casi nadie se detiene a mirar es el Tesoro de Moregine, una vajilla de plata tan fina que parece imposible que sobreviviera diecinueve siglos bajo tierra.',
     ],
     lookFor: [
       'Los calcos de yeso de las víctimas, obtenidos vertiendo escayola en los huecos que dejaron los cuerpos en la ceniza endurecida.',

@@ -1,7 +1,7 @@
 /** Preferencias del reproductor de narración (persistidas). */
-export interface NarratorSettings { engine: 'audio' | 'speech'; rate: number; voiceURI?: string }
+export interface NarratorSettings { rate: number; voiceURI?: string }
 const KEY = 'pompei-guide:narrator';
-const DEFAULT: NarratorSettings = { engine: 'audio', rate: 1 };
+const DEFAULT: NarratorSettings = { rate: 1 };
 export function loadNarratorSettings(): NarratorSettings {
   try { const raw = localStorage.getItem(KEY); return raw ? { ...DEFAULT, ...JSON.parse(raw) } : DEFAULT; } catch { return DEFAULT; }
 }

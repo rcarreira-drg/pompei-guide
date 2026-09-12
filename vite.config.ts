@@ -33,11 +33,6 @@ export default defineConfig({
         maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
         runtimeCaching: [
           {
-            urlPattern: /\/audio\/.*\.mp3$/i,
-            handler: 'CacheFirst',
-            options: { cacheName: 'pompei-audio-v1', expiration: { maxEntries: 300, maxAgeSeconds: 60 * 60 * 24 * 365 }, cacheableResponse: { statuses: [0, 200] }, rangeRequests: true }
-          },
-          {
             urlPattern: /^https:\/\/([abc]\.)?tile\.openstreetmap\.org\/.*/i,
             handler: 'CacheFirst',
             options: { cacheName: 'osm-tiles', expiration: { maxEntries: 1500, maxAgeSeconds: 60 * 60 * 24 * 90 }, cacheableResponse: { statuses: [0, 200] } }

@@ -14,7 +14,6 @@ import WakeLockToggle from '@/components/WakeLockToggle';
 import WeatherCard from '@/components/WeatherCard';
 import Planner from '@/components/Planner';
 import Diploma from '@/components/Diploma';
-import AudioDownload from '@/components/AudioDownload';
 import MapDownload from '@/components/MapDownload';
 import { stopsForMode, modeSummary, EXTRA_IDS, type RouteMode } from '@/lib/modes';
 import { useWalkRoute } from '@/lib/useWalkRoute';
@@ -111,7 +110,6 @@ export default function Visit() {
                 <summary><span className="kicker">ANTES DE EMPEZAR</span><h2>{mode === 'express' ? 'POR QUÉ ESTA RUTA EXPRÉS' : 'POR QUÉ ESTE RECORRIDO'}</h2></summary>
                 <div className="practical-accordion-body">
                   <Narrator
-                    audioKey={mode === 'express' ? 'route:express' : 'route:completa'}
                     texts={(mode === 'express' ? ROUTE.logicExpress : ROUTE.logic) ?? []}
                     title={mode === 'express' ? 'Presentación de la ruta exprés' : 'Presentación del recorrido'}
                     compactHeader
@@ -129,7 +127,6 @@ export default function Visit() {
               <ExpressToggle />
               <WakeLockToggle />
             </div>
-            <AudioDownload />
             <MapDownload />
 
             <h2 className="section-title">{rmode === 'express' ? 'RUTA EXPRÉS' : rmode === 'total' ? 'RUTA TOTAL' : 'TODAS LAS PARADAS'}</h2>

@@ -52,7 +52,6 @@ export default function StopPage() {
   const next = nextForRoute ?? undefined;
   // En modo total el "por qué seguimos" clásico no aplica (la siguiente parada es otra): se omite y el audio se detiene antes
   const whyNext = rmode === 'total' ? undefined : isExpress && stop.whyNextExpress ? stop.whyNextExpress : stop.whyNext;
-  const audioKey = isExpress && stop.whyNextExpress ? `${stop.id}:express` : stop.id;
   const narrationTexts = [stop.intro, ...stop.narration, ...(whyNext ? [whyNext] : [])];
   const isVisited = Boolean(visited[stop.id]);
   const imgSrc = stop.image
@@ -117,7 +116,7 @@ export default function StopPage() {
         </div>
 
 
-        <Narrator audioKey={audioKey} texts={narrationTexts} title={`${stop.order}. ${stop.name}`} introIndex={0} outroIndex={whyNext ? narrationTexts.length - 1 : undefined} />
+        <Narrator texts={narrationTexts} title={`${stop.order}. ${stop.name}`} introIndex={0} outroIndex={whyNext ? narrationTexts.length - 1 : undefined} />
 
         {stop.lookFor.length > 0 && (
           <section>

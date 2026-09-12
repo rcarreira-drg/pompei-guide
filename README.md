@@ -3,7 +3,8 @@
 Webapp mobile-first (PWA, offline) en estilo brutalista para **preparar** y **recorrer** el Parque Arqueológico de Pompeya.
 
 - **Preparar**: 8 capítulos de historia y contexto, cronología, glosario y quiz.
-- **Visita**: ruta guiada de 24 paradas con mapa (Leaflet/OSM), geolocalización, brújula, narración por voz (Web Speech API), progreso persistente y planificador horario.
+- **Visita**: tres modos (exprés 13, completa 24, total con todos los puntos del plano oficial), mapa (Leaflet/OSM) con posición y rumbo, ruta dinámica por las calles reales, brújula, narración con la voz del móvil, progreso persistente y planificador horario.
+- **Plano oficial**: los 145 puntos del plano de papel del parque, por Regio y número, con relato.
 - **Práctico**: entradas, transporte, planificación del día, normas, checklist y FAQ, con clima del día (Open-Meteo).
 
 Stack: Vite · React 18 · TypeScript · react-router · react-leaflet · vite-plugin-pwa. Sin backend. Hosting: GitHub Pages.

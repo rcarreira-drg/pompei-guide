@@ -6,6 +6,7 @@ import SectionPage from './pages/SectionPage';
 import Visit from './pages/Visit';
 import StopPage from './pages/StopPage';
 import Practical from './pages/Practical';
+import OfficialMap from './pages/OfficialMap';
 import QuizPage from './pages/QuizPage';
 import './styles/app.css';
 import './styles/pages.css';
@@ -30,6 +31,8 @@ export default function App() {
           <Route path="/visita" element={<Visit />} />
           <Route path="/visita/:id" element={<StopPage />} />
           <Route path="/practico" element={<Practical />} />
+          <Route path="/mapa" element={<OfficialMap />} />
+          <Route path="/mapa/:key" element={<OfficialMap />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
@@ -37,6 +40,7 @@ export default function App() {
         <NavLink to="/" end>INICIO</NavLink>
         <NavLink to="/preparar">PREPARAR</NavLink>
         <NavLink to="/visita">VISITA</NavLink>
+        <NavLink to="/mapa">PLANO</NavLink>
         <NavLink to="/practico">PRÁCTICO</NavLink>
       </nav>
     </>

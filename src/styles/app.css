@@ -1,13 +1,13 @@
 .bottom-nav {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 1000;
-  display: grid; grid-template-columns: repeat(4, 1fr);
+  display: grid; grid-template-columns: repeat(5, 1fr);
   height: calc(var(--nav-h) + var(--safe-b)); padding-bottom: var(--safe-b);
   background: var(--ink); border-top: var(--border);
 }
 .bottom-nav a {
   display: flex; align-items: center; justify-content: center;
   color: var(--paper); text-decoration: none;
-  font-family: var(--font-mono); font-weight: 700; font-size: 0.72rem; letter-spacing: 0.08em;
+  font-family: var(--font-mono); font-weight: 700; font-size: 0.62rem; letter-spacing: 0.04em;
   border-right: 2px solid var(--paper);
 }
 .bottom-nav a:last-child { border-right: 0; }
