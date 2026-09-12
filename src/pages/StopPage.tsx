@@ -11,6 +11,7 @@ import { useHeading } from '@/lib/useHeading';
 import { useProgress } from '@/lib/useProgress';
 import { resolveCredit } from '@/lib/credit';
 import StopNotes from '@/components/StopNotes';
+import Gallery from '@/components/Gallery';
 import { useWalkRoute } from '@/lib/useWalkRoute';
 import { stopsForMode, findStop, nextInMode, prevInMode, type RouteMode } from '@/lib/modes';
 import { useMemo, useEffect, useState } from 'react';
@@ -160,6 +161,8 @@ export default function StopPage() {
           )}
         </div>
 
+
+        {stop.gallery && stop.gallery.length > 0 && <Gallery items={stop.gallery} />}
 
         <Narrator texts={narrationTexts} title={`${stop.order}. ${stop.name}`} introIndex={0} outroIndex={whyNext ? narrationTexts.length - 1 : undefined} />
 

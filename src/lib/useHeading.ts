@@ -48,8 +48,9 @@ export async function enableHeading(): Promise<void> {
   attach();
   const ctor = window.DeviceOrientationEvent as unknown as { requestPermission?: () => Promise<'granted' | 'denied' | 'prompt'> };
   if (ctor && typeof ctor.requestPermission === 'function') {
-    try { const r = await ctor.requestPermission(); if (r === 'denied') disableHeading(); }
-    catch { /* algunos navegadores lanzan si no hay gesto: mantenemos los listeners */ }
+    // No desactivamos aunque devuelva 'denied': en Chromium sin permiso de sensores devuelve 'denied' y aun así
+    // los eventos pueden llegar; si no llegan, el temporizador marcará `unsupported`.
+    try { await ctor.requestPermission(); } catch { /* sin gesto o no soportado: mantenemos los listeners */ }
   }
 }
 export function disableHeading() {
