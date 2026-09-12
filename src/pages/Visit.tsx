@@ -14,6 +14,7 @@ import WeatherCard from '@/components/WeatherCard';
 import Planner from '@/components/Planner';
 import Diploma from '@/components/Diploma';
 import AudioDownload from '@/components/AudioDownload';
+import MapDownload from '@/components/MapDownload';
 import { filterStops } from '@/lib/express';
 import { useWalkRoute } from '@/lib/useWalkRoute';
 import LocationToggle from '@/components/LocationToggle';
@@ -126,6 +127,7 @@ export default function Visit() {
               <WakeLockToggle />
             </div>
             <AudioDownload />
+            <MapDownload />
 
             <h2 className="section-title">{mode === 'express' ? 'RUTA EXPRÉS' : 'TODAS LAS PARADAS'}</h2>
             <p className="mono stop-list-summary">
@@ -171,7 +173,7 @@ export default function Visit() {
             Modo sin conexión: la guía funciona sin internet una vez cargada; el mapa necesita datos móviles la primera vez que visitas
             cada zona.
           </span>
-        </p>
+         <span className="mono">Versión {__BUILD_TIME__}.</span></p>
       </div>
     </div>
   );

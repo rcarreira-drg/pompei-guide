@@ -5,6 +5,7 @@ import path from 'node:path';
 
 export default defineConfig({
   base: '/pompei-guide/',
+  define: { __BUILD_TIME__: JSON.stringify(new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC') },
   resolve: { alias: { '@': path.resolve(__dirname, 'src') } },
   plugins: [
     react(),
@@ -39,7 +40,7 @@ export default defineConfig({
           {
             urlPattern: /^https:\/\/[abc]\.tile\.openstreetmap\.org\/.*/i,
             handler: 'CacheFirst',
-            options: { cacheName: 'osm-tiles', expiration: { maxEntries: 600, maxAgeSeconds: 60 * 60 * 24 * 30 } }
+            options: { cacheName: 'osm-tiles', expiration: { maxEntries: 1500, maxAgeSeconds: 60 * 60 * 24 * 30 } }
           }
         ]
       }

@@ -86,7 +86,7 @@ export default function Home() {
 
         <footer className="home-footer">
           <p className="mono">Imágenes: Wikimedia Commons (dominio público / licencias CC). Mapa © OpenStreetMap contributors.</p>
-          <p className="mono">Proyecto no oficial, sin afiliación con el Parco Archeologico di Pompei.</p>
+          <p className="mono">Proyecto no oficial, sin afiliación con el Parco Archeologico di Pompei. Versión {__BUILD_TIME__}.</p>
         </footer>
       </div>
     </div>

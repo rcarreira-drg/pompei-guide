@@ -10,6 +10,34 @@ import { bestVoice, pause as ttsPause, resume as ttsResume, speak, spanishVoices
 import { loadNarratorSettings, saveNarratorSettings, type NarratorSettings } from '@/lib/narratorSettings';
 
 type Status = 'idle' | 'loading' | 'playing' | 'paused';
+
+/** Un único <audio> global insertado en el documento: iOS solo mantiene en segundo plano
+ *  (y muestra en la pantalla de bloqueo) medios que están en el DOM y arrancados por un gesto. */
+interface AudioSessionLike { type: string }
+function ensurePlaybackSession() {
+  const nav = navigator as Navigator & { audioSession?: AudioSessionLike };
+  try { if (nav.audioSession && nav.audioSession.type !== 'playback') nav.audioSession.type = 'playback'; } catch { /* no soportado */ }
+}
+/** iPhone/iPad con la app instalada en pantalla de inicio: iOS corta el audio al bloquear en ese modo. */
+export function isIosStandalone(): boolean {
+  const ios = /iP(hone|ad|od)/.test(navigator.userAgent);
+  const standalone = (navigator as Navigator & { standalone?: boolean }).standalone === true || matchMedia('(display-mode: standalone)').matches;
+  return ios && standalone;
+}
+function sharedAudio(): HTMLAudioElement {
+  ensurePlaybackSession();
+  let a = document.getElementById('pompei-narrator-audio') as HTMLAudioElement | null;
+  if (!a) {
+    a = document.createElement('audio');
+    a.id = 'pompei-narrator-audio';
+    a.setAttribute('playsinline', '');
+    a.setAttribute('webkit-playsinline', '');
+    a.preload = 'auto';
+    a.style.display = 'none';
+    document.body.appendChild(a);
+  }
+  return a;
+}
 const RATES = [0.9, 1, 1.15, 1.3];
 
 export interface NarratorProps {
@@ -40,7 +68,8 @@ export default function Narrator({ audioKey, texts, title, introIndex = 0, outro
 
   const updateSettings = (patch: Partial<NarratorSettings>) => { const next = { ...settings, ...patch }; setSettings(next); saveNarratorSettings(next); };
 
-  useEffect(() => () => { ttsStop(); audioRef.current?.pause(); audioRef.current = null; }, [audioKey]);
+  const listenersAbort = useRef<AbortController | null>(null);
+  useEffect(() => () => { ttsStop(); audioRef.current?.pause(); listenersAbort.current?.abort(); audioRef.current = null; }, [audioKey]);
   useEffect(() => {
     if (!speechOk) return;
     const upd = () => setVoices(spanishVoices());
@@ -74,24 +103,27 @@ export default function Narrator({ audioKey, texts, title, introIndex = 0, outro
 
   const getAudio = useCallback(() => {
     if (audioRef.current) return audioRef.current;
-    const a = new Audio();
-    a.preload = 'auto';
-    a.src = audioUrl(track!.file);
+    const a = sharedAudio();
+    const src = audioUrl(track!.file);
+    if (a.src !== new URL(src, location.href).href) { a.src = src; a.load(); }
     a.playbackRate = settings.rate;
+    listenersAbort.current?.abort();
+    const ac = new AbortController(); listenersAbort.current = ac;
+    const opts = { signal: ac.signal };
     a.addEventListener('timeupdate', () => {
       if (!a.duration) return;
       setProgress(a.currentTime / a.duration);
       const i = paragraphAt(a.currentTime);
       if (i !== indexRef.current) { indexRef.current = i; setIndex(i); }
-    });
-    a.addEventListener('playing', () => setStatus('playing'));
-    a.addEventListener('waiting', () => setStatus('loading'));
-    a.addEventListener('pause', () => { if (!a.ended) setStatus((s) => (s === 'idle' ? s : 'paused')); });
-    a.addEventListener('ended', () => finish());
+    }, opts);
+    a.addEventListener('playing', () => { setStatus('playing'); if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'playing'; }, opts);
+    a.addEventListener('waiting', () => setStatus('loading'), opts);
+    a.addEventListener('pause', () => { if (!a.ended) setStatus((s) => (s === 'idle' ? s : 'paused')); if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'paused'; }, opts);
+    a.addEventListener('ended', () => finish(), opts);
     a.addEventListener('error', () => {
       if (speechOk) { setError('Audio no disponible sin conexión; se usa la voz del sistema.'); updateSettings({ engine: 'speech' }); speakFrom(indexRef.current); }
       else { setError('No se ha podido cargar el audio. Comprueba la conexión o descarga la narración desde la pantalla Visita.'); finish(); }
-    });
+    }, opts);
     audioRef.current = a;
     return a;
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -102,8 +134,12 @@ export default function Narrator({ audioKey, texts, title, introIndex = 0, outro
     const a = getAudio();
     setError(null); setStatus('loading');
     indexRef.current = i; setIndex(i);
-    const seek = () => { a.currentTime = track.starts[i] ?? 0; a.play().catch(() => setStatus('idle')); };
-    if (a.readyState >= 1) seek(); else { a.addEventListener('loadedmetadata', seek, { once: true }); a.load(); }
+    const target = track.starts[i] ?? 0;
+    if (a.readyState >= 1) a.currentTime = target;
+    else a.addEventListener('loadedmetadata', () => { a.currentTime = target; }, { once: true });
+    // play() debe llamarse de forma SÍNCRONA dentro del gesto del usuario (iOS/Android lo exigen para permitir
+    // la reproducción y mantenerla con la pantalla bloqueada)
+    a.play().catch(() => setStatus('idle'));
   }, [track, getAudio]);
 
   // ---------- Media Session (pantalla de bloqueo) ----------
@@ -199,6 +235,11 @@ export default function Narrator({ audioKey, texts, title, introIndex = 0, outro
       )}
       {!track && !speechOk && <p className="callout callout--info">La narración por voz no está disponible en este navegador. Lee el texto a continuación.</p>}
       {error && <p className="callout callout--warn" role="alert">{error}</p>}
+      {engine === 'audio' && track && isIosStandalone() && (
+        <p className="callout callout--info narrator-ios-hint">
+          En iPhone, con la app instalada en la pantalla de inicio, iOS suele cortar el audio al bloquear. Para escuchar con la pantalla apagada, abre la guía en Safari (rcarreira-drg.github.io/pompei-guide) o baja el brillo en lugar de bloquear.
+        </p>
+      )}
 
       <div className="narrator-text">
         {texts.map((p, i) => (
