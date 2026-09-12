@@ -15,6 +15,7 @@ import Planner from '@/components/Planner';
 import Diploma from '@/components/Diploma';
 import AudioDownload from '@/components/AudioDownload';
 import { filterStops } from '@/lib/express';
+import { useWalkRoute } from '@/lib/useWalkRoute';
 
 const CATEGORY_LABEL: Record<StopCategory, string> = {
   puerta: 'PUERTA',
@@ -45,6 +46,8 @@ export default function Visit() {
     }
     return stops.find((s) => !visited[s.id]) ?? stops[stops.length - 1];
   }, [stops, visited, currentStop]);
+
+  const walk = useWalkRoute(pos, nextStop?.coords ?? null);
 
   const nearbyUnvisited = useMemo(() => {
     if (!pos) return undefined;
@@ -101,7 +104,10 @@ export default function Visit() {
               </div>
             )}
 
-            <RouteMap stops={stops} path={ROUTE.path} currentId={nextStop?.id} visited={visited} userPos={pos} height="60vh" />
+            <RouteMap stops={stops} path={ROUTE.path} currentId={nextStop?.id} visited={visited} userPos={pos} walk={walk?.path ?? null} height="60vh" />
+            {walk && pos && (
+              <p className="mono walk-summary">HASTA LA SIGUIENTE PARADA: {`${Math.round(walk.distance / 10) * 10} m`} · ≈ {Math.max(1, Math.round(walk.distance / 75))} min a pie (camino en ocre)</p>
+            )}
 
             <Diploma visitedCount={visitedCount} total={stops.length} startedAt={routeStartedAt} />
 

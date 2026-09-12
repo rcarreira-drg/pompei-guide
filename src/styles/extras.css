@@ -167,3 +167,19 @@
 .narrator-hint:hover { background: transparent !important; }
 .audio-download { padding: var(--space-4); margin: var(--space-4) 0; display: grid; gap: var(--space-3); }
 .audio-progress { height: 14px; }
+
+/* ===== Ruta dinámica ===== */
+.walk-summary { font-size: 0.78rem; font-weight: 700; margin: var(--space-3) 0; padding: var(--space-2) var(--space-3); background: var(--ochre); border: var(--border); }
+.next-directions-target { display: flex; flex-direction: column; gap: 2px; margin-bottom: var(--space-3); }
+.next-directions-target strong { font-family: var(--font-display); font-size: var(--step-1); text-transform: uppercase; }
+.next-directions .route-map { margin-bottom: var(--space-3); }
+.next-sticky {
+  position: fixed; left: 0; right: 0; bottom: calc(var(--nav-h) + var(--safe-b)); z-index: 900;
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: var(--space-3);
+  padding: var(--space-2) var(--space-4); min-height: 52px;
+  background: var(--ochre); color: var(--ink); border-top: var(--border); border-bottom: 2px solid var(--ink); text-decoration: none;
+}
+.next-sticky .kicker { font-size: 0.65rem; }
+.next-sticky strong { font-family: var(--font-display); text-transform: uppercase; font-size: 0.95rem; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.next-sticky-dist { font-size: 0.75rem; font-weight: 700; white-space: nowrap; }
+.has-next-sticky { padding-bottom: calc(var(--nav-h) + var(--safe-b) + 56px); }

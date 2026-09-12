@@ -10,6 +10,8 @@ import { useGeolocation } from '@/lib/useGeolocation';
 import { useProgress } from '@/lib/useProgress';
 import { resolveCredit } from '@/lib/credit';
 import StopNotes from '@/components/StopNotes';
+import { useWalkRoute } from '@/lib/useWalkRoute';
+import { formatDistance, walkMinutes } from '@/lib/geo';
 import type { Block } from '@/content/types';
 
 const LONG_WORD_LENGTH = 12;
@@ -19,6 +21,8 @@ export default function StopPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { pos, enabled, enable, error: geoError } = useGeolocation();
+  const nextForRoute = ROUTE.stops.find((x) => x.order === (ROUTE.stops.find((y) => y.id === id)?.order ?? 0) + 1) ?? null;
+  const walk = useWalkRoute(pos ?? ROUTE.stops.find((y) => y.id === id)?.coords ?? null, nextForRoute?.coords ?? null);
   const { visited, markVisited, setCurrentStop } = useProgress();
 
   const stops = ROUTE.stops;
@@ -61,7 +65,7 @@ export default function StopPage() {
   };
 
   return (
-    <div>
+    <div className={next ? 'has-next-sticky' : ''}>
       <header className="stop-hero container">
         <p className="kicker">
           PARADA {stop.order}/{stops.length}
@@ -118,16 +122,34 @@ export default function StopPage() {
 
         {tipsBlocks.length > 0 && <Blocks blocks={tipsBlocks} />}
 
-        {stop.directionsToNext && (
-          <section className="box next-directions">
+        {next && (
+          <section className="box next-directions" id="siguiente">
             <h2 className="section-title">CÓMO LLEGAR A LA SIGUIENTE</h2>
-            <p>{stop.directionsToNext}</p>
-            {stop.walkMinutesToNext != null && <p className="mono">≈ {stop.walkMinutesToNext} min a pie</p>}
+            <p className="next-directions-target">
+              <span className="kicker">PARADA {next.order}</span>
+              <strong>{next.name}</strong>
+            </p>
+            <RouteMap
+              stops={[stop, next]}
+              currentId={next.id}
+              visited={visited}
+              userPos={pos}
+              walk={walk?.path ?? null}
+              follow
+              height="38vh"
+            />
+            {walk && (
+              <p className="mono walk-summary">
+                {pos ? 'DESDE TU POSICIÓN' : 'DESDE ESTA PARADA'} · {formatDistance(walk.distance)} · ≈ {walkMinutes(walk.distance)} min a pie
+                {walk.offNetwork ? ' · en línea recta' : ' · por las calles del parque'}
+              </p>
+            )}
+            {stop.directionsToNext && <p>{stop.directionsToNext}</p>}
             {!enabled && (
-              <button type="button" className="btn btn-accent btn-block" onClick={enable}>ACTIVAR UBICACIÓN</button>
+              <button type="button" className="btn btn-accent btn-block" onClick={enable}>ACTIVAR UBICACIÓN PARA SEGUIR EL CAMINO</button>
             )}
             {geoError && <p className="callout callout--warn">{geoError}</p>}
-            {next && <Compass target={next.coords} userPos={pos} label={next.name} compact />}
+            <Compass target={next.coords} userPos={pos} label={next.name} compact />
           </section>
         )}
 
@@ -156,9 +178,20 @@ export default function StopPage() {
 
         <StopNotes stopId={stop.id} />
 
-        <h2 className="section-title">UBICACIÓN</h2>
-        <RouteMap stops={[stop]} currentId={stop.id} visited={visited} userPos={pos} height="30vh" />
+        {!next && (
+          <>
+            <h2 className="section-title">UBICACIÓN</h2>
+            <RouteMap stops={[stop]} currentId={stop.id} visited={visited} userPos={pos} height="30vh" />
+          </>
+        )}
       </div>
+      {next && (
+        <a href="#siguiente" className="next-sticky" onClick={(e) => { e.preventDefault(); document.getElementById('siguiente')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }} aria-label={`Ir a las indicaciones hacia ${next.name}`}>
+          <span className="kicker">SIGUIENTE →</span>
+          <strong>{next.name}</strong>
+          {walk && <span className="mono next-sticky-dist">{formatDistance(walk.distance)} · {walkMinutes(walk.distance)} min</span>}
+        </a>
+      )}
     </div>
   );
 }

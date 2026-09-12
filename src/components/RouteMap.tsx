@@ -20,6 +20,12 @@ export interface RouteMapProps {
   userPos?: LatLng | null;
   onSelect?: (id: string) => void;
   height?: string;
+  /** Camino dinámico (p.ej. desde tu posición hasta la siguiente parada). */
+  walk?: LatLng[] | null;
+  /** Puntos extra que deben caber en el encuadre (posición del usuario, destino…). */
+  fitExtra?: LatLng[];
+  /** Si true, re-encuadra cuando cambian los puntos (seguimiento). */
+  follow?: boolean;
 }
 
 function isVisited(visited: VisitedMap | undefined, id: string): boolean {
@@ -41,19 +47,21 @@ function stopIcon(order: number, state: 'visited' | 'current' | 'default') {
 const bounds = L.latLngBounds(PARK_BOUNDS).pad(0.15);
 
 /** Encuadra todas las paradas al montar (y cuando cambia el conjunto). */
-function FitStops({ points, single }: { points: LatLng[]; single: boolean }) {
+function FitStops({ points, single, follow }: { points: LatLng[]; single: boolean; follow?: boolean }) {
   const map = useMap();
+  const key = follow ? points.map((p) => p[0].toFixed(4) + ',' + p[1].toFixed(4)).join('|') : String(points.length);
   useEffect(() => {
     if (points.length === 0) return;
     try {
       if (single) map.setView(points[0], 17, { animate: false });
-      else map.fitBounds(L.latLngBounds(points), { padding: [24, 24], maxZoom: 17, animate: false });
+      else map.fitBounds(L.latLngBounds(points), { padding: [28, 28], maxZoom: 18, animate: false });
     } catch { /* el mapa puede estar desmontándose */ }
-  }, [map, points.length, single]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [map, key, single]);
   return null;
 }
 
-export default function RouteMap({ stops, path = [], currentId, visited, userPos, onSelect, height = '55vh' }: RouteMapProps) {
+export default function RouteMap({ stops, path = [], currentId, visited, userPos, onSelect, height = '55vh', walk, fitExtra = [], follow }: RouteMapProps) {
   if (stops.length === 0) {
     return (
       <div className="route-map route-map--empty box" style={{ height }}>
@@ -83,12 +91,23 @@ export default function RouteMap({ stops, path = [], currentId, visited, userPos
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> contributors'
         />
-        <FitStops points={stops.map((s) => s.coords)} single={stops.length === 1} />
+        <FitStops
+          points={[...stops.map((s) => s.coords), ...fitExtra, ...(walk ?? [])]}
+          single={stops.length === 1 && fitExtra.length === 0 && !walk}
+          follow={follow}
+        />
 
         {path.length > 1 && (
           <>
             <Polyline positions={path} pathOptions={{ color: '#111111', weight: 5, opacity: 1 }} />
             <Polyline positions={path} pathOptions={{ color: '#b4321e', weight: 2, dashArray: '6 8', opacity: 1 }} />
+          </>
+        )}
+
+        {walk && walk.length > 1 && (
+          <>
+            <Polyline positions={walk} pathOptions={{ color: '#111111', weight: 9, opacity: 1, lineCap: 'square' }} />
+            <Polyline positions={walk} pathOptions={{ color: '#d9a521', weight: 5, opacity: 1, lineCap: 'square' }} />
           </>
         )}
 
