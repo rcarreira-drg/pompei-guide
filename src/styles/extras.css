@@ -196,7 +196,6 @@
 .visit-logic { margin: var(--space-5) 0; }
 
 /* ===== Marcador del usuario con rumbo ===== */
-.user-divicon { background: transparent; border: 0; }
 .user-pin { position: relative; display: block; width: 64px; height: 64px; }
 .user-dot { position: absolute; left: 50%; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; background: var(--pompeian); border: 3px solid var(--ink); box-shadow: 0 0 0 3px var(--white); z-index: 2; }
 .user-cone { position: absolute; left: 50%; top: 50%; width: 64px; height: 64px; margin: -32px 0 0 -32px; display: none;
@@ -273,12 +272,23 @@
 .gallery-modal-nav { display: grid; grid-template-columns: auto 1fr auto auto; gap: var(--space-2); align-items: center; color: var(--paper); }
 .gallery-modal-nav .mono { text-align: center; }
 
-/* ===== Estilo de mapa "tinta" y bloqueo de interacción ===== */
-.route-map.style-tinta .leaflet-tile-pane { filter: grayscale(1) contrast(1.45) brightness(1.04) sepia(0.28); }
-.route-map.style-tinta .leaflet-container { background: var(--paper); }
-.route-map { position: relative; }
+/* ===== Mapa: fondo de tinta y bloqueo de interacción ===== */
+.route-map { position: relative; background: var(--paper); }
 .map-lock { position: absolute; inset: 0; z-index: 1100; background: transparent; border: 0; cursor: pointer; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 34px; }
 .map-lock-label { display: inline-block; padding: 8px 12px; background: var(--ink); color: var(--paper); font-family: var(--font-mono); font-weight: 700; font-size: 0.68rem; letter-spacing: .08em; border: 2px solid var(--paper); box-shadow: var(--shadow-sm); }
-.route-map.is-locked .leaflet-control-zoom { opacity: .55; }
-.map-style-toggle { position: absolute; left: 10px; top: 104px; z-index: 1000; }
+.route-map.is-locked .map-ctrl-btn { opacity: .55; }
 .map-container-end { display: none; }
+
+/* ===== Controles propios: zoom y capas ===== */
+.map-zoom-controls { position: absolute; left: 10px; top: 10px; z-index: 1000; display: grid; gap: 6px; }
+.map-layers-toggle { position: absolute; left: 10px; top: 104px; z-index: 1000; }
+.map-layers-panel {
+  position: absolute; top: 46px; left: 0; z-index: 1001; min-width: 190px;
+  padding: var(--space-3); display: grid; gap: 2px; background: var(--white);
+  border: var(--border); box-shadow: var(--shadow-sm);
+}
+.map-layers-item {
+  display: flex; align-items: center; gap: 8px; min-height: 40px; padding: 4px 2px;
+  font-family: var(--font-mono); font-weight: 700; font-size: 0.7rem; letter-spacing: .03em; cursor: pointer;
+}
+.map-layers-item input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--pompeian); flex: 0 0 auto; }

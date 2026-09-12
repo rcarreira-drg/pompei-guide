@@ -8,19 +8,19 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --port 4173",
     "test:e2e": "playwright test",
-    "deploy": "gh-pages -d dist -t"
+    "deploy": "gh-pages -d dist -t",
+    "postinstall": "node scripts/copy-maplibre-worker.mjs"
   },
   "dependencies": {
-    "leaflet": "^1.9.4",
-    "leaflet-rotate": "^0.2.8",
+    "@types/three": "^0.186.0",
+    "maplibre-gl": "^6.9.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-leaflet": "^4.2.1",
-    "react-router-dom": "^6.26.2"
+    "react-router-dom": "^6.26.2",
+    "three": "^0.186.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",
-    "@types/leaflet": "^1.9.12",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",

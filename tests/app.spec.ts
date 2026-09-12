@@ -14,7 +14,7 @@ test.beforeEach(({ page }) => {
   page.on('console', m => { if (m.type() === 'error') errors.push(`console: ${m.text()}`); });
 });
 test.afterEach(() => {
-  const real = errors.filter(e => !/favicon|tile\.openstreetmap|net::ERR|Failed to load resource/i.test(e));
+  const real = errors.filter(e => !/favicon|tiles\.openfreemap|net::ERR|Failed to load resource|AJAXError/i.test(e));
   expect(real, 'sin errores de consola').toEqual([]);
 });
 
@@ -45,7 +45,7 @@ test('preparar: lista de capítulos y lectura de uno', async ({ page }) => {
 
 test('visita: mapa, lista de paradas y detalle con narración', async ({ page }) => {
   await page.goto('#/visita');
-  await expect(page.locator('.leaflet-container')).toBeVisible();
+  await expect(page.locator('.route-map canvas')).toBeVisible();
   const stops = page.locator('a[href*="#/visita/"]');
   expect(await stops.count()).toBeGreaterThanOrEqual(20);
   await stops.first().click();
@@ -131,22 +131,33 @@ test('visita: la ubicación se puede detener', async ({ page }) => {
   await expect(page.getByRole('button', { name: /activar ubicación/i })).toBeVisible();
 });
 
-test('mapa: las teselas vistas se sirven sin conexión desde el service worker', async ({ page, context, browserName }) => {
+test('mapa: las teselas vectoriales vistas se sirven sin conexión desde el service worker', async ({ page, context, browserName }) => {
   test.skip(browserName !== 'chromium', 'service worker solo en chromium');
   await page.goto('#/visita');
   await page.evaluate(() => navigator.serviceWorker.ready);
+  // La primera carga nunca está controlada por el service worker (se registra durante esa
+  // misma carga), así que sus peticiones no pasan por la caché de teselas; recargamos una
+  // vez para que el SW ya activo tome el control antes de comprobar nada.
   await page.reload();
-  await expect(page.locator('.leaflet-container')).toBeVisible();
-  await page.waitForFunction(() => Array.from(document.querySelectorAll<HTMLImageElement>('.leaflet-tile')).filter(i => i.complete && i.naturalWidth > 0).length >= 4, null, { timeout: 30_000 });
-  const before = await page.evaluate(() => Array.from(document.querySelectorAll<HTMLImageElement>('.leaflet-tile')).map(i => i.src));
+  await expect(page.locator('.route-map canvas')).toBeVisible();
+  // Deja tiempo a que MapLibre pida y el SW cachee teselas .pbf de verdad (no solo el TileJSON).
+  await page.waitForFunction(async () => {
+    if (!('caches' in window)) return false;
+    const c = await caches.open('ofm-tiles');
+    const keys = await c.keys();
+    return keys.some(r => r.url.endsWith('.pbf'));
+  }, null, { timeout: 30_000 });
+
   await context.setOffline(true);
   await page.reload();
-  await expect(page.locator('.leaflet-container')).toBeVisible();
-  await page.waitForFunction(() => Array.from(document.querySelectorAll<HTMLImageElement>('.leaflet-tile')).filter(i => i.complete && i.naturalWidth > 0).length >= 4, null, { timeout: 30_000 });
-  const after = await page.evaluate(() => Array.from(document.querySelectorAll<HTMLImageElement>('.leaflet-tile')).filter(i => i.complete && i.naturalWidth > 0).map(i => i.src));
-  expect(after.length).toBeGreaterThanOrEqual(4);
-  expect(after.every(u => /^https:\/\/tile\.openstreetmap\.org\//.test(u))).toBeTruthy();
-  expect(before.length).toBeGreaterThan(0);
+  await expect(page.locator('.route-map canvas')).toBeVisible({ timeout: 30_000 });
+
+  const pbfEntries = await page.evaluate(async () => {
+    const c = await caches.open('ofm-tiles');
+    const keys = await c.keys();
+    return keys.filter(r => r.url.endsWith('.pbf')).length;
+  });
+  expect(pbfEntries).toBeGreaterThan(0);
   await context.setOffline(false);
 });
 
