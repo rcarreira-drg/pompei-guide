@@ -31,7 +31,7 @@ test('SALTAR lleva a Inicio y marca el onboarding como visto', async ({ page }) 
   await expect(page).toHaveURL(/#\/bienvenida\/1$/);
   await page.getByRole('button', { name: /saltar/i }).click();
   await expect(page).toHaveURL(/#\/$/);
-  await expect(page.getByRole('heading', { level: 1 })).toContainText(/POMPEYA/i);
+  await expect(page.getByRole('heading', { level: 1 })).toContainText(/POMPEI/i);
 
   const flag = await page.evaluate(() => localStorage.getItem('pompei-guide:onboarded'));
   expect(flag).toBe('1');
@@ -53,7 +53,7 @@ test('recorre las 7 pantallas con SIGUIENTE y termina con EMPEZAR', async ({ pag
   await expect(page.getByRole('button', { name: /^siguiente/i })).toHaveCount(0);
   await page.getByRole('button', { name: /^empezar$/i }).click();
   await expect(page).toHaveURL(/#\/$/);
-  await expect(page.getByRole('heading', { level: 1 })).toContainText(/POMPEYA/i);
+  await expect(page.getByRole('heading', { level: 1 })).toContainText(/POMPEI/i);
 });
 
 test('ANTERIOR retrocede y los puntos de progreso permiten saltar de pantalla', async ({ page }) => {

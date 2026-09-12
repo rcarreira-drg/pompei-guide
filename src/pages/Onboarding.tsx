@@ -32,7 +32,7 @@ function VoiceTest() {
 
   const handle = () => {
     setPlaying(true);
-    const ok = speak('Hola, soy tu guía en Pompeya. Te acompañaré parada a parada durante la visita, con la voz de este móvil.', {
+    const ok = speak('Hola, soy tu guía en Pompei. Te acompañaré parada a parada durante la visita, con la voz de este móvil.', {
       onEnd: () => setPlaying(false),
       onError: () => setPlaying(false),
     });
@@ -65,8 +65,8 @@ const SLIDES: SlideDef[] = [
   {
     id: 'bienvenida',
     illus: 'vesuvio',
-    kicker: 'POMPEYA · GUÍA DE BOLSILLO',
-    title: 'POMPEYA EN EL BOLSILLO',
+    kicker: 'POMPEI · GUÍA DE BOLSILLO',
+    title: 'POMPEI EN EL BOLSILLO',
     body: () => (
       <>
         <p>Tres cosas que puedes hacer: prepararte antes del viaje, recorrer el parque como con un guía, y buscar cualquier punto del plano oficial.</p>
@@ -209,7 +209,10 @@ export default function Onboarding() {
         if (dx < 0) goTo(index + 1); else goTo(index - 1);
       }}
     >
-      <button type="button" className="btn onboarding-skip" onClick={finish}>SALTAR</button>
+      <div className="onboarding-topbar">
+        <span className="mono onboarding-count">{index} / {TOTAL}</span>
+        <button type="button" className="btn onboarding-skip" onClick={finish}>SALTAR</button>
+      </div>
 
       <OnboardingSlide index={index} total={TOTAL} illus={slide.illus} kicker={slide.kicker} title={slide.title} illusSize={slide.illusSize}>
         {slide.body()}

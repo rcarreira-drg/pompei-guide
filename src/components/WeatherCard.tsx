@@ -58,7 +58,7 @@ export default function WeatherCard() {
     <div className="weather-card box">
       <div className="weather-now">
         <div>
-          <p className="kicker">AHORA EN POMPEYA</p>
+          <p className="kicker">AHORA EN POMPEI</p>
           <p className="weather-now-temp">{weather.now.temp}°</p>
         </div>
         <div className="weather-now-meta mono">

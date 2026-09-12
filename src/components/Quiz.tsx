@@ -58,7 +58,7 @@ function questionsFor(mode: Mode): QuizQuestion[] {
 
 function resultMessage(pct: number): string {
   if (pct >= 90) return 'DIGNO DE FIORELLI';
-  if (pct >= 60) return 'BUEN CIUDADANO DE POMPEYA';
+  if (pct >= 60) return 'BUEN CIUDADANO DE POMPEI';
   return 'VUELVE A LEER EL CAPÍTULO…';
 }
 

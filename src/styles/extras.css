@@ -272,3 +272,13 @@
 .gallery-credit { font-size: 0.65rem; color: var(--ash-light); }
 .gallery-modal-nav { display: grid; grid-template-columns: auto 1fr auto auto; gap: var(--space-2); align-items: center; color: var(--paper); }
 .gallery-modal-nav .mono { text-align: center; }
+
+/* ===== Estilo de mapa "tinta" y bloqueo de interacción ===== */
+.route-map.style-tinta .leaflet-tile-pane { filter: grayscale(1) contrast(1.45) brightness(1.04) sepia(0.28); }
+.route-map.style-tinta .leaflet-container { background: var(--paper); }
+.route-map { position: relative; }
+.map-lock { position: absolute; inset: 0; z-index: 1100; background: transparent; border: 0; cursor: pointer; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 34px; }
+.map-lock-label { display: inline-block; padding: 8px 12px; background: var(--ink); color: var(--paper); font-family: var(--font-mono); font-weight: 700; font-size: 0.68rem; letter-spacing: .08em; border: 2px solid var(--paper); box-shadow: var(--shadow-sm); }
+.route-map.is-locked .leaflet-control-zoom { opacity: .55; }
+.map-style-toggle { position: absolute; left: 10px; top: 104px; z-index: 1000; }
+.map-container-end { display: none; }

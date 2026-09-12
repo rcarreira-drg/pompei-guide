@@ -69,6 +69,26 @@ function userIcon(heading: number | null | undefined) {
   });
 }
 
+const STYLE_KEY = 'pompei-guide:map-style';
+type MapStyle = 'tinta' | 'color';
+const loadStyle = (): MapStyle => { try { return (localStorage.getItem(STYLE_KEY) as MapStyle) || 'tinta'; } catch { return 'tinta'; } };
+
+/** Bloqueo de interacción: el mapa no captura el dedo hasta que el usuario lo toca a propósito (evita
+ *  que el scroll de la página "se quede atrapado" al pasar por encima del mapa). */
+function InteractionLock({ active, onActivate }: { active: boolean; onActivate: () => void }) {
+  const map = useMap();
+  useEffect(() => {
+    if (active) { map.dragging.enable(); map.touchZoom.enable(); map.scrollWheelZoom.enable(); }
+    else { map.dragging.disable(); map.touchZoom.disable(); map.scrollWheelZoom.disable(); }
+  }, [map, active]);
+  if (active) return null;
+  return (
+    <button type="button" className="map-lock" onClick={onActivate} aria-label="Activar el mapa para moverlo y ampliarlo">
+      <span className="map-lock-label">TOCA PARA USAR EL MAPA</span>
+    </button>
+  );
+}
+
 /** Rotación: gesto de dos dedos (plugin leaflet-rotate) y modo "brújula" (el mapa gira con el rumbo del móvil). */
 function RotationControls({ heading }: { heading: number | null | undefined }) {
   const map = useMap();
@@ -133,6 +153,9 @@ function FitStops({ points, single, follow }: { points: LatLng[]; single: boolea
 export default function RouteMap({ stops, path = [], currentId, visited, userPos, onSelect, height = '55vh', walk, fitExtra = [], follow, heading, minor }: RouteMapProps) {
   const [far, setFar] = useState(true);
   const onZoom = useCallback((f: boolean) => setFar(f), []);
+  const [active, setActive] = useState(false);
+  const [style, setStyle] = useState<MapStyle>(loadStyle);
+  const toggleStyle = () => { const next: MapStyle = style === 'tinta' ? 'color' : 'tinta'; setStyle(next); try { localStorage.setItem(STYLE_KEY, next); } catch { /* ignore */ } };
   if (stops.length === 0) {
     return (
       <div className="route-map route-map--empty box" style={{ height }}>
@@ -144,7 +167,7 @@ export default function RouteMap({ stops, path = [], currentId, visited, userPos
   const center: LatLng = stops[0].coords;
 
   return (
-    <div className={`route-map box ${far ? 'is-far' : 'is-near'}`} style={{ height }}>
+    <div className={`route-map box ${far ? 'is-far' : 'is-near'} style-${style} ${active ? 'is-active' : 'is-locked'}`} style={{ height }}>
       <MapContainer
         center={center}
         zoom={16}
@@ -158,7 +181,9 @@ export default function RouteMap({ stops, path = [], currentId, visited, userPos
         zoomAnimation={false}
         markerZoomAnimation={false}
         maxBoundsViscosity={1.0}
-        scrollWheelZoom
+        scrollWheelZoom={false}
+        dragging={false}
+        touchZoom={false}
         style={{ height: '100%', width: '100%' }}
         attributionControl
       >
@@ -215,7 +240,14 @@ export default function RouteMap({ stops, path = [], currentId, visited, userPos
         {userPos && <Marker position={userPos} icon={userIcon(heading)} interactive={false} zIndexOffset={1000} />}
         {userPos && <CenterOnUser userPos={userPos} />}
         <RotationControls heading={heading} />
+        <InteractionLock active={active} onActivate={() => setActive(true)} />
       </MapContainer>
+      <div className="map-style-toggle">
+        <button type="button" className="map-ctrl-btn" onClick={toggleStyle} aria-label="Cambiar el estilo del mapa" aria-pressed={style === 'tinta'}>
+          {style === 'tinta' ? '◐ TINTA' : '◑ COLOR'}
+        </button>
+      </div>
+      <div className="map-container-end" />
     </div>
   );
 }

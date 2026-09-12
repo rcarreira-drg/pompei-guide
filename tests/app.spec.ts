@@ -25,7 +25,7 @@ async function noHorizontalScroll(page: Page) {
 
 test('portada carga con título y CTAs', async ({ page }) => {
   await page.goto('#/');
-  await expect(page.getByRole('heading', { level: 1 })).toContainText(/POMPEYA/i);
+  await expect(page.getByRole('heading', { level: 1 })).toContainText(/POMPEI/i);
   await expect(page.getByRole('link', { name: /preparar/i }).first()).toBeVisible();
   await expect(page.getByRole('link', { name: /recorrido|visita/i }).first()).toBeVisible();
   await noHorizontalScroll(page);

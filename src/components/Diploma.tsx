@@ -21,12 +21,12 @@ export default function Diploma({
   if (total <= 0 || visitedCount < total) return null;
 
   const today = new Date().toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' });
-  const shareText = `He completado la ruta de Pompeya visitando las ${total} paradas. ¡VISITADA · POMPEII · 79 D.C.!`;
+  const shareText = `He completado la ruta de Pompei visitando las ${total} paradas. ¡VISITADA · POMPEII · 79 D.C.!`;
 
   async function share() {
     if (navigator.share) {
       try {
-        await navigator.share({ text: shareText, title: 'Diploma de Pompeya' });
+        await navigator.share({ text: shareText, title: 'Diploma de Pompei' });
         return;
       } catch {
         /* el usuario canceló o falló: seguimos al fallback */
@@ -49,7 +49,7 @@ export default function Diploma({
       <p className="kicker diploma-kicker">DIPLOMA DE VISITANTE</p>
       <h3 className="diploma-title">RUTA COMPLETADA</h3>
       <p className="diploma-text">
-        Has recorrido las {total} paradas de la ruta clásica de Pompeya, desde la Porta Marina hasta el final del
+        Has recorrido las {total} paradas de la ruta clásica de Pompei, desde la Porta Marina hasta el final del
         recorrido, siguiendo los mismos pasos que sus antiguos habitantes.
       </p>
       <p className="mono diploma-meta">FECHA: {today.toUpperCase()}</p>

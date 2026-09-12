@@ -1,6 +1,6 @@
-# POMPEYA — Guía de visita
+# POMPEI — Guía de visita
 
-Webapp mobile-first (PWA, offline) en estilo brutalista para **preparar** y **recorrer** el Parque Arqueológico de Pompeya.
+Webapp mobile-first (PWA, offline) en estilo brutalista para **preparar** y **recorrer** el Parque Arqueológico de Pompei.
 
 - **Preparar**: 8 capítulos de historia y contexto, cronología, glosario y quiz.
 - **Visita**: tres modos (exprés 13, completa 24, total con todos los puntos del plano oficial), mapa (Leaflet/OSM) con posición y rumbo, ruta dinámica por las calles reales, brújula, narración con la voz del móvil, progreso persistente y planificador horario.

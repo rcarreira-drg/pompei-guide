@@ -13,9 +13,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['img/**/*', 'icons/*'],
       manifest: {
-        name: 'POMPEYA — Guía de visita',
-        short_name: 'POMPEYA',
-        description: 'Guía brutalista para preparar y recorrer el Parque Arqueológico de Pompeya.',
+        name: 'POMPEI — Guía de visita',
+        short_name: 'POMPEI',
+        description: 'Guía brutalista para preparar y recorrer el Parque Arqueológico de Pompei.',
         theme_color: '#111111',
         background_color: '#f2efe6',
         display: 'standalone',

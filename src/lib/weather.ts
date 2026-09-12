@@ -1,4 +1,4 @@
-/** Clima en Pompeya vía Open-Meteo (gratuito, sin API key). */
+/** Clima en Pompei vía Open-Meteo (gratuito, sin API key). */
 export interface DayWeather {
   date: string;        // YYYY-MM-DD
   tmax: number; tmin: number;
