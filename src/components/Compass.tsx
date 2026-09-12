@@ -4,7 +4,8 @@
  * Sin userPos: dial apagado. Con userPos sin heading: "modo mapa" (rumbo fijo
  * respecto al norte). Con heading: la flecha gira con el móvil.
  */
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useHeading } from '@/lib/useHeading';
 import type { LatLng } from '@/lib/geo';
 import { bearingDeg, compassLabel, distanceM, formatDistance, walkMinutes } from '@/lib/geo';
 
@@ -87,67 +88,7 @@ function polar(deg: number, r: number): [number, number] {
 }
 
 export default function Compass({ target, userPos, label = 'Siguiente parada', compact }: CompassProps) {
-  const [heading, setHeading] = useState<number | null>(null);
-  const [orientationOn, setOrientationOn] = useState(false);
-  const [supported, setSupported] = useState(false);
-  const [unsupported, setUnsupported] = useState(false);
-  const receivedRef = useRef(false);
-  const gotAbsoluteRef = useRef(false);
-
-  useEffect(() => {
-    setSupported(typeof window !== 'undefined' && 'DeviceOrientationEvent' in window);
-  }, []);
-
-  const handleOrientation = useCallback((e: Event) => {
-    const ev = e as DeviceOrientationEventWithWebkit;
-    if (e.type === 'deviceorientation' && gotAbsoluteRef.current) return; // preferimos el evento absoluto si llega
-    let h: number | null = null;
-    if (typeof ev.webkitCompassHeading === 'number') {
-      h = ev.webkitCompassHeading; // iOS Safari
-    } else if (ev.alpha != null) {
-      if (e.type === 'deviceorientationabsolute' || ev.absolute) gotAbsoluteRef.current = true;
-      const screenAngle =
-        typeof window !== 'undefined' && window.screen && window.screen.orientation ? window.screen.orientation.angle : 0;
-      h = norm360(360 - ev.alpha + screenAngle);
-    }
-    if (h != null) {
-      receivedRef.current = true;
-      setUnsupported(false);
-      setHeading(h);
-    }
-  }, []);
-
-  useEffect(() => {
-    return () => {
-      window.removeEventListener('deviceorientationabsolute', handleOrientation);
-      window.removeEventListener('deviceorientation', handleOrientation);
-    };
-  }, [handleOrientation]);
-
-  const enableCompass = useCallback(async () => {
-    const attach = () => {
-      receivedRef.current = false;
-      gotAbsoluteRef.current = false;
-      window.addEventListener('deviceorientationabsolute', handleOrientation);
-      window.addEventListener('deviceorientation', handleOrientation);
-      setOrientationOn(true);
-      setUnsupported(false);
-      window.setTimeout(() => {
-        if (!receivedRef.current) setUnsupported(true);
-      }, 2000);
-    };
-    const ctor = window.DeviceOrientationEvent as unknown as DeviceOrientationEventConstructorWithPermission;
-    try {
-      if (ctor && typeof ctor.requestPermission === 'function') {
-        const result = await ctor.requestPermission();
-        if (result === 'granted') attach();
-      } else {
-        attach();
-      }
-    } catch {
-      // permiso denegado o no soportado: se mantiene el modo mapa
-    }
-  }, [handleOrientation]);
+  const { heading, on: orientationOn, supported, unsupported, enable: enableCompass } = useHeading();
 
   const active = !!userPos;
   const bearing = userPos ? bearingDeg(userPos, target) : null;

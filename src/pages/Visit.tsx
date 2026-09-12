@@ -5,6 +5,7 @@ import RouteMap from '@/components/RouteMap';
 import Compass from '@/components/Compass';
 import { ROUTE } from '@/content/route';
 import { useGeolocation } from '@/lib/useGeolocation';
+import { useHeading } from '@/lib/useHeading';
 import { useProgress } from '@/lib/useProgress';
 import { distanceM } from '@/lib/geo';
 import type { StopCategory } from '@/content/types';
@@ -36,6 +37,7 @@ const CATEGORY_LABEL: Record<StopCategory, string> = {
 
 export default function Visit() {
   const { pos } = useGeolocation();
+  const { heading } = useHeading();
   const { visited, currentStop, reset, mode, routeStartedAt } = useProgress();
   const [confirmingReset, setConfirmingReset] = useState(false);
 
@@ -101,7 +103,7 @@ export default function Visit() {
               </div>
             )}
 
-            <RouteMap stops={stops} path={ROUTE.path} currentId={nextStop?.id} visited={visited} userPos={pos} walk={walk?.path ?? null} height="60vh" />
+            <RouteMap stops={stops} path={ROUTE.path} currentId={nextStop?.id} visited={visited} userPos={pos} heading={heading} walk={walk?.path ?? null} height="60vh" />
 
             {((mode === 'express' ? ROUTE.logicExpress : ROUTE.logic) ?? []).length > 0 && (
               <details className="practical-accordion box visit-logic" open={visitedCount === 0}>

@@ -2,7 +2,7 @@
  * Mapa Leaflet brutalista. Solo usa divIcon/CircleMarker (nunca el icono por
  * defecto de Leaflet, que rompe con Vite si no se gestionan sus assets).
  */
-import { CircleMarker, MapContainer, Marker, Polyline, Popup, TileLayer, useMap } from 'react-leaflet';
+import { MapContainer, Marker, Polyline, Popup, TileLayer, useMap } from 'react-leaflet';
 import { useEffect } from 'react';
 import L from 'leaflet';
 import { Link } from 'react-router-dom';
@@ -26,6 +26,8 @@ export interface RouteMapProps {
   fitExtra?: LatLng[];
   /** Si true, re-encuadra cuando cambian los puntos (seguimiento). */
   follow?: boolean;
+  /** Rumbo del dispositivo en grados (0 = norte). Si se indica, el marcador del usuario muestra un cono de dirección. */
+  heading?: number | null;
 }
 
 function isVisited(visited: VisitedMap | undefined, id: string): boolean {
@@ -46,6 +48,32 @@ function stopIcon(order: number, state: 'visited' | 'current' | 'default') {
 
 const bounds = L.latLngBounds(PARK_BOUNDS).pad(0.15);
 
+/** Marcador del usuario: punto rojo y, si hay rumbo, cono de visión que gira con el móvil. */
+function userIcon(heading: number | null | undefined) {
+  const hasH = heading != null && Number.isFinite(heading);
+  return L.divIcon({
+    className: 'user-divicon',
+    html: `<span class="user-pin ${hasH ? 'has-heading' : ''}" style="--h:${hasH ? Math.round(heading as number) : 0}deg"><span class="user-cone"></span><span class="user-dot"></span></span>`,
+    iconSize: [64, 64],
+    iconAnchor: [32, 32],
+  });
+}
+
+/** Botón para centrar el mapa en la posición del usuario. */
+function CenterOnUser({ userPos }: { userPos: LatLng }) {
+  const map = useMap();
+  return (
+    <button
+      type="button"
+      className="map-center-btn"
+      onClick={(e) => { e.stopPropagation(); try { map.setView(userPos, Math.max(map.getZoom(), 17), { animate: false }); } catch { /* ignore */ } }}
+      aria-label="Centrar el mapa en mi posición"
+    >
+      ◎ CENTRAR EN MÍ
+    </button>
+  );
+}
+
 /** Encuadra todas las paradas al montar (y cuando cambia el conjunto). */
 function FitStops({ points, single, follow }: { points: LatLng[]; single: boolean; follow?: boolean }) {
   const map = useMap();
@@ -61,7 +89,7 @@ function FitStops({ points, single, follow }: { points: LatLng[]; single: boolea
   return null;
 }
 
-export default function RouteMap({ stops, path = [], currentId, visited, userPos, onSelect, height = '55vh', walk, fitExtra = [], follow }: RouteMapProps) {
+export default function RouteMap({ stops, path = [], currentId, visited, userPos, onSelect, height = '55vh', walk, fitExtra = [], follow, heading }: RouteMapProps) {
   if (stops.length === 0) {
     return (
       <div className="route-map route-map--empty box" style={{ height }}>
@@ -132,13 +160,8 @@ export default function RouteMap({ stops, path = [], currentId, visited, userPos
           );
         })}
 
-        {userPos && (
-          <CircleMarker
-            center={userPos}
-            radius={9}
-            pathOptions={{ color: '#111111', weight: 3, fillColor: '#b4321e', fillOpacity: 1 }}
-          />
-        )}
+        {userPos && <Marker position={userPos} icon={userIcon(heading)} interactive={false} zIndexOffset={1000} />}
+        {userPos && <CenterOnUser userPos={userPos} />}
       </MapContainer>
     </div>
   );

@@ -7,6 +7,7 @@ import { Illustration } from '@/illustrations';
 import { img } from '@/content/images';
 import { ROUTE } from '@/content/route';
 import { useGeolocation } from '@/lib/useGeolocation';
+import { useHeading } from '@/lib/useHeading';
 import { useProgress } from '@/lib/useProgress';
 import { resolveCredit } from '@/lib/credit';
 import StopNotes from '@/components/StopNotes';
@@ -24,6 +25,7 @@ export default function StopPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { pos } = useGeolocation();
+  const { heading } = useHeading();
   const { visited, markVisited, setCurrentStop, mode } = useProgress();
   const isExpress = mode === 'express';
   // En modo exprés la lista (y por tanto la "siguiente") es la de la ruta exprés
@@ -144,7 +146,7 @@ export default function StopPage() {
               stops={[stop, next]}
               currentId={next.id}
               visited={visited}
-              userPos={pos}
+              userPos={pos} heading={heading}
               walk={walk?.path ?? null}
               follow
               height="38vh"
@@ -189,7 +191,7 @@ export default function StopPage() {
         {!next && (
           <>
             <h2 className="section-title">UBICACIÓN</h2>
-            <RouteMap stops={[stop]} currentId={stop.id} visited={visited} userPos={pos} height="30vh" />
+            <RouteMap stops={[stop]} currentId={stop.id} visited={visited} userPos={pos} heading={heading} height="30vh" />
           </>
         )}
       </div>

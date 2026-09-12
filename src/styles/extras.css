@@ -194,3 +194,16 @@
 .narrator-outro { border-left: 5px solid var(--ochre); background: var(--paper-2); }
 .narrator-outro-kicker { display: block; font-size: 0.65rem; margin-bottom: 4px; color: var(--pompeian); }
 .visit-logic { margin: var(--space-5) 0; }
+
+/* ===== Marcador del usuario con rumbo ===== */
+.user-divicon { background: transparent; border: 0; }
+.user-pin { position: relative; display: block; width: 64px; height: 64px; }
+.user-dot { position: absolute; left: 50%; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; background: var(--pompeian); border: 3px solid var(--ink); box-shadow: 0 0 0 3px var(--white); z-index: 2; }
+.user-cone { position: absolute; left: 50%; top: 50%; width: 64px; height: 64px; margin: -32px 0 0 -32px; display: none;
+  transform: rotate(var(--h)); transform-origin: 50% 50%; transition: transform .25s ease-out;
+  background: conic-gradient(from -28deg at 50% 50%, rgba(180,50,30,.55) 0 56deg, transparent 56deg 360deg);
+  clip-path: circle(50% at 50% 50%); }
+.user-pin.has-heading .user-cone { display: block; }
+.user-pin.has-heading .user-dot::after { content: ''; position: absolute; left: 50%; top: -11px; margin-left: -5px; border: 5px solid transparent; border-bottom: 8px solid var(--ink); border-top: 0; transform: rotate(var(--h)); transform-origin: 50% 20px; }
+.map-center-btn { position: absolute; right: 10px; top: 10px; z-index: 1000; min-height: 40px; padding: 0 12px; border: var(--border); background: var(--white); font-family: var(--font-mono); font-weight: 700; font-size: 0.7rem; letter-spacing: .06em; box-shadow: var(--shadow-sm); cursor: pointer; }
+.map-center-btn:active { transform: translate(2px, 2px); box-shadow: none; }
