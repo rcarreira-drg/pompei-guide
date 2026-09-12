@@ -47,20 +47,19 @@ function VoiceTest() {
       </button>
       {!supported && <p className="callout callout--warn">Este navegador no tiene síntesis de voz.</p>}
       {supported && voices.length === 0 && (
-        <p className="callout callout--warn">
-          No se ha encontrado ninguna voz en español instalada. Instala una en los ajustes del sistema (Ajustes → Accesibilidad → Texto a voz, o Ajustes → Idiomas) y vuelve a intentarlo.
-        </p>
+        <p className="callout callout--warn">No hay voz en español instalada. Añádela en Ajustes y vuelve a intentarlo.</p>
       )}
       {supported && voices.length > 0 && (
         <p className="mono onboarding-voice-list">
-          {voices.length} {voices.length === 1 ? 'voz en español instalada' : 'voces en español instaladas'}: {voices.slice(0, 3).map((v) => v.name).join(', ')}{voices.length > 3 ? '…' : ''}
+          {voices.length} {voices.length === 1 ? 'voz en español' : 'voces en español'}: {voices.slice(0, 2).map((v) => v.name).join(', ')}{voices.length > 2 ? '…' : ''}
         </p>
       )}
+      <p className="onboarding-note">Se detiene si bloqueas la pantalla: activa PANTALLA SIEMPRE ENCENDIDA.</p>
     </div>
   );
 }
 
-interface SlideDef { id: string; illus: IllustrationName; kicker: string; title: string; body: () => ReactNode }
+interface SlideDef { id: string; illus: IllustrationName; kicker: string; title: string; body: () => ReactNode; illusSize?: 'sm' | 'xs' }
 
 const SLIDES: SlideDef[] = [
   {
@@ -80,9 +79,10 @@ const SLIDES: SlideDef[] = [
     illus: 'plinio',
     kicker: 'ANTES DEL VIAJE',
     title: 'PREPARA LA VISITA',
+    illusSize: 'sm',
     body: () => (
       <>
-        <p>Ocho capítulos de historia, cronología, glosario y quiz. Checklist, tiempo, entradas y cómo llegar.</p>
+        <p>Historia, cronología, glosario y quiz. Checklist, tiempo, entradas y cómo llegar.</p>
         <Link to="/preparar" className="btn btn-primary btn-block">IR A PREPARAR</Link>
         <InstallHintBlock />
       </>
@@ -105,9 +105,10 @@ const SLIDES: SlideDef[] = [
     illus: 'calle',
     kicker: 'EL DÍA DE LA VISITA',
     title: 'UN GUÍA EN EL BOLSILLO',
+    illusSize: 'xs',
     body: () => (
       <>
-        <p>Activa la ubicación: verás tu posición, el camino y un aviso al llegar a cada parada.</p>
+        <p>Tu posición y el camino, con un aviso al llegar a cada parada.</p>
         <MapDownload />
       </>
     ),
@@ -117,9 +118,10 @@ const SLIDES: SlideDef[] = [
     illus: 'teatro',
     kicker: 'ESCUCHAR AL GUÍA',
     title: 'LA VOZ DE TU MÓVIL',
+    illusSize: 'xs',
     body: () => (
       <>
-        <p>Elige voz y velocidad, y toca un párrafo para saltar a él. Se detiene si bloqueas la pantalla: activa PANTALLA SIEMPRE ENCENDIDA.</p>
+        <p>Elige voz y velocidad; toca un párrafo para saltar a él.</p>
         <VoiceTest />
       </>
     ),
@@ -129,9 +131,10 @@ const SLIDES: SlideDef[] = [
     illus: 'foro',
     kicker: 'EL PLANO OFICIAL',
     title: 'BUSCA CUALQUIER PUNTO',
+    illusSize: 'sm',
     body: () => (
       <>
-        <p>El plano de taquilla tiene ocho regiones numeradas. Elige Regio y número, o busca por nombre, y escucha el relato.</p>
+        <p>Ocho regiones numeradas: elige Regio y número, o busca por nombre, y escucha el relato.</p>
         <Link to="/mapa" className="btn btn-primary btn-block">ABRIR EL PLANO</Link>
       </>
     ),
@@ -208,7 +211,7 @@ export default function Onboarding() {
     >
       <button type="button" className="btn onboarding-skip" onClick={finish}>SALTAR</button>
 
-      <OnboardingSlide index={index} total={TOTAL} illus={slide.illus} kicker={slide.kicker} title={slide.title}>
+      <OnboardingSlide index={index} total={TOTAL} illus={slide.illus} kicker={slide.kicker} title={slide.title} illusSize={slide.illusSize}>
         {slide.body()}
         {isLast && <p className="mono onboarding-again-hint">Puedes volver a ver esto en Práctico → ¿Cómo funciona?</p>}
       </OnboardingSlide>
@@ -246,7 +249,7 @@ export function OnboardingHelp() {
       <Hero kicker="AYUDA" title="¿CÓMO FUNCIONA?" subtitle="Repasa aquí las pantallas de bienvenida cuando quieras." />
       <div className="container onboarding-help-list">
         {SLIDES.map((s, i) => (
-          <OnboardingSlide key={s.id} id={s.id} index={i + 1} total={TOTAL} illus={s.illus} kicker={s.kicker} title={s.title}>
+          <OnboardingSlide key={s.id} id={s.id} index={i + 1} total={TOTAL} illus={s.illus} kicker={s.kicker} title={s.title} illusSize={s.illusSize}>
             {s.body()}
           </OnboardingSlide>
         ))}
