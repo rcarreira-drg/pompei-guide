@@ -93,7 +93,7 @@ export default function Visit() {
         <ArrivalToggle />
 
         {nearbyUnvisited && (
-          <Link to={`/visita/${nearbyUnvisited.id}`} className="box banner-here" aria-label={`Estás en ${nearbyUnvisited.name}`}>
+          <Link to={`/visita/${nearbyUnvisited.id}`} className="box banner-here page-enter" aria-label={`Estás en ${nearbyUnvisited.name}`}>
             <span className="kicker">ESTÁS EN</span>
             <strong>{nearbyUnvisited.name}</strong>
           </Link>

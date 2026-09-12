@@ -267,13 +267,13 @@ export default function StopPage() {
       </div>
       {next && (
         directionsInView ? (
-          <Link to={`/visita/${next.id}`} className="next-sticky next-sticky--go" aria-label={`Ir a la siguiente parada: ${next.name}`}>
+          <Link to={`/visita/${next.id}`} className="next-sticky next-sticky--go page-enter" aria-label={`Ir a la siguiente parada: ${next.name}`}>
             <span className="kicker">IR A LA PARADA →</span>
             <strong>{next.name}</strong>
             {(walkNextFromUser ?? walk) && <span className="mono next-sticky-dist">{formatDistance((walkNextFromUser ?? walk)!.distance)} · {walkMinutes((walkNextFromUser ?? walk)!.distance)} min</span>}
           </Link>
         ) : (
-          <a href="#siguiente" className="next-sticky" onClick={(e) => { e.preventDefault(); document.getElementById('siguiente')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }} aria-label={`Ver cómo llegar a ${next.name}`}>
+          <a href="#siguiente" className="next-sticky page-enter" onClick={(e) => { e.preventDefault(); document.getElementById('siguiente')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }} aria-label={`Ver cómo llegar a ${next.name}`}>
             <span className="kicker">SIGUIENTE ↓</span>
             <strong>{next.name}</strong>
             {(walkNextFromUser ?? walk) && <span className="mono next-sticky-dist">{formatDistance((walkNextFromUser ?? walk)!.distance)} · {walkMinutes((walkNextFromUser ?? walk)!.distance)} min</span>}

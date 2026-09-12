@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import { Link } from 'react-router-dom';
 import LazyVesuvio from '@/components/three/LazyVesuvio';
 import Hero from '@/components/Hero';
@@ -33,24 +34,24 @@ export default function Home() {
         </div>
 
         <div className="cta-grid">
-          <Link to="/preparar" className="cta-card box" aria-label="Preparar la visita">
+          <Link to="/preparar" className="cta-card box reveal" style={{ '--i': 0 } as CSSProperties} aria-label="Preparar la visita">
             <span className="cta-card-index mono">01</span>
             <h2>PREPARAR LA VISITA</h2>
             <p className="mono cta-card-meta">{SECTIONS.length || '—'} capítulos</p>
           </Link>
-          <Link to="/visita" className="cta-card box" aria-label="Empezar el recorrido">
+          <Link to="/visita" className="cta-card box reveal" style={{ '--i': 1 } as CSSProperties} aria-label="Empezar el recorrido">
             <span className="cta-card-index mono">02</span>
             <h2>EMPEZAR EL RECORRIDO</h2>
             <p className="mono cta-card-meta">
               {ROUTE.stops.length || '—'} paradas · {ROUTE.totalHours}
             </p>
           </Link>
-          <Link to="/mapa" className="cta-card box" aria-label="Plano oficial por regiones y números">
+          <Link to="/mapa" className="cta-card box reveal" style={{ '--i': 2 } as CSSProperties} aria-label="Plano oficial por regiones y números">
             <span className="cta-card-index mono">03</span>
             <h2>PLANO OFICIAL</h2>
             <p className="mono cta-card-meta">145 puntos · elige Regio y número · escucha</p>
           </Link>
-          <Link to="/practico" className="cta-card box" aria-label="Información práctica">
+          <Link to="/practico" className="cta-card box reveal" style={{ '--i': 3 } as CSSProperties} aria-label="Información práctica">
             <span className="cta-card-index mono">04</span>
             <h2>INFO PRÁCTICA</h2>
             <p className="mono cta-card-meta">Horarios · entradas · FAQ</p>

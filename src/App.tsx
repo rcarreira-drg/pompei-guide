@@ -43,21 +43,23 @@ export default function App() {
       <ScrollToTop />
       <FirstVisitRedirect />
       <main id="main">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/preparar" element={<Prepare />} />
-          <Route path="/preparar/quiz" element={<QuizPage />} />
-          <Route path="/preparar/:id" element={<SectionPage />} />
-          <Route path="/visita" element={<Visit />} />
-          <Route path="/visita/:id" element={<StopPage />} />
-          <Route path="/practico" element={<Practical />} />
-          <Route path="/mapa" element={<OfficialMap />} />
-          <Route path="/mapa/:key" element={<OfficialMap />} />
-          <Route path="/bienvenida" element={<Navigate to="/bienvenida/1" replace />} />
-          <Route path="/bienvenida/:n" element={<Onboarding />} />
-          <Route path="/ayuda" element={<OnboardingHelp />} />
-          <Route path="*" element={<Home />} />
-        </Routes>
+        <div key={pathname} className="page-enter">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/preparar" element={<Prepare />} />
+            <Route path="/preparar/quiz" element={<QuizPage />} />
+            <Route path="/preparar/:id" element={<SectionPage />} />
+            <Route path="/visita" element={<Visit />} />
+            <Route path="/visita/:id" element={<StopPage />} />
+            <Route path="/practico" element={<Practical />} />
+            <Route path="/mapa" element={<OfficialMap />} />
+            <Route path="/mapa/:key" element={<OfficialMap />} />
+            <Route path="/bienvenida" element={<Navigate to="/bienvenida/1" replace />} />
+            <Route path="/bienvenida/:n" element={<Onboarding />} />
+            <Route path="/ayuda" element={<OnboardingHelp />} />
+            <Route path="*" element={<Home />} />
+          </Routes>
+        </div>
       </main>
       {!hideNav && (
         <nav className="bottom-nav" aria-label="Navegación principal">

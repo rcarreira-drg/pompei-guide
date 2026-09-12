@@ -23,6 +23,31 @@ export function createSquareTexture(color: string, size = 16): THREE.Texture {
   return texture;
 }
 
+/**
+ * Textura de resplandor: gradiente radial dibujado dentro de un lienzo cuadrado
+ * (mismo formato que `createSquareTexture`, sin bordes duros), pensada para un
+ * único quad de acento (p. ej. el resplandor del cráter).
+ */
+export function createRadialGlowTexture(color: string, size = 64): THREE.Texture {
+  const canvas = document.createElement('canvas');
+  canvas.width = size;
+  canvas.height = size;
+  const ctx = canvas.getContext('2d');
+  if (ctx) {
+    const cx = size / 2;
+    const gradient = ctx.createRadialGradient(cx, cx, 0, cx, cx, cx);
+    gradient.addColorStop(0, color);
+    gradient.addColorStop(0.55, color);
+    gradient.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, size, size);
+  }
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.colorSpace = THREE.SRGBColorSpace;
+  texture.needsUpdate = true;
+  return texture;
+}
+
 /** PRNG determinista (mulberry32) para no depender de Math.random() en la disposición de partículas. */
 export function makePRNG(seed: number): () => number {
   let a = seed >>> 0;
