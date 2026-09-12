@@ -74,7 +74,7 @@ test('visita: el modo exprés filtra la lista sin recargar', async ({ page }) =>
   const stops = page.locator('a[href*="#/visita/"]');
   const before = await stops.count();
   await page.getByRole('button', { name: /exprés/i }).click();
-  await expect(page.getByRole('heading', { name: /ruta exprés/i })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /^ruta exprés$/i })).toBeVisible();
   expect(await stops.count()).toBeLessThan(before);
   await page.getByRole('button', { name: /completa/i }).click();
   expect(await stops.count()).toBe(before);

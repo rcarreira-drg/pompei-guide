@@ -191,3 +191,6 @@
 .geo-status-text { font-size: 0.75rem; font-weight: 700; }
 .geo-stop { min-height: 40px; padding: 0 var(--space-3); font-size: 0.72rem; }
 .geo-status-error { grid-column: 1 / -1; margin: 0; }
+.narrator-outro { border-left: 5px solid var(--ochre); background: var(--paper-2); }
+.narrator-outro-kicker { display: block; font-size: 0.65rem; margin-bottom: 4px; color: var(--pompeian); }
+.visit-logic { margin: var(--space-5) 0; }

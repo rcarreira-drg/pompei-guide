@@ -60,6 +60,10 @@ export interface Stop {
   illus?: IllustrationName;
   tips?: string[];          // consejos prácticos (sombra, colas, cerrado a veces…)
   accessibility?: 'facil' | 'medio' | 'dificil';
+  /** Párrafo narrado al final: por qué el recorrido sigue ahora hacia la siguiente parada (ruta completa). */
+  whyNext?: string;
+  /** Igual, pero para la ruta exprés (solo en paradas de la ruta exprés; la siguiente parada es distinta). */
+  whyNextExpress?: string;
 }
 
 export interface Route {
@@ -71,6 +75,10 @@ export interface Route {
   start: string;           // id de parada
   stops: Stop[];
   path?: [number, number][]; // polilínea opcional del recorrido completo [lat,lng]
+  /** Presentación narrada de la ruta completa: lógica del itinerario (por dónde, en qué orden y por qué). */
+  logic?: string[];
+  /** Presentación narrada de la ruta exprés. */
+  logicExpress?: string[];
 }
 
 export interface ChecklistItem { id: string; text: string; why?: string }

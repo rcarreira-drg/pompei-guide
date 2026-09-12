@@ -17,6 +17,7 @@ import AudioDownload from '@/components/AudioDownload';
 import { filterStops } from '@/lib/express';
 import { useWalkRoute } from '@/lib/useWalkRoute';
 import LocationToggle from '@/components/LocationToggle';
+import Narrator from '@/components/Narrator';
 
 const CATEGORY_LABEL: Record<StopCategory, string> = {
   puerta: 'PUERTA',
@@ -100,6 +101,20 @@ export default function Visit() {
             )}
 
             <RouteMap stops={stops} path={ROUTE.path} currentId={nextStop?.id} visited={visited} userPos={pos} walk={walk?.path ?? null} height="60vh" />
+
+            {((mode === 'express' ? ROUTE.logicExpress : ROUTE.logic) ?? []).length > 0 && (
+              <details className="practical-accordion box visit-logic" open={visitedCount === 0}>
+                <summary><span className="kicker">ANTES DE EMPEZAR</span><h2>{mode === 'express' ? 'POR QUÉ ESTA RUTA EXPRÉS' : 'POR QUÉ ESTE RECORRIDO'}</h2></summary>
+                <div className="practical-accordion-body">
+                  <Narrator
+                    audioKey={mode === 'express' ? 'route:express' : 'route:completa'}
+                    texts={(mode === 'express' ? ROUTE.logicExpress : ROUTE.logic) ?? []}
+                    title={mode === 'express' ? 'Presentación de la ruta exprés' : 'Presentación del recorrido'}
+                    compactHeader
+                  />
+                </div>
+              </details>
+            )}
             {walk && pos && (
               <p className="mono walk-summary">HASTA LA SIGUIENTE PARADA: {`${Math.round(walk.distance / 10) * 10} m`} · ≈ {Math.max(1, Math.round(walk.distance / 75))} min a pie (camino en ocre)</p>
             )}

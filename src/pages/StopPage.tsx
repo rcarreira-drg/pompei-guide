@@ -11,6 +11,8 @@ import { useProgress } from '@/lib/useProgress';
 import { resolveCredit } from '@/lib/credit';
 import StopNotes from '@/components/StopNotes';
 import { useWalkRoute } from '@/lib/useWalkRoute';
+import { filterStops } from '@/lib/express';
+import { useMemo } from 'react';
 import LocationToggle from '@/components/LocationToggle';
 import { formatDistance, walkMinutes } from '@/lib/geo';
 import type { Block } from '@/content/types';
@@ -22,13 +24,18 @@ export default function StopPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { pos } = useGeolocation();
-  const nextForRoute = ROUTE.stops.find((x) => x.order === (ROUTE.stops.find((y) => y.id === id)?.order ?? 0) + 1) ?? null;
-  const walk = useWalkRoute(pos ?? ROUTE.stops.find((y) => y.id === id)?.coords ?? null, nextForRoute?.coords ?? null);
-  const { visited, markVisited, setCurrentStop } = useProgress();
-
-  const stops = ROUTE.stops;
-  const index = stops.findIndex((s) => s.id === id);
-  const stop = index >= 0 ? stops[index] : undefined;
+  const { visited, markVisited, setCurrentStop, mode } = useProgress();
+  const isExpress = mode === 'express';
+  // En modo exprés la lista (y por tanto la "siguiente") es la de la ruta exprés
+  const stops = useMemo(() => filterStops(ROUTE.stops, isExpress), [isExpress]);
+  const fullIndex = ROUTE.stops.findIndex((s) => s.id === id);
+  const stop = fullIndex >= 0 ? ROUTE.stops[fullIndex] : undefined;
+  // Si la parada no pertenece a la ruta exprés, la siguiente es la primera exprés posterior
+  const index = stop ? stops.findIndex((s) => s.id === stop.id) : -1;
+  const nextForRoute = stop
+    ? (index >= 0 ? stops[index + 1] : stops.find((s) => s.order > stop.order)) ?? null
+    : null;
+  const walk = useWalkRoute(pos ?? stop?.coords ?? null, nextForRoute?.coords ?? null);
 
   if (!stop) {
     return (
@@ -41,8 +48,11 @@ export default function StopPage() {
     );
   }
 
-  const prev = index > 0 ? stops[index - 1] : undefined;
-  const next = index < stops.length - 1 ? stops[index + 1] : undefined;
+  const prev = index > 0 ? stops[index - 1] : (index < 0 ? [...stops].reverse().find((s) => s.order < stop.order) : undefined);
+  const next = nextForRoute ?? undefined;
+  const whyNext = isExpress && stop.whyNextExpress ? stop.whyNextExpress : stop.whyNext;
+  const audioKey = isExpress && stop.whyNextExpress ? `${stop.id}:express` : stop.id;
+  const narrationTexts = [stop.intro, ...stop.narration, ...(whyNext ? [whyNext] : [])];
   const isVisited = Boolean(visited[stop.id]);
   const imgSrc = stop.image
     ? stop.image.src.startsWith('http') || stop.image.src.startsWith('/')
@@ -106,7 +116,7 @@ export default function StopPage() {
         </div>
 
 
-        <Narrator stopId={stop.id} intro={stop.intro} paragraphs={stop.narration} title={stop.name} />
+        <Narrator audioKey={audioKey} texts={narrationTexts} title={`${stop.order}. ${stop.name}`} introIndex={0} outroIndex={whyNext ? narrationTexts.length - 1 : undefined} />
 
         {stop.lookFor.length > 0 && (
           <section>
