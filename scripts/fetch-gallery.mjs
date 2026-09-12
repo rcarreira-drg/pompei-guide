@@ -55,24 +55,60 @@ const GALLERY_ID_TO_FILE = {
   // --- Lote 1 (paradas 1-6) ---
   'porta-marina-g1': 'I08 130a Porta Marina, Durchfahröffnung.jpg',
   'porta-marina-g2': 'I08 128 Pompeii, Rampe zur Porta Marina.jpg',
-  'porta-marina-g3': 'Marina gate and Pompeii city walls.jpg',
+  'porta-marina-g3':
+    'South view near Porta Marina, Archaeological Park of Pompeii, Italy (PPL1-Corrected) julesvernex2.jpg',
   'templo-venus-g1': 'I08 131 Venustempel.jpg',
   'templo-venus-g2': 'Colonna a Pompei.JPG',
-  'templo-venus-g3': 'Pompei (Italy, October 2020) - 67 (50543741701).jpg',
+  'templo-venus-g3': 'Pompeii - Temple of Venus.jpg',
   'basilica-g1': 'Basilica, Pompeii 01.jpg',
   'basilica-g2': 'Basilica (Pompei) WLM 003.JPG',
   'templo-apolo-g1': 'Pompeii Ruins Temple of Apollo & Bronze Statue of Apollo (48440752001).jpg',
-  'templo-apolo-g2': 'Pompeii Temple of Apollo inscription.jpg',
-  'templo-apolo-g3': '2025-03-12 Santuario di Apollo.jpg',
+  'templo-apolo-g2': 'Altar temple of apollo 1000650.jpg',
+  'templo-apolo-g3': 'Ingresso del tempio di Apollo.JPG',
   'foro-g1': 'Foro (Pompei) WLM 002.JPG',
   'edificio-eumachia-g1': 'Eumachia building (Pompeii) - columns.jpg',
   'edificio-eumachia-g2': 'Macellum (Pompeii).jpg',
 
-  // --- Lote 2 (paradas 7-12): añadir aquí una vez verificados en Commons ---
+  // --- Lote 2 (paradas 7-12) ---
+  'termas-foro-g1': 'Pompeii forum baths changing room.jpg',
+  'termas-foro-g2': 'Terme del Foro IMG 0075.JPG',
+  'casa-poeta-tragico-g1':
+    'Pompeii, House of the Tragic Poet (Pompeii) with Impluvium and Lararium (48443768027).jpg',
+  'casa-fauno-g1': 'Modern copy of the Dancing Faun (in Pompeii).jpg',
+  'casa-fauno-g2': 'Casa del fauno entrada 09.JPG',
+  'casa-vettii-g1': 'Casa dei Vettii WLM24 (132).jpg',
+  'casa-vettii-g2': 'Casa dei Vettii WLM24 (112).jpg',
+  'lupanar-g1': 'Lupanar de Pompeya, Italia, 2016 01.jpg',
+  'lupanar-g2': 'Pompeya lupanar.jpg',
+  'termas-estabianas-g1': 'Estabianas patio 01.JPG',
+  'termas-estabianas-g2': 'Estucos. Terme Stabiane. 02.JPG',
 
-  // --- Lote 3 (paradas 13-18): añadir aquí una vez verificados en Commons ---
+  // --- Lote 3 (paradas 13-18) ---
+  'via-abbondanza-g1': "Fountain at Via dell'Abbondanza.jpg",
+  'via-abbondanza-g2': 'Campaign inscription in Pompeii.jpg',
+  'fullonica-stephanus-g1': 'Impluvia in Fullonica of Stephanus (Pompeii).jpg',
+  'fullonica-stephanus-g2':
+    'The atrium of the Fullonica of Stephanus, one of the most important and complete laundries found in Pompeii, with a tub for washing clothes, Pompeii (47970999208).jpg',
+  'casa-menandro-g1': 'Menander fresco in the House of Menander (Pompeii) (48442910712).jpg',
+  'casa-menandro-g2': 'Atrio nella Casa del Menandro.jpg',
+  'teatro-grande-g1': 'I08 141 großes Theater.jpg',
+  'teatro-grande-g2': 'Colonne del Quadriportico dei Teatri di Pompei.jpg',
+  'templo-isis-g1': 'Isis Pompeya 17.JPG',
+  'templo-isis-g2': 'Italie Pompei Temple Isis - panoramio.jpg',
+  'casa-venus-concha-g1': 'Venus Anadyomenes in the House of Venus (Pompeii).jpg',
+  'casa-venus-concha-g2': 'Casa Delle Venere in Conchiglia.jpg',
 
-  // --- Lote 4 (paradas 19-24): añadir aquí una vez verificados en Commons ---
+  // --- Lote 4 (paradas 19-24) ---
+  'casa-octavio-cuartio-g1': 'Casa di Ottavio Quartione (Pompeii) - Giardino (Pompeii).jpg',
+  'casa-octavio-cuartio-g2': 'Altarino nella casa di Ottavio Quartione a Pompei.jpg',
+  'jardin-fugitivos-g1': 'Orto dei Fuggiaschi 02.jpg',
+  'palestra-grande-g1': 'Palaestra of Pompeii (48443186896).jpg',
+  'palestra-grande-g2': 'Colonnato della Palestra Grande nelle rovine di Pompei.jpg',
+  'anfiteatro-g1': 'Amphitheatre (Pompeii) - Gate.jpg',
+  'necropolis-porta-nocera-g1':
+    'Aedicula Tomb of Publius Vesonius Phileros, Vesonia, and Marcus Orfellius Faustus, Publius Vesonius Pileros, Publius Vesonius Proculus, Vesonia Urbana, Eliodorus - Pompeii Scavi (49347302041).jpg',
+  'necropolis-porta-nocera-g2': 'Necropoli Porta Nocera (3).jpg',
+  'villa-misterios-g1': 'Villa dei misteri, ingresso.jpg',
 };
 
 // Alt text (para el manifiesto images.ts; el alt mostrado en cada parada se
@@ -80,18 +116,53 @@ const GALLERY_ID_TO_FILE = {
 const GALLERY_ALT_ES = {
   'porta-marina-g1': 'Pasadizo estrecho y abovedado para peatones en la Porta Marina',
   'porta-marina-g2': 'Rampa de acceso a la Porta Marina vista desde el exterior de la muralla',
-  'porta-marina-g3': 'Tramo de muralla de piedra caliza junto a la Porta Marina',
-  'templo-venus-g1': 'Terraza del Templo de Venus con columnas y vistas al golfo de Nápoles',
+  'porta-marina-g3': 'Tramo de muralla de Pompeya visto desde fuera, cerca de la Porta Marina',
+  'templo-venus-g1': 'Terraza del Templo de Venus con restos de columnas y del podio',
   'templo-venus-g2': 'Restos de una columna corintia en el Templo de Venus de Pompeya',
-  'templo-venus-g3': 'Vista panorámica desde la terraza del Templo de Venus hacia la llanura costera',
-  'basilica-g1': 'Interior de la Basílica de Pompeya con sus columnas de ladrillo',
-  'basilica-g2': 'Detalle de una columna de ladrillo de la Basílica de Pompeya',
+  'templo-venus-g3': 'Columna y restos del podio del Templo de Venus de Pompeya',
+  'basilica-g1': 'Columnas de ladrillo de la Basílica de Pompeya vistas desde dentro',
+  'basilica-g2': 'Doble fila de columnas de la Basílica de Pompeya',
   'templo-apolo-g1': 'Reproducción en bronce de Apolo tensando el arco en el Templo de Apolo',
-  'templo-apolo-g2': 'Inscripción en la columna del reloj de sol del Templo de Apolo',
-  'templo-apolo-g3': 'Patio porticado del Templo de Apolo con sus columnas jónicas',
+  'templo-apolo-g2': 'Altar de mármol frente a la escalinata del Templo de Apolo',
+  'templo-apolo-g3': 'Patio porticado del Templo de Apolo visto entre sus columnas jónicas',
   'foro-g1': 'Pórtico de columnas en uno de los lados largos del Foro de Pompeya',
   'edificio-eumachia-g1': 'Columnas de la entrada porticada del Edificio de Eumáquia',
   'edificio-eumachia-g2': 'Vista general del patio del Macellum, mercado de Pompeya',
+
+  'termas-foro-g1': 'Vestuario masculino de las Termas del Foro con su techo abovedado',
+  'termas-foro-g2': 'Hornacinas del vestuario de las Termas del Foro',
+  'casa-poeta-tragico-g1': 'Atrio con impluvio y larario de la Casa del Poeta Trágico',
+  'casa-fauno-g1': 'Reproducción del fauno danzante de la Casa del Fauno',
+  'casa-fauno-g2': 'Entrada o fauces de la Casa del Fauno en Pompeya',
+  'casa-vettii-g1': 'Peristilo con columnas de la Casa de los Vettii',
+  'casa-vettii-g2': 'Sala con paneles rojos del cuarto estilo en la Casa de los Vettii',
+  'lupanar-g1': 'Cartel identificativo de la entrada al Lupanar de Pompeya',
+  'lupanar-g2': 'Fachada exterior del Lupanar de Pompeya con su piso superior',
+  'termas-estabianas-g1': 'Pórtico columnado de la palestra de las Termas Estabianas',
+  'termas-estabianas-g2': 'Relieve de estuco sobre una puerta de las Termas Estabianas',
+
+  'via-abbondanza-g1': "Fuente pública de piedra en la Via dell'Abbondanza",
+  'via-abbondanza-g2': 'Pintada electoral o programma en una fachada de Pompeya',
+  'fullonica-stephanus-g1': 'Pilas escalonadas de lavado en la Fullonica de Stephanus',
+  'fullonica-stephanus-g2': 'Antiguo atrio con pila de lavado en la Fullonica de Stephanus',
+  'casa-menandro-g1': 'Fresco con el retrato del comediógrafo Menandro',
+  'casa-menandro-g2': 'Atrio con columnas de la Casa del Menandro',
+  'teatro-grande-g1': 'Gradas y orquesta del Teatro Grande de Pompeya',
+  'teatro-grande-g2': 'Columnas del Cuadripórtico de los Teatros de Pompeya',
+  'templo-isis-g1': 'Pequeño templete del recinto del Templo de Isis',
+  'templo-isis-g2': 'Podio, columnas y escalinata del Templo de Isis',
+  'casa-venus-concha-g1': 'Fresco de Venus en la concha marina, Casa de la Venus en la Concha',
+  'casa-venus-concha-g2': 'Peristilo ajardinado de la Casa de la Venus en la Concha',
+
+  'casa-octavio-cuartio-g1': 'Canal de agua o eurípo en el jardín de la Casa de Octavio Cuartio',
+  'casa-octavio-cuartio-g2': 'Cenador o biclinium junto al canal de la Casa de Octavio Cuartio',
+  'jardin-fugitivos-g1': 'Antiguo viñedo replantado en el Jardín de los Fugitivos, con el Vesubio al fondo',
+  'palestra-grande-g1': 'Patio arbolado de la Palestra Grande de Pompeya',
+  'palestra-grande-g2': 'Pórtico de columnas de la Palestra Grande de Pompeya',
+  'anfiteatro-g1': 'Rampa de acceso a la arena del Anfiteatro de Pompeya',
+  'necropolis-porta-nocera-g1': 'Tumba de Publio Vesonio Filerote en la Necrópolis de Porta Nocera',
+  'necropolis-porta-nocera-g2': 'Fila de tumbas entre cipreses en la Necrópolis de Porta Nocera',
+  'villa-misterios-g1': 'Pórtico columnado de la Villa de los Misterios',
 };
 
 function stripHtml(s) {

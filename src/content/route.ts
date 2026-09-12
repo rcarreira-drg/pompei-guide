@@ -31,6 +31,23 @@ const STOPS: Stop[] = [
     whyNext: 'Subimos la rampa y, antes de meternos en el bullicio de la plaza, nos desviamos a la izquierda hacia una terraza que mira justo al mar del que acabo de hablaros. Allí arriba la ciudad colocó a su diosa de cara a los barcos, para que fuera lo primero que se viera desde el agua. Vamos ahora porque a esta hora la terraza está casi vacía y el sol todavía entra bajo. Son cuatro minutos en cuesta suave. Guardad aliento: hoy se camina mucho.',
     whyNextExpress: 'Con dos horas y media por delante renunciamos a la terraza de Venus. La vista es buena, pero el rodeo cuesta casi diez minutos entre ida y vuelta, y ese tiempo lo necesitamos entero más adelante. Subimos derechos por la Via Marina, entramos en la plaza y giramos a la izquierda, hacia el edificio más grande del foro. Allí empieza de verdad la visita, y allí os voy a pedir que toquéis una columna para comprobar que no es en absoluto lo que parece.',
     image: { src: 'porta-marina', alt: 'Rampa de acceso de la Porta Marina en Pompeya', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'porta-marina-g1',
+        alt: 'El pasadizo estrecho y abovedado para peatones en la Porta Marina',
+        caption: 'Fijaos en la bóveda de hormigón del pasadizo estrecho: es el paso reservado a la gente a pie, junto al carril ancho para carros.',
+      },
+      {
+        src: 'porta-marina-g2',
+        alt: 'Camino empedrado junto al solar del antiguo Antiquarium, cerca de la Porta Marina',
+        caption: 'Mirad el solar arbolado a la derecha de la puerta: ahí estuvo el primer Antiquarium, destruido en el bombardeo de 1943.',
+      },
+      {
+        src: 'porta-marina-g3',
+        alt: 'Tramo de muralla de Pompeya visto desde fuera, cerca de la Porta Marina',
+        caption: 'Fijaos en la textura irregular de los bloques de la muralla, distinta según la fase de construcción.',
+      },
+    ],
     illus: 'calle',
     tips: [
       'La rampa es empedrada y tiene pendiente: calzado con buen agarre desde el primer minuto.',
@@ -69,6 +86,23 @@ const STOPS: Stop[] = [
     anecdote: 'El propio nombre oficial de la colonia romana, Colonia Cornelia Veneria Pompeianorum, llevaba a Venus incorporada como parte del título de la ciudad: no había forma más clara de declarar de quién eran estas tierras.',
     directionsToNext: 'Volved sobre vuestros pasos hacia la Via Marina y continuad hacia la plaza. A la izquierda, antes de entrar en el foro propiamente dicho, encontraréis la Basílica. Menos de tres minutos caminando.',
     whyNext: 'Bajamos otra vez a la Via Marina y entramos en la plaza de una vez. A la izquierda, nada más pisarla, hay un galpón enorme con las columnas partidas: la Basílica. Vamos allí antes que a ninguna otra cosa por dos razones. La primera es práctica: es el edificio con menos sombra de todo el foro y a mediodía se convierte en una sartén. La segunda es que ahí dentro os voy a pedir que toquéis una columna y descubráis, con la mano, cómo mentía esta gente.',
+    gallery: [
+      {
+        src: 'templo-venus-g1',
+        alt: 'Terraza del Templo de Venus con restos de columnas y del podio',
+        caption: 'Poneos en el borde de la terraza y reconoced el podio del templo entre los restos de columnas.',
+      },
+      {
+        src: 'templo-venus-g2',
+        alt: 'Restos de una columna corintia en el Templo de Venus de Pompeya',
+        caption: 'Fijaos en el capitel de esta columna corintia, de las que rodeaban el patio del santuario.',
+      },
+      {
+        src: 'templo-venus-g3',
+        alt: 'Columna y restos del podio del Templo de Venus de Pompeya',
+        caption: 'Buscad los bloques de mármol sin terminar junto al podio: son la obra que la erupción dejó a medias.',
+      },
+    ],
     illus: 'columna',
     tips: [
       'Es una parada corta pero muy fotogénica al amanecer, con el Vesubio al fondo; conviene no gastar aquí demasiado tiempo del recorrido total.',
@@ -106,6 +140,23 @@ const STOPS: Stop[] = [
     whyNext: 'Salimos a la plaza y giramos a la derecha, bordeando el foro por su lado oeste. Dos minutos, todavía con sombra. Pasamos del edificio del dinero al santuario más viejo de la ciudad, porque hoy vamos a agrupar las cosas por oficio en lugar de saltar de un extremo a otro de la explanada. Y os adelanto una cosa: allí, grabados en una columna y en un altar, están los nombres de los señores que pagaron el reloj del pueblo. Uno de ellos nos saldrá otra vez esta tarde.',
     whyNextExpress: 'Salimos a la plaza y giramos a la derecha, hacia el lado oeste. Dos minutos escasos, y aquí la ruta corta no se salta nada, porque el Templo de Apolo entra en cualquier versión de esta visita. Aprovechamos que todavía es temprano y que el sol no ha entrado del todo en la plaza para encadenar las dos paradas seguidas, antes de que el foro se llene de banderines y de grupos detenidos justo en mitad del paso.',
     image: { src: 'basilica', alt: 'Columnas de la Basílica de Pompeya', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'basilica-g1',
+        alt: 'Columnas de ladrillo de la Basílica de Pompeya vistas desde dentro',
+        caption: 'Tocad con la vista las estrías de estas columnas de ladrillo: donde falta el estuco asoma el material real.',
+      },
+      {
+        src: 'basilica-g2',
+        alt: 'Doble fila de columnas de la Basílica de Pompeya',
+        caption: 'Reconoced la Basílica por esta doble fila de columnas, que dividía el salón en tres naves.',
+      },
+      {
+        src: 'graffiti',
+        alt: 'Grafitos antiguos rascados en el estuco de un muro de Pompeya',
+        caption: 'Acercaos al estuco de los muros laterales y buscad los grafitos rascados a mano por quienes esperaban turno.',
+      },
+    ],
     illus: 'columna',
     tips: [
       'Hay poca sombra en esta zona a mediodía; es buen momento para beber agua antes de seguir hacia el foro abierto.',
@@ -144,6 +195,23 @@ const STOPS: Stop[] = [
     whyNext: 'Cruzamos el recinto hacia el este y en un minuto estamos en la plaza grande. Dejo el foro para después de sus templos a propósito: es la parada más larga de la mañana y quiero que lleguéis con las piernas calientes y sin prisa, cuando todavía cabe gente en la explanada. Allí os voy a pedir dos cosas bastante raras: que miréis el suelo antes que el Vesubio, y que contéis pedestales vacíos. Hay más de los que parece a primera vista.',
     whyNextExpress: 'Cruzamos hacia el este y en un minuto pisamos la plaza grande. Tampoco aquí hay atajo posible, ni falta que hace: el foro es el sitio al que se viene a entender Pompeya de un vistazo, y conviene verlo pronto, con el grupo descansado y antes de que la explanada se llene del todo. En la versión corta le dedicamos un cuarto de hora bien aprovechado y salimos derechos hacia el norte.',
     image: { src: 'templo-apolo', alt: 'Columnas del Templo de Apolo en Pompeya', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'templo-apolo-g1',
+        alt: 'Reproducción en bronce de Apolo tensando el arco en el Templo de Apolo',
+        caption: 'Buscad la estatua en bronce de Apolo tensando el arco, junto a la escalinata del templo.',
+      },
+      {
+        src: 'templo-apolo-g2',
+        alt: 'Altar de mármol frente a la escalinata del Templo de Apolo',
+        caption: 'Fijaos en el altar de mármol delante de la escalinata, con los nombres de los cuatro magistrados que lo pagaron.',
+      },
+      {
+        src: 'templo-apolo-g3',
+        alt: 'Patio porticado del Templo de Apolo visto entre sus columnas jónicas',
+        caption: 'Entrad en el patio y recorred con la vista las columnas jónicas que lo rodean, el recinto religioso más antiguo de Pompeya.',
+      },
+    ],
     illus: 'columna',
     tips: [
       'Buscad el ángulo desde la escalinata del templo: es uno de los mejores puntos para fotografiar el Vesubio enmarcado por las columnas.',
@@ -182,6 +250,23 @@ const STOPS: Stop[] = [
     whyNext: 'Recorremos el lado este de la plaza, que es donde estaba el dinero de verdad. Después del poder religioso y del político toca el motor: la lana y la comida. En tres minutos entramos en el edificio más grande que pagó jamás un particular en esta ciudad, y lo pagó una mujer. Vamos ahora, además, porque a media mañana esta franja de la plaza se llena de grupos parados y luego cuesta cruzarla. Fijaos en el nombre de la puerta lateral antes de entrar.',
     whyNextExpress: 'En la versión corta dejamos fuera el Edificio de Eumáquia y el Macellum. Merecen la pena, pero son dos paradas de leer inscripciones y mirar desagües, y eso pide un tiempo que hoy no tenemos. Salimos del foro por el lado norte hacia la Via del Foro y giramos por la Via delle Terme, unos siete minutos de paseo llano. Vamos a las Termas del Foro, primera parada larga de la ruta, con sombra, con aseos y con la mejor lección de fontanería romana del día.',
     image: { src: 'foro-vesubio', alt: 'El foro de Pompeya con el Vesubio al fondo', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'templo-jupiter',
+        alt: 'El Templo de Júpiter en el extremo norte del Foro de Pompeya',
+        caption: 'Levantad la vista hacia el norte y reconoced el Templo de Júpiter por su podio alto y sus columnas en pie.',
+      },
+      {
+        src: 'arco-caligula',
+        alt: 'Arco honorífico junto al Foro de Pompeya',
+        caption: 'Buscad este arco cercano a la plaza, uno de los que marcaban los accesos al Foro.',
+      },
+      {
+        src: 'foro-g1',
+        alt: 'Pórtico de columnas en uno de los lados largos del Foro de Pompeya',
+        caption: 'Fijaos en las columnas del pórtico que bordea la plaza y comparad su piedra a un lado y a otro.',
+      },
+    ],
     illus: 'foro',
     tips: [
       'Los baños públicos más cercanos al foro están junto a las Termas del Foro, nuestra próxima parada larga; aprovechad si lo necesitáis.',
@@ -220,6 +305,23 @@ const STOPS: Stop[] = [
     directionsToNext: 'Salid del foro por el lado norte hacia la Via del Foro y tomad la Via delle Terme a la izquierda. Seguid esta calle unos trescientos cincuenta metros hasta la entrada de las Termas del Foro, unos siete minutos caminando.',
     whyNext: 'Salimos del foro por el lado norte hacia la Via del Foro y tomamos la Via delle Terme, unos siete minutos de caminata llana. Es la despedida de la plaza: a partir de aquí ya no volvemos al centro cívico. Antes de meternos en el barrio de las grandes casas conviene una parada práctica y fresca, con aseos y con sombra, porque después vienen varias mansiones seguidas. Y hay otro motivo: quiero que entendáis cómo se calentaba y se repartía el agua en esta ciudad antes de ver lo que hacían con ella los ricos en sus jardines.',
     image: { src: 'edificio-eumachia', alt: 'Fachada del Edificio de Eumáquia en el foro de Pompeya', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'macellum',
+        alt: 'Patio del Macellum con los restos circulares del templete central',
+        caption: 'Cruzad al edificio de al lado y buscad los restos circulares del templete central, donde se vendía sobre todo pescado.',
+      },
+      {
+        src: 'edificio-eumachia-g1',
+        alt: 'Columnas de la entrada porticada del Edificio de Eumáquia',
+        caption: 'Fijaos en la inscripción grabada sobre estas columnas de la entrada porticada, financiada por Eumáquia.',
+      },
+      {
+        src: 'edificio-eumachia-g2',
+        alt: 'Hornacinas con estatuas en el recinto del Macellum',
+        caption: 'Buscad estas hornacinas con estatuas junto al patio del Macellum, el mercado de la ciudad.',
+      },
+    ],
     illus: 'columna',
     tips: [
       'Si el grupo va con niños, el Macellum es un buen sitio para explicar de forma sencilla cómo se compraba la comida en una ciudad romana.',
@@ -259,6 +361,18 @@ const STOPS: Stop[] = [
     whyNext: 'Salimos hacia el oeste por la Via delle Terme y giramos por el Vicolo di Modesto, cuatro minutos escasos por una calleja estrecha y con sombra. Entramos en el barrio de las grandes casas, pero lo hacemos a propósito por la puerta pequeña: primero una vivienda modesta y después, a dos pasos, la mansión más grande de Pompeya. El contraste solo funciona en este orden. Además, en el umbral de esa casa pequeña hay un animal esperándoos desde hace dos mil años.',
     whyNextExpress: 'Nos saltamos la Casa del Poeta Trágico. Su perro de mosaico es famoso con razón, pero es una parada breve y el tiempo que ahorramos lo necesita entera la Casa del Fauno, que ocupa una manzana. Salimos de las termas hacia el oeste y subimos hacia el norte por las callejas de la Regio Sexta, unos seis minutos entre paredes altas y sombra agradecida. Vamos directos a la casa privada más grande que se ha excavado en esta ciudad.',
     image: { src: 'termas-foro', alt: 'Interior de las Termas del Foro en Pompeya', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'termas-foro-g1',
+        alt: 'Vestuario masculino de las Termas del Foro con su techo abovedado',
+        caption: 'Levantad la vista al techo abovedado del vestuario y buscad las figuras de telamones que parecen sostenerlo.',
+      },
+      {
+        src: 'termas-foro-g2',
+        alt: 'Hornacinas del vestuario de las Termas del Foro',
+        caption: 'Fijaos en las hornacinas de la pared, donde los clientes dejaban la ropa mientras se bañaban.',
+      },
+    ],
     illus: 'termas',
     tips: [
       'Hay baños públicos modernos muy cerca, en la zona del foro; conviene usarlos antes de adentrarse en el barrio de las domus.',
@@ -297,6 +411,18 @@ const STOPS: Stop[] = [
     directionsToNext: 'Seguid por el Vicolo di Modesto hasta la Via della Fortuna y girad a la derecha: la entrada a la Casa del Fauno, la mayor mansión de Pompeya, está a menos de cuatro minutos.',
     whyNext: 'Seguimos por el Vicolo di Modesto hasta la Via della Fortuna y giramos a la derecha, cuatro minutos. Pasamos de la casa más pequeña con el detalle más caro a la casa más grande de toda Pompeya, y ese salto conviene darlo andando, sin parada intermedia, para que lo noten las piernas. Aprovechad la sombra de esta calleja mientras dure, porque adonde vamos hay dos patios abiertos seguidos y ni un árbol a la vista.',
     image: { src: 'cave-canem', alt: 'Mosaico cave canem en la Casa del Poeta Trágico', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'perro-mosaico',
+        alt: 'Detalle del mosaico cave canem con el perro guardián',
+        caption: 'Fijaos en las teselas diminutas del perro, colocadas siguiendo la curva del cuerpo para dar volumen a la figura.',
+      },
+      {
+        src: 'casa-poeta-tragico-g1',
+        alt: 'Atrio con impluvio y larario de la Casa del Poeta Trágico',
+        caption: 'Cruzad el umbral y reconoced el atrio por su impluvio central, el hueco que recogía el agua de lluvia.',
+      },
+    ],
     illus: 'mosaico',
     tips: [
       'La entrada suele estar acordonada para proteger el mosaico original; se ve perfectamente sin necesidad de pisar el umbral.',
@@ -335,6 +461,23 @@ const STOPS: Stop[] = [
     whyNext: 'Subimos por el Vicolo dei Vettii hacia el norte, dos minutos escasos, porque las dos casas grandes de este barrio están casi pared con pared. El orden importa: primero el dinero viejo y sobrio de los samnitas, y ahora el dinero recién ganado de dos hermanos que nacieron esclavos. Ese contraste se ve en cuanto se cruza el umbral y no se olvida. Conviene además llegar pronto, porque el aforo es limitado y a media mañana la cola dobla la esquina.',
     whyNextExpress: 'Subimos por el Vicolo dei Vettii hacia el norte, dos minutos, y aquí la ruta corta no recorta nada: estas dos casas están tan cerca que separarlas sería absurdo. Encadenamos el dinero viejo de los samnitas con el dinero nuevo de dos hermanos que nacieron esclavos, que es el contraste más útil del barrio. Llegamos ahora porque el aforo es limitado y a media mañana la cola crece deprisa.',
     image: { src: 'casa-fauno', alt: 'Peristilo de la Casa del Fauno en Pompeya', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'casa-fauno-g2',
+        alt: 'Entrada o fauces de la Casa del Fauno en Pompeya',
+        caption: 'Reconoced la entrada por este corredor pintado, las fauces por las que se accede a la casa más grande de Pompeya.',
+      },
+      {
+        src: 'casa-fauno-g1',
+        alt: 'Reproducción del fauno danzante de la Casa del Fauno',
+        caption: 'Buscad la reproducción del fauno danzante, plantada justo en el hueco del impluvio del primer atrio.',
+      },
+      {
+        src: 'mosaico-alejandro',
+        alt: 'El Mosaico de Alejandro, hallado en la Casa del Fauno',
+        caption: 'Recordad este mosaico al pisar el suelo donde apareció: el original, con dos millones de teselas, se guarda hoy en Nápoles.',
+      },
+    ],
     illus: 'mosaico',
     tips: [
       'Es una parada extensa: reservad tiempo suficiente, porque la casa es literalmente del tamaño de una manzana entera.',
@@ -374,6 +517,23 @@ const STOPS: Stop[] = [
     whyNext: 'Bajamos por el Vicolo dei Vettii hasta la Via della Fortuna, giramos por el Vicolo Storto y cruzamos la Via Stabiana hasta el Vicolo del Lupanare, unos siete minutos. Dejamos el barrio de las mansiones y bajamos al barrio popular, cruzando de paso uno de los dos grandes ejes de la ciudad. Vamos a un sitio pequeño, oscuro y muy visitado, así que conviene llegar antes que la cola. Y os aviso ya: allí bajaremos la voz.',
     whyNextExpress: 'Bajamos hacia la Via della Fortuna, giramos por el Vicolo Storto y cruzamos la Via Stabiana hasta el Vicolo del Lupanare, siete minutos por el mismo camino que la ruta larga. Aquí no hay nada que recortar: el Lupanar entra en cualquier visita, por morbo o por memoria. Lo que sí conviene es llegar cuanto antes, porque el aforo es minúsculo y a media mañana la espera puede comerse un cuarto de hora largo.',
     image: { src: 'casa-vettii-fresco', alt: 'Fresco del cuarto estilo pompeyano en la Casa de los Vettii', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'casa-vettii-priapo',
+        alt: 'Pintura de Príapo pesando su miembro en una balanza, en el vestíbulo',
+        caption: 'Mirad a la derecha nada más entrar: ahí está Príapo pesándose en una balanza contra un saco de monedas.',
+      },
+      {
+        src: 'casa-vettii-g1',
+        alt: 'Peristilo con columnas de la Casa de los Vettii',
+        caption: 'Salid al jardín y reconoced el peristilo restaurado, con sus columnas y la estatuilla junto a la fuente.',
+      },
+      {
+        src: 'casa-vettii-g2',
+        alt: 'Sala con paneles rojos del cuarto estilo en la Casa de los Vettii',
+        caption: 'Fijaos en los paneles rojos enmarcados por franjas finas: imitan placas de mármol caro encajadas en la pared.',
+      },
+    ],
     illus: 'fresco',
     tips: [
       'Es una de las casas con más aforo limitado y colas en horas centrales; si podéis elegir, visitadla a primera hora.',
@@ -413,6 +573,18 @@ const STOPS: Stop[] = [
     whyNext: 'Salimos a la Via degli Augustali y tomamos el Vicolo del Lupanare hacia la Via Stabiana: dos minutos hasta la esquina de las Termas Estabianas. Encadeno a propósito el sitio más pequeño y cerrado del barrio con el más grande y abierto, porque después de esta parada conviene aire, luz y un patio donde estirar las piernas. Comparten el mismo cruce y la misma clientela, por cierto. Vamos a las termas más antiguas de la ciudad, y allí se lavaban sin una gota de jabón.',
     whyNextExpress: 'Salimos a la Via degli Augustali y tomamos el Vicolo del Lupanare hacia la Via Stabiana, dos minutos hasta la esquina. Ningún atajo aquí, y además viene bien: después de una parada tan cerrada y tan cargada, un patio enorme al aire libre deja respirar al grupo. En la ruta corta estas termas se ven rápido, pero no me las salto por nada, porque explican cómo se lavaba media ciudad sin jabón.',
     image: { src: 'lupanar-fresco', alt: 'Pinturas eróticas sobre los dinteles del Lupanar de Pompeya', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'lupanar-g1',
+        alt: 'Cartel identificativo de la entrada al Lupanar de Pompeya',
+        caption: 'Buscad este cartel junto a la entrada, con la referencia Regio VII, Insula XII, número 18: es la puerta del Lupanar.',
+      },
+      {
+        src: 'lupanar-g2',
+        alt: 'Fachada exterior del Lupanar de Pompeya con su piso superior',
+        caption: 'Reconoced el edificio por fuera, con su planta superior de habitaciones algo mayores para quien podía pagarlas.',
+      },
+    ],
     illus: 'lupanar',
     tips: [
       'Es la parada con más cola de todo el recorrido; el aforo dentro es muy reducido y conviene tener paciencia o volver más tarde.',
@@ -452,6 +624,18 @@ const STOPS: Stop[] = [
     whyNext: 'Salimos a la Via Stabiana y cruzamos justo enfrente, un minuto de nada, hasta el cruce con la Via dell\'Abbondanza. Es un momento importante del día aunque no lo parezca: a partir de aquí giramos hacia el este y ya no volvemos atrás. Vamos a pisar la calle más concurrida de Pompeya, con sus pasos de piedra y sus fuentes públicas, así que rellenad ahí la botella. Y en cuanto lleguéis, mirad las fachadas: están cubiertas de pintadas pidiendo el voto.',
     whyNextExpress: 'Cruzamos la Via Stabiana justo enfrente, un minuto, hasta el cruce con la Via dell\'Abbondanza. Tampoco aquí cambia nada respecto a la ruta larga, porque este cruce con sus pasos de piedra y sus fuentes es el corazón del tráfico de la ciudad y marca el giro definitivo hacia el este. Rellenad la botella al llegar y mirad las fachadas: están escritas de arriba abajo con propaganda electoral.',
     image: { src: 'termas-estabianas', alt: 'Palestra de las Termas Estabianas en Pompeya', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'termas-estabianas-g1',
+        alt: 'Pórtico columnado de la palestra de las Termas Estabianas',
+        caption: 'Reconoced el patio por su pórtico de columnas: aquí se corría y se luchaba antes de entrar a bañarse.',
+      },
+      {
+        src: 'termas-estabianas-g2',
+        alt: 'Relieve de estuco sobre una puerta de las Termas Estabianas',
+        caption: 'Fijaos en el relieve de estuco sobre esta puerta, parte de la decoración más antigua del edificio.',
+      },
+    ],
     illus: 'termas',
     tips: [
       'Hay aseos públicos junto a la entrada de las termas, últimos antes de adentrarse en la Via dell’Abbondanza.',
@@ -489,6 +673,18 @@ const STOPS: Stop[] = [
     whyNext: 'Seguimos hacia el este por la Via dell\'Abbondanza, pasado el termopolio, unos seis minutos sin desviarnos. Esta calle es larga y conviene hacerla de un tirón mientras el cuerpo aguanta el ritmo. Entramos después en un taller, y lo hago a propósito justo ahora: después de tanto templo, tanta plaza y tanta mansión, viene bien meter la nariz en el trabajo sucio que pagaba todo lo demás. Aviso de que allí vamos a hablar de orina durante un rato largo.',
     whyNextExpress: 'En la ruta corta dejamos fuera la Fullonica de Stephanus y la Casa del Menandro, que son dos paradas magníficas y dos desvíos que hoy no caben. Seguimos por la Via dell\'Abbondanza y giramos hacia el Vicolo del Balcone Pensile en dirección a la Via dei Teatri, unos diez minutos de camino cómodo. Vamos al Teatro Grande, que es el sitio donde mejor se entiende de un vistazo cómo estaba ordenada por dentro esta sociedad.',
     image: { src: 'via-abbondanza', alt: 'Pasos de peatones de piedra en la Via dell’Abbondanza', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'via-abbondanza-g1',
+        alt: "Fuente pública de piedra en la Via dell'Abbondanza",
+        caption: 'Buscad una de estas fuentes públicas de piedra y rellenad la botella: el agua todavía es buena.',
+      },
+      {
+        src: 'via-abbondanza-g2',
+        alt: 'Pintada electoral o programma en una fachada de Pompeya',
+        caption: 'Fijaos en las letras rojas pintadas en la fachada, propaganda electoral pidiendo el voto para un candidato.',
+      },
+    ],
     illus: 'termopolio',
     tips: [
       'Las piedras del cruce son irregulares y resbalan si ha llovido: pisad con cuidado al cruzar.',
@@ -526,6 +722,18 @@ const STOPS: Stop[] = [
     directionsToNext: 'Seguid por la Via dell’Abbondanza y girad por el Vicolo di Paquio Proculo hacia la Via di Nola: la Casa del Menandro está un poco más al sur, unos siete minutos caminando.',
     whyNext: 'Seguimos por la Via dell\'Abbondanza y giramos por el Vicolo di Paquio Proculo hacia la Via di Nola, unos siete minutos hasta la Casa del Menandro, algo más al sur. Salimos del olor a amoniaco y entramos en una casa con termas propias, que es el otro extremo de la escala social, y me gusta que se recorra andando y seguido para que se note el salto. Allí, además, hay un rincón de sótano donde alguien escondió algo y nunca volvió a por ello.',
     image: { src: 'fullonica-stephanus', alt: 'Pilas de lavado de la Fullonica de Stephanus en Pompeya', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'fullonica-stephanus-g1',
+        alt: 'Pilas escalonadas de lavado en la Fullonica de Stephanus',
+        caption: 'Fijaos en las pilas escalonadas de obra, donde un operario pisaba la ropa con agua y orina fermentada.',
+      },
+      {
+        src: 'fullonica-stephanus-g2',
+        alt: 'Antiguo atrio con pila de lavado en la Fullonica de Stephanus',
+        caption: 'Reconoced el antiguo atrio de la casa, con su pila de lavado plantada en mitad del que fuera un salón señorial.',
+      },
+    ],
     illus: 'domus',
     tips: [
       'El suelo de las pilas suele estar húmedo o resbaladizo tras la lluvia; extremad la precaución.',
@@ -563,6 +771,18 @@ const STOPS: Stop[] = [
     directionsToNext: 'Volved hacia la Via Stabiana y bajad por el Vicolo del Balcone Pensile hasta la Via dei Teatri: el conjunto del Teatro Grande, el Odeón y el Cuadripórtico está al fondo, unos siete minutos de camino.',
     whyNext: 'Volvemos hacia la Via Stabiana y bajamos por el Vicolo del Balcone Pensile hasta la Via dei Teatri, unos siete minutos. Cerramos el capítulo de las casas privadas y entramos en el barrio del ocio, que ocupa toda la ladera sur porque aprovecha la pendiente natural del terreno para no tener que levantar gradas desde cero. Teatro, odeón y templo egipcio, los tres juntos. Y allí vamos a ver quién se sentaba dónde, que en esta ciudad nunca fue una cuestión de llegar pronto.',
     image: { src: 'casa-menandro', alt: 'Peristilo de la Casa del Menandro en Pompeya', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'casa-menandro-g2',
+        alt: 'Atrio con columnas de la Casa del Menandro',
+        caption: 'Cruzad el atrio de columnas y buscad, al fondo, la escalera que baja al sótano donde apareció la plata.',
+      },
+      {
+        src: 'casa-menandro-g1',
+        alt: 'Fresco con el retrato del comediógrafo Menandro',
+        caption: 'Buscad en el peristilo el retrato de Menandro sentado con su rollo de papiro: da nombre a la casa.',
+      },
+    ],
     illus: 'domus',
     tips: [
       'Es una casa amplia y a veces con acceso restringido a ciertas salas por turnos de conservación; consultad el panel de la entrada.',
@@ -601,6 +821,18 @@ const STOPS: Stop[] = [
     whyNext: 'Salimos del Cuadripórtico hacia el sur, dos minutos escasos, sin salir del mismo barrio. Pasamos del ocio romano a un culto importado, porque a esta ciudad portuaria llegaban mercancías, monedas y también dioses. El templo al que vamos es egipcio, es pequeño, y lo reconstruyó entero un antiguo esclavo para comprarle a su hijo de seis años un asiento en el gobierno de la ciudad. Aprovechad estos dos minutos de sombra: después viene el tramo más largo de la jornada.',
     whyNextExpress: 'Aquí la ruta corta se salta tres paradas de golpe: el Templo de Isis y las dos casas con jardín del extremo este. Son bonitas y están lejos, y ese tramo se come media hora larga que necesitamos para terminar bien. Volvemos hacia el sur por la Via Stabiana y seguimos por el camino perimetral hacia la Via di Nocera, unos quince minutos de paseo continuado, directos al Jardín de los Fugitivos. Cambia el tono por completo, así que preparaos.',
     image: { src: 'teatro-grande', alt: 'Gradas del Teatro Grande de Pompeya', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'teatro-grande-g1',
+        alt: 'Gradas y orquesta del Teatro Grande de Pompeya',
+        caption: 'Reconoced el graderío excavado en la ladera y la orquesta semicircular al fondo, junto al edificio de escena.',
+      },
+      {
+        src: 'teatro-grande-g2',
+        alt: 'Columnas del Cuadripórtico de los Teatros de Pompeya',
+        caption: 'Buscad las columnas del Cuadripórtico, el patio de detrás donde también se alojó un cuartel de gladiadores.',
+      },
+    ],
     illus: 'teatro',
     tips: [
       'Las gradas de piedra son altas y sin pasamanos en varios tramos; tened cuidado si bajáis hasta la orquesta.',
@@ -639,6 +871,18 @@ const STOPS: Stop[] = [
     directionsToNext: 'Salid hacia la Via Stabiana y tomad la Via dell’Abbondanza hacia el este durante unos quinientos metros, hasta la altura de la Via di Championnet: la Casa de la Venus en la Concha está a la izquierda, unos nueve minutos de camino.',
     whyNext: 'Salimos hacia la Via Stabiana y tomamos la Via dell\'Abbondanza hacia el este unos quinientos metros, nueve minutos largos. Es el trecho más largo entre dos paradas de todo el día, así que dosificad el agua y la conversación. A cambio, entramos en una zona muy distinta: casas medianas con jardín, lejos del centro, donde suele haber bastante menos gente. Y en la primera de ellas quiero que os fijéis en una pared que finge ser un jardín más grande del que hay.',
     image: { src: 'templo-isis', alt: 'Restos del Templo de Isis en Pompeya', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'templo-isis-g2',
+        alt: 'Podio, columnas y escalinata del Templo de Isis',
+        caption: 'Reconoced el templo por su podio elevado con escalinata, rodeado del pórtico de columnas del patio.',
+      },
+      {
+        src: 'templo-isis-g1',
+        alt: 'Pequeño templete del recinto del Templo de Isis',
+        caption: 'Buscad, junto al templo, la escalerita que baja hasta el purgatorium, la pila de agua sagrada.',
+      },
+    ],
     illus: 'columna',
     tips: [
       'Es una parada tranquila y con poca afluencia comparada con otras cercanas; buen momento para sentarse un momento a la sombra.',
@@ -675,6 +919,18 @@ const STOPS: Stop[] = [
     anecdote: 'Esta imagen de Venus en la concha es, junto al mosaico del cave canem, una de las escenas de Pompeya más reproducidas en postales, carteles y portadas de libros sobre la ciudad.',
     directionsToNext: 'La Casa de Octavio Cuartio está prácticamente pared con pared, un minuto caminando hacia el este por la misma Via dell’Abbondanza.',
     whyNext: 'La casa siguiente está prácticamente pared con pared, un minuto hacia el este por la misma calle. Encadeno los dos jardines a propósito, porque son la misma idea resuelta de dos maneras opuestas: aquí han pintado el jardín que no cabía, y al lado lo han construido de verdad, con canales de agua y pérgola de parra. Comparar de memoria fresca vale mucho más que comparar media hora después. Además es sombra y llaneo, que a estas alturas del día se agradece.',
+    gallery: [
+      {
+        src: 'casa-venus-concha-g1',
+        alt: 'Fresco de Venus en la concha marina, Casa de la Venus en la Concha',
+        caption: 'Buscad esta Venus reclinada en su concha, en el muro del fondo del jardín, protegida por un cristal.',
+      },
+      {
+        src: 'casa-venus-concha-g2',
+        alt: 'Peristilo ajardinado de la Casa de la Venus en la Concha',
+        caption: 'Cruzad la casa sin entreteneros y salid directos al jardín: el motivo de esta parada es la pared del fondo.',
+      },
+    ],
     illus: 'fresco',
     tips: [
       'El cristal protector puede producir reflejos; buscad el ángulo lateral para fotografiar el fresco sin deslumbraros.',
@@ -712,6 +968,18 @@ const STOPS: Stop[] = [
     anecdote: 'El eurípo de esta casa imita a pequeña escala los grandes canales ornamentales de las villas imperiales romanas, como si sus propietarios quisieran, dentro de sus posibilidades, vivir como un emperador aunque fuera solo en su propio patio trasero.',
     directionsToNext: 'Bajad por la Via di Championnet hacia el sur, en dirección al Vicolo di Championnet: el Jardín de los Fugitivos está a unos cinco minutos.',
     whyNext: 'Bajamos por la Via di Championnet hacia el sur, unos cinco minutos hasta el Jardín de los Fugitivos. Necesitamos ese paseo. Llevamos toda la jornada hablando de dinero, de nombres grabados y de agua corriente, y la siguiente parada no va de nada de eso: va de trece personas concretas que intentaron salir de la ciudad y no lo consiguieron. Usad estos cinco minutos para cambiar el tono y, si vais con niños pequeños, para avisarles de lo que van a ver.',
+    gallery: [
+      {
+        src: 'casa-octavio-cuartio-g1',
+        alt: 'Canal de agua o eurípo en el jardín de la Casa de Octavio Cuartio',
+        caption: 'Seguid con la vista el canal de agua hasta el fondo de la parcela: son dos canales cruzados en ángulo recto.',
+      },
+      {
+        src: 'casa-octavio-cuartio-g2',
+        alt: 'Cenador o biclinium junto al canal de la Casa de Octavio Cuartio',
+        caption: 'Buscad el cenador con bancos junto al canal, el biclinium donde se comía recostado a la sombra de la parra.',
+      },
+    ],
     illus: 'domus',
     tips: [
       'El jardín es largo y sin apenas sombra directa en las horas centrales del día; llevad agua.',
@@ -749,6 +1017,18 @@ const STOPS: Stop[] = [
     whyNext: 'Salimos hacia el este por el camino perimetral en dirección a la Via di Nocera, unos cinco minutos hasta la Palestra Grande. Después de una parada así hace falta caminar un poco y llegar a un sitio enorme y abierto donde quepa el aire. Entramos ya en la última fase del día, la esquina sureste de la ciudad, donde están juntos el gimnasio, el anfiteatro y la necrópolis. El gimnasio parece la parada menos interesante de las tres. No lo es.',
     whyNextExpress: 'En la ruta corta renunciamos a la Palestra Grande, un patio enorme que aquí le cede el sitio al anfiteatro, que es el final que merece la visita. Salimos hacia el este por el camino perimetral en dirección a la Via di Nocera y seguimos hasta la Piazza Anfiteatro, unos ocho minutos de camino llano y sin sombra. Aprovechad para beber antes de arrancar, porque este último tramo se hace a pleno sol.',
     image: { src: 'jardin-fugitivos', alt: 'Calcos de yeso en el Jardín de los Fugitivos de Pompeya', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'jardin-fugitivos-g1',
+        alt: 'Antiguo viñedo replantado en el Jardín de los Fugitivos, con el Vesubio al fondo',
+        caption: 'Fijaos en las hileras de vides replantadas siguiendo los surcos de plantación que se conservan en el terreno.',
+      },
+      {
+        src: 'calcos-yeso',
+        alt: 'Calco de yeso de una víctima de la erupción',
+        caption: 'Acercaos a las vitrinas y buscad los detalles de ropa y postura que aún se distinguen en los calcos.',
+      },
+    ],
     illus: 'yeso',
     tips: [
       'Es una de las paradas más emotivas del recorrido; conviene avisar con antelación si viajáis con niños pequeños.',
@@ -786,6 +1066,18 @@ const STOPS: Stop[] = [
     directionsToNext: 'Salid por el lado este de la palestra hacia la Piazza Anfiteatro: el Anfiteatro está justo enfrente, unos tres minutos de camino.',
     whyNext: 'Salimos por el lado este hacia la Piazza Anfiteatro, tres minutos y está enfrente. He dejado el edificio más grande para el final del recorrido por dentro de las murallas, y no solo por tamaño: su plaza de acceso es también la salida natural del recinto, así que el día se cierra donde conviene. Allí os voy a enseñar los agujeros del toldo que os prometí en el teatro y os voy a presentar otra vez a un señor que conocimos por la mañana.',
     image: { src: 'palestra-grande', alt: 'Columnas de la Palestra Grande de Pompeya', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'palestra-grande-g1',
+        alt: 'Patio arbolado de la Palestra Grande de Pompeya',
+        caption: 'Poneos en una esquina del patio y mirad hacia la contraria: los árboles marcan las hileras de los antiguos plátanos.',
+      },
+      {
+        src: 'palestra-grande-g2',
+        alt: 'Pórtico de columnas de la Palestra Grande de Pompeya',
+        caption: 'Reconoced el recinto por su pórtico de columnas, que recorre tres de los cuatro lados del patio.',
+      },
+    ],
     illus: 'columna',
     tips: [
       'Es un espacio muy abierto y sin apenas sombra al mediodía; buen momento para protegerse del sol antes del tramo final.',
@@ -823,6 +1115,18 @@ const STOPS: Stop[] = [
     whyNext: 'Salimos por la Piazza Anfiteatro y bajamos por la Via di Nocera hacia el sur, siete minutos hasta la antigua Porta di Nocera. Terminado el recorrido por dentro, cruzamos la muralla para ver lo que la ley romana obligaba a dejar siempre fuera, que son las tumbas. Es el cierre lógico del día porque allí vuelve todo lo que hemos ido contando, los nombres comprados, los libertos con prisa y el dinero convertido en piedra, pero visto desde el otro lado de la puerta.',
     whyNextExpress: 'Con el anfiteatro cerramos la ruta exprés. La salida más cómoda es la Piazza Anfiteatro que tenéis delante, con aseos y una zona de sombra para sentarse antes de irse. En dos horas y media habéis visto el foro y sus templos, unas termas, la casa más grande de la ciudad, la de dos hermanos que nacieron esclavos, el Lupanar, la calle principal, un teatro, los calcos del Jardín de los Fugitivos y este graderío. Eso no es media Pompeya: es la columna vertebral de Pompeya.',
     image: { src: 'anfiteatro', alt: 'Graderío del Anfiteatro de Pompeya', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'anfiteatro-g1',
+        alt: 'Rampa de acceso a la arena del Anfiteatro de Pompeya',
+        caption: 'Reconoced el edificio por esta rampa abovedada: por aquí entraban gladiadores y animales, sin sótanos debajo.',
+      },
+      {
+        src: 'anfiteatro-interior',
+        alt: 'Interior de la arena del anfiteatro de Pompeya',
+        caption: 'Entrad en la arena y girad sobre vosotros mismos: bajo vuestros pies no hay nada, a diferencia del Coliseo de Roma.',
+      },
+    ],
     illus: 'gladiador',
     tips: [
       'Hay baños públicos y una zona de sombra junto a la Piazza Anfiteatro, última antes del tramo final de la ruta.',
@@ -859,6 +1163,18 @@ const STOPS: Stop[] = [
     directionsToNext: 'Aquí termina el recorrido principal por el recinto amurallado. Si deseáis añadir la Villa de los Misterios, consultad las indicaciones específicas en las notas prácticas de esta parada.',
     whyNext: 'Aquí se acaba el recorrido dentro de las murallas y toca decidir. Si el grupo está fundido, lo sensato es desandar esos siete minutos hasta la Piazza Anfiteatro y salir por ahí con la conciencia tranquila: habéis visto la ciudad entera. Si queda cuerda, merece la pena volver hasta la Porta Marina, por donde entramos esta mañana, y seguir un cuarto de hora más hasta la Villa de los Misterios. Cerraríamos el día donde lo empezamos y con la mejor pintura de toda Pompeya.',
     image: { src: 'necropolis-porta-nocera', alt: 'Tumbas de la Necrópolis de Porta Nocera en Pompeya', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'necropolis-porta-nocera-g2',
+        alt: 'Fila de tumbas entre cipreses en la Necrópolis de Porta Nocera',
+        caption: 'Cruzad la puerta y reconoced la necrópolis por esta hilera de tumbas junto al camino, entre cipreses.',
+      },
+      {
+        src: 'necropolis-porta-nocera-g1',
+        alt: 'Tumba de Publio Vesonio Filerote en la Necrópolis de Porta Nocera',
+        caption: 'Buscad esta tumba con tres figuras en el nicho: es la de Publio Vesonio Filerote, con su segunda inscripción de rencor.',
+      },
+    ],
     illus: 'ceniza',
     tips: [
       'Es un buen punto para dar por terminada la visita si el grupo está cansado, volviendo hacia la Piazza Anfiteatro para salir del recinto.',
@@ -895,6 +1211,18 @@ const STOPS: Stop[] = [
     directionsToNext: undefined,
     whyNext: 'Aquí se cierra el recorrido completo. Para volver a la salida, lo más cómodo es desandar el camino hasta la Porta Marina, la misma puerta por la que entramos esta mañana, un cuarto de hora de paseo que además devuelve los tramos de muralla del principio con la luz de la tarde, que es otra luz y otra ciudad. Quien haya venido en coche o en autobús tiene más cerca la Porta di Ercolano. Habéis cruzado una ciudad entera a pie, y eso muy poca gente lo hace.',
     image: { src: 'villa-misterios-fresco', alt: 'Friso pictórico de la Villa de los Misterios en Pompeya', credit: 'Wikimedia Commons' },
+    gallery: [
+      {
+        src: 'villa-misterios-g1',
+        alt: 'Pórtico columnado de la Villa de los Misterios',
+        caption: 'Reconoced la villa por este pórtico de columnas, con vistas que en origen se abrían hacia el mar.',
+      },
+      {
+        src: 'villa-misterios-exterior',
+        alt: 'Patio interior con columnas de la Villa de los Misterios',
+        caption: 'Fijaos en el aparejo de los muros de este patio: piedra irregular y ladrillo, la firma constructiva más antigua de la casa.',
+      },
+    ],
     illus: 'fresco',
     tips: [
       'La villa queda en el extremo noroeste del yacimiento, separada del recinto principal; se llega en unos quince minutos a pie desde la Porta Marina o rodeando por la Porta di Ercolano.',
