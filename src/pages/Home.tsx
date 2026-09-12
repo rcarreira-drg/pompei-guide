@@ -43,8 +43,13 @@ export default function Home() {
               {ROUTE.stops.length || '—'} paradas · {ROUTE.totalHours}
             </p>
           </Link>
-          <Link to="/practico" className="cta-card box" aria-label="Información práctica">
+          <Link to="/mapa" className="cta-card box" aria-label="Plano oficial por regiones y números">
             <span className="cta-card-index mono">03</span>
+            <h2>PLANO OFICIAL</h2>
+            <p className="mono cta-card-meta">145 puntos · elige Regio y número · escucha</p>
+          </Link>
+          <Link to="/practico" className="cta-card box" aria-label="Información práctica">
+            <span className="cta-card-index mono">04</span>
             <h2>INFO PRÁCTICA</h2>
             <p className="mono cta-card-meta">Horarios · entradas · FAQ</p>
           </Link>

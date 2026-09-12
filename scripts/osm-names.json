@@ -1,0 +1,3467 @@
+[
+ {
+  "name": "Porta Sarno",
+  "alt": "",
+  "type": "city_gate",
+  "lat": 40.7528139,
+  "lng": 14.4944173
+ },
+ {
+  "name": "Porta di Stabia",
+  "alt": "",
+  "type": "city_gate",
+  "lat": 40.7483283,
+  "lng": 14.4899552
+ },
+ {
+  "name": "Porta di Ercolano",
+  "alt": "",
+  "type": "city_gate",
+  "lat": 40.7518271,
+  "lng": 14.4811095
+ },
+ {
+  "name": "Porta Nola",
+  "alt": "",
+  "type": "city_gate",
+  "lat": 40.7537202,
+  "lng": 14.4907955
+ },
+ {
+  "name": "Porta Marina",
+  "alt": "",
+  "type": "city_gate",
+  "lat": 40.748509,
+  "lng": 14.4830852
+ },
+ {
+  "name": "Porta Marina",
+  "alt": "",
+  "type": "",
+  "lat": 40.7483534,
+  "lng": 14.4822238
+ },
+ {
+  "name": "Porta Vesuvio",
+  "alt": "",
+  "type": "city_gate",
+  "lat": 40.7533795,
+  "lng": 14.4840985
+ },
+ {
+  "name": "Scavi Archeologici di Pompei - Bigliettaria Piazza Anfiteatro",
+  "alt": "",
+  "type": "",
+  "lat": 40.7497718,
+  "lng": 14.4953119
+ },
+ {
+  "name": "Uscita SP Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7535856,
+  "lng": 14.4770921
+ },
+ {
+  "name": "Casa del forno (VI.3.3)",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7509649,
+  "lng": 14.4828052
+ },
+ {
+  "name": "Tempio di Venere (VIII.1.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7484237,
+  "lng": 14.4837195
+ },
+ {
+  "name": "Casa del Naviglio o di Zefiro e Flora",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7507991,
+  "lng": 14.4845577
+ },
+ {
+  "name": "Casa del Chirurgo (VI.1.10)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7516167,
+  "lng": 14.4818647
+ },
+ {
+  "name": "Thermopolium e popina di Phoebus (VI.1.18)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7513226,
+  "lng": 14.4821564
+ },
+ {
+  "name": "Casa dei Dioscuri (VI.9.6)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7517671,
+  "lng": 14.4836964
+ },
+ {
+  "name": "Casa dei cinque scheletri",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7514017,
+  "lng": 14.4838969
+ },
+ {
+  "name": "Bottega di L. Livi Firmi (IX.1.5)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7503085,
+  "lng": 14.4877691
+ },
+ {
+  "name": "Villa di Diomede",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7523925,
+  "lng": 14.4786501
+ },
+ {
+  "name": "Casa di Romolo e Remo (VII.7.10)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.748829,
+  "lng": 14.4838464
+ },
+ {
+  "name": "Casa della caccia antica (VII.4.48)",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7511103,
+  "lng": 14.4853943
+ },
+ {
+  "name": "Pompei Scavi - Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7487976,
+  "lng": 14.4809254
+ },
+ {
+  "name": "Porta Nocera",
+  "alt": "",
+  "type": "city_gate",
+  "lat": 40.7495098,
+  "lng": 14.4934419
+ },
+ {
+  "name": "Pompei Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7486408,
+  "lng": 14.4814814
+ },
+ {
+  "name": "Terme Suburbane",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7486758,
+  "lng": 14.4827788
+ },
+ {
+  "name": "Tempio di Asclepio (VIII.7.25)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7493086,
+  "lng": 14.4886183
+ },
+ {
+  "name": "Necropoli di Porta Ercolano",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7523434,
+  "lng": 14.4800602
+ },
+ {
+  "name": "Casa del Principe di Napoli (VI.15.8)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7526256,
+  "lng": 14.4843524
+ },
+ {
+  "name": "Casa di Marco Lucrezio Frontone (V.4.A)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7529152,
+  "lng": 14.4880089
+ },
+ {
+  "name": "Casa dei Gladiatori (V.5.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7528446,
+  "lng": 14.4884573
+ },
+ {
+  "name": "Casa dei Ceii (I.6.15)",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7500099,
+  "lng": 14.4895058
+ },
+ {
+  "name": "Fullonica di Stephanus (I.6.7)",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7502861,
+  "lng": 14.4891237
+ },
+ {
+  "name": "Casa di Marco Lucrezio (IX.3.5)",
+  "alt": "Casa delle Suonatrici",
+  "type": "ruins",
+  "lat": 40.7510258,
+  "lng": 14.4869243
+ },
+ {
+  "name": "Casa del Cinghiale I (VIII.3.8)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7491213,
+  "lng": 14.4859469
+ },
+ {
+  "name": "Casa del Gallo I (VIII.5.2)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7491971,
+  "lng": 14.4862031
+ },
+ {
+  "name": "Comitium (VIII.3.1)",
+  "alt": "Scuola di Verna",
+  "type": "archaeological_site",
+  "lat": 40.7490621,
+  "lng": 14.4854769
+ },
+ {
+  "name": "Scavi Archeologici di Pompei - Biglietteria Porta Marina",
+  "alt": "",
+  "type": "",
+  "lat": 40.7484812,
+  "lng": 14.4819266
+ },
+ {
+  "name": "Tempio",
+  "alt": "",
+  "type": "restaurant",
+  "lat": 40.7485944,
+  "lng": 14.4812829
+ },
+ {
+  "name": "Casa di Olconio Rufo (VIII.4.4)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7495375,
+  "lng": 14.4875243
+ },
+ {
+  "name": "Domus L. Cornelli Diadumeni",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7502199,
+  "lng": 14.4862247
+ },
+ {
+  "name": "Domus Popdi Secundi Augustiani",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.749602,
+  "lng": 14.4886917
+ },
+ {
+  "name": "Casa di Sirico (VII.1.47)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7502984,
+  "lng": 14.4871672
+ },
+ {
+  "name": "Casa di T. Mescini Gelonis (VIII.4.9)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7496165,
+  "lng": 14.4877874
+ },
+ {
+  "name": "Casa dei Cubicoli Floreali (I.9.5)",
+  "alt": "Casa del Frutteto",
+  "type": "archaeological_site",
+  "lat": 40.7509056,
+  "lng": 14.4906838
+ },
+ {
+  "name": "Casa del Criptoportico (I.6.2)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.750131,
+  "lng": 14.4896717
+ },
+ {
+  "name": "Officina coriariorum di M. Vesonius Primus (I.5.2)",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7487467,
+  "lng": 14.4901331
+ },
+ {
+  "name": "Torre Annunziata Via Plinio",
+  "alt": "",
+  "type": "",
+  "lat": 40.7490204,
+  "lng": 14.4746891
+ },
+ {
+  "name": "Torre Annunziata sud - Boscoreale",
+  "alt": "",
+  "type": "",
+  "lat": 40.7508969,
+  "lng": 14.4744484
+ },
+ {
+  "name": "Compagnia Turistica Associata Torre Annunziata",
+  "alt": "",
+  "type": "",
+  "lat": 40.7489788,
+  "lng": 14.4745999
+ },
+ {
+  "name": "Domus Pompeiana",
+  "alt": "",
+  "type": "restaurant",
+  "lat": 40.7471857,
+  "lng": 14.483801
+ },
+ {
+  "name": "Casa di Cura M.Rosaria - Camera Iperbarica",
+  "alt": "",
+  "type": "doctors",
+  "lat": 40.747661,
+  "lng": 14.4950985
+ },
+ {
+  "name": "B&B Villa Rocla",
+  "alt": "",
+  "type": "guest_house",
+  "lat": 40.7473157,
+  "lng": 14.4771404
+ },
+ {
+  "name": "Casa di Q. Octavius Romulus (I.4.28)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7498209,
+  "lng": 14.4891971
+ },
+ {
+  "name": "Casa del Pressorio di Terracotta (I.4.22)",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7499652,
+  "lng": 14.4885305
+ },
+ {
+  "name": "Bottega di Tyrsus (I.6.1)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7504681,
+  "lng": 14.4894237
+ },
+ {
+  "name": "Bottega di Vero Gromatico (I.6.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.75048,
+  "lng": 14.4893341
+ },
+ {
+  "name": "Casa dell'Efebo",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7504183,
+  "lng": 14.4899937
+ },
+ {
+  "name": "Casa senza nome (I.7.19)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7501552,
+  "lng": 14.4901036
+ },
+ {
+  "name": "Casa di Adone Ferito (VI.7.18)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7516727,
+  "lng": 14.4832976
+ },
+ {
+  "name": "Caupona",
+  "alt": "",
+  "type": "restaurant",
+  "lat": 40.7459463,
+  "lng": 14.4831251
+ },
+ {
+  "name": "Casa di M. Epidio Rufo (IX.1.20)",
+  "alt": "Casa dei Diadumeni",
+  "type": "archaeological_site",
+  "lat": 40.7501931,
+  "lng": 14.4883051
+ },
+ {
+  "name": "Casa dei Casti Amanti (IX.12.6)",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.750938,
+  "lng": 14.4899557
+ },
+ {
+  "name": "Casa dei Pigmei (IX.5.9)",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7519883,
+  "lng": 14.4873784
+ },
+ {
+  "name": "Casa delle Pareti Rosse (VIII.5.37)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7490439,
+  "lng": 14.4871436
+ },
+ {
+  "name": "Casa della Regina Carolina (VIII 3.14)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7485155,
+  "lng": 14.4862436
+ },
+ {
+  "name": "Palestra dei Iuvenes (VIII.2.23)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7481977,
+  "lng": 14.485942
+ },
+ {
+  "name": "Casa della Fontana Grande (VI.8.22)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7509992,
+  "lng": 14.4833393
+ },
+ {
+  "name": "Casa della Soffitta (V.3.4)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7524892,
+  "lng": 14.4875792
+ },
+ {
+  "name": "Casa di Championnet II (VIII.2.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7485768,
+  "lng": 14.4846999
+ },
+ {
+  "name": "Casa del Cinghiale II (VIII.2.26)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.74834,
+  "lng": 14.486183
+ },
+ {
+  "name": "Casa del Bracciale d'Oro (VI.17.42)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7501549,
+  "lng": 14.4831099
+ },
+ {
+  "name": "Porta di Capua",
+  "alt": "",
+  "type": "city_gate",
+  "lat": 40.7542431,
+  "lng": 14.4867805
+ },
+ {
+  "name": "Bar Santuario",
+  "alt": "",
+  "type": "restaurant",
+  "lat": 40.7493909,
+  "lng": 14.4999857
+ },
+ {
+  "name": "Casa dell' Augustale (II.2.4)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.751811,
+  "lng": 14.4925148
+ },
+ {
+  "name": "Antiquarium di Pompei",
+  "alt": "",
+  "type": "museum",
+  "lat": 40.7482951,
+  "lng": 14.4833309
+ },
+ {
+  "name": "Casa del Naviglio o di Zefiro e Flora",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7508822,
+  "lng": 14.4842728
+ },
+ {
+  "name": "Casa di A. Octavius Primus (VII.15.13)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7495105,
+  "lng": 14.4837142
+ },
+ {
+  "name": "Casa senza nome (VII.15.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.749193,
+  "lng": 14.4837063
+ },
+ {
+  "name": "Casa Del Marinaio (VII.15.2)",
+  "alt": "Casa di Niobe",
+  "type": "archaeological_site",
+  "lat": 40.7491101,
+  "lng": 14.4836178
+ },
+ {
+  "name": "Casa di Ercole ed Auge (VIII.3.4)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7490657,
+  "lng": 14.4857415
+ },
+ {
+  "name": "Casa di Pane (VIII.3.31)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7488466,
+  "lng": 14.4855889
+ },
+ {
+  "name": "Casa di Sex. Decimius Rufus (VIII.3.21)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7484569,
+  "lng": 14.4857198
+ },
+ {
+  "name": "Casa del Gallo I",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7489499,
+  "lng": 14.4863546
+ },
+ {
+  "name": "Casa di Plotilla (VIII.3.24)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7488338,
+  "lng": 14.4858713
+ },
+ {
+  "name": "Casa senza nome (VIII.3.27)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7486562,
+  "lng": 14.4856874
+ },
+ {
+  "name": "Casa dello Scultore (VIII.7.24)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7492641,
+  "lng": 14.4886689
+ },
+ {
+  "name": "Piazza Anfiteatro",
+  "alt": "",
+  "type": "",
+  "lat": 40.7491281,
+  "lng": 14.4952652
+ },
+ {
+  "name": "Casa di Diana III (VII.6.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7501547,
+  "lng": 14.4833927
+ },
+ {
+  "name": "Casa di Petutius Quintio (VII.6.30)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7498555,
+  "lng": 14.4836727
+ },
+ {
+  "name": "Casa senza nome (VII.6.7)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7502131,
+  "lng": 14.4835152
+ },
+ {
+  "name": "Lupanare (VII.6.35)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7497082,
+  "lng": 14.4836881
+ },
+ {
+  "name": "Casa del Peristilio (VII.6.28)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.749939,
+  "lng": 14.4838566
+ },
+ {
+  "name": "Arco di Caio e Lucio Cesare",
+  "alt": "",
+  "type": "",
+  "lat": 40.750017,
+  "lng": 14.484306
+ },
+ {
+  "name": "Casa delle Quadrighe (VII.2.25)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7506902,
+  "lng": 14.4856762
+ },
+ {
+  "name": "Officina tintoria di Ubonius (VII.2.11)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7510281,
+  "lng": 14.4865493
+ },
+ {
+  "name": "Casa di Optatio (VII.2.14)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7511306,
+  "lng": 14.4865107
+ },
+ {
+  "name": "Casa di T. Terentius Proculus (VII.2.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7508196,
+  "lng": 14.486856
+ },
+ {
+  "name": "Casa di Tito Terentius Neo (VII.2.6)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7509353,
+  "lng": 14.4867487
+ },
+ {
+  "name": "Casa di Mercurio (VII.2.35)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7505544,
+  "lng": 14.4856937
+ },
+ {
+  "name": "Bottega (VIII.7.11)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7486523,
+  "lng": 14.4894092
+ },
+ {
+  "name": "Casa di L. Aelius Magnus (VIII.2.21)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.748116,
+  "lng": 14.4858161
+ },
+ {
+  "name": "Casa senza nome (VIII.2.13)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7485959,
+  "lng": 14.4853559
+ },
+ {
+  "name": "Casa senza nome (VIII.6.5)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.748804,
+  "lng": 14.4873168
+ },
+ {
+  "name": "Pompei Scavi - Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7487767,
+  "lng": 14.480889
+ },
+ {
+  "name": "Panificio di T. Terentius Proculus (IX.3.12)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7509267,
+  "lng": 14.4872302
+ },
+ {
+  "name": "Panificio (I.4.13)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7498864,
+  "lng": 14.4883836
+ },
+ {
+  "name": "Panificio di Modestus (VII.1.36)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7506397,
+  "lng": 14.4869404
+ },
+ {
+  "name": "Casa del Forno (VII.12.11)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7504123,
+  "lng": 14.4861387
+ },
+ {
+  "name": "Casa del Forno di Sotericus (I.12.2)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.751224,
+  "lng": 14.491134
+ },
+ {
+  "name": "Terme Sarno (VIII.2.20)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7480807,
+  "lng": 14.4854074
+ },
+ {
+  "name": "Casa di Stabianus (I.22.2)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7495487,
+  "lng": 14.4921357
+ },
+ {
+  "name": "Casa con taberna (I.6.9)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7502779,
+  "lng": 14.4890767
+ },
+ {
+  "name": "Bottega (VII.4.39)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7508672,
+  "lng": 14.4854753
+ },
+ {
+  "name": "Caupona di Philippus (VII.2.33)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7504452,
+  "lng": 14.4856047
+ },
+ {
+  "name": "Bottega (VIII.2.31.)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7485408,
+  "lng": 14.4867551
+ },
+ {
+  "name": "Bottega (VI.14.11)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7515125,
+  "lng": 14.4857906
+ },
+ {
+  "name": "Thermopolium (I.9.4)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7509649,
+  "lng": 14.4904895
+ },
+ {
+  "name": "Casa di Hermes (IV.3.C)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7532763,
+  "lng": 14.489659
+ },
+ {
+  "name": "thermopolium della Fenice (I.11.11)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7504402,
+  "lng": 14.4912304
+ },
+ {
+  "name": "Caupona di Astylus e Pardalus (II.2.1)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7517601,
+  "lng": 14.4922297
+ },
+ {
+  "name": "thermopolium di Polybius (I.2.29)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7488618,
+  "lng": 14.4898138
+ },
+ {
+  "name": "Thermopolium (I.4.27)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7502001,
+  "lng": 14.4887889
+ },
+ {
+  "name": "Thermopolium (I.3.22)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7496591,
+  "lng": 14.4891665
+ },
+ {
+  "name": "Thermopolium (I.7.8)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7506765,
+  "lng": 14.4898883
+ },
+ {
+  "name": "Casa di Trittolemo (VII.7.5)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.74888,
+  "lng": 14.4840306
+ },
+ {
+  "name": "Anfiteatro",
+  "alt": "",
+  "type": "restaurant",
+  "lat": 40.7489225,
+  "lng": 14.4948798
+ },
+ {
+  "name": "Anfiteatro",
+  "alt": "",
+  "type": "restaurant",
+  "lat": 40.7489017,
+  "lng": 14.4947971
+ },
+ {
+  "name": "Bookshop Anfiteatro",
+  "alt": "",
+  "type": "",
+  "lat": 40.7495495,
+  "lng": 14.4955492
+ },
+ {
+  "name": "Casa dei Pittori a Lavoro (IX.12.9)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7512378,
+  "lng": 14.4897852
+ },
+ {
+  "name": "Casa di Fabius Celer (IX.3.13)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7509979,
+  "lng": 14.4872887
+ },
+ {
+  "name": "Casa di C. Catius Scithus (IX.3.14)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7510375,
+  "lng": 14.4873946
+ },
+ {
+  "name": "Pompei Scavi - Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7487891,
+  "lng": 14.4809031
+ },
+ {
+  "name": "Casa di Cn. Caetronius Eutychus (VI.9.7)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7516365,
+  "lng": 14.4837783
+ },
+ {
+  "name": "Casa del Centauro (VI.9.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7521372,
+  "lng": 14.4834857
+ },
+ {
+  "name": "Casa di Laocoonte (VI.14.30)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7521203,
+  "lng": 14.4854015
+ },
+ {
+  "name": "Villa Porpora",
+  "alt": "",
+  "type": "hotel",
+  "lat": 40.7511443,
+  "lng": 14.4775526
+ },
+ {
+  "name": "Osteria Nonna Cherubina",
+  "alt": "",
+  "type": "restaurant",
+  "lat": 40.7513509,
+  "lng": 14.476822
+ },
+ {
+  "name": "Via delle Terme",
+  "alt": "",
+  "type": "",
+  "lat": 40.7504598,
+  "lng": 14.4837102
+ },
+ {
+  "name": "Vicolo del Lupanare",
+  "alt": "",
+  "type": "",
+  "lat": 40.7504173,
+  "lng": 14.48669
+ },
+ {
+  "name": "Vicolo Storto",
+  "alt": "",
+  "type": "",
+  "lat": 40.7508374,
+  "lng": 14.4855175
+ },
+ {
+  "name": "Vicolo dell'Anfiteatro",
+  "alt": "",
+  "type": "",
+  "lat": 40.7521303,
+  "lng": 14.493927
+ },
+ {
+  "name": "Via del Foro",
+  "alt": "",
+  "type": "",
+  "lat": 40.7502506,
+  "lng": 14.4845426
+ },
+ {
+  "name": "Area picnic di Porta Nola",
+  "alt": "",
+  "type": "picnic_site",
+  "lat": 40.7543168,
+  "lng": 14.4900176
+ },
+ {
+  "name": "Percorso Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7526526,
+  "lng": 14.4783427
+ },
+ {
+  "name": "Percorso Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.753518,
+  "lng": 14.4773316
+ },
+ {
+  "name": "Area picnic Anfiteatro",
+  "alt": "",
+  "type": "picnic_site",
+  "lat": 40.7503464,
+  "lng": 14.4961554
+ },
+ {
+  "name": "Torre V",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7509932,
+  "lng": 14.4960859
+ },
+ {
+  "name": "Piazzale dell'Anfiteatro",
+  "alt": "",
+  "type": "",
+  "lat": 40.7511846,
+  "lng": 14.494542
+ },
+ {
+  "name": "Orto dei Fuggiaschi (I.21.6)",
+  "alt": "",
+  "type": "",
+  "lat": 40.7495303,
+  "lng": 14.4925789
+ },
+ {
+  "name": "Palestra Grande (II.7.1)",
+  "alt": "",
+  "type": "yes",
+  "lat": 40.7507366,
+  "lng": 14.493894
+ },
+ {
+  "name": "Casa del Giardino di Ercole (II.8.6)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7502266,
+  "lng": 14.4930684
+ },
+ {
+  "name": "Percorso Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7537502,
+  "lng": 14.4772208
+ },
+ {
+  "name": "Via della Palestra",
+  "alt": "",
+  "type": "",
+  "lat": 40.7500441,
+  "lng": 14.4924818
+ },
+ {
+  "name": "Vicolo delle Terme",
+  "alt": "",
+  "type": "",
+  "lat": 40.7502269,
+  "lng": 14.483934
+ },
+ {
+  "name": "Torre IV",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7504596,
+  "lng": 14.4952487
+ },
+ {
+  "name": "Parco Fonte Salutare",
+  "alt": "",
+  "type": "",
+  "lat": 40.7477938,
+  "lng": 14.4998371
+ },
+ {
+  "name": "Ferrovia Torre Annunziata – Sorrento",
+  "alt": "",
+  "type": "",
+  "lat": 40.7457888,
+  "lng": 14.4824754
+ },
+ {
+  "name": "Ferrovia Torre Annunziata – Sorrento",
+  "alt": "",
+  "type": "",
+  "lat": 40.7448462,
+  "lng": 14.4827717
+ },
+ {
+  "name": "Via Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7482888,
+  "lng": 14.4822602
+ },
+ {
+  "name": "Casa della Venere in Conchiglia (II.3.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7518125,
+  "lng": 14.4927848
+ },
+ {
+  "name": "Casa di Pinarius Cerialis e Cassia (III.4.B)",
+  "alt": "Casa di Ifigenia",
+  "type": "archaeological_site",
+  "lat": 40.7518958,
+  "lng": 14.491641
+ },
+ {
+  "name": "Domus",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7505809,
+  "lng": 14.4919743
+ },
+ {
+  "name": "Caupona di Hermes (II.1.1)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7515839,
+  "lng": 14.4918512
+ },
+ {
+  "name": "Torre VI",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7519548,
+  "lng": 14.4953847
+ },
+ {
+  "name": "Via Provinciale Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7507315,
+  "lng": 14.4795198
+ },
+ {
+  "name": "Gragnano-Torre Nord",
+  "alt": "",
+  "type": "",
+  "lat": 40.7302532,
+  "lng": 14.4916319
+ },
+ {
+  "name": "Hotel Villa dei Misteri",
+  "alt": "",
+  "type": "hotel",
+  "lat": 40.750664,
+  "lng": 14.4790552
+ },
+ {
+  "name": "Ferrovia Torre Annunziata – Sorrento",
+  "alt": "",
+  "type": "",
+  "lat": 40.7465915,
+  "lng": 14.4822082
+ },
+ {
+  "name": "Ferrovia Torre Annunziata – Sorrento",
+  "alt": "",
+  "type": "",
+  "lat": 40.7477145,
+  "lng": 14.4817371
+ },
+ {
+  "name": "B&b Villa Ettore",
+  "alt": "",
+  "type": "guest_house",
+  "lat": 40.7463107,
+  "lng": 14.4954363
+ },
+ {
+  "name": "Casa Maria",
+  "alt": "",
+  "type": "apartments",
+  "lat": 40.7539653,
+  "lng": 14.4975197
+ },
+ {
+  "name": "San Valentino-Torre Nord",
+  "alt": "",
+  "type": "",
+  "lat": 40.7734953,
+  "lng": 14.526773
+ },
+ {
+  "name": "Piazza Porta Marina Inferiore",
+  "alt": "",
+  "type": "",
+  "lat": 40.7470687,
+  "lng": 14.4839911
+ },
+ {
+  "name": "Pompei Scavi - Villa Dei Misteri",
+  "alt": "",
+  "type": "train_station",
+  "lat": 40.748605,
+  "lng": 14.4812753
+ },
+ {
+  "name": "Terme del Foro (VII.5.2)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7503359,
+  "lng": 14.4841235
+ },
+ {
+  "name": "Via del Tempio d'Iside",
+  "alt": "",
+  "type": "",
+  "lat": 40.7492482,
+  "lng": 14.4880932
+ },
+ {
+  "name": "Via del Foro",
+  "alt": "",
+  "type": "",
+  "lat": 40.7501743,
+  "lng": 14.4845853
+ },
+ {
+  "name": "Via del Foro",
+  "alt": "",
+  "type": "",
+  "lat": 40.7494771,
+  "lng": 14.4848017
+ },
+ {
+  "name": "Arco Onorario",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7501251,
+  "lng": 14.4845569
+ },
+ {
+  "name": "Arco di Caligola",
+  "alt": "Arco di Caligola",
+  "type": "ruins",
+  "lat": 40.7507531,
+  "lng": 14.4841863
+ },
+ {
+  "name": "Piazzale Anfiteatro",
+  "alt": "",
+  "type": "",
+  "lat": 40.7506557,
+  "lng": 14.4949551
+ },
+ {
+  "name": "Piazzale dell'Anfiteatro",
+  "alt": "",
+  "type": "",
+  "lat": 40.751109,
+  "lng": 14.4946204
+ },
+ {
+  "name": "Via Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7472069,
+  "lng": 14.4833506
+ },
+ {
+  "name": "Torre II",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7489286,
+  "lng": 14.4924349
+ },
+ {
+  "name": "Torre III",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.749947,
+  "lng": 14.4943882
+ },
+ {
+  "name": "Porta Nola",
+  "alt": "",
+  "type": "city_gate",
+  "lat": 40.7537081,
+  "lng": 14.4907687
+ },
+ {
+  "name": "Torre IX",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7542012,
+  "lng": 14.4866675
+ },
+ {
+  "name": "Torre VII",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.75345,
+  "lng": 14.4928908
+ },
+ {
+  "name": "Torre VIII",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7540673,
+  "lng": 14.4888988
+ },
+ {
+  "name": "Torre X",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7531467,
+  "lng": 14.4836434
+ },
+ {
+  "name": "Torre XII",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7523615,
+  "lng": 14.4821063
+ },
+ {
+  "name": "Torre di Mercurio XI",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7527543,
+  "lng": 14.4828627
+ },
+ {
+  "name": "Piazza Anfiteatro",
+  "alt": "",
+  "type": "",
+  "lat": 40.7494782,
+  "lng": 14.4953758
+ },
+ {
+  "name": "Basilica di Pompei (VIII.1.1)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7487369,
+  "lng": 14.4844795
+ },
+ {
+  "name": "Lupanare (VII.12.18)",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.750286,
+  "lng": 14.4867947
+ },
+ {
+  "name": "Tempio di Apollo",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7492133,
+  "lng": 14.4844162
+ },
+ {
+  "name": "Vicolo del Lupanare",
+  "alt": "",
+  "type": "",
+  "lat": 40.7499524,
+  "lng": 14.4870668
+ },
+ {
+  "name": "Granai del Foro (VII.7.29)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.749639,
+  "lng": 14.4842167
+ },
+ {
+  "name": "Mensa Ponderaria (VII.7.31)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7494612,
+  "lng": 14.484267
+ },
+ {
+  "name": "Pompei Scavi - Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7489578,
+  "lng": 14.4805763
+ },
+ {
+  "name": "Pompei Scavi - Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7489456,
+  "lng": 14.4807418
+ },
+ {
+  "name": "Terme Stabiane (VII.1.8)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.74999,
+  "lng": 14.4875593
+ },
+ {
+  "name": "Palestra Sannitica (VIII.7.29)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7490346,
+  "lng": 14.487948
+ },
+ {
+  "name": "Casa del Fauno",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7513726,
+  "lng": 14.4845357
+ },
+ {
+  "name": "Macellum (VII.9.7)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7500719,
+  "lng": 14.4851167
+ },
+ {
+  "name": "Santuario dei Lari Pubblici",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7497516,
+  "lng": 14.4850214
+ },
+ {
+  "name": "Tempio di Vespasiano",
+  "alt": "aedes genili augusti",
+  "type": "ruins",
+  "lat": 40.7495978,
+  "lng": 14.4851942
+ },
+ {
+  "name": "Tempio di Giove (VII.8.1)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.749947,
+  "lng": 14.4845076
+ },
+ {
+  "name": "Casa delle Forme di Terracotta (VII.4.62)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7506315,
+  "lng": 14.4846955
+ },
+ {
+  "name": "Casa di Bacco (VII.4.10)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.750422,
+  "lng": 14.484774
+ },
+ {
+  "name": "Castellum Aquae",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7532188,
+  "lng": 14.4841623
+ },
+ {
+  "name": "Casa dell'Ara Massima (VI.16.15)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7526832,
+  "lng": 14.484774
+ },
+ {
+  "name": "Thermopolium",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7505344,
+  "lng": 14.4831868
+ },
+ {
+  "name": "Campanile del Santuario Della Madonna Di Pompei",
+  "alt": "",
+  "type": "attraction",
+  "lat": 40.749623,
+  "lng": 14.5000434
+ },
+ {
+  "name": "Casa di Meleagro (VI.9.2)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7523781,
+  "lng": 14.4834317
+ },
+ {
+  "name": "Casa del Triclinio all'aperto",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7508032,
+  "lng": 14.492682
+ },
+ {
+  "name": "Casa di Ottavio Quartione (II.2.2)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7517719,
+  "lng": 14.4924408
+ },
+ {
+  "name": "Casa e caupona di Epagatus",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7484605,
+  "lng": 14.4899523
+ },
+ {
+  "name": "Casa degli Attori",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7488428,
+  "lng": 14.4894592
+ },
+ {
+  "name": "Tempio della Fortuna Augusta",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7507135,
+  "lng": 14.484412
+ },
+ {
+  "name": "Casa dei mosaici geometrici (VIII.2.16)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7483552,
+  "lng": 14.4851951
+ },
+ {
+  "name": "Casa di M. Obellius Firmus (IX.14.4)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7525817,
+  "lng": 14.4891496
+ },
+ {
+  "name": "Praedia di Giulia Felice (II.4.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7520301,
+  "lng": 14.4933501
+ },
+ {
+  "name": "Casa di Trebio Valente (III.2.1)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7514798,
+  "lng": 14.4909805
+ },
+ {
+  "name": "Casa del Moralista (III.4.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7518752,
+  "lng": 14.4919015
+ },
+ {
+  "name": "Casa di Apollo (VI.7.23)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7524028,
+  "lng": 14.4828527
+ },
+ {
+  "name": "Terme centrali di Pompei",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7515503,
+  "lng": 14.4867771
+ },
+ {
+  "name": "Casa del Citarista (I.4.25)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7498875,
+  "lng": 14.4888469
+ },
+ {
+  "name": "Casa di Paquio Proculo (I.7.1)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7503509,
+  "lng": 14.4897477
+ },
+ {
+  "name": "Foro di Pompei (VII.8)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7493293,
+  "lng": 14.4848509
+ },
+ {
+  "name": "Ferrovia Torre Annunziata – Sorrento",
+  "alt": "",
+  "type": "",
+  "lat": 40.7516275,
+  "lng": 14.4772227
+ },
+ {
+  "name": "Ferrovia Torre Annunziata – Sorrento",
+  "alt": "",
+  "type": "",
+  "lat": 40.7517887,
+  "lng": 14.4771288
+ },
+ {
+  "name": "Casa di Fabio Amandio (I.7.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7505182,
+  "lng": 14.4896351
+ },
+ {
+  "name": "Caupona of Masculus",
+  "alt": "Caupona di Masculus",
+  "type": "ruins",
+  "lat": 40.7500728,
+  "lng": 14.4903048
+ },
+ {
+  "name": "Casa di Balbus",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7504107,
+  "lng": 14.4902773
+ },
+ {
+  "name": "Villa Diomede",
+  "alt": "",
+  "type": "hotel",
+  "lat": 40.7522666,
+  "lng": 14.4771209
+ },
+ {
+  "name": "Villa Franca",
+  "alt": "",
+  "type": "hotel",
+  "lat": 40.7522649,
+  "lng": 14.4767699
+ },
+ {
+  "name": "Casa di Sallustio (VI.2.4)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7511967,
+  "lng": 14.4826103
+ },
+ {
+  "name": "Casa delle colonne cilindriche (I.16.2)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7503701,
+  "lng": 14.4915423
+ },
+ {
+  "name": "Casa dei Quattro Stili (I.8.17)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7503617,
+  "lng": 14.4904335
+ },
+ {
+  "name": "Officina di A. Granius romanus (I.8.13)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7502438,
+  "lng": 14.4906999
+ },
+ {
+  "name": "Casa di Epidius Primus (I.8.14)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7502158,
+  "lng": 14.4905637
+ },
+ {
+  "name": "Caupona e officina di Fufidius Successus (I.8.15)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.75016,
+  "lng": 14.4904325
+ },
+ {
+  "name": "Bottega (I.8.12)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7503406,
+  "lng": 14.4906021
+ },
+ {
+  "name": "Officina tinctoria di Terentius (I.8.19)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7505375,
+  "lng": 14.490191
+ },
+ {
+  "name": "Caupona di Lucius Betutius Placidus (I.8.8)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7507621,
+  "lng": 14.4902808
+ },
+ {
+  "name": "Casa della Statuetta Indiana (I.8.5)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7507021,
+  "lng": 14.4901887
+ },
+ {
+  "name": "officina",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7495409,
+  "lng": 14.4901357
+ },
+ {
+  "name": "Casa di Cerere (I.9.13)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7504429,
+  "lng": 14.4907605
+ },
+ {
+  "name": "Caupona di Amarantus (I.9.11)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7504026,
+  "lng": 14.4910852
+ },
+ {
+  "name": "Casa senza nome (I.12.10-11)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7507022,
+  "lng": 14.4915998
+ },
+ {
+  "name": "Casa senza nome (I.12.9)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7507372,
+  "lng": 14.491707
+ },
+ {
+  "name": "Casa del Garum degli Umbricii (I.12.8)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7508392,
+  "lng": 14.4917434
+ },
+ {
+  "name": "Casa della Venere in Bikini (I.11.6)",
+  "alt": "Casa di Maximus (I.11.6)",
+  "type": "archaeological_site",
+  "lat": 40.7511341,
+  "lng": 14.4910162
+ },
+ {
+  "name": "Casa di N. Popidius Priscus (VII.2.20)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7507616,
+  "lng": 14.4859707
+ },
+ {
+  "name": "casa senza nome (VII.3.6)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7512873,
+  "lng": 14.4858216
+ },
+ {
+  "name": "Casa del Labirinto (VI.11.9)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7520132,
+  "lng": 14.4841191
+ },
+ {
+  "name": "Casa di Pansa (VI.6.1)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7508288,
+  "lng": 14.483308
+ },
+ {
+  "name": "Casa di Minucius (I.10.8)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7497305,
+  "lng": 14.489519
+ },
+ {
+  "name": "Casa del Fabbro (I.10.7)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7497389,
+  "lng": 14.4896687
+ },
+ {
+  "name": "Casa di Stallius Eros (I.6.13)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7499309,
+  "lng": 14.4893308
+ },
+ {
+  "name": "Casa dei Quadretti Teatrali (I.6.11)",
+  "alt": "Casa di Publio Casca Longus",
+  "type": "archaeological_site",
+  "lat": 40.7501283,
+  "lng": 14.4890852
+ },
+ {
+  "name": "Casa degli Archi (I.17.4)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7500809,
+  "lng": 14.4912971
+ },
+ {
+  "name": "Casa di Musa (V.2.F)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7524377,
+  "lng": 14.4860042
+ },
+ {
+  "name": "Casa di Stephanus (I.8.2)",
+  "alt": "Taberna Pomaria di Felix",
+  "type": "archaeological_site",
+  "lat": 40.7506906,
+  "lng": 14.4900526
+ },
+ {
+  "name": "Bottega",
+  "alt": "",
+  "type": "",
+  "lat": 40.7508359,
+  "lng": 14.490144
+ },
+ {
+  "name": "Schola Armaturarum (III.3.6)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.751648,
+  "lng": 14.491614
+ },
+ {
+  "name": "Casa dell'Orso ferito (VII.2.45)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7506333,
+  "lng": 14.4863349
+ },
+ {
+  "name": "Casa di Popidi Prisci (VII.2.38)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.750564,
+  "lng": 14.485826
+ },
+ {
+  "name": "Casa del Larario di Achille (I.6.4)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7503722,
+  "lng": 14.4893066
+ },
+ {
+  "name": "Fortuna Village",
+  "alt": "",
+  "type": "camp_site",
+  "lat": 40.7463076,
+  "lng": 14.4846109
+ },
+ {
+  "name": "Percorso Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7535089,
+  "lng": 14.4776749
+ },
+ {
+  "name": "Percorso Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7534571,
+  "lng": 14.477879
+ },
+ {
+  "name": "Viale dell'Anfiteatro",
+  "alt": "",
+  "type": "",
+  "lat": 40.749965,
+  "lng": 14.4951561
+ },
+ {
+  "name": "Viale dell'Anfiteatro",
+  "alt": "",
+  "type": "",
+  "lat": 40.750249,
+  "lng": 14.495032
+ },
+ {
+  "name": "Casa delle Colonne a Mosaico",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7523014,
+  "lng": 14.4804159
+ },
+ {
+  "name": "Casa di Faustus (V.1.23)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7521443,
+  "lng": 14.4859427
+ },
+ {
+  "name": "Casa di Lucio Cecilio Giocondo (V.1.26)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7520709,
+  "lng": 14.4860788
+ },
+ {
+  "name": "Bottega degli Aliarii (V.1.17)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7521502,
+  "lng": 14.4856567
+ },
+ {
+  "name": "Casa degli epigrammi greci (V.1.18)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7522771,
+  "lng": 14.4858497
+ },
+ {
+  "name": "Casa senza nome (V.1.15)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7522439,
+  "lng": 14.4856587
+ },
+ {
+  "name": "Casa delle Nozze d'Argento (V.2.I)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7524966,
+  "lng": 14.4865468
+ },
+ {
+  "name": "Bottega (V.1.8)",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7518566,
+  "lng": 14.4865386
+ },
+ {
+  "name": "Bottega (V.1.5)",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7517975,
+  "lng": 14.4863744
+ },
+ {
+  "name": "Bottega (V.1.6)",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7518096,
+  "lng": 14.486439
+ },
+ {
+  "name": "Bottega (V.1.4)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7517843,
+  "lng": 14.4863283
+ },
+ {
+  "name": "Casa con bottega (V.1.31)",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7517529,
+  "lng": 14.4861397
+ },
+ {
+  "name": "Caupona di Fortunatus (V.1.1)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.751708,
+  "lng": 14.4861843
+ },
+ {
+  "name": "Bottega (V.1.2)",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7517464,
+  "lng": 14.4862532
+ },
+ {
+  "name": "Casa del Toro (V.1.7)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7519469,
+  "lng": 14.4862768
+ },
+ {
+  "name": "Casa di M. Tofelanus Valens (V.1.28)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7518646,
+  "lng": 14.4860282
+ },
+ {
+  "name": "Bottega (V.1.27)",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7519078,
+  "lng": 14.4859313
+ },
+ {
+  "name": "Thermopolium di Salvius (V.1.13)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7523105,
+  "lng": 14.4856237
+ },
+ {
+  "name": "Casa Myriam (Airbnb)",
+  "alt": "",
+  "type": "yes",
+  "lat": 40.7538788,
+  "lng": 14.4975552
+ },
+ {
+  "name": "Casa di Aniceto (I.3.23)",
+  "alt": "Domus della Rissa nell´anfiteatro Pompeiano",
+  "type": "archaeological_site",
+  "lat": 40.7496193,
+  "lng": 14.4892826
+ },
+ {
+  "name": "Torre I",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.748147,
+  "lng": 14.4875098
+ },
+ {
+  "name": "Casa di Ercole (VI.7.6)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7514401,
+  "lng": 14.4833375
+ },
+ {
+  "name": "Vicolo della Fullonica",
+  "alt": "",
+  "type": "",
+  "lat": 40.7514503,
+  "lng": 14.4832169
+ },
+ {
+  "name": "Casa del Centenario (IX.8.6)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7520821,
+  "lng": 14.4879758
+ },
+ {
+  "name": "Ferrovia Torre Annunziata – Sorrento",
+  "alt": "",
+  "type": "",
+  "lat": 40.7476939,
+  "lng": 14.4818256
+ },
+ {
+  "name": "Ferrovia Torre Annunziata – Sorrento",
+  "alt": "",
+  "type": "",
+  "lat": 40.7466154,
+  "lng": 14.4822707
+ },
+ {
+  "name": "Ferrovia Torre Annunziata – Sorrento",
+  "alt": "",
+  "type": "",
+  "lat": 40.7458194,
+  "lng": 14.4825232
+ },
+ {
+  "name": "Ferrovia Torre Annunziata – Sorrento",
+  "alt": "",
+  "type": "",
+  "lat": 40.7448555,
+  "lng": 14.4828283
+ },
+ {
+  "name": "Via Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7474118,
+  "lng": 14.4834074
+ },
+ {
+  "name": "Caupona VI.10.1",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7514752,
+  "lng": 14.4837979
+ },
+ {
+  "name": "Casa di Diana (VIII.3.18)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7483843,
+  "lng": 14.4858351
+ },
+ {
+  "name": "Casa delle Colombe a Mosaico (VIII.2.34)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7483378,
+  "lng": 14.4870087
+ },
+ {
+  "name": "Casa di L. Caecilius Phoebus (VIII.2.36)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7483685,
+  "lng": 14.4872054
+ },
+ {
+  "name": "Bottega (I.3.12)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.749459,
+  "lng": 14.4887538
+ },
+ {
+  "name": "santuario extraurbano del Fondo Iozzino",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.747261,
+  "lng": 14.4968278
+ },
+ {
+  "name": "Ferrovia Torre Annunziata – Sorrento",
+  "alt": "",
+  "type": "",
+  "lat": 40.7481573,
+  "lng": 14.4814751
+ },
+ {
+  "name": "Ferrovia Torre Annunziata – Sorrento",
+  "alt": "",
+  "type": "",
+  "lat": 40.7482935,
+  "lng": 14.4814099
+ },
+ {
+  "name": "Gragnano-Torre Nord",
+  "alt": "",
+  "type": "",
+  "lat": 40.7499859,
+  "lng": 14.4745846
+ },
+ {
+  "name": "Casa di Capella (I.3.24)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7495707,
+  "lng": 14.489455
+ },
+ {
+  "name": "Casa senza nome (I.3.20)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7495395,
+  "lng": 14.4891349
+ },
+ {
+  "name": "Thermopolium (I.3.11)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7494145,
+  "lng": 14.488803
+ },
+ {
+  "name": "Bottega (I.3.9)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.749415,
+  "lng": 14.4889707
+ },
+ {
+  "name": "Casa senza nome (I.3.8)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7493916,
+  "lng": 14.4891226
+ },
+ {
+  "name": "Bottega di Sextilius Verus (I.3.14)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7494839,
+  "lng": 14.488853
+ },
+ {
+  "name": "Fullonica of Sestius Venustus (I.3.15)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7495052,
+  "lng": 14.4889348
+ },
+ {
+  "name": "Bottega (I.3.7)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7492887,
+  "lng": 14.4889307
+ },
+ {
+  "name": "Bottega (I.3.6)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.749244,
+  "lng": 14.4890567
+ },
+ {
+  "name": "Thermopolium (I.3.2)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7491295,
+  "lng": 14.4891248
+ },
+ {
+  "name": "Casa di Epidius Fortunatus (I.3.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7492362,
+  "lng": 14.4892905
+ },
+ {
+  "name": "Casa senza nome (I.3.30)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7493128,
+  "lng": 14.4896165
+ },
+ {
+  "name": "Thermopolium (I.3.28)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.74941,
+  "lng": 14.4896823
+ },
+ {
+  "name": "Thermopolium (I.2.13)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7490365,
+  "lng": 14.4892932
+ },
+ {
+  "name": "Casa senza nome (I.2.15)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7491088,
+  "lng": 14.4894266
+ },
+ {
+  "name": "Casa senza nome (I.2.16)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7491091,
+  "lng": 14.4895935
+ },
+ {
+  "name": "Casa con bottega (I.2.22)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7491139,
+  "lng": 14.4900116
+ },
+ {
+  "name": "Thermopolium (I.2.21)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7491681,
+  "lng": 14.4899056
+ },
+ {
+  "name": "Casa senza nome (I.2.17)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7491964,
+  "lng": 14.4897783
+ },
+ {
+  "name": "Caupona e Lupanare di Demetrius (I.2.18)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7492498,
+  "lng": 14.489845
+ },
+ {
+  "name": "Caupona con thermopolium (I.2.1)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7487624,
+  "lng": 14.4896297
+ },
+ {
+  "name": "Casa con Colonna Etrusca (I.2.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7488389,
+  "lng": 14.4896354
+ },
+ {
+  "name": "Bottega di C. Hostilius Conops (I.2.7)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7488972,
+  "lng": 14.48943
+ },
+ {
+  "name": "Casa degli Attori (I.2.6)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7489358,
+  "lng": 14.4895728
+ },
+ {
+  "name": "Thermopolium (I.2.11)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.748987,
+  "lng": 14.4893097
+ },
+ {
+  "name": "Casa di L. e M. Volusii Fausti (I.2.10)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7490167,
+  "lng": 14.4894369
+ },
+ {
+  "name": "officina libraria of Acilius Cedrus (I.2.24)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7490047,
+  "lng": 14.4899837
+ },
+ {
+  "name": "Casa dell'Atrio Tetrastilo (I.2.28)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.748981,
+  "lng": 14.4897783
+ },
+ {
+  "name": "Thermopolium (I.1.9)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7486775,
+  "lng": 14.4896995
+ },
+ {
+  "name": "Casa dei Capitelli Etruschi (I.5.1)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7487787,
+  "lng": 14.4899383
+ },
+ {
+  "name": "Casa senza nome (VIII.7.6)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7484065,
+  "lng": 14.4894836
+ },
+ {
+  "name": "Bottega di M. Surus Garasenus (VIII.7.8)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7485584,
+  "lng": 14.4895121
+ },
+ {
+  "name": "Bottega (VIII.7.15)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7487044,
+  "lng": 14.4893013
+ },
+ {
+  "name": "Tempioa Dorico – Santuario di Atena ed Eracle (VIII.7.31)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7482865,
+  "lng": 14.4879886
+ },
+ {
+  "name": "Bottega (VIII.4.28)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.749488,
+  "lng": 14.4885036
+ },
+ {
+  "name": "Bottega (VIII.4.25)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7495881,
+  "lng": 14.488389
+ },
+ {
+  "name": "Bottega (VIII.5.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7492738,
+  "lng": 14.4862204
+ },
+ {
+  "name": "Bottega (VIII.5.4)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7492882,
+  "lng": 14.4862839
+ },
+ {
+  "name": "Bottega (VIII.5.6)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7493049,
+  "lng": 14.4863565
+ },
+ {
+  "name": "Bottega di Anteros (VIII.3.9)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.749173,
+  "lng": 14.4860143
+ },
+ {
+  "name": "Casa del Ninfeo (VIII.2.28)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7482989,
+  "lng": 14.4864495
+ },
+ {
+  "name": "Casa di Severus (VIII.2.30)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7483589,
+  "lng": 14.4865942
+ },
+ {
+  "name": "Caupona",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7493357,
+  "lng": 14.4867794
+ },
+ {
+  "name": "Casa della Calce (VIII.5.28)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7493662,
+  "lng": 14.4871589
+ },
+ {
+  "name": "casa del Medico (VIII.5.24)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7493539,
+  "lng": 14.4869447
+ },
+ {
+  "name": "Terme Repubblicane (VIII.5.36)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7491026,
+  "lng": 14.4873007
+ },
+ {
+  "name": "Orto (VIII.6.2)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7487035,
+  "lng": 14.4866586
+ },
+ {
+  "name": "Bottega (VIII.6.8)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7487895,
+  "lng": 14.4865034
+ },
+ {
+  "name": "Casa senza nome (VIII.6.1)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7486711,
+  "lng": 14.4864534
+ },
+ {
+  "name": "Casa senza nome (VIII.6.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7486682,
+  "lng": 14.4868716
+ },
+ {
+  "name": "Casa senza nome (VIII.6.4)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7486953,
+  "lng": 14.4871885
+ },
+ {
+  "name": "Casa di Giuseppe II (VIII.2.39)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7484135,
+  "lng": 14.4874846
+ },
+ {
+  "name": "Bottega (VIII.4.17)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7497932,
+  "lng": 14.4881147
+ },
+ {
+  "name": "Bottega (VIII.4.18)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7497903,
+  "lng": 14.4881705
+ },
+ {
+  "name": "Bottega (VIII.4.19)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7497524,
+  "lng": 14.4881918
+ },
+ {
+  "name": "Bottega (VIII.4.20)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7497205,
+  "lng": 14.4882065
+ },
+ {
+  "name": "Bottega (VIII.4.21)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7496941,
+  "lng": 14.4882559
+ },
+ {
+  "name": "Casa senza nome I.4.2",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7495972,
+  "lng": 14.4887517
+ },
+ {
+  "name": "Casa con bottega (IX.2.13)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.75053,
+  "lng": 14.4877263
+ },
+ {
+  "name": "Bottega (IX.2.9)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.750545,
+  "lng": 14.4875353
+ },
+ {
+  "name": "Bottega (IX.2.2)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7507755,
+  "lng": 14.4872377
+ },
+ {
+  "name": "Casa delle Nozze di Nettuno e Anfitrite (IX.2.27)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7508199,
+  "lng": 14.4873037
+ },
+ {
+  "name": "Bottega (IX.2.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7507365,
+  "lng": 14.4872785
+ },
+ {
+  "name": "Casa con bottega (IX.2.4)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7507438,
+  "lng": 14.4873933
+ },
+ {
+  "name": "Casa con bottega (IX.2.5)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7507069,
+  "lng": 14.4874343
+ },
+ {
+  "name": "Casa di Titus Dentatius Panthera (IX.2.16)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7506877,
+  "lng": 14.4879977
+ },
+ {
+  "name": "Casa di Q. Brittius Balbus (IX.2.17)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7507697,
+  "lng": 14.4879173
+ },
+ {
+  "name": "Casa di A. Virnius Modestus (IX.7.16)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7507048,
+  "lng": 14.488397
+ },
+ {
+  "name": "Caupona di Ti. Claudius Epaphroditus (IX.7.23)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7511181,
+  "lng": 14.4879826
+ },
+ {
+  "name": "Bottega (IX.6.F)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7512816,
+  "lng": 14.4879994
+ },
+ {
+  "name": "Casa del Gruppo dei Vasi di Vetro (VI.13.2)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7513337,
+  "lng": 14.4849345
+ },
+ {
+  "name": "Casa di M. Terentius Eudoxus",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.751382,
+  "lng": 14.4851021
+ },
+ {
+  "name": "Casa di Claudius Eulogus (VI.13.10)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7515478,
+  "lng": 14.4849846
+ },
+ {
+  "name": "Casa di Pompeius Axiochus (VI.13.19)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.75162,
+  "lng": 14.4848692
+ },
+ {
+  "name": "Thermopolium (VI.13.17)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7518772,
+  "lng": 14.4847193
+ },
+ {
+  "name": "Casa senza nome (VI.13.13)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7517551,
+  "lng": 14.4847889
+ },
+ {
+  "name": "Caupona di Salvius (VI.14.36)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7520083,
+  "lng": 14.4849788
+ },
+ {
+  "name": "Officina lignaria (VI.14.37)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7519394,
+  "lng": 14.4850188
+ },
+ {
+  "name": "Bottega (VI.14.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7513795,
+  "lng": 14.4854461
+ },
+ {
+  "name": "Bottega (VI.14.15)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7515937,
+  "lng": 14.4859445
+ },
+ {
+  "name": "Bottega (VI.14.14)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7515576,
+  "lng": 14.4858951
+ },
+ {
+  "name": "Caupona (VI.14.1)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7513289,
+  "lng": 14.4853583
+ },
+ {
+  "name": "Thermopolium (VI.16.40)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7521021,
+  "lng": 14.4849361
+ },
+ {
+  "name": "Casa d'Iside (VI.2.17)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7519654,
+  "lng": 14.4820243
+ },
+ {
+  "name": "Casa di un Vasaio (VIII.5.9)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7492209,
+  "lng": 14.4865735
+ },
+ {
+  "name": "Regio I Insula 8",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7504933,
+  "lng": 14.4903454
+ },
+ {
+  "name": "Regio I Insula 9",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7506562,
+  "lng": 14.4907148
+ },
+ {
+  "name": "Bottega (VIII.4.22)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7496658,
+  "lng": 14.4882913
+ },
+ {
+  "name": "Bottega (VIII.4.26)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7495682,
+  "lng": 14.488436
+ },
+ {
+  "name": "Panificio di Felix (VIII.4.27)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7494956,
+  "lng": 14.4884229
+ },
+ {
+  "name": "Panificio (IX.1.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7504039,
+  "lng": 14.4877847
+ },
+ {
+  "name": "Casa con panificio (VI.6.17)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7505485,
+  "lng": 14.4833631
+ },
+ {
+  "name": "Bottega VII.16.6.",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7487447,
+  "lng": 14.4836295
+ },
+ {
+  "name": "Casa di Narcisso (VII.12.17)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7503152,
+  "lng": 14.4867248
+ },
+ {
+  "name": "Casa del Labrum Dipinto (I.12.16)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7510082,
+  "lng": 14.4913438
+ },
+ {
+  "name": "Regio VIII Insula 2",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7483247,
+  "lng": 14.4858934
+ },
+ {
+  "name": "Casa di Eros Punito (VII.2.23)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7507825,
+  "lng": 14.4857281
+ },
+ {
+  "name": "Panificio di Popidius Priscus (VII.2.22)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7508792,
+  "lng": 14.4857238
+ },
+ {
+  "name": "Thermopolium (VI.8.8)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7507284,
+  "lng": 14.4839271
+ },
+ {
+  "name": "Thermopolium Caupona (VI.8.9)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7507352,
+  "lng": 14.4840163
+ },
+ {
+  "name": "Bottega (VI.8.6)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7506276,
+  "lng": 14.4838988
+ },
+ {
+  "name": "House and Officina Fullonica of L. Veranius Hypsaeus (VI.8.20)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7509452,
+  "lng": 14.4837466
+ },
+ {
+  "name": "Bottega (VI.8.4)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7505922,
+  "lng": 14.4838203
+ },
+ {
+  "name": "Casa di Medusa (I.12.15)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7509069,
+  "lng": 14.4914555
+ },
+ {
+  "name": "Thermopolium di C. Hostilius Conops (I.2.8)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7489237,
+  "lng": 14.4893981
+ },
+ {
+  "name": "Regio VI Insula 8",
+  "alt": "",
+  "type": "",
+  "lat": 40.7509939,
+  "lng": 14.4837552
+ },
+ {
+  "name": "Bottega del Barbiere / Street Shrine? (VI.8.14)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7508309,
+  "lng": 14.4840127
+ },
+ {
+  "name": "Regio I Insula 10",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7497061,
+  "lng": 14.4898678
+ },
+ {
+  "name": "Regio VI Insula 2",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7516442,
+  "lng": 14.4823496
+ },
+ {
+  "name": "Tempio d'Iside (VIII.7.28)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7491818,
+  "lng": 14.4882708
+ },
+ {
+  "name": "Lettere-Torre Centrale cd Torre Sud",
+  "alt": "",
+  "type": "",
+  "lat": 40.7423715,
+  "lng": 14.4734483
+ },
+ {
+  "name": "Torre Nord -Torre Centrale 1 cd Torre Centrale 2, Torre Sud, Castellammare",
+  "alt": "",
+  "type": "",
+  "lat": 40.745216,
+  "lng": 14.4729178
+ },
+ {
+  "name": "Casa senza nome (IX.10.2)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7526648,
+  "lng": 14.4887086
+ },
+ {
+  "name": "Casa senza nome (IX.10.1)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7526032,
+  "lng": 14.4885072
+ },
+ {
+  "name": "Torre Nord-Torre Sud",
+  "alt": "",
+  "type": "",
+  "lat": 40.7454947,
+  "lng": 14.4721576
+ },
+ {
+  "name": "Casa con bottega (II.3.8)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7514637,
+  "lng": 14.4932093
+ },
+ {
+  "name": "Bottega (VII.5.21)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7502892,
+  "lng": 14.4843472
+ },
+ {
+  "name": "Bottega (VII.5.22)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7503311,
+  "lng": 14.4843255
+ },
+ {
+  "name": "Bottega (VII.5.23)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7503766,
+  "lng": 14.4843161
+ },
+ {
+  "name": "Bottega (VII.5.25)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7504341,
+  "lng": 14.4842755
+ },
+ {
+  "name": "Thermopolium (VII.4.4)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7506055,
+  "lng": 14.4845068
+ },
+ {
+  "name": "Bottega di Aurelius (VII.4.14)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7502911,
+  "lng": 14.4846151
+ },
+ {
+  "name": "Bottega (VII.4.13)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7503364,
+  "lng": 14.4845714
+ },
+ {
+  "name": "Casa dei Capitelli colorati (VII.4.31)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.750767,
+  "lng": 14.4853005
+ },
+ {
+  "name": "Thermopolium",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7503355,
+  "lng": 14.4833007
+ },
+ {
+  "name": "Casa dell'Ancora",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7512101,
+  "lng": 14.4841776
+ },
+ {
+  "name": "Villa dei Misteri",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7537173,
+  "lng": 14.4775307
+ },
+ {
+  "name": "Casa di Leda e il Cigno (V.6.12)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7529731,
+  "lng": 14.4847073
+ },
+ {
+  "name": "Casa con bottega (VII.4.22)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7503255,
+  "lng": 14.4849946
+ },
+ {
+  "name": "Caupona della Società dei Saccari (VII.4.16)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.750247,
+  "lng": 14.4846485
+ },
+ {
+  "name": "Bottega (VII.4.17)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7502571,
+  "lng": 14.4847124
+ },
+ {
+  "name": "Casa della Parete Nera (VII.4.59)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7507442,
+  "lng": 14.4848196
+ },
+ {
+  "name": "Casa dei Capitelli Figurati (VII.4.57)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7507829,
+  "lng": 14.4850025
+ },
+ {
+  "name": "Casa del Granduca di Toscana (VII.4.56)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7509184,
+  "lng": 14.4851062
+ },
+ {
+  "name": "Ferrovia Torre Annunziata – Sorrento",
+  "alt": "",
+  "type": "",
+  "lat": 40.7483584,
+  "lng": 14.4813287
+ },
+ {
+  "name": "Percorso Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7536627,
+  "lng": 14.4773827
+ },
+ {
+  "name": "Percorso Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7536461,
+  "lng": 14.4772303
+ },
+ {
+  "name": "Percorso Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.753497,
+  "lng": 14.4774732
+ },
+ {
+  "name": "Percorso Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7536044,
+  "lng": 14.4772549
+ },
+ {
+  "name": "Percorso Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7535542,
+  "lng": 14.477304
+ },
+ {
+  "name": "Percorso Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7536566,
+  "lng": 14.4772051
+ },
+ {
+  "name": "Foro Triangolare (VIII.7.30)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7485135,
+  "lng": 14.4881374
+ },
+ {
+  "name": "Casa di M. Caesi Blandi (VII.1.40)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7505159,
+  "lng": 14.4867087
+ },
+ {
+  "name": "Bottega (VII.7.27)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7499256,
+  "lng": 14.4841882
+ },
+ {
+  "name": "Necropoli di Porta Stabia",
+  "alt": "",
+  "type": "cemetery",
+  "lat": 40.7480426,
+  "lng": 14.4906674
+ },
+ {
+  "name": "Necropoli di Porta Nocera",
+  "alt": "",
+  "type": "cemetery",
+  "lat": 40.7492618,
+  "lng": 14.4939363
+ },
+ {
+  "name": "Necropoli di Porta Vesuvio",
+  "alt": "",
+  "type": "cemetery",
+  "lat": 40.7534461,
+  "lng": 14.4838403
+ },
+ {
+  "name": "Necropoli di Porta Nola",
+  "alt": "",
+  "type": "cemetery",
+  "lat": 40.7539854,
+  "lng": 14.4909507
+ },
+ {
+  "name": "Casa dei Girali (V.7.1)",
+  "alt": "Casa degli Amorini",
+  "type": "archaeological_site",
+  "lat": 40.7525371,
+  "lng": 14.4858869
+ },
+ {
+  "name": "Thermopolium",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7527892,
+  "lng": 14.4867023
+ },
+ {
+  "name": "Piazza Anfiteatro",
+  "alt": "",
+  "type": "",
+  "lat": 40.7493969,
+  "lng": 14.4953884
+ },
+ {
+  "name": "Piazza Anfiteatro",
+  "alt": "",
+  "type": "",
+  "lat": 40.7494387,
+  "lng": 14.4958273
+ },
+ {
+  "name": "Torre Annunziata",
+  "alt": "",
+  "type": "",
+  "lat": 40.7479225,
+  "lng": 14.4532387
+ },
+ {
+  "name": "Anfiteatro romano di Pompei (II.6.1)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7512663,
+  "lng": 14.4951778
+ },
+ {
+  "name": "Linea 13 (Napoli Porta Nolana → Sorrento)",
+  "alt": "",
+  "type": "",
+  "lat": 40.7385845,
+  "lng": 14.3805422
+ },
+ {
+  "name": "Linea 13 (Sorrento → Napoli Porta Nolana)",
+  "alt": "",
+  "type": "",
+  "lat": 40.7385466,
+  "lng": 14.3805153
+ },
+ {
+  "name": "Linea 14 (Napoli Porta Nolana → Poggiomarino)",
+  "alt": "",
+  "type": "",
+  "lat": 40.8010563,
+  "lng": 14.4050476
+ },
+ {
+  "name": "Linea 14 (Poggiomarino → Napoli Porta Nolana)",
+  "alt": "",
+  "type": "",
+  "lat": 40.8010431,
+  "lng": 14.4050837
+ },
+ {
+  "name": "Casa dei Vettii (VI.15.1)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7520904,
+  "lng": 14.4845733
+ },
+ {
+  "name": "Casa di Fabio Rufo (VII.16.22)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7499657,
+  "lng": 14.4831525
+ },
+ {
+  "name": "Casa degli Amorini Dorati (VI.16.7)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7522584,
+  "lng": 14.4849821
+ },
+ {
+  "name": "Casa del Poeta Tragico (VI.8.5)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7507502,
+  "lng": 14.4837814
+ },
+ {
+  "name": "Casa della Fontana Piccola (VI.8.23)",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7512906,
+  "lng": 14.4835676
+ },
+ {
+  "name": "Pompei Scavi-Villa dei Misteri",
+  "alt": "",
+  "type": "",
+  "lat": 40.7489456,
+  "lng": 14.4806794
+ },
+ {
+  "name": "Casa della Nave Europa (I.15.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.750512,
+  "lng": 14.4918098
+ },
+ {
+  "name": "Casa di Giulio Polibio (IX.1.3)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7511681,
+  "lng": 14.4902207
+ },
+ {
+  "name": "Flixbus 569: Taranto, Porto Mercantile => Roma, Tiburtina",
+  "alt": "Flixbus 569: Taranto, Porto Mercantile => Roma, Tiburtina",
+  "type": "",
+  "lat": 41.1505035,
+  "lng": 14.8765528
+ },
+ {
+  "name": "Flixbus 569: Roma, Tiburtina => Taranto, Porto Mercantile",
+  "alt": "Flixbus 569: Roma, Tiburtina => Taranto, Porto Mercantile",
+  "type": "",
+  "lat": 41.1481232,
+  "lng": 14.8759049
+ },
+ {
+  "name": "Flixbus N592 (Parte d'Italia): Villa San Giovanni => Teramo Villa Comunale",
+  "alt": "",
+  "type": "",
+  "lat": 40.4334853,
+  "lng": 14.4199225
+ },
+ {
+  "name": "Flixbus N592 (Parte d'Italia): Teramo Villa Comunale => Villa San Giovanni",
+  "alt": "",
+  "type": "",
+  "lat": 40.4368076,
+  "lng": 14.419872
+ },
+ {
+  "name": "Flixbus N528 (Parte d'Italia): Villa San Giovanni => Milano Lampugnano",
+  "alt": "",
+  "type": "",
+  "lat": 41.8474218,
+  "lng": 12.7194315
+ },
+ {
+  "name": "Flixbus N528 (Parte d'Italia): Milano Lampugnano => Villa San Giovanni",
+  "alt": "",
+  "type": "",
+  "lat": 41.8472293,
+  "lng": 12.7193809
+ },
+ {
+  "name": "Flixbus N597 (Parte d'Italia): Torino, Vittorio Emanuele => Villa San Giovanni, Porto dei traghetti",
+  "alt": "Flixbus N597 (Parte d'Italia): Torino, Vittorio Emanuele => Villa San Giovanni, Porto dei traghetti",
+  "type": "",
+  "lat": 41.8600533,
+  "lng": 11.9852658
+ },
+ {
+  "name": "Flixbus N597 (Parte d'Italia): Villa San Giovanni, Porto dei traghetti => Torino, Vittorio Emanuele",
+  "alt": "Flixbus N597 (Parte d'Italia): Villa San Giovanni, Porto dei traghetti => Torino, Vittorio Emanuele",
+  "type": "",
+  "lat": 41.860312,
+  "lng": 11.984113
+ },
+ {
+  "name": "Ferrovia Torre Annunziata – Sorrento",
+  "alt": "",
+  "type": "",
+  "lat": 40.6934837,
+  "lng": 14.435587
+ },
+ {
+  "name": "Casa dell’Argenteria (VI.7.20)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7520421,
+  "lng": 14.4830622
+ },
+ {
+  "name": "Casa di Cornelio Rufo (VIII.4.15)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.749567,
+  "lng": 14.4881669
+ },
+ {
+  "name": "Casa del Menandro (I.10.4)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7497912,
+  "lng": 14.4899859
+ },
+ {
+  "name": "Casa degli Amanti (I.10.11)",
+  "alt": "",
+  "type": "archaeological_site",
+  "lat": 40.7494938,
+  "lng": 14.4899364
+ },
+ {
+  "name": "Teatro Grande (VIII.7.20)",
+  "alt": "",
+  "type": "ruins",
+  "lat": 40.7488242,
+  "lng": 14.4884036
+ },
+ {
+  "name": "Flixbus N590 (Parte d'Italia): Roma Tiburtina => Villa San Giovanni",
+  "alt": "",
+  "type": "",
+  "lat": 40.0619878,
+  "lng": 14.419872
+ },
+ {
+  "name": "Flixbus N590 (Parte d'Italia): Villa San Giovanni => Roma Tiburtina",
+  "alt": "",
+  "type": "",
+  "lat": 40.0631661,
+  "lng": 14.42026
+ },
+ {
+  "name": "Teatro Piccolo (VIII.7.17)",
+  "alt": "Odeion",
+  "type": "ruins",
+  "lat": 40.7488318,
+  "lng": 14.4890205
+ }
+]

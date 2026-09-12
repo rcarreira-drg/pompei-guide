@@ -2,7 +2,7 @@
  * Plano oficial: elige Regio y número como en el plano de papel del parque y escucha el relato.
  * Los puntos con parada en la ruta enlazan a su ficha; el resto tienen ficha propia (OFFICIAL_ENTRIES).
  */
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import Hero from '@/components/Hero';
 import Narrator from '@/components/Narrator';
@@ -31,6 +31,13 @@ export default function OfficialMap() {
   const regio: Regio = selected?.regio ?? ((() => { try { return (sessionStorage.getItem(LAST_KEY) as Regio) || 'VII'; } catch { return 'VII'; } })());
   useEffect(() => { try { sessionStorage.setItem(LAST_KEY, regio); } catch { /* ignore */ } }, [regio]);
   const items = OFFICIAL_LEGEND.filter((i) => i.regio === regio);
+  const [q, setQ] = useState('');
+  const norm = (t: string) => t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const results = useMemo(() => {
+    const n = norm(q.trim());
+    if (n.length < 2) return [];
+    return OFFICIAL_LEGEND.filter((i) => norm(i.es).includes(n) || norm(i.it).includes(n) || `${i.regio.toLowerCase()}-${i.num}` === n || `${i.regio.toLowerCase()} ${i.num}` === n).slice(0, 12);
+  }, [q]);
 
   // Punto más cercano a la posición actual (para orientarse con el plano en la mano)
   const nearest = useMemo(() => {
@@ -54,6 +61,30 @@ export default function OfficialMap() {
             <strong>{nearest.item.regio}·{nearest.item.num} {nearest.item.es}</strong>
             <span className="mono">{formatDistance(nearest.d)}</span>
           </Link>
+        )}
+
+        <label className="official-search">
+          <span className="kicker">BUSCAR</span>
+          <input
+            type="search"
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder="Nombre o código, p. ej. Lupanar o VII 18"
+            aria-label="Buscar punto del plano por nombre o código"
+            className="official-search-input"
+          />
+        </label>
+        {results.length > 0 && (
+          <ul className="official-results">
+            {results.map((i) => (
+              <li key={legendKey(i)}>
+                <Link to={`/mapa/${legendKey(i)}`} onClick={() => setQ('')} className="official-result" style={{ ['--regio' as string]: REGIO_META[i.regio].color }}>
+                  <span className="legend-num">{i.regio}·{i.num}</span>
+                  <span>{i.es}<small className="mono"> {i.it}</small></span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         )}
 
         <div className="regio-tabs" role="tablist" aria-label="Regiones del plano">
