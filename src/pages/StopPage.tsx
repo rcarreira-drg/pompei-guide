@@ -13,7 +13,7 @@ import { resolveCredit } from '@/lib/credit';
 import StopNotes from '@/components/StopNotes';
 import { useWalkRoute } from '@/lib/useWalkRoute';
 import { stopsForMode, findStop, nextInMode, prevInMode, type RouteMode } from '@/lib/modes';
-import { useMemo } from 'react';
+import { useMemo, useEffect, useState } from 'react';
 import LocationToggle from '@/components/LocationToggle';
 import { formatDistance, walkMinutes, distanceM } from '@/lib/geo';
 import type { Block } from '@/content/types';
@@ -41,6 +41,16 @@ export default function StopPage() {
   const walkNextFromUser = useWalkRoute(pos, nextForRoute?.coords ?? null);
   const distHere = pos && stop ? distanceM(pos, stop.coords) : null;
   const arrived = distHere != null && distHere < 40;
+  // La barra fija hace scroll a "cómo llegar a la siguiente"; cuando esa sección ya está a la vista, navega a la siguiente parada
+  const [directionsInView, setDirectionsInView] = useState(false);
+  useEffect(() => {
+    setDirectionsInView(false);
+    const el = document.getElementById('siguiente');
+    if (!el || !('IntersectionObserver' in window)) return;
+    const io = new IntersectionObserver((entries) => setDirectionsInView(entries.some((e) => e.isIntersecting)), { threshold: 0.25 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [id]);
 
   if (!stop) {
     return (
@@ -228,11 +238,19 @@ export default function StopPage() {
         )}
       </div>
       {next && (
-        <Link to={`/visita/${next.id}`} className="next-sticky" aria-label={`Ir a la siguiente parada: ${next.name}`}>
-          <span className="kicker">SIGUIENTE →</span>
-          <strong>{next.name}</strong>
-          {(walkNextFromUser ?? walk) && <span className="mono next-sticky-dist">{formatDistance((walkNextFromUser ?? walk)!.distance)} · {walkMinutes((walkNextFromUser ?? walk)!.distance)} min</span>}
-        </Link>
+        directionsInView ? (
+          <Link to={`/visita/${next.id}`} className="next-sticky next-sticky--go" aria-label={`Ir a la siguiente parada: ${next.name}`}>
+            <span className="kicker">IR A LA PARADA →</span>
+            <strong>{next.name}</strong>
+            {(walkNextFromUser ?? walk) && <span className="mono next-sticky-dist">{formatDistance((walkNextFromUser ?? walk)!.distance)} · {walkMinutes((walkNextFromUser ?? walk)!.distance)} min</span>}
+          </Link>
+        ) : (
+          <a href="#siguiente" className="next-sticky" onClick={(e) => { e.preventDefault(); document.getElementById('siguiente')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }} aria-label={`Ver cómo llegar a ${next.name}`}>
+            <span className="kicker">SIGUIENTE ↓</span>
+            <strong>{next.name}</strong>
+            {(walkNextFromUser ?? walk) && <span className="mono next-sticky-dist">{formatDistance((walkNextFromUser ?? walk)!.distance)} · {walkMinutes((walkNextFromUser ?? walk)!.distance)} min</span>}
+          </a>
+        )
       )}
     </div>
   );

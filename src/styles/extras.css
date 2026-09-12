@@ -253,3 +253,5 @@
 .map-rotate-controls { position: absolute; right: 10px; top: 58px; z-index: 1000; display: grid; gap: 6px; justify-items: end; }
 .map-north { display: inline-block; color: var(--pompeian); }
 .map-rotate-hint { font-size: 0.65rem; color: var(--ash); }
+.next-sticky--go { background: var(--pompeian); color: var(--paper); }
+.next-sticky--go .kicker { color: var(--paper); }
