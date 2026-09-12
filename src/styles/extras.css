@@ -278,6 +278,10 @@
 .map-lock-label { display: inline-block; padding: 8px 12px; background: var(--ink); color: var(--paper); font-family: var(--font-mono); font-weight: 700; font-size: 0.68rem; letter-spacing: .08em; border: 2px solid var(--paper); box-shadow: var(--shadow-sm); }
 .route-map.is-locked .map-ctrl-btn { opacity: .55; }
 .map-container-end { display: none; }
+/* Atribución compacta, una sola línea (ver `attribution: ''` en las fuentes de mapStyle.ts:
+   sin eso MapLibre concatenaba la nuestra con la del TileJSON de OpenFreeMap y salían
+   duplicadas en varias líneas). */
+.route-map .maplibregl-ctrl-attrib { font-family: var(--font-mono); font-size: 0.6rem; line-height: 1.3; }
 
 /* ===== Controles propios: zoom y capas ===== */
 .map-zoom-controls { position: absolute; left: 10px; top: 10px; z-index: 1000; display: grid; gap: 6px; }

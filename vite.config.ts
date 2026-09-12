@@ -29,7 +29,9 @@ export default defineConfig({
         ]
       },
       workbox: {
-        globPatterns: ['**/*.{js,mjs,css,html,svg,png,jpg,webp,woff2}'],
+        // "json" cubre public/geo/park-buildings.json y park-streets.json (capas propias
+        // del parque, ver src/lib/mapStyle.ts) para que el mapa funcione sin conexión.
+        globPatterns: ['**/*.{js,mjs,css,html,svg,png,jpg,webp,woff2,json}'],
         maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
         runtimeCaching: [
           {

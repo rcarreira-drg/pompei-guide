@@ -13,7 +13,7 @@ import type { LatLng } from '@/lib/geo';
 import { PARK_BOUNDS } from '@/lib/geo';
 import {
   buildMapStyle,
-  LAYER_IDS,
+  LAYER_GROUPS,
   loadMapLayers,
   saveMapLayers,
   OFM_ATTRIBUTION,
@@ -118,12 +118,12 @@ function userPinNode(): HTMLElement {
   return el;
 }
 
-const LAYER_TOGGLES: Array<{ key: keyof MapLayerFlags; id: string; label: string }> = [
-  { key: 'buildings', id: LAYER_IDS.buildingFill, label: 'Edificios' },
-  { key: 'parkStreets', id: LAYER_IDS.streetsPark, label: 'Calles del parque' },
-  { key: 'otherStreets', id: LAYER_IDS.streetsOther, label: 'Otras vías' },
-  { key: 'streetNames', id: LAYER_IDS.streetNames, label: 'Nombres de calles' },
-  { key: 'water', id: LAYER_IDS.water, label: 'Agua' },
+const LAYER_TOGGLES: Array<{ key: keyof MapLayerFlags; label: string }> = [
+  { key: 'buildings', label: 'Edificios' },
+  { key: 'parkStreets', label: 'Calles del parque' },
+  { key: 'otherStreets', label: 'Otras vías' },
+  { key: 'streetNames', label: 'Nombres de calles' },
+  { key: 'water', label: 'Agua' },
 ];
 
 export default function RouteMap({
@@ -329,12 +329,14 @@ export default function RouteMap({
     if (!styleReady) return;
     const map = mapRef.current;
     if (!map) return;
-    for (const t of LAYER_TOGGLES) {
-      try {
-        map.setLayoutProperty(t.id, 'visibility', layers[t.key] ? 'visible' : 'none');
-        if (t.key === 'buildings') map.setLayoutProperty(LAYER_IDS.buildingOutline, 'visibility', layers.buildings ? 'visible' : 'none');
-      } catch {
-        /* la capa aún no existe (estilo cargando) */
+    for (const key of Object.keys(LAYER_GROUPS) as Array<keyof MapLayerFlags>) {
+      const visibility = layers[key] ? 'visible' : 'none';
+      for (const id of LAYER_GROUPS[key]) {
+        try {
+          map.setLayoutProperty(id, 'visibility', visibility);
+        } catch {
+          /* la capa aún no existe (estilo cargando) */
+        }
       }
     }
   }, [layers, styleReady]);
