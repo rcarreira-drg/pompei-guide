@@ -1,7 +1,6 @@
 /** Descarga las teselas OSM del parque (zoom 15-18) a la caché que usa el service worker ('osm-tiles'). */
 import { PARK_BOUNDS } from './geo';
 const CACHE = 'osm-tiles';
-const SUBS = ['a', 'b', 'c'];
 function tileXY(lat: number, lng: number, z: number) {
   const n = 2 ** z;
   const x = Math.floor(((lng + 180) / 360) * n);
@@ -11,10 +10,10 @@ function tileXY(lat: number, lng: number, z: number) {
 }
 export function parkTileUrls(zooms = [15, 16, 17, 18]): string[] {
   const [[s, w], [n, e]] = PARK_BOUNDS;
-  const urls: string[] = []; let k = 0;
+  const urls: string[] = [];
   for (const z of zooms) {
     const a = tileXY(n, w, z), b = tileXY(s, e, z);
-    for (let x = a.x; x <= b.x; x++) for (let y = a.y; y <= b.y; y++) urls.push(`https://${SUBS[k++ % 3]}.tile.openstreetmap.org/${z}/${x}/${y}.png`);
+    for (let x = a.x; x <= b.x; x++) for (let y = a.y; y <= b.y; y++) urls.push(`https://tile.openstreetmap.org/${z}/${x}/${y}.png`);
   }
   return urls;
 }

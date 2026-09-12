@@ -112,3 +112,22 @@ test('visita: la ubicación se puede detener', async ({ page }) => {
   await page.reload();
   await expect(page.getByRole('button', { name: /activar ubicación/i })).toBeVisible();
 });
+
+test('mapa: las teselas vistas se sirven sin conexión desde el service worker', async ({ page, context, browserName }) => {
+  test.skip(browserName !== 'chromium', 'service worker solo en chromium');
+  await page.goto('#/visita');
+  await page.evaluate(() => navigator.serviceWorker.ready);
+  await page.reload();
+  await expect(page.locator('.leaflet-container')).toBeVisible();
+  await page.waitForFunction(() => Array.from(document.querySelectorAll<HTMLImageElement>('.leaflet-tile')).filter(i => i.complete && i.naturalWidth > 0).length >= 4, null, { timeout: 30_000 });
+  const before = await page.evaluate(() => Array.from(document.querySelectorAll<HTMLImageElement>('.leaflet-tile')).map(i => i.src));
+  await context.setOffline(true);
+  await page.reload();
+  await expect(page.locator('.leaflet-container')).toBeVisible();
+  await page.waitForFunction(() => Array.from(document.querySelectorAll<HTMLImageElement>('.leaflet-tile')).filter(i => i.complete && i.naturalWidth > 0).length >= 4, null, { timeout: 30_000 });
+  const after = await page.evaluate(() => Array.from(document.querySelectorAll<HTMLImageElement>('.leaflet-tile')).filter(i => i.complete && i.naturalWidth > 0).map(i => i.src));
+  expect(after.length).toBeGreaterThanOrEqual(4);
+  expect(after.every(u => /^https:\/\/tile\.openstreetmap\.org\//.test(u))).toBeTruthy();
+  expect(before.length).toBeGreaterThan(0);
+  await context.setOffline(false);
+});

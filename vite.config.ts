@@ -38,9 +38,9 @@ export default defineConfig({
             options: { cacheName: 'pompei-audio-v1', expiration: { maxEntries: 300, maxAgeSeconds: 60 * 60 * 24 * 365 }, cacheableResponse: { statuses: [0, 200] }, rangeRequests: true }
           },
           {
-            urlPattern: /^https:\/\/[abc]\.tile\.openstreetmap\.org\/.*/i,
+            urlPattern: /^https:\/\/([abc]\.)?tile\.openstreetmap\.org\/.*/i,
             handler: 'CacheFirst',
-            options: { cacheName: 'osm-tiles', expiration: { maxEntries: 1500, maxAgeSeconds: 60 * 60 * 24 * 30 } }
+            options: { cacheName: 'osm-tiles', expiration: { maxEntries: 1500, maxAgeSeconds: 60 * 60 * 24 * 90 }, cacheableResponse: { statuses: [0, 200] } }
           }
         ]
       }
