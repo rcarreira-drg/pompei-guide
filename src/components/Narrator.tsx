@@ -18,6 +18,8 @@ export interface NarratorProps {
   introIndex?: number;
   outroIndex?: number;
   compactHeader?: boolean;
+  /** Arranca la narración automáticamente (llegada a la parada con la opción activada). */
+  autoStart?: boolean;
 }
 
 /** Duración estimada de lectura a 1×: ~150 palabras por minuto. */
@@ -26,7 +28,7 @@ function estimateMinutes(texts: string[], rate: number): number {
   return Math.max(1, Math.round(words / (150 * rate)));
 }
 
-export default function Narrator({ texts, introIndex = 0, outroIndex, compactHeader }: NarratorProps) {
+export default function Narrator({ texts, introIndex = 0, outroIndex, compactHeader, autoStart }: NarratorProps) {
   const speechOk = ttsSupported();
   const [settings, setSettings] = useState<NarratorSettings>(() => loadNarratorSettings());
   const [status, setStatus] = useState<Status>('idle');
@@ -79,6 +81,11 @@ export default function Narrator({ texts, introIndex = 0, outroIndex, compactHea
     if (!window.speechSynthesis.speaking) speakFrom(indexRef.current, sentenceRef.current);
     setStatus('playing');
   };
+  // Llegada a la parada con narración automática activada: arranca sola, igual que el botón ESCUCHAR.
+  useEffect(() => {
+    if (autoStart && speechOk && status === 'idle') speakFrom(0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autoStart, speechOk]);
   const handleStop = () => { ttsStop(); finish(); };
   const handleRate = (r: number) => {
     updateSettings({ rate: r });

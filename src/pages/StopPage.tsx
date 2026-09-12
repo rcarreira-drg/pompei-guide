@@ -1,4 +1,4 @@
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import Blocks from '@/components/Blocks';
 import Narrator from '@/components/Narrator';
 import Compass from '@/components/Compass';
@@ -17,6 +17,8 @@ import { stopsForMode, findStop, nextInMode, prevInMode, type RouteMode } from '
 import { useMemo, useEffect, useState } from 'react';
 import LocationToggle from '@/components/LocationToggle';
 import { formatDistance, walkMinutes, distanceM } from '@/lib/geo';
+import { ARRIVAL_RADIUS_M, vibrateArrival, useAnnouncedStop } from '@/lib/arrival';
+import { loadNarratorSettings } from '@/lib/narratorSettings';
 import type { Block } from '@/content/types';
 
 const LONG_WORD_LENGTH = 12;
@@ -25,6 +27,8 @@ const hasLongWord = (text: string) => text.split(/\s+/).some((w) => w.length > L
 export default function StopPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const { announcedStopId, setAnnouncedStop } = useAnnouncedStop();
   const { pos } = useGeolocation();
   const { heading } = useHeading();
   const { visited, markVisited, setCurrentStop, mode } = useProgress();
@@ -41,7 +45,28 @@ export default function StopPage() {
   const walk = useWalkRoute(stop?.coords ?? null, nextForRoute?.coords ?? null);
   const walkNextFromUser = useWalkRoute(pos, nextForRoute?.coords ?? null);
   const distHere = pos && stop ? distanceM(pos, stop.coords) : null;
-  const arrived = distHere != null && distHere < 40;
+  const arrived = distHere != null && distHere < ARRIVAL_RADIUS_M;
+
+  // Narración automática al llegar: por navegación desde Visit.tsx (?auto=1, se limpia para
+  // que recargar no vuelva a arrancar) o por llegar estando ya en la página de la parada.
+  const autoParam = searchParams.get('auto') === '1';
+  const [autoStart, setAutoStart] = useState(false);
+  useEffect(() => {
+    if (!autoParam || !stop) return;
+    setAutoStart(true);
+    setAnnouncedStop(stop.id);
+    const next = new URLSearchParams(searchParams);
+    next.delete('auto');
+    setSearchParams(next, { replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autoParam, stop?.id]);
+  useEffect(() => {
+    if (!stop || !arrived || stop.id === announcedStopId) return;
+    const settings = loadNarratorSettings();
+    setAnnouncedStop(stop.id);
+    if (settings.vibrateOnArrival) vibrateArrival();
+    if (settings.autoplayOnArrival) setAutoStart(true);
+  }, [arrived, stop, announcedStopId, setAnnouncedStop]);
   // La barra fija hace scroll a "cómo llegar a la siguiente"; cuando esa sección ya está a la vista, navega a la siguiente parada
   const [directionsInView, setDirectionsInView] = useState(false);
   useEffect(() => {
@@ -164,7 +189,7 @@ export default function StopPage() {
 
         {stop.gallery && stop.gallery.length > 0 && <Gallery items={stop.gallery} />}
 
-        <Narrator texts={narrationTexts} title={`${stop.order}. ${stop.name}`} introIndex={0} outroIndex={whyNext ? narrationTexts.length - 1 : undefined} />
+        <Narrator texts={narrationTexts} title={`${stop.order}. ${stop.name}`} introIndex={0} outroIndex={whyNext ? narrationTexts.length - 1 : undefined} autoStart={autoStart} />
 
         {stop.lookFor.length > 0 && (
           <section>

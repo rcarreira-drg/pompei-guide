@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useMemo, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import ProgressBar from '@/components/ProgressBar';
 import RouteMap from '@/components/RouteMap';
 import Compass from '@/components/Compass';
@@ -7,7 +7,6 @@ import { ROUTE } from '@/content/route';
 import { useGeolocation } from '@/lib/useGeolocation';
 import { useHeading } from '@/lib/useHeading';
 import { useProgress } from '@/lib/useProgress';
-import { distanceM } from '@/lib/geo';
 import type { StopCategory } from '@/content/types';
 import ExpressToggle from '@/components/ExpressToggle';
 import WakeLockToggle from '@/components/WakeLockToggle';
@@ -19,6 +18,9 @@ import { stopsForMode, modeSummary, EXTRA_IDS, type RouteMode } from '@/lib/mode
 import { useWalkRoute } from '@/lib/useWalkRoute';
 import LocationToggle from '@/components/LocationToggle';
 import Narrator from '@/components/Narrator';
+import ArrivalToggle from '@/components/ArrivalToggle';
+import { stopAtPosition, vibrateArrival, useAnnouncedStop } from '@/lib/arrival';
+import { loadNarratorSettings } from '@/lib/narratorSettings';
 
 const CATEGORY_LABEL: Record<StopCategory, string> = {
   puerta: 'PUERTA',
@@ -39,6 +41,8 @@ export default function Visit() {
   const { heading } = useHeading();
   const { visited, currentStop, reset, mode, routeStartedAt } = useProgress();
   const [confirmingReset, setConfirmingReset] = useState(false);
+  const navigate = useNavigate();
+  const { announcedStopId, setAnnouncedStop } = useAnnouncedStop();
 
   const rmode: RouteMode = (mode as RouteMode) ?? 'completa';
   const stops = useMemo(() => stopsForMode(rmode), [rmode]);
@@ -54,10 +58,18 @@ export default function Visit() {
 
   const walk = useWalkRoute(pos, nextStop?.coords ?? null);
 
-  const nearbyUnvisited = useMemo(() => {
-    if (!pos) return undefined;
-    return stops.find((s) => !visited[s.id] && distanceM(pos, s.coords) < 40);
-  }, [pos, stops, visited]);
+  const nearbyUnvisited = useMemo(
+    () => stopAtPosition(pos, stops, visited, currentStop),
+    [pos, stops, visited, currentStop]
+  );
+
+  useEffect(() => {
+    if (!nearbyUnvisited || nearbyUnvisited.id === announcedStopId) return;
+    setAnnouncedStop(nearbyUnvisited.id);
+    const settings = loadNarratorSettings();
+    if (settings.vibrateOnArrival) vibrateArrival();
+    if (settings.autoplayOnArrival) navigate(`/visita/${nearbyUnvisited.id}?auto=1`);
+  }, [nearbyUnvisited, announcedStopId, setAnnouncedStop, navigate]);
 
   const handleReset = () => {
     if (!confirmingReset) {
@@ -78,6 +90,7 @@ export default function Visit() {
 
       <div className="container">
         <LocationToggle />
+        <ArrivalToggle />
 
         {nearbyUnvisited && (
           <Link to={`/visita/${nearbyUnvisited.id}`} className="box banner-here" aria-label={`Estás en ${nearbyUnvisited.name}`}>
