@@ -50,6 +50,8 @@
 /* ---- Home ---- */
 .home-illus { margin-top: var(--space-6); padding: var(--space-4); background: var(--paper-2); }
 .home-illus-svg { width: 100%; height: auto; display: block; }
+.home-illus-3d { width: 100%; height: min(52vw, 360px); min-height: 180px; overflow: hidden; border: var(--border); }
+.home-illus-fallback { width: 100%; height: 100%; display: block; }
 
 .cta-grid { display: grid; gap: var(--space-4); margin-top: var(--space-6); }
 .cta-card {
@@ -318,18 +320,18 @@
 .progress-block.is-filled { background: var(--pompeian); }
 .progress-label { margin-top: var(--space-2); }
 
-/* ---- RouteMap ---- */
+/* ---- RouteMap (MapLibre GL) ---- */
 .route-map { overflow: hidden; }
 .route-map--empty { display: flex; align-items: center; justify-content: center; }
-.route-map .leaflet-container { background: var(--paper-2); font-family: var(--font-body); }
-.route-map .leaflet-popup-content-wrapper {
-  border: var(--border); border-radius: 0; box-shadow: var(--shadow-sm); padding: 0;
+.route-map .maplibregl-map { background: var(--paper-2); font-family: var(--font-body); }
+.route-map .maplibregl-popup-content {
+  border: var(--border); border-radius: 0; box-shadow: var(--shadow-sm); padding: var(--space-3);
 }
-.route-map .leaflet-popup-content { margin: var(--space-3); }
-.route-map .leaflet-popup-tip { border-radius: 0; }
+.route-map .maplibregl-popup-tip { border-radius: 0; }
 .popup-title { display: block; margin-bottom: var(--space-2); }
 .popup-btn { min-height: 40px; margin-top: 0; }
-.route-map .leaflet-control-attribution { font-size: 10px; }
+.route-map .maplibregl-ctrl-attrib { font-size: 10px; }
+.route-map .maplibregl-ctrl-bottom-right, .route-map .maplibregl-ctrl-bottom-left { z-index: 900; }
 
 .stop-pin {
   display: flex; align-items: center; justify-content: center; width: 28px; height: 28px;
@@ -356,5 +358,5 @@
   .section-card-media { aspect-ratio: auto; height: 100%; border-bottom: 0; border-right: var(--border); }
 }
 
-/* Controles Leaflet con área táctil ≥44px */
-.leaflet-touch .leaflet-control-zoom a, .leaflet-control-zoom a { width: 44px !important; height: 44px !important; line-height: 44px !important; font-size: 22px; }
+/* Controles propios del mapa con área táctil ≥44px */
+.map-zoom-btn { width: 44px; height: 44px; padding: 0; font-size: 22px; line-height: 1; justify-content: center; }

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Illustration } from '@/illustrations';
+import LazyVesuvio from '@/components/three/LazyVesuvio';
 import Hero from '@/components/Hero';
 import { SECTIONS } from '@/content/sections';
 import { ROUTE } from '@/content/route';
@@ -23,11 +23,13 @@ export default function Home() {
 
   return (
     <div>
-      <Hero kicker="PARQUE ARQUEOLÓGICO" title="POMPEYA" subtitle="Guía para antes y durante la visita" />
+      <Hero kicker="PARQUE ARQUEOLÓGICO" title="POMPEI" subtitle="Guía para antes y durante la visita" />
 
       <div className="container">
         <div className="home-illus box">
-          <Illustration name="vesuvio" title="El Vesubio sobre la bahía de Nápoles" className="home-illus-svg" />
+          <div className="home-illus-3d">
+            <LazyVesuvio title="El Vesubio sobre la bahía de Nápoles" />
+          </div>
         </div>
 
         <div className="cta-grid">
